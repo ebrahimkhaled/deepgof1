@@ -1,5 +1,7 @@
 # DeepGOF-1
 
+[![DOI](https://zenodo.org/badge/1347367720.svg)](https://doi.org/10.5281/zenodo.22113219)
+
 A pretrained goodness-of-fit test for logistic regression. The test statistic is a small
 convolutional network (18,273 frozen parameters) that reads the model's *residual map* — a 6×6
 grid of standardized residual sums over the ranks of the two strongest covariates — and the
