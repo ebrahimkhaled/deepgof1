@@ -5,6 +5,10 @@ version: "1.0.0"
 date-released: "2026-08-26"
 license: MIT
 type: software
+# Concept DOI: always resolves to the newest version. Cite this one unless you need to pin
+# DeepGOF-1 exactly, in which case use the version DOI 10.5281/zenodo.22113220.
+doi: "10.5281/zenodo.22113219"
+repository-code: "https://github.com/ebrahimkhaled/deepgof1"
 authors:
   - family-names: Ebrahim
     given-names: "Ebrahim Khaled"

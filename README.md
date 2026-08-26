@@ -130,5 +130,16 @@ speckit/      the frozen pre-declarations for every gate (the goalposts, shipped
 ## Licence
 
 Code: MIT. Deposited results and corpora: CC-BY 4.0. See `LICENSE.md`.
-Archived at Zenodo (concept DOI resolves to the newest version; a version DOI pins DeepGOF-1
-exactly) — DOI minted at deposit time.
+
+## Citing this archive
+
+Archived at Zenodo. Two DOIs, and which one you want depends on why you are citing:
+
+- **`10.5281/zenodo.22113219`** — the **concept** DOI. Always resolves to the newest version.
+  Use this one by default.
+- **`10.5281/zenodo.22113220`** — the **version** DOI for **v1.0.0**. Use this when you need to
+  pin DeepGOF-1 exactly, for example when reproducing a number from the paper.
+
+> Ebrahim, E. K. (2026). *DeepGOF-1: pretrained goodness-of-fit test for logistic regression —
+> weights, training corpus, benchmark harness and per-replicate results* (v1.0.0) [Software].
+> Zenodo. https://doi.org/10.5281/zenodo.22113219
