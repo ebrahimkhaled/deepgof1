@@ -1,0 +1,49 @@
+=== SCN BLOCK n=50 seed=101000  13:10:15 ===
+SCN n=50 seed=101000 | 9 scenarios x 5 severities | 48000 jobs | K=6 B=199
+SCN block COMPLETE: 47992/48000 datasets, 54.1 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/scn/n50_s101000
+[SCN n=50 seed=101000] train 2000 | held-out null 1000 | eval 44992
+   size: DEEP 0.0620  CCT-9 0.0530
+   BLOCK A (localised)      vs CCT-9 +0.0063   vs best-partition -0.0117
+   BLOCK B (index/smooth)   vs CCT-9 +0.0143   vs best-partition +0.0152
+   block .bin deleted
+=== SCN BLOCK n=100 seed=101000  14:04:50 ===
+SCN n=100 seed=101000 | 9 scenarios x 5 severities | 48000 jobs | K=6 B=199
+SCN block COMPLETE: 48000/48000 datasets, 51.3 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/scn/n100_s101000
+[SCN n=100 seed=101000] train 2000 | held-out null 1000 | eval 45000
+   size: DEEP 0.0430  CCT-9 0.0510
+   BLOCK A (localised)      vs CCT-9 +0.0522   vs best-partition +0.0060
+   BLOCK B (index/smooth)   vs CCT-9 +0.0385   vs best-partition +0.0269
+   block .bin deleted
+=== SCN BLOCK n=200 seed=101000  14:57:32 ===
+SCN n=200 seed=101000 | 9 scenarios x 5 severities | 48000 jobs | K=6 B=199
+SCN block COMPLETE: 48000/48000 datasets, 69.6 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/scn/n200_s101000
+[SCN n=200 seed=101000] train 2000 | held-out null 1000 | eval 45000
+   size: DEEP 0.0600  CCT-9 0.0520
+   BLOCK A (localised)      vs CCT-9 +0.0411   vs best-partition -0.0026
+   BLOCK B (index/smooth)   vs CCT-9 -0.0033   vs best-partition -0.0072
+   block .bin deleted
+=== SCN BLOCK n=50 seed=102000  16:08:12 ===
+SCN n=50 seed=102000 | 9 scenarios x 5 severities | 48000 jobs | K=6 B=199
+SCN block COMPLETE: 47992/48000 datasets, 53.6 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/scn/n50_s102000
+[SCN n=50 seed=102000] train 2000 | held-out null 1000 | eval 44992
+   size: DEEP 0.0550  CCT-9 0.0570
+   BLOCK A (localised)      vs CCT-9 +0.0319   vs best-partition +0.0083
+   BLOCK B (index/smooth)   vs CCT-9 +0.0472   vs best-partition +0.0298
+   block .bin deleted
+=== SCN BLOCK n=100 seed=102000  17:02:26 ===
+SCN n=100 seed=102000 | 9 scenarios x 5 severities | 48000 jobs | K=6 B=199
+SCN block COMPLETE: 48000/48000 datasets, 53.1 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/scn/n100_s102000
+[SCN n=100 seed=102000] train 2000 | held-out null 1000 | eval 45000
+   size: DEEP 0.0500  CCT-9 0.0540
+   BLOCK A (localised)      vs CCT-9 +0.0285   vs best-partition -0.0192
+   BLOCK B (index/smooth)   vs CCT-9 +0.0298   vs best-partition +0.0217
+   block .bin deleted
+=== SCN BLOCK n=200 seed=102000  17:56:00 ===
+SCN n=200 seed=102000 | 9 scenarios x 5 severities | 48000 jobs | K=6 B=199
+SCN block COMPLETE: 48000/48000 datasets, 60.2 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/scn/n200_s102000
+[SCN n=200 seed=102000] train 2000 | held-out null 1000 | eval 45000
+   size: DEEP 0.0520  CCT-9 0.0430
+   BLOCK A (localised)      vs CCT-9 +0.0462   vs best-partition +0.0282
+   BLOCK B (index/smooth)   vs CCT-9 +0.0114   vs best-partition +0.0148
+   block .bin deleted
+=== SCN ALL BLOCKS DONE 2026-08-22 18:56:41 ===

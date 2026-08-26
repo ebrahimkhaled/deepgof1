@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use DeepGOF-1 or its deposited results, please cite the paper and this archive."
+title: "DeepGOF-1: pretrained goodness-of-fit test for logistic regression"
+version: "1.0.0"
+date-released: "2026-08-26"
+license: MIT
+type: software
+authors:
+  - family-names: Ebrahim
+    given-names: "Ebrahim Khaled"
+    orcid: "https://orcid.org/0009-0006-7839-8778"
+    affiliation: "Department of Statistics, Faculty of Commerce, Alexandria University"
+keywords:
+  - goodness-of-fit
+  - logistic regression
+  - model misspecification
+  - parametric bootstrap
+  - Monte Carlo test
+  - convolutional neural network
+abstract: >-
+  Research compendium for DeepGOF-1, a goodness-of-fit test for logistic regression whose
+  statistic is a convolutional network trained once offline and shipped frozen, and whose
+  p-value is the rank of the observed score inside the analyst's own parametric bootstrap.
+  Contains the deployable test in base R, the frozen weights, the exact training corpus and
+  its generator, the thirteen-arm benchmark harness, every per-replicate p-value behind the
+  paper, and the frozen pre-declared evaluation criteria.
+preferred-citation:
+  type: article
+  title: >-
+    DeepGOF-1: A Pretrained Convolutional Goodness-of-Fit Test for Logistic Regression with
+    a Computable Consistency Certificate
+  authors:
+    - family-names: Ebrahim
+      given-names: "Ebrahim Khaled"
+      orcid: "https://orcid.org/0009-0006-7839-8778"
+  year: 2026
+  status: submitted

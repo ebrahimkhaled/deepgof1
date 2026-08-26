@@ -1,0 +1,34 @@
+=== S4 BLOCK seed=101000 n=50  18:32:25 ===
+S4 block seed=101000 n=50 | null 2000, rand 1000, alt 2000 x3 | B=199 | 12 workers
+S4 block COMPLETE: 5000 datasets (5000 requested), 6.9 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/s4/s101000_n50
+[s101000_n50] n=50 seed=101000 | train 2000 | held-out null 1000 | held-out alt 2000 | Firth fired 0.02%
+   K= 4 ( 16 cells,  1.5% empty)  size 0.0520    matched power 0.0682  AUC 0.5161
+   K= 6 ( 36 cells, 19.1% empty)  size 0.0550    matched power 0.0630  AUC 0.5294
+   K= 8 ( 64 cells, 41.4% empty)  size 0.0560    matched power 0.0498  AUC 0.5331
+   K=12 (144 cells, 68.8% empty)  size 0.0430    matched power 0.0536  AUC 0.5472
+   block .bin deleted
+=== S4 BLOCK seed=101000 n=100  18:39:37 ===
+S4 block seed=101000 n=100 | null 2000, rand 1000, alt 2000 x3 | B=199 | 12 workers
+S4 block COMPLETE: 5000 datasets (5000 requested), 7.6 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/s4/s101000_n100
+Error: unexpected ')' in ""blk_pvalues.csv")"
+Execution halted
+R FAILED 101000/100
+=== S4 BLOCK seed=102000 n=50  18:47:18 ===
+S4 block seed=102000 n=50 | null 2000, rand 1000, alt 2000 x3 | B=199 | 12 workers
+S4 block COMPLETE: 5000 datasets (5000 requested), 6.9 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/s4/s102000_n50
+[s102000_n50] n=50 seed=102000 | train 2000 | held-out null 1000 | held-out alt 2000 | Firth fired 0.02%
+   K= 4 ( 16 cells,  1.5% empty)  size 0.0630    matched power 0.0615  AUC 0.5285
+   K= 6 ( 36 cells, 19.2% empty)  size 0.0600    matched power 0.0537  AUC 0.5466
+   K= 8 ( 64 cells, 41.4% empty)  size 0.0520    matched power 0.0575  AUC 0.5590
+   K=12 (144 cells, 68.8% empty)  size 0.0380    matched power 0.0490  AUC 0.5719
+   block .bin deleted
+=== S4 BLOCK seed=102000 n=100  18:54:30 ===
+S4 block seed=102000 n=100 | null 2000, rand 1000, alt 2000 x3 | B=199 | 12 workers
+S4 block COMPLETE: 5000 datasets (5000 requested), 7.6 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/s4/s102000_n100
+[s102000_n100] n=100 seed=102000 | train 2000 | held-out null 1000 | held-out alt 2000 | Firth fired 0.00%
+   K= 4 ( 16 cells,  0.0% empty)  size 0.0480    matched power 0.1161  AUC 0.5089
+   K= 6 ( 36 cells,  3.6% empty)  size 0.0540    matched power 0.0976  AUC 0.5081
+   K= 8 ( 64 cells, 16.9% empty)  size 0.0500    matched power 0.0805  AUC 0.5051
+   K=12 (144 cells, 47.2% empty)  size 0.0410    matched power 0.0673  AUC 0.5229
+   block .bin deleted
+=== S4 ALL BLOCKS DONE 19:02:24 ===

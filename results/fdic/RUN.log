@@ -1,0 +1,22 @@
+GA: n=334 events= 69 (20.7%)  bootstrapping 2000 nulls on the real design ...
+FL: n=307 events= 56 (18.2%)  bootstrapping 2000 nulls on the real design ...
+IL: n=655 events= 46 (7.0%)  bootstrapping 2000 nulls on the real design ...
+CA: n=311 events= 34 (10.9%)  bootstrapping 2000 nulls on the real design ...
+WA: n= 97 events= 17 (17.5%)  bootstrapping 2000 nulls on the real design ...
+MN: n=431 events= 16 (3.7%)  bootstrapping 2000 nulls on the real design ...
+
+================ REAL-DESIGN SIZE AT NOMINAL .05 ================
+GA (n=334, 69 events): CCT 0.0525 | 11-test range 0.0140-0.0565 | median 0.0360
+FL (n=307, 56 events): CCT 0.0690 | 11-test range 0.0105-0.0885 | median 0.0405
+IL (n=655, 46 events): CCT 0.0995 | 11-test range 0.0090-0.0880 | median 0.0475
+CA (n=311, 34 events): CCT 0.0430 | 11-test range 0.0025-0.0475 | median 0.0290
+WA (n= 97, 17 events): CCT 0.0720 | 11-test range 0.0100-0.0715 | median 0.0407
+MN (n=431, 16 events): CCT 0.0825 | 11-test range 0.0050-0.0821 | median 0.0485
+
+Pre-declared branch test: does CCT land in the .06-.10 band measured in simulation?
+  GA: 0.0525 -> BELOW band (distortion does NOT transfer)
+  FL: 0.0690 -> IN BAND (distortion transfers)
+  IL: 0.0995 -> IN BAND (distortion transfers)
+  CA: 0.0430 -> BELOW band (distortion does NOT transfer)
+  WA: 0.0720 -> IN BAND (distortion transfers)
+  MN: 0.0825 -> IN BAND (distortion transfers)

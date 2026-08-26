@@ -1,0 +1,33 @@
+{
+  "title": "DeepGOF-1: pretrained goodness-of-fit test for logistic regression — weights, training corpus, benchmark harness and per-replicate results",
+  "upload_type": "software",
+  "description": "<p>The complete research compendium for <em>DeepGOF-1: A Pretrained Convolutional Goodness-of-Fit Test for Logistic Regression with a Computable Consistency Certificate</em>.</p><p>DeepGOF-1 is a goodness-of-fit test for logistic regression whose statistic is a convolutional network trained once, offline, on simulated departures and shipped frozen (18,273 parameters). The network reads the fitted model's <em>residual map</em> — a 6&times;6 grid of standardized residual sums over the ranks of the two strongest covariates — and the p-value is the rank of the observed score inside the analyst's own parametric bootstrap, so the level is a property of the calibration rather than of what the network learned.</p><p>This deposit contains everything needed to reproduce the paper and to train a successor:</p><ul><li><strong>R/</strong> and <strong>inst/extdata/</strong> — the deployable test in pure base R with the frozen weights and a cross-language verification bench (base R reproduces the training framework to 5e-11).</li><li><strong>training/</strong> — the exact training corpus (8,400 labelled residual maps), the corpus generator (the one file a successor edits), the training script and the exporter, with the row-major/column-major porting trap documented.</li><li><strong>benchmark/</strong> — the thirteen-arm evaluation harness: the reproduced Liu et al. (2024) settings, a nine-scenario severity lattice, a sixty-cell design grid, and the consistency-certificate scripts.</li><li><strong>results/</strong> — every per-replicate p-value behind every table and figure in the paper.</li><li><strong>speckit/</strong> — the frozen pre-declarations for every gate, so a successor version is judged against the same criteria, including the criteria this version failed.</li></ul><p>The deployable test alone is also distributed as <code>deepgof1()</code> in the R package <code>ebrahim.gof</code> (version 2.6.0 and later). Code is MIT-licensed; deposited results, corpora and weights are CC-BY-4.0.</p>",
+  "creators": [
+    {
+      "name": "Ebrahim, Ebrahim Khaled",
+      "affiliation": "Department of Statistics, Faculty of Commerce, Alexandria University",
+      "orcid": "0009-0006-7839-8778"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "keywords": [
+    "goodness-of-fit",
+    "logistic regression",
+    "model misspecification",
+    "parametric bootstrap",
+    "Monte Carlo test",
+    "convolutional neural network",
+    "calibration",
+    "reproducibility"
+  ],
+  "language": "eng",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/ebrahimkhaled/ebrahim.gof",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "notes": "The training corpus and the deposited per-replicate results are large by design: they exist so that a referee can check any number in the paper without rerunning multi-CPU-day simulations, and so that a successor version (DeepGOF-2) can be trained by editing a single file and evaluated against the same frozen criteria."
+}

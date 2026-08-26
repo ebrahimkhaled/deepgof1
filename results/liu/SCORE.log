@@ -1,0 +1,253 @@
+--- S1_n500_s102000 ---
+
+[LIU Setting 1, n=500, seed=102000]  RAW rejection at nominal .05
+arm                  size   C=0.25    C=0.5   C=0.75      C=1    rise
+DEEP                0.043    0.941    1.000    1.000    1.000  +0.957 *
+CCT-8               0.077    0.970    1.000    1.000    1.000  +0.923
+HL                  0.050    0.899    1.000    1.000    1.000  +0.950
+HL-equalwidth       0.048    0.604    1.000    1.000    1.000  +0.952
+Pigeon-Heyse        0.033    0.872    1.000    1.000    1.000  +0.967
+Tsiatis             0.048    0.895    1.000    1.000    1.000  +0.952
+Xie                 0.040    0.891    1.000    1.000    1.000  +0.960
+Stukel              0.079    0.981    1.000    1.000    1.000  +0.921
+Osius-Rojek         0.055    0.935    1.000    0.998    0.808  +0.753
+le-Cessie           0.045    0.922    1.000    1.000    1.000  +0.955
+-- own family --
+EF                  0.048    0.814    1.000    1.000    1.000  +0.952
+DEF.poly2           0.052    0.962    1.000    1.000    1.000  +0.948
+DEF.poly3           0.055    0.950    1.000    1.000    1.000  +0.945
+DEF.stukel          0.052    0.948    1.000    1.000    1.000  +0.948
+A.poly              0.052    0.943    1.000    1.000    1.000  +0.948
+A.spline            0.067    0.948    1.000    1.000    1.000  +0.933
+  block .bin deleted
+--- S1_n50_s102000 ---
+
+[LIU Setting 1, n=50, seed=102000]  RAW rejection at nominal .05
+arm                  size   C=0.25    C=0.5   C=0.75      C=1    rise
+DEEP                0.054    0.211    0.686    0.949    0.993  +0.939 *
+CCT-8               0.066    0.301    0.815    0.993    1.000  +0.934
+HL                  0.048    0.220    0.567    0.865    0.976  +0.928
+HL-equalwidth       0.042    0.044    0.349    0.850    0.870  +0.828
+Pigeon-Heyse        0.037    0.181    0.516    0.814    0.959  +0.922
+Tsiatis             0.053    0.214    0.541    0.882    0.980  +0.927
+Xie                 0.040    0.203    0.567    0.882    0.977  +0.937
+Stukel              0.061    0.274    0.828    0.974    0.884  +0.823
+Osius-Rojek         0.032    0.273    0.800    0.887    0.788  +0.756
+le-Cessie           0.041    0.152    0.672    0.978    0.997  +0.956
+-- own family --
+EF                  0.022    0.049    0.366    0.830    0.975  +0.953
+DEF.poly2           0.048    0.232    0.784    0.987    0.999  +0.951
+DEF.poly3           0.053    0.197    0.722    0.976    0.997  +0.944
+DEF.stukel          0.029    0.233    0.718    0.957    0.993  +0.964
+A.poly              0.028    0.244    0.781    0.989    1.000  +0.972
+A.spline            0.039    0.233    0.710    0.975    0.998  +0.959
+Traceback (most recent call last):
+  File "C:\Users\ebrah\.gemini\Projects\PDFs\Paper_Ebrahim_Frangiton\paper_deepgof\code\liu_score.py", line 116, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\ebrah\.gemini\Projects\PDFs\Paper_Ebrahim_Frangiton\paper_deepgof\code\liu_score.py", line 112, in main
+    os.remove(os.path.join(d, "blk_maps.bin")); print("  block .bin deleted")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof\\results/liu/S1_n50_s102000/blk_maps.bin'
+'
+FAILED results/liu/S1_n500_s102000/
+--- S1_n50_s102000 ---
+
+[LIU Setting 1, n=50, seed=102000]  RAW rejection at nominal .05
+arm                  size   C=0.25    C=0.5   C=0.75      C=1    rise
+DEEP                0.054    0.211    0.686    0.949    0.993  +0.939 *
+CCT-8               0.066    0.301    0.815    0.993    1.000  +0.934
+HL                  0.048    0.220    0.567    0.865    0.976  +0.928
+HL-equalwidth       0.042    0.044    0.349    0.850    0.870  +0.828
+Pigeon-Heyse        0.037    0.181    0.516    0.814    0.959  +0.922
+Tsiatis             0.053    0.214    0.541    0.882    0.980  +0.927
+Xie                 0.040    0.203    0.567    0.882    0.977  +0.937
+Stukel              0.061    0.274    0.828    0.974    0.884  +0.823
+Osius-Rojek         0.032    0.273    0.800    0.887    0.788  +0.756
+le-Cessie           0.041    0.152    0.672    0.978    0.997  +0.956
+-- own family --
+EF                  0.022    0.049    0.366    0.830    0.975  +0.953
+DEF.poly2           0.048    0.232    0.784    0.987    0.999  +0.951
+DEF.poly3           0.053    0.197    0.722    0.976    0.997  +0.944
+DEF.stukel          0.029    0.233    0.718    0.957    0.993  +0.964
+A.poly              0.028    0.244    0.781    0.989    1.000  +0.972
+A.spline            0.039    0.233    0.710    0.975    0.998  +0.959
+  block .bin deleted
+--- S2_n500_s102000 ---
+
+[LIU Setting 2, n=500, seed=102000]  RAW rejection at nom
+[LIU Setting 2, n=500, seed=102000]  RAW rejection at nominal .05
+arm                  size   C=0.25    C=0.5   C=0.75      C=1    rise
+DEEP                0.037    0.949    0.838    0.643    0.470  +0.433 *
+CCT-8               0.051    0.977    1.000    1.000    1.000  +0.949
+HL                  0.039    0.331    0.608    0.512    0.381  +0.342
+HL-equalwidth       0.034    0.306    0.596    0.520    0.377  +0.343
+Pigeon-Heyse        0.023    0.275    0.565    0.453    0.338  +0.315
+Tsiatis             0.058    0.635    0.998    0.998    0.999  +0.941
+Xie                 0.022    0.597    0.994    0.998    1.000  +0.978
+Stukel              0.036    0.471    0.741    0.660    0.486  +0.450
+Osius-Rojek         0.048    0.496    0.784    0.780    0.644  +0.596
+le-Cessie           0.044    0.995    1.000    1.000    1.000  +0.956
+-- own family --
+EF                  0.038    0.301    0.605    0.511    0.381  +0.343
+DEF.poly2           0.037    0.532    0.773    0.672    0.507  +0.470
+DEF.poly3           0.041    0.499    0.727    0.631    0.462  +0.421
+DEF.stukel          0.030    0.526    0.751    0.588    0.480  +0.450
+A.poly              0.053    0.997    1.000    1.000    1.000  +0.947
+A.spline            0.056    0.996    1.000    1.000    1.000  +0.944
+
+  LIU2 (Setting 2 only): DEEP rise = +0.433  [PASS vs the frozen +.15 bar]
+  external rises: HL +0.342  HL-equalwidth +0.343  Pigeon-Heyse +0.315  Tsiatis +0.941  Xie +0.978  Stukel +0.450  Osius-Rojek +0.596  le-Cessie +0.956
+Traceback (most recent call last):
+  File "C:\Users\ebrah\.gemini\Projects\PDFs\Paper_Ebrahim_Frangiton\paper_deepgof\code\liu_score.py", line 116, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\ebrah\.gemini\Projects\PDFs\Paper_Ebrahim_Frangiton\paper_deepgof\code\liu_score.py", line 112, in main
+    os.remove(os.path.join(d, "blk_maps.bin")); print("  block .bin deleted")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof\\results/liu/S2_n500_s102000/blk_maps.bin'
+--- S3_n100_s102000 ---
+
+[LIU Setting 3, n=100, seed=102000]  RAW rejection at nominal .05
+arm                  size   C=0.25    C=0.5   C=0.75      C=1    rise
+DEEP                0.055    0.072    0.152    0.260    0.368  +0.313 *
+CCT-8               0.363    0.274    0.352    0.519    0.648  +0.285
+HL                  0.035    0.053    0.155    0.308    0.422  +0.387
+HL-equalwidth       0.025    0.051    0.101    0.142    0.176  +0.151
+Pigeon-Heyse        0.022    0.033    0.122    0.250    0.375  +0.353
+Tsiatis             0.055    0.085    0.188    0.344    0.494  +0.439
+Xie                 0.023    0.054    0.155    0.329    0.459  +0.436
+Stukel              0.013    0.065    0.211    0.420    0.566  +0.553
+Osius-Rojek         0.457    0.386    0.414    0.476    0.558  +0.101
+le-Cessie           0.051    0.103    0.223    0.434    0.562  +0.511
+-- own family --
+EF                  0.036    0.040    0.104    0.164    0.217  +0.181
+DEF.poly2           0.052    0.128    0.255    0.407    0.515  +0.463
+DEF.poly3           0.047    0.113    0.217    0.373    0.485  +0.438
+DEF.stukel          0.047    0.139    0.276    0.428    0.518  +0.471
+A.poly              0.056    0.097    0.241    0.385    0.545  +0.489
+A.spline            0.046    0.089    0.223    0.379    0.544  +0.498
+Traceback (most recent call last):
+  File "C:\Users\ebrah\.gemini\Projects\PDFs\Paper_Ebrahim_Frangiton\p
+[LIU Setting 3, n=500, seed=102000]  RAW rejection at nominal .05
+arm                  size   C=0.25    C=0.5   C=0.75      C=1    rise
+DEEP                0.055    0.152    0.485    0.828    0.969  +0.914 *
+CCT-8               0.135    0.354    0.847    0.984    1.000  +0.865
+HL                  0.031    0.161    0.583    0.893    0.972  +0.941
+HL-equalwidth       0.027    0.192    0.580    0.780    0.863  +0.836
+Pigeon-Heyse        0.015    0.121    0.519    0.862    0.963  +0.948
+Tsiatis             0.044    0.172    0.651    0.940    0.991  +0.947
+Xie             Traceback (most recent call last):
+  File "C:\Users\ebrah\.gemini\Projects\PDFs\Paper_Ebrahim_Frangiton\paper_deepgof\code\liu_score.py", line 116, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\ebrah\.gemini\Projects\PDFs\Paper_Ebrahim_Frangiton\paper_deepgof\code\liu_score.py", line 51, in main
+    M = np.fromfile(os.path.join(d, "blk_maps.bin"), dtype=np.float32).reshape(nd, B+1, K*K)
+        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof\\results/liu/S3_n500_s102000/blk_maps.bin'
+            0.048    0.240    0.766    0.962    0.997  +0.949
+  block .bin deleted
+FAILED results/liu/S3_n500_s102000/
+--- S3_n50_s102000 ---
+
+[LIU Setting 3, n=50,
+[LIU Setting 3, n=50, seed=102000]  RAW rejection at nominal .05
+arm                  size   C=0.25    C=0.5   C=0.75      C=1    rise
+DEEP                0.050    0.064    0.092    0.149    0.233  +0.183 *
+CCT-8               0.427    0.341    0.298    0.394    0.487  +0.060
+HL                  0.037    0.048    0.099    0.171    0.293  +0.256
+HL-equalwidth       0.021    0.035    0.055    0.078    0.090  +0.069
+Pigeon-Heyse        0.021    0.028    0.075    0.134    0.245  +0.224
+Tsiatis             0.056    0.088    0.132    0.239    0.359  +0.303
+Xie                 0.034    0.049    0.099    0.179    0.304  +0.270
+Stukel              0.017    0.046    0.109    0.246    0.360  +0.343
+Osius-Rojek         0.498    0.401    0.344    0.390    0.400  -0.098
+le-Cessie           0.049    0.070    0.115    0.231    0.337  +0.288
+-- own family --
+EF                  0.031    0.029    0.051    0.045    0.089  +0.058
+DEF.poly2           0.065    0.070    0.144    0.260    0.335  +0.270
+DEF.poly3           0.056    0.076    0.129    0.245    0.308  +0.252
+DEF.stukel          0.069    0.085    0.156    0.273    0.335  +0.266
+A.poly              0.053    0.071    0.136    0.238    0.318  +0.265
+A.spline            0.053    0.080    0.133    0.228    0.330  +0.277
+Traceback (most recent call last):
+  File "C:\Users\ebrah\.gemini\Projects\PDFs\Paper_Ebrahim_Frangiton\paper_deepgof\code\liu_score.py", line 116, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\ebrah\.gemini\Projects\PDFs\Paper_Ebrahim_Frangiton\paper_deepgof\code\liu_score.py", line 112, in main
+    os.remove(os.path.join(d, "blk_maps.bin")); print("  block .bin deleted")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof\\results/liu/S3_n50_s102000/blk_maps.bin'
+--- S4_n100_s102000 ---
+
+[LIU Setting 4, n=100, seed=102000]  RAW rejection at nominal .05
+arm                  size   C=0.25    C=0.5   C=0.75      C=1    rise
+DEEP                0.050    0.429    0.927    0.995    1.000  +0.950 *
+CCT-8               0.547    0.895    1.000    1.000    1.000  +0.453
+HL                  0.039    0.228    0.587    0.701    0.737  +0.698
+HL-equalwidth       0.056    0.305    0.630    0.675    0.639  +0.583
+Pigeon-Heyse        0.019    0.163    0.536    0.652    0.702  +0.683
+Tsiatis             0.043    0.428    0.950    0.998    1.000  +0.957
+Xie                 0.029    0.388    0.948    0.997    1.000  +0.971
+Stukel              0.068    0.627    0.820    0.811    0.797  +0.729
+Osius-Rojek         0.625    0.853    0.963    0.984    0.993  +0.368
+le-Cessie           0.073    0.677    0.997    1.000    1.000  +0.927
+-- own family --
+EF                  0.040    0.226    0.591    0.700    0.738  +0.698
+DEF.poly2           0.043    0.531    0.773    0.804    0.812  +0.769
+DEF.poly3           0.047    0.434    0.729    0.791    0.793  +0.746
+DEF.stukel          0.040    0.382    0.697    0.770    0.776  +0.736
+A.poly              0.056    0.756    0.998    1.000    1.000  +0.944
+A.spline            0.057    0.572    0.995    1.000    1.000  +0.943
+Traceback (most recent call last):
+  File "C:\Users\ebrah\.gemini\Projects\PDFs\Paper_Ebrahim_Frangiton\
+[LIU Setting 4, n=500, seed=102000]  RAW rejection at nominal .05
+arm                  size   C=0.25    C=0.5   C=0.75      C=1    rise
+DEEP                0.046    0.996    1.000    1.000    1.000  +0.954 *
+CCT-8               0.193    1.000    1.000    1.000    1.000  +0.807
+HL                  0.060    0.984    0.998    0.983    0.928  +0.868
+HL-equalwidth       0.056    0.985    0.997    0.949    0.806  +0.750
+Pigeon-Heyse        0.035    0.977    0.997    0.981    0.924  +0.889
+Tsiatis             0.042    0.999    1.000    1.000    1.000  +0.958
+Xie              Traceback (most recent call last):
+  File "C:\Users\ebrah\.gemini\Projects\PDFs\Paper_Ebrahim_Frangiton\paper_deepgof\code\liu_score.py", line 116, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\ebrah\.gemini\Projects\PDFs\Paper_Ebrahim_Frangiton\paper_deepgof\code\liu_score.py", line 51, in main
+    M = np.fromfile(os.path.join(d, "blk_maps.bin"), dtype=np.float32).reshape(nd, B+1, K*K)
+        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof\\results/liu/S4_n500_s102000/blk_maps.bin'
+           0.044    1.000    1.000    1.000    1.000  +0.956
+  block .bin deleted
+--- S4_n50_s102000 ---
+
+[LIU Setting 4, n=50, seed=102000]  RAW rejection at nominal .05
+arm                  size   C=0.25    C=0.5   C=0.75      C=1    rise
+DEEP                0.047    0.200    0.522    0.732    0.875  +0.828 *
+CCT-8               0.576    0.783    0.963    0.992    1.000  +0.424
+HL                  0.053    0.094    0.273    0.380    0.478  +0.425
+HL-equalwidth       0.058    0.113    0.331    0.429    0.484  +0.426
+Pigeon-Heyse        0.027    0.058    0.208    0.314    0.414  +0.387
+Tsiatis             0.047    0.181    0.589    0.825    0.948  +0.901
+Xie                 0.029    0.157    0.587    0.846    0.940  +0.911
+Stukel              0.080    0.324    0.590    0.656    0.678  +0.598
+Osius-Rojek         0.666    0.824    0.919    0.964    0.982  +0.316
+le-Cessie           0.055    0.361    0.849    0.967    0.998  +0.943
+-- own family --
+EF                  0.049    0.096    0.269    0.376    0.476  +0.427
+DEF.poly2           0.065    0.250    0.535    0.657    0.681  +0.616
+DEF.poly3           0.059    0.182    0.465    0.593    0.647  +0.588
+DEF.stukel          0.055    0.169    0.432    0.575    0.621  +0.566
+A.poly              0.058    0.357    0.884    0.987    1.000  +0.942
+A.spline            0.063    0.258    0.764    0.947    0.996  +0.933
+Traceback (most recent call last):
+  File "C:\Users\ebrah\.gemini\Projects\PDFs\Paper_Ebrahim_Frangiton\paper_deepgof\code\liu_score.py", line 116, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\ebrah\.gemini\Projects\PDFs\Paper_Ebrahim_Frangiton\paper_deepgof\code\liu_score.py", line 112, in main
+    os.remove(os.path.join(d, "blk_maps.bin")); print("  block .bin deleted")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof\\results/liu/S4_n50_s102000/blk_maps.bin'
+=== SCORING DONE ===
+FAILED results/liu/S4_n50_s102000/
+=== SCORING DONE ===

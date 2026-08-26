@@ -1,0 +1,91 @@
+=== BLOCK seed=101000 n=50  14:50:29 ===
+PB block seed=101000 n=50 | null 2000, rand 1000, alt 2000 x3 | B=199 | 12 workers
+PB block COMPLETE: 9000 datasets (9000 requested), 6.1 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/probit/s101000_n50
+[s101000_n50] n=50 seed=101000 | train 2000 | held-out null 1000 | probit=2000 probit_extreme=2000 cloglog=2000
+   mix 1.0: score-AUC 0.5487  deployed size 0.0490
+   mix 0.5: score-AUC 0.5389  deployed size 0.0470
+   probit          matched: DEEP 0.0362 | best-of-11 0.0510 (A.spline) | CCT 0.0000   -> vs11 -0.0148  vsCCT +0.0362
+   probit_extreme  matched: DEEP 0.0278 | best-of-11 0.0350 (HL-equalwidth) | CCT 0.0000   -> vs11 -0.0072  vsCCT +0.0278
+   cloglog         matched: DEEP 0.0297 | best-of-11 0.0630 (HL-equalwidth) | CCT 0.0000   -> vs11 -0.0333  vsCCT +0.0297
+   block .bin deleted (summary + p-values retained)
+=== BLOCK seed=101000 n=100  14:56:57 ===
+PB block seed=101000 n=100 | null 2000, rand 1000, alt 2000 x3 | B=199 | 12 workers
+PB block COMPLETE: 9000 datasets (9000 requested), 6.8 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/probit/s101000_n100
+[s101000_n100] n=100 seed=101000 | train 2000 | held-out null 1000 | probit=2000 probit_extreme=2000 cloglog=2000
+   mix 1.0: score-AUC 0.5323  deployed size 0.0510
+   mix 0.5: score-AUC 0.5568  deployed size 0.0520
+   probit          matched: DEEP 0.0614 | best-of-11 0.0580 (A.poly) | CCT 0.0420   -> vs11 +0.0034  vsCCT +0.0194
+   probit_extreme  matched: DEEP 0.0443 | best-of-11 0.0490 (HL-equalwidth) | CCT 0.0375   -> vs11 -0.0047  vsCCT +0.0068
+   cloglog         matched: DEEP 0.0645 | best-of-11 0.1065 (DEF.poly2) | CCT 0.0545   -> vs11 -0.0420  vsCCT +0.0100
+   block .bin deleted (summary + p-values retained)
+=== BLOCK seed=101000 n=200  15:04:08 ===
+PB block seed=101000 n=200 | null 2000, rand 1000, alt 2000 x3 | B=199 | 12 workers
+PB block COMPLETE: 9000 datasets (9000 requested), 8.0 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/probit/s101000_n200
+[s101000_n200] n=200 seed=101000 | train 2000 | held-out null 1000 | probit=2000 probit_extreme=2000 cloglog=2000
+   mix 1.0: score-AUC 0.5034  deployed size 0.0570
+   mix 0.5: score-AUC 0.5768  deployed size 0.0570
+   probit          matched: DEEP 0.0328 | best-of-11 0.0480 (Tsiatis) | CCT 0.0370   -> vs11 -0.0152  vsCCT -0.0042
+   probit_extreme  matched: DEEP 0.0317 | best-of-11 0.0520 (HL-equalwidth) | CCT 0.0340   -> vs11 -0.0203  vsCCT -0.0023
+   cloglog         matched: DEEP 0.0226 | best-of-11 0.2485 (DEF.poly2) | CCT 0.1145   -> vs11 -0.2259  vsCCT -0.0919
+   block .bin deleted (summary + p-values retained)
+=== BLOCK seed=102000 n=50  15:12:29 ===
+PB block seed=102000 n=50 | null 2000, rand 1000, alt 2000 x3 | B=199 | 12 workers
+PB block COMPLETE: 9000 datasets (9000 requested), 6.4 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/probit/s102000_n50
+[s102000_n50] n=50 seed=102000 | train 2000 | held-out null 1000 | probit=2000 probit_extreme=2000 cloglog=2000
+   mix 1.0: score-AUC 0.5724  deployed size 0.0430
+   mix 0.5: score-AUC 0.5054  deployed size 0.0530
+   probit          matched: DEEP 0.0440 | best-of-11 0.0580 (Pigeon-Heyse) | CCT 0.0360   -> vs11 -0.0140  vsCCT +0.0080
+   probit_extreme  matched: DEEP 0.0230 | best-of-11 0.0405 (HL-equalwidth) | CCT 0.0260   -> vs11 -0.0175  vsCCT -0.0030
+   cloglog         matched: DEEP 0.0155 | best-of-11 0.0660 (HL-equalwidth) | CCT 0.0325   -> vs11 -0.0505  vsCCT -0.0170
+   block .bin deleted (summary + p-values retained)
+=== BLOCK seed=102000 n=100  15:19:12 ===
+PB block seed=102000 n=100 | null 2000, rand 1000, alt 2000 x3 | B=199 | 12 workers
+PB block COMPLETE: 9000 datasets (9000 requested), 6.8 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/probit/s102000_n100
+[s102000_n100] n=100 seed=102000 | train 2000 | held-out null 1000 | probit=2000 probit_extreme=2000 cloglog=2000
+   mix 1.0: score-AUC 0.5231  deployed size 0.0400
+   mix 0.5: score-AUC 0.5649  deployed size 0.0510
+   probit          matched: DEEP 0.0491 | best-of-11 0.0715 (EF) | CCT 0.0430   -> vs11 -0.0224  vsCCT +0.0061
+   probit_extreme  matched: DEEP 0.0460 | best-of-11 0.0485 (HL-equalwidth) | CCT 0.0330   -> vs11 -0.0025  vsCCT +0.0130
+   cloglog         matched: DEEP 0.1021 | best-of-11 0.1095 (DEF.poly2) | CCT 0.0455   -> vs11 -0.0074  vsCCT +0.0566
+   block .bin deleted (summary + p-values retained)
+=== BLOCK seed=102000 n=200  15:26:23 ===
+PB block seed=102000 n=200 | null 2000, rand 1000, alt 2000 x3 | B=199 | 12 workers
+PB block COMPLETE: 9000 datasets (9000 requested), 8.2 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/probit/s102000_n200
+[s102000_n200] n=200 seed=102000 | train 2000 | held-out null 1000 | probit=2000 probit_extreme=2000 cloglog=2000
+   mix 1.0: score-AUC 0.5080  deployed size 0.0540
+   mix 0.5: score-AUC 0.5411  deployed size 0.0560
+   probit          matched: DEEP 0.0485 | best-of-11 0.0515 (DEF.poly3) | CCT 0.0395   -> vs11 -0.0030  vsCCT +0.0090
+   probit_extreme  matched: DEEP 0.0493 | best-of-11 0.0765 (HL-equalwidth) | CCT 0.0350   -> vs11 -0.0272  vsCCT +0.0143
+   cloglog         matched: DEEP 0.1249 | best-of-11 0.2535 (DEF.poly2) | CCT 0.1070   -> vs11 -0.1286  vsCCT +0.0179
+   block .bin deleted (summary + p-values retained)
+=== BLOCK seed=103000 n=50  15:34:53 ===
+PB block seed=103000 n=50 | null 2000, rand 1000, alt 2000 x3 | B=199 | 12 workers
+PB block COMPLETE: 9000 datasets (9000 requested), 6.2 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/probit/s103000_n50
+[s103000_n50] n=50 seed=103000 | train 2000 | held-out null 1000 | probit=2000 probit_extreme=2000 cloglog=2000
+   mix 1.0: score-AUC 0.5675  deployed size 0.0480
+   mix 0.5: score-AUC 0.5628  deployed size 0.0540
+   probit          matched: DEEP 0.0443 | best-of-11 0.0530 (HL) | CCT 0.0490   -> vs11 -0.0087  vsCCT -0.0047
+   probit_extreme  matched: DEEP 0.0272 | best-of-11 0.0565 (HL-equalwidth) | CCT 0.0270   -> vs11 -0.0293  vsCCT +0.0002
+   cloglog         matched: DEEP 0.0280 | best-of-11 0.0860 (HL-equalwidth) | CCT 0.0435   -> vs11 -0.0580  vsCCT -0.0155
+   block .bin deleted (summary + p-values retained)
+=== BLOCK seed=103000 n=100  15:41:24 ===
+PB block seed=103000 n=100 | null 2000, rand 1000, alt 2000 x3 | B=199 | 12 workers
+PB block COMPLETE: 9000 datasets (9000 requested), 7.5 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/probit/s103000_n100
+[s103000_n100] n=100 seed=103000 | train 2000 | held-out null 1000 | probit=2000 probit_extreme=2000 cloglog=2000
+   mix 1.0: score-AUC 0.5361  deployed size 0.0440
+   mix 0.5: score-AUC 0.5875  deployed size 0.0450
+   probit          matched: DEEP 0.0432 | best-of-11 0.0790 (Tsiatis) | CCT 0.0535   -> vs11 -0.0358  vsCCT -0.0103
+   probit_extreme  matched: DEEP 0.0504 | best-of-11 0.0450 (Tsiatis) | CCT 0.0335   -> vs11 +0.0054  vsCCT +0.0169
+   cloglog         matched: DEEP 0.0865 | best-of-11 0.1215 (DEF.poly2) | CCT 0.0555   -> vs11 -0.0350  vsCCT +0.0310
+   block .bin deleted (summary + p-values retained)
+=== BLOCK seed=103000 n=200  15:49:12 ===
+PB block seed=103000 n=200 | null 2000, rand 1000, alt 2000 x3 | B=199 | 12 workers
+PB block COMPLETE: 9000 datasets (9000 requested), 8.5 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/probit/s103000_n200
+[s103000_n200] n=200 seed=103000 | train 2000 | held-out null 1000 | probit=2000 probit_extreme=2000 cloglog=2000
+   mix 1.0: score-AUC 0.5129  deployed size 0.0490
+   mix 0.5: score-AUC 0.5782  deployed size 0.0530
+   probit          matched: DEEP 0.0568 | best-of-11 0.0540 (Tsiatis) | CCT 0.0385   -> vs11 +0.0028  vsCCT +0.0183
+   probit_extreme  matched: DEEP 0.0713 | best-of-11 0.0510 (HL-equalwidth) | CCT 0.0395   -> vs11 +0.0203  vsCCT +0.0318
+   cloglog         matched: DEEP 0.1716 | best-of-11 0.2295 (DEF.poly2) | CCT 0.0895   -> vs11 -0.0579  vsCCT +0.0821
+   block .bin deleted (summary + p-values retained)
+=== ALL BLOCKS DONE 15:58:01 ===

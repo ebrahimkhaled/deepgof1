@@ -1,0 +1,45 @@
+SKIP results/liu/S2_n100_s101000
+SKIP results/liu/S2_n50_s101000
+SKIP results/liu/S2_n500_s101000
+SKIP results/liu/S1_n100_s101000
+SKIP results/liu/S1_n50_s101000
+SKIP results/liu/S1_n500_s101000
+SKIP results/liu/S3_n100_s101000
+SKIP results/liu/S3_n50_s101000
+SKIP results/liu/S3_n500_s101000
+SKIP results/liu/S4_n100_s101000
+SKIP results/liu/S4_n50_s101000
+SKIP results/liu/S4_n500_s101000
+SKIP results/liu/S2_n100_s102000
+SKIP results/liu/S2_n50_s102000
+=== LIU S2 n=500 seed=102000  00:19:49 ===
+LIU Setting 2 | n=500 seed=102000 | C in {0,0.25,0.5,0.75,1} | 7000 jobs | K=6 B=199
+LIU block COMPLETE: 7000/7000 datasets, 13.5 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/liu/S2_n500_s102000
+=== LIU S1 n=100 seed=102000  00:33:42 ===
+LIU Setting 1 | n=100 seed=102000 | C in {0,0.25,0.5,0.75,1} | 7000 jobs | K=6 B=199
+LIU block COMPLETE: 7000/7000 datasets, 6.2 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/liu/S1_n100_s102000
+=== LIU S1 n=50 seed=102000  00:40:12 ===
+LIU Setting 1 | n=50 seed=102000 | C in {0,0.25,0.5,0.75,1} | 7000 jobs | K=6 B=199
+LIU block COMPLETE: 7000/7000 datasets, 6.1 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/liu/S1_n50_s102000
+=== LIU S1 n=500 seed=102000  00:46:40 ===
+LIU Setting 1 | n=500 seed=102000 | C in {0,0.25,0.5,0.75,1} | 7000 jobs | K=6 B=199
+LIU block COMPLETE: 7000/7000 datasets, 11.7 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/liu/S1_n500_s102000
+=== LIU S3 n=100 seed=102000  00:58:40 ===
+LIU Setting 3 | n=100 seed=102000 | C in {0,0.25,0.5,0.75,1} | 7000 jobs | K=6 B=199
+LIU block COMPLETE: 6988/7000 datasets, 7.0 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/liu/S3_n100_s102000
+=== LIU S3 n=50 seed=102000  01:05:58 ===
+LIU Setting 3 | n=50 seed=102000 | C in {0,0.25,0.5,0.75,1} | 7000 jobs | K=6 B=199
+LIU block COMPLETE: 6982/7000 datasets, 8.9 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/liu/S3_n50_s102000
+=== LIU S3 n=500 seed=102000  01:15:13 ===
+LIU Setting 3 | n=500 seed=102000 | C in {0,0.25,0.5,0.75,1} | 7000 jobs | K=6 B=199
+LIU block COMPLETE: 6994/7000 datasets, 12.5 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/liu/S3_n500_s102000
+=== LIU S4 n=100 seed=102000  01:28:01 ===
+LIU Setting 4 | n=100 seed=102000 | C in {0,0.25,0.5,0.75,1} | 7000 jobs | K=6 B=199
+LIU block COMPLETE: 7000/7000 datasets, 6.2 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/liu/S4_n100_s102000
+=== LIU S4 n=50 seed=102000  01:34:37 ===
+LIU Setting 4 | n=50 seed=102000 | C in {0,0.25,0.5,0.75,1} | 7000 jobs | K=6 B=199
+LIU block COMPLETE: 7000/7000 datasets, 5.8 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/liu/S4_n50_s102000
+=== LIU S4 n=500 seed=102000  01:40:45 ===
+LIU Setting 4 | n=500 seed=102000 | C in {0,0.25,0.5,0.75,1} | 7000 jobs | K=6 B=199
+LIU block COMPLETE: 7000/7000 datasets, 12.1 min -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/results/liu/S4_n500_s102000
+=== LIU GENERATION DONE 2026-08-23 01:53:12 ===
