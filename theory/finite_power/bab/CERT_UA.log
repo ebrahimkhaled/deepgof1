@@ -1,0 +1,10 @@
+stripe_x1: certified t = 38.343 (07_pcrown 40.064)  z=4.22 charge=0.0450 (union 0.0782) tail=0.0047  [124s]
+   validation: used-relaxation violations 0.00490 (budget 0.04502), lower-fn breaches 0 (min gap 52.589), MC power 1.0000 -> ok
+step_x1: certified t = 30.779 (07_pcrown 32.067)  z=4.22 charge=0.0479 (union 0.0782) tail=0.0018  [74s]
+   validation: used-relaxation violations 0.00542 (budget 0.04785), lower-fn breaches 0 (min gap 51.204), MC power 1.0000 -> ok
+saddle: certified t = 44.844 (07_pcrown 47.330)  z=4.18 charge=0.0465 (union 0.0933) tail=0.0032  [69s]
+   validation: used-relaxation violations 0.00540 (budget 0.04652), lower-fn breaches 0 (min gap 40.589), MC power 1.0000 -> ok
+diffuse: certified t = 32.828 (07_pcrown 34.372)  z=4.20 charge=0.0448 (union 0.0854) tail=0.0049  [68s]
+   validation: used-relaxation violations 0.00554 (budget 0.04483), lower-fn breaches 0 (min gap 37.416), MC power 1.0000 -> ok
+random: certified t = 58.988 (07_pcrown 62.468)  z=4.16 charge=0.0459 (union 0.1018) tail=0.0040  [65s]
+   validation: used-relaxation violations 0.00488 (budget 0.04589), lower-fn breaches 0 (min gap 30.547), MC power 1.0000 -> ok

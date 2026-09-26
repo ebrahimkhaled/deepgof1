@@ -1,11 +1,12 @@
 {
-  "title": "DeepGOF-1: pretrained goodness-of-fit test for logistic regression — weights, training corpus, benchmark harness and per-replicate results",
+  "title": "Auditing a Frozen Neural Goodness-of-Fit Test for Logistic Regression: Validity, Certified Consistency and Local Power of DeepGOF-1",
+  "version": "2.0.0",
   "upload_type": "software",
-  "description": "<p>The complete research compendium for <em>DeepGOF-1: A Pretrained Convolutional Goodness-of-Fit Test for Logistic Regression with a Computable Consistency Certificate</em>.</p><p>DeepGOF-1 is a goodness-of-fit test for logistic regression whose statistic is a convolutional network trained once, offline, on simulated departures and shipped frozen (18,273 parameters). The network reads the fitted model's <em>residual map</em> — a 6&times;6 grid of standardized residual sums over the ranks of the two strongest covariates — and the p-value is the rank of the observed score inside the analyst's own parametric bootstrap, so the level is a property of the calibration rather than of what the network learned.</p><p>This deposit contains everything needed to reproduce the paper and to train a successor:</p><ul><li><strong>R/</strong> and <strong>inst/extdata/</strong> — the deployable test in pure base R with the frozen weights and a cross-language verification bench (base R reproduces the training framework to 5e-11).</li><li><strong>training/</strong> — the exact training corpus (8,400 labelled residual maps), the corpus generator (the one file a successor edits), the training script and the exporter, with the row-major/column-major porting trap documented.</li><li><strong>benchmark/</strong> — the thirteen-arm evaluation harness: the reproduced Liu et al. (2024) settings, a nine-scenario severity lattice, a sixty-cell design grid, and the consistency-certificate scripts.</li><li><strong>results/</strong> — every per-replicate p-value behind every table and figure in the paper.</li><li><strong>speckit/</strong> — the frozen pre-declarations for every gate, so a successor version is judged against the same criteria, including the criteria this version failed.</li></ul><p>The deployable test alone is also distributed as <code>deepgof1()</code> in the R package <code>ebrahim.gof</code> (version 2.6.0 and later). Code is MIT-licensed; deposited results, corpora and weights are CC-BY-4.0.</p>",
+  "description": "<p>Reproducibility archive (version 2) for the paper <em>Auditing a Frozen Neural Goodness-of-Fit Test for Logistic Regression: Validity, Certified Consistency and Local Power of DeepGOF-1</em>. Version 1.0.0 of the DeepGOF-1 archive is <a href=\"https://doi.org/10.5281/zenodo.22113220\">10.5281/zenodo.22113220</a>.</p><p>DeepGOF-1 is a goodness-of-fit test for logistic regression whose statistic is a convolutional network trained once, offline, on simulated departures and shipped frozen (18,273 parameters). The network reads the fitted model's <em>residual map</em>, a 6&times;6 grid of standardized residual sums over the ranks of the two strongest covariates, and the p-value is the rank of the observed score inside the analyst's own parametric bootstrap (B = 199).</p><p><strong>Contents.</strong></p><ul><li><strong>R/, inst/extdata/</strong>: the deployable test in base R with the frozen weights; ties among covariate values are broken at random, once per call, as in ebrahim.gof 2.8.0.</li><li><strong>training/</strong>: the training corpus (8,400 labelled maps), its generator, the network and training loop, the export to R and the cross-language check.</li><li><strong>benchmark/</strong>: self-contained harnesses for the two simulation studies (the 60-cell design grid and the four settings of Liu et al. 2024), with a smoke test that regenerates datasets and reproduces the deposited p-values exactly.</li><li><strong>results/</strong>: every per-replicate p-value behind the benchmark tables and figures, and the FDIC application's results.</li><li><strong>theory/</strong>: scripts, raw simulation output and notes behind the theoretical results of the paper and of its Online Resource 1 (validity and the finite-sample size bound, the data-computable calibration-gap bound and its rate, conditional consistency and the blind cone, local asymptotic power and covariates that carry no signal, finite-sample power certificates, the Neyman&ndash;Pearson optimality gap, one corrupted record at small n, the added comparison tests, the simulation with two active covariates among ten, the real-design check, the tie-breaking study).</li><li><strong>bagoft/</strong>: the paired comparison with BAGofT: every per-replicate p-value, timings, the verification of the fast implementation and the one-line repair the released BAGofT code needs for a single-covariate model.</li><li><strong>application/fdic/</strong>: the bank-failure application, rebuilt from two keyless FDIC BankFind API calls.</li><li><strong>tables/</strong>: one script that recomputes every generated number of the paper's tables from the deposited files.</li><li><strong>figures/</strong>: the scripts of the paper's figures.</li></ul><p>README.md maps every table and figure of the paper and every result of Online Resource 1 to its files. The deployable test alone is also distributed as <code>deepgof1()</code> in the R package <code>ebrahim.gof</code> (version 2.8.0 or later). Code is MIT-licensed; data, results, corpora and weights are CC BY 4.0 (see LICENSE).</p>",
   "creators": [
     {
       "name": "Ebrahim, Ebrahim Khaled",
-      "affiliation": "Department of Statistics, Faculty of Commerce, Alexandria University",
+      "affiliation": "Department of Applied Statistics, Faculty of Business, Alexandria University",
       "orcid": "0009-0006-7839-8778"
     }
   ],
@@ -19,15 +20,26 @@
     "Monte Carlo test",
     "convolutional neural network",
     "calibration",
+    "local asymptotic power",
+    "Neyman-Pearson",
+    "neural network verification",
+    "robustness",
     "reproducibility"
   ],
   "language": "eng",
   "related_identifiers": [
     {
-      "identifier": "https://github.com/ebrahimkhaled/ebrahim.gof",
+      "identifier": "10.5281/zenodo.22113220",
+      "relation": "isNewVersionOf",
+      "scheme": "doi",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.32614/CRAN.package.ebrahim.gof",
       "relation": "isSupplementTo",
-      "scheme": "url"
+      "scheme": "doi",
+      "resource_type": "software"
     }
   ],
-  "notes": "The training corpus and the deposited per-replicate results are large by design: they exist so that a referee can check any number in the paper without rerunning multi-CPU-day simulations, and so that a successor version (DeepGOF-2) can be trained by editing a single file and evaluated against the same frozen criteria."
+  "notes": "The per-replicate results are large by design: they let a reader check any number in the paper without rerunning simulations that took several CPU-days. Scripts under theory/ that were run in place carry path constants of the form /path/to/project/...; README.md says which folder of this archive each one refers to."
 }

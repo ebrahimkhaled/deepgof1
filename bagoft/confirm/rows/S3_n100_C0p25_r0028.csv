@@ -1,0 +1,2 @@
+"setting","n","C","rep","seed","p","p_med","p_min","bag_pmin_stat","time_s","status","err","nsplits","nsim","ntree","impl","label"
+3,100,0.25,28,1711028,0.21,0.11,0.73,1.14548695340222e-06,78.99,"ok","",100,100,60,"bagoft_fast (identical to BAGofT 1.0.0, VERIFY_FAST.log)","CONFIRMATORY"

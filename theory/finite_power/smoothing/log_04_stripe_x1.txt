@@ -1,0 +1,9 @@
+stripe_x1: paper's t_emp (threshold T_HAT, power .95) = 5.5163
+stripe_x1: paper's t_emp (threshold T_HAT, power .95) = 5.5163
+stripe_x1: paper's t_emp (threshold T_HAT, power .95) = 5.5163
+  fixed target 0.95: t = 5.5466  (power there 0.9487, slope 0.0814/unit t, SE(t) = 0.0061)
+  fixed target 0.50: t = 3.3407  (power there 0.4994, slope 0.2800/unit t, SE(t) = 0.0040)
+  b199 target 0.95: t = 5.5935  (power there 0.9501, slope 0.0807/unit t, SE(t) = 0.0060)
+  b199 target 0.50: t = 3.3561  (power there 0.5004, slope 0.2797/unit t, SE(t) = 0.0040)
+  hat target 0.95: t = 5.5310  (power there 0.9484, slope 0.0825/unit t, SE(t) = 0.0060)
+stripe_x1 truth done in 3569 s

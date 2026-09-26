@@ -1,0 +1,9 @@
+check_proj_liu_c | 2026-09-24 17:38:34 
+Liu S1 n=50            max|A_c - A_R| std 5.51e-08, raw 4.33e-08 | rel diff in T std 4.92e-10, raw 4.96e-10 | R 0.05 s, C 0.01 s
+Liu S2 n=100           max|A_c - A_R| std 3.55e-14, raw 2.84e-14 | rel diff in T std 1.21e-16, raw 6.09e-16 | R 0.04 s, C 0.02 s
+Liu S3 n=50            max|A_c - A_R| std 3.08e-08, raw 3.04e-08 | rel diff in T std 1.92e-10, raw 6.89e-10 | R 0.02 s, C 0.00 s
+Liu S4 n=500           max|A_c - A_R| std 7.54e-10, raw 2.37e-09 | rel diff in T std 2.15e-14, raw 9.92e-14 | R 5.20 s, C 1.03 s
+Liu S2 n=500           max|A_c - A_R| std 1.42e-13, raw 1.71e-13 | rel diff in T std 1.75e-16, raw 1.03e-15 | R 5.32 s, C 1.12 s
+niche n=200 p=10       max|A_c - A_R| std 2.84e-14, raw 2.84e-14 | rel diff in T std 0.00e+00, raw 6.52e-16 | R 0.39 s, C 0.08 s
+niche n=500 p=10       max|A_c - A_R| std 1.14e-13, raw 1.14e-13 | rel diff in T std 8.60e-16, raw 1.21e-15 | R 5.71 s, C 1.39 s
+duplicated rows n=60   max|A_c - A_R| std 2.20e-08, raw 2.58e-08 | rel diff in T std 5.13e-11, raw 5.51e-11 | R 0.03 s, C 0.00 s

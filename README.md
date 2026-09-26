@@ -1,147 +1,232 @@
-# DeepGOF-1
+# DeepGOF-1: reproducibility archive, version 2
 
-[![DOI](https://zenodo.org/badge/1347367720.svg)](https://doi.org/10.5281/zenodo.22113219)
+Archive for the paper
 
-A pretrained goodness-of-fit test for logistic regression. The test statistic is a small
-convolutional network (18,273 frozen parameters) that reads the model's *residual map* — a 6×6
-grid of standardized residual sums over the ranks of the two strongest covariates — and the
-p-value is a rank inside the analyst's own parametric bootstrap, so **the level is a property of
-the calibration, not of what the network learned**.
+> Ebrahim, E. K. *Auditing a Frozen Neural Goodness-of-Fit Test for Logistic Regression: Validity,
+> Certified Consistency and Local Power of DeepGOF-1.*
 
-This is a **versioned first model**. Everything needed to train a better one — the corpus
-generator, the training code, the benchmark harness, and every per-replicate p-value behind the
-paper's tables — is in this tree, together with the frozen pre-declared criteria we were judged
-by, so a **DeepGOF-2 is judged the same way**.
+and its supplement (Online Resource 1). DeepGOF-1 is a goodness-of-fit test for logistic regression
+whose statistic is a small convolutional network (18,273 frozen parameters) that reads the fitted
+model's *residual map*, a 6 x 6 grid of standardized residual sums over the ranks of the two strongest
+covariates. The p-value is the rank of the observed score inside the analyst's own parametric
+bootstrap (B = 199), so the level is a property of the calibration, not of what the network learned.
 
----
+| DOI | what it identifies |
+|---|---|
+| 10.5281/zenodo.22113219 | concept DOI: always the newest version |
+| 10.5281/zenodo.22113220 | version 1.0.0, the first archive |
+| (shown on this record's page) | this version, 2.0.0: cite it to reproduce a number of the paper above |
+| 10.32614/CRAN.package.ebrahim.gof | the R package that distributes the deployable test as `deepgof1()` |
 
-## 0. Two ways in
+## What changed from version 1.0.0
 
-**Just want to run the test?** Install the R package -- the deployable test ships as
-`deepgof1()` in `ebrahim.gof` (>= 2.6.0), with the frozen weights inside:
+* The archive is organised around the paper above. Every table, figure and supplementary result maps
+  to files below (Sections 4 and 5 of this README).
+* **Ties.** `R/deepgof1.R` breaks ties among covariate values at random, once per call: a random
+  permutation of the rows is drawn only when some covariate column has a tied value, and the same
+  permutation serves the observed map and every bootstrap map. This is the rule of `ebrahim.gof` 2.8.0
+  and of the paper's Algorithm 1. With continuous covariates nothing is drawn and the p-value is
+  bit-identical to version 1.0.0 (checked against the package on untied, binary and rounded designs:
+  identical statistic, bootstrap scores and p-value for the same seed). `ties = "roworder"` restores
+  the earlier rule and exists only to reproduce numbers computed before the fix (see Section 6).
+* The benchmark harnesses are self-contained (`library(ebrahim.gof)`; no other project needed) and
+  compute the paper's arms. A smoke test regenerates datasets from their seeds and reproduces the
+  deposited p-values exactly.
+* The per-replicate files carry the paper's arms: Hosmer-Lemeshow (HL), HL equal-width,
+  Pigeon-Heyse, Stukel (the SstBoth form of Liu et al. 2024), Osius-Rojek, Stute-Zhu, mHL, GiViTI, the
+  projection test of Liu et al. (2024), BAGofT and DeepGOF-1.
+* New: `theory/` (the paper's theoretical results and their numerical checks), `tables/` (one script
+  regenerates every generated number of the tables), `bagoft/`, and the FDIC application in
+  `application/fdic/`.
+
+## 1. Quick start
+
+Pure base R for the test itself; no Python and no GPU.
 
 ```r
-install.packages("ebrahim.gof")     # or remotes::install_github("ebrahimkhaled/ebrahim.gof")
-library(ebrahim.gof)
-deepgof1(glm(y ~ x1 + x2, data = d, family = binomial()))
-```
-
-**Want to check the paper, or train a successor?** That is what this archive is for: the
-training corpus and its generator, the benchmark harness, every per-replicate p-value
-behind every table, and the frozen pre-declared criteria. Start at Section 3.
-
-## 1. How do I use the test from this archive?
-
-Pure base R. No Python, no GPU, no training, no tuning. One test ≈ 2–5 s.
-
-```r
-source("R/deepgof1.R")
+source("R/deepgof1.R")                      # from the archive root
 fit <- glm(y ~ x1 + x2, data = d, family = binomial())
-deepgof1(fit)
-#>  DeepGOF-1: pretrained residual-map goodness-of-fit test
-#>  S = 8.2852, B = 199, p-value = 0.0050
-#>  grid: 6 x 6 over ranks of x1 and x2
+set.seed(1); deepgof1(fit)                  # B = 199; report the seed when an axis has ties
 ```
 
-The p-value is `(1 + #{bootstrap scores >= observed}) / (B + 1)` with `B = 199`; a bootstrap
-refit that fails scores `+Inf`, which counts *against* rejection (the conservative direction).
-Run `Rscript release/smoke_test.R` (one level up) for a working example, and
-`Rscript training/VERIFY.R` to confirm the base-R forward pass matches PyTorch on the shipped
-weights (**agreement 4.6e-11**).
+or `install.packages("ebrahim.gof"); ebrahim.gof::deepgof1(fit)` (version 2.8.0 or later breaks ties at
+random; earlier versions break them by row order).
 
-## 2. How was it trained?
+| check | command (from the archive root) | expected |
+|---|---|---|
+| deployed test end to end | `Rscript smoke_test.R` | misspecified model p = .005; correct model p = .915 |
+| base R against the training framework | `Rscript training/VERIFY.R` | max difference 4.6e-11, PASS |
+| benchmark pipeline on tiny blocks | `sh benchmark/smoke_test.sh` | every regenerated p-value equals the deposit (difference 0) |
+| every generated number of the tables | `python tables/make_tables.py` | `tables/tables_generated.tex`, identical to the manuscript's |
+| FDIC adequacy calls, both tie rules | `Rscript application/fdic/fdic_tie_check.R` | fixed (random) rule identical to the deposit and the paper; row-order rule gives the pre-fix values |
 
-Once, offline, on simulated data. Two decisions carry the whole design:
+Software used: R 4.4.1 with `ebrahim.gof` 2.8.0, `brglm2`, `givitiR` 1.3 and `BAGofT` 1.0.0; Python 3
+with numpy, pandas, scipy, scikit-learn and PyTorch (training and the per-block networks only).
 
-- **Deployment-matched nulls.** The null class is *bootstrap replicates* — simulate from a
-  fitted model, refit, map — because that is exactly the object the deployed test compares
-  against. Training against plain correct-model data broke calibration in our sweeps: the score
-  learns to see the bootstrap itself (paper, Fig. 4; the score-AUC diagnostic).
-- **A versioned departure prior.** Alternatives come from ~100 random departure *families*
-  (quadratic, cubic, interaction, sine, bump, step, |x|, and index-type terms), amplitudes
-  scaled on the linear predictor. The prior is a first-class object: the same architecture
-  scored **+.090** under one prior and **−.071** under another. Ours is deposited verbatim as
-  `training/ship_corpus.csv` (8,400 labeled maps) and defined by `training/01_corpus.R`.
+## 2. Layout
 
-Architecture: `1×6×6 → Conv3×3(16) → Conv3×3(32) → MaxPool2 → Conv3×3(32) →
-GlobalMax⊕GlobalMean(64) → FC64 → FC1`, 25 epochs, Adam, BCE (`training/02_train.py`).
-Export to the R deployment format: `training/03_export_to_R.py` (read its port-trap note).
+| folder | contents |
+|---|---|
+| `R/` | `deepgof1.R` (the test) and `deepgof1_forward.R` (the forward pass in base R) |
+| `inst/extdata/` | frozen weights, standardizer, and the cross-language verification maps |
+| `training/` | `01_corpus.R` (corpus generator), `ship_corpus.csv` (the 8,400 labelled training maps), `02_train.py` (network and training loop), `03_export_to_R.py` (export; documents the row-major/column-major port trap), `VERIFY.R` |
+| `benchmark/` | `liu/` (Simulation II harness), `grid/` (Simulation I harness), `common/` (matched-level device, network), `theory/` (certificate and blind-cone checks), `smoke_test.sh` |
+| `results/` | `liu/` (24 blocks), `s3/` (60 blocks), `smalln/`, `fdic/`, `theory_blind_direction.csv`. The pooled summaries of the first run (`results/liu/AUGSCORE_INTERIM.csv`, `SUMMARY_AUG.csv`, `VERDICT.csv`, `AUGMENT_SUMMARY.csv`, and each block's `summary.csv`) are kept with the rows of the paper's arms; `tables/make_tables.py` recomputes Table 3 from the per-replicate files and checks it against `AUGSCORE_INTERIM.csv`. The column `proj_superseded` of `augment_pvalues.csv` is the first run's projection statistic (a different weight); it serves only as the pairing key of the corrected projection test |
+| `bagoft/` | `confirm/` (the paired comparison of Section 6.2), `explore/` (the earlier exploratory trial, the fast implementation and the repair) |
+| `application/fdic/` | FDIC data (from two keyless API calls) and the three scripts of the application |
+| `tables/` | `make_tables.py` (writes `tables_generated.tex` and `results/liu/TABLE2_SCORES.csv`), `stukel_na.py` |
+| `figures/` | the scripts of Figures 1, 2, 4 and 5 (Figure 3 is in `theory/local_power/irrelevant/`) |
+| `theory/` | one folder per theoretical question (Section 5); `_support/rdeploy/` holds the deployed forward pass, weights and scaler the theory scripts load |
 
-## 3. How do I make DeepGOF-2?
+### How the simulation p-values were produced
 
-1. Edit **`training/01_corpus.R`** — the one file a successor edits (change the departure
-   prior, the null class, the sample size, or the resolution `K`).
-2. `python training/02_train.py` on the new corpus; export with `training/03_export_to_R.py`.
-3. `Rscript training/VERIFY.R` — must print max |difference| < 1e-6, or do not deploy.
-4. Run the benchmark (`benchmark/`, see `benchmark/PORTING.md`) and **compare against the same
-   frozen criteria we did**: the pre-declarations in `speckit/` ship with this release exactly
-   so a successor cannot move the goalposts.
+* A **block** is one (design or setting, n, corpus seed). Datasets are generated from a deterministic seed
+  per replicate (written at the top of each harness), so any single replicate can be re-derived.
+* The classical arms are `ebrahim.gof` implementations; Stukel is the SstBoth form of Liu et al. (2024)
+  (`gof_stukel(form = "marginal")`), which is what the benchmark's Stukel column holds throughout.
+* The DeepGOF-1 column applies the deployed test (map, network, rank among B = 199 bootstrap maps) with
+  the network trained on the block's training corpus: half of the block's nulls, as bootstrap
+  replicates, against its random training departures (`kind = 1` rows), by `benchmark/liu/liu_score.py`
+  and `benchmark/grid/s3_score.py`. The corpus seeds (101000, 102000 and, in the grid, 103000) are the
+  paper's independent training corpora. In the grid, one network per (n, seed) is trained on design D1
+  and applied unchanged to D1-D4. The paired BAGofT comparison (`bagoft/confirm/`) reads these
+  per-block DeepGOF-1 p-values of corpus 101000 (`results/liu/*_s101000/deep_pvalues.csv`), and the
+  classifier (AUC) diagnostic of the paper's Section 3.1 is the `score_auc` column of the grid's
+  `summary.csv` files.
+* **Which network.** The benchmark simulations (Simulations I and II, with the BAGofT comparison)
+  therefore use per-block networks with the architecture and training loop of the shipped network, not
+  the shipped weights. Every other DeepGOF-1 result of the paper (Sections 3-4 and 7-9: theory checks,
+  local power, certificates, the simulation with two active covariates among ten and its real-design
+  check, the corrupted-record studies, FDIC) and of Online Resource 1 uses the shipped weights, loaded
+  from `inst/extdata/` by `R/deepgof1.R`, from the package, or from `theory/_support/rdeploy/weights.csv`
+  (the same file).
+* NA policy: in Table 3 (the Liu benchmark) each test is evaluated on the datasets where it returns a
+  p-value, for nulls and alternatives alike (`tables/make_tables.py`; the original convention, no
+  p-value = no rejection, is kept in the `*_na1` columns of `results/liu/TABLE2_SCORES.csv` and gives
+  Stukel's test 0.643 overall instead of 0.610). Elsewhere, and in each block's `summary.csv`, a test
+  that returns no p-value cannot reject (p = 1).
+  Matched power: each arm is randomized to exactly .05 on the block's held-out nulls
+  (`benchmark/common/matched_power.py`).
 
-The five measured directions most likely to pay (each with the deposit behind it, none
-guaranteed — one already failed once, as recorded):
+## 3. Reproducing
 
-1. **Representation, not learner:** p = 3 designs lose 3–4× what p = 2 does because the 2-D
-   grid discards a covariate. A permutation-invariant set network over (xᵢ, π̂ᵢ, rᵢ) removes the
-   projection entirely.
-2. **Corpus-bagging:** training-corpus variance dominated design comparisons (one cell moved
-   .0219→.1786 across three corpora). Bagging over M corpora shrinks it like √M.
-3. **Selection over the classical battery:** the Cauchy combination loses ~.057 to its own best
-   member. Our gate SEL attempt failed (−.0354) for a diagnosed reason — the selector predicted
-   which arm fires most extremely, not which has most matched-level power. The objective is
-   fixable; the gap is still there.
-4. **Conditioning on the sufficient statistic:** our probe was ruled an *invalid measurement*
-   (the AUC diagnostic had not converged: .509→.607 from 1.5k to 30k maps). Re-run at N ≈ 30,000
-   before drawing any conclusion.
-5. **Tune the departure prior alone** — no architecture change needed (see the ±.09/−.07 fact
-   above).
+| step | command | time |
+|---|---|---|
+| one Liu block | `LU_SET=2 LU_N=100 LU_SEED=101000 Rscript benchmark/liu/liu_grid.R`, then `python benchmark/liu/liu_score.py --dir results/liu/S2_n100_s101000`; Stute-Zhu: `benchmark/liu/liu_augment.R` | CPU-hours per block; n = 500 is the slowest |
+| mHL, GiViTI, projection, BAGofT | `theory/addon_arms/` (`liu_addon.R`, `proj_addon.R`, `niche_addon.R`, `niche_bagoft_fast.R`) | about 0.4 CPU-s per dataset for mHL and GiViTI; 0.5-3.5 s for the projection test |
+| one grid block | `S3_DESIGN=D1 S3_N=100 S3_SEED=101000 Rscript benchmark/grid/s3_grid.R` (all four designs), `python benchmark/grid/s3_score.py --n 100 --seed 101000`, `python benchmark/grid/s3_collect.py` | CPU-hours per block |
+| Table 3, Table 4, Table 8 and the text macros | `python tables/make_tables.py` | minutes |
 
-## 4. What are the known weaknesses? (verbatim, with numbers)
+All harnesses read the environment variable `DEEPGOF_ARCHIVE` (default: the current directory) and
+run with two worker processes unless told otherwise. The deposited per-replicate files exist so that
+nobody has to rerun the multi-CPU-day simulations to check a number.
 
-- **Power rank 7th of 13** on the reproduced Liu et al. (2024) benchmark at matched level
-  (mean .637). The test **beats every partition-based test at every n** (+.13/+.15/+.06 vs
-  Hosmer–Lemeshow at n = 50/100/500) but loses to the covariate-space and smoothing tests
-  (proj .769, le-Cessie .756). It is a **small-sample instrument**: its rank degrades
-  5th → 5th → 8th as n grows 50 → 100 → 500.
-- **The 2-D map discards covariates:** against the best PUBLISHED test per cell, p = 2 designs
-  are at parity (+.009, +.003) while p = 3 designs pay −.060 and −.082 (gate S3) — a
-  representation limit, formalized in the paper's Corollary S.6.
-- **A thin blind cone exists:** directions with negative consistency certificate
-  (min found −0.281), all sub-cell-resolution oscillations — the boundary every binned
-  statistic shares. Spherical measure < 1.2e-5 (95% one-sided, 250k directions).
-- **Probit-type alternatives:** the map signal μ is tiny (symmetric, tails-only), so finite-n
-  power is near α for every grouped test including this one; consistency still holds but with a
-  poor constant.
-- Size is the strong suit: **58/60 pre-declared design cells in the nominal band**, and on the
-  external benchmark the level is the most STABLE of the 13 arms — mean .0506 at nominal .05,
-  with a block-to-block SD of .004 against .012 (le-Cessie) and .011 (proj). Those three arms
-  tie on the mean; they differ in dispersion, and that is the claim that survives.
+**Path constants of the theory scripts.** Scripts under `theory/` were run in place in the author's
+project tree; their path constants now read `/path/to/project/paper_deepgof/...`. Map them as follows:
+`.../theory/<folder>` is `theory/<folder>` of this archive; `.../code/rdeploy` is `theory/_support/rdeploy`;
+`.../release/deepgof1/results` and `.../results` are `results/`; `.../confirm_bagoft` and
+`.../explore_bagoft` are `bagoft/confirm` and `bagoft/explore`; `/path/to/ebrahim.gof` is a clone of the
+package (version 2.8.0). The hash-covered scripts are deposited byte-identical so that they still match
+their recorded hashes; their path constants therefore keep the author's original absolute project path
+(ending in `.../paper_deepgof/...`), which maps in the same way. Scripts and comments that name files of the project's `code/` folder refer to
+their archive copies: `liu_grid.R`, `liu_augment.R` -> `benchmark/liu/`; `s3_grid.R`, `s3_score.py` ->
+`benchmark/grid/`; `universal_design.R` -> `benchmark/grid/s3_designs.R` (the same generator
+functions); `map_train.py` -> `benchmark/common/`; `probit_common.py` (`randomized_matched_power`) ->
+`benchmark/common/matched_power.py`; `fdic_deepgof.R` -> `application/fdic/`. The scripts in `benchmark/theory/` run with the working directory
+`theory/_support/rdeploy`. `theory/_support/rdeploy/deepgof.R` is the wrapper the theory simulations
+used; it breaks ties by row order, which matters only for tied covariates, and every theory simulation
+uses continuous covariates. For data analysis use `R/deepgof1.R` or the package.
 
-## Layout
+## 4. The paper: tables, figures and in-text results
 
-```
-R/            deepgof1() + the base-R forward pass (no Python at deploy time)
-inst/extdata/ frozen weights, scaler, and the cross-language verify bench
-training/     01_corpus.R · 02_train.py · 03_export_to_R.py · VERIFY.R · ship_corpus.csv
-benchmark/    liu/ (Liu et al. 2024 settings, 13 arms) · scenarios/ (9×5×3 lattice)
-              · grid/ (60-cell design grid) · theory/ (certificate scripts) · harness/
-              · PORTING.md
-results/      every per-replicate p-value behind the paper's tables, as deposited
-speckit/      the frozen pre-declarations for every gate (the goalposts, shipped)
-```
+| paper item | what | files |
+|---|---|---|
+| Figure 1 (residual maps) | simulated maps of five misfits | `figures/fig3_maps_sc.py` (with sign marks: `fig3_maps_sc_signs.py`), style `ekml_style_sc.py` |
+| Figure 2 (architecture) | the network and the deployed test | `figures/fig1_architecture_sc.py` |
+| Section 3.1 (validity; gap estimate) | the tail-localized gap, 90th percentiles .030 (n = 50) and .007 (n = 200) | `theory/calibration_gap/` (`per_dataset.csv`, `cell_summary.csv`, `PILOT_RESULTS.md`) |
+| Section 3.2, Table 1 (certificate margins, blind cone) | recession slopes along five directions; the most negative direction found | `benchmark/theory/theory_verify_numbers.R`, `theory_sphere_check.R`, `theory_blindcone_probe.R`, `theory_recession_check.R`; `results/theory_blind_direction.csv` |
+| Section 4.1, Table 2 (local sample-size ratios) | HL and Stukel columns; projection column | `theory/local_power/FORMULA.json` (`ARE_vs_DG`), `01_local_power.py`; projection: `theory/local_power/irrelevant/PROJ_LIU_RAW.json` (k = 0); with Stukel in the SstBoth form: `theory/stukel_sstboth/TAB_ARE_SSTBOTH.json` |
+| Section 4.2, Figure 3 (covariates that carry no signal) | ratio against k irrelevant covariates | `theory/local_power/irrelevant/fig_are_irrelevant.py` (reads `ARE_IRRELEVANT.json`, `PROJ_LIU_RAW.json`); SstBoth version: `theory/stukel_sstboth/fig_are_irrelevant_sstboth.py`, `IRR_SSTBOTH.json` |
+| Section 4.3 (power certificate) | certified against true sample sizes; smoothing certificate | `theory/finite_power/` (`PCERT.json`, `CERTIFIED.json`), `theory/finite_power/smoothing/SMOOTH_CERT.json` |
+| Section 5, Figure 4 (Simulation I: level on the 60-cell grid; gain over the best partition test) | per-replicate p-values of every arm and cell | `results/s3/<design>_n<n>_s<seed>/` (`blk_pvalues.csv`, `deep_pvalues.csv`, `summary.csv`), `results/s3/VERDICT.csv`; figure `figures/fig6_s3grid_sc_v2.py`; grid mean of the level: `tables/make_tables.py` (`\sizegrid`). Per-arm rejection rates of every cell (the pointer in Section 5 of the paper): `results/s3/<block>/summary.csv` (`raw_size`, `raw_power`, `matched_power`). The rejection rates of the partition tests on the small-n null designs are in `results/smalln/` |
+| Section 6.1, Table 3 (extended Liu benchmark) and Figure 5 | per-replicate p-values; per-block scores | `results/liu/<block>/` (`blk_pvalues.csv`: HL, HL equal-width, Pigeon-Heyse, Stukel, Osius-Rojek; `augment_pvalues.csv`: Stute-Zhu; `deep_pvalues.csv`: DeepGOF-1), `theory/addon_arms/liu_rows/` (mHL, GiViTI), `theory/addon_arms/proj_rows_liu/` (projection, `proj_liu_raw`), `bagoft/confirm/` (BAGofT); table: `tables/make_tables.py`; per-block scores `results/liu/TABLE2_SCORES.csv`; Osius-Rojek variance `results/liu/OSIUS_VARIANCE.csv` (`benchmark/liu/osius_variance.R`); figure `figures/fig8_liu_sc_v2.py` |
+| Section 6.2, Table 4 (paired comparison with BAGofT) | every per-replicate p-value, paired tables, level by n, timings, the repair | `bagoft/confirm/` (`run_confirm.R`, `analyze_confirm.py`, `analyze_size_by_n.py`, `rows/`, `CONFIRM_PAIRED.csv`, `CONFIRM_ROW.csv`, `SIZE_BY_N.csv`, `REVIEW_RECOMPUTED.csv`, `COST.csv`, `IDENTITY_WIDE.csv`, `PREDECLARATION.sha256`, `ADDENDUM_1.sha256`); `bagoft/explore/` (`common.R`, `verify_fast.R`, `bagoft_fast.R` and `VERIFY_FAST.log`, byte-identical to the hashed files; `parRF_dropfix.R`, the one-line repair; `EXPLORATORY_FULL_TABLE.csv`, package timings). The declaration itself is available from the author |
+| Section 7, Table 5 (two active covariates among ten) | one row per dataset, the decision rule, BAGofT at n = 200 | `theory/niche_paper/NICHE_ROWS.csv`, `analyze_niche_paper.py` (writes `niche_generated.tex`, identical to the manuscript's), `niche_power.csv`, `niche_diff.csv`, `niche_size.csv`, `niche_rule.csv`, `niche_bagoft.csv`; BAGofT rows `theory/addon_arms/niche_rows_bagoft/`; the real-design check that closes the section: `theory/real_data_niche/` (declaration, hash files, `scan_candidates.R`, `check_separation.R`, `partA.R`, `calibrate.R`, `run_partB.R`, `analyze_partB.R`, every per-replicate row) |
+| Section 8, Tables 6 and 7 (one corrupted record; the two repair rules) | per-replicate rows of Studies 1 and 2 | `theory/small_n/rows/`, `rows_trim/`, `RESULTS.json`, `RESULTS_TRIM.json` (`02_analyse.py`, `04_analyse_trim.py` reproduce them exactly); Stukel in the SstBoth form: `theory/small_n/sstboth_addon/`; deletion rule with more covariates: `theory/small_n/touch_rate/` |
+| Section 9, Table 8 (FDIC bank failures) | data, classical p-values and real-design sizes, DeepGOF-1 calls and sizes | `application/fdic/` (`fdic_download.R`, `fdic_size.R`, `fdic_deepgof.R`, `fdic_tie_check.R`), `results/fdic/`; table: `tables/make_tables.py` |
+| Section 10 (a versioned object) | deployed code, weights, corpus, generator, training and export code, harnesses | `R/`, `inst/extdata/`, `training/`, `benchmark/`, `bagoft/` |
+| Section 2.1 and the Discussion (ties) | the tie-breaking study: FDIC in 30 random row orders, Liu Setting 3, GLOW | `theory/tie_fix/`, `theory/fdic_roworder/` |
+
+## 5. Online Resource 1: results and files
+
+S-numbers and the section numbers below are those of Online Resource 1. Results that are proved
+analytically have no data files; the files listed are the numerical checks and inputs.
+
+| Online Resource 1 | results | files |
+|---|---|---|
+| Table S1 | correspondence of main-text and supplement results | (none) |
+| Sections 1-3 | setting, assumptions A1-A7, Lemmas A.1-A.2 | (none) |
+| Section 4 | Lemma S.1 (recession function) and Remark R1 (slope check) | `benchmark/theory/theory_recession_check.R`, `theory_verify_numbers.R` (run in `theory/_support/rdeploy`) |
+| Section 5 | Lemma S.2, Proposition S.3 (validity) | size evidence: `results/s3/` |
+| Section 6 | Lemmas A.3-A.5, Propositions S.7, S.8 (finite-sample size bound and its tail-localized form), the exact maximized Monte Carlo variant, the AUC diagnostic, the gap protocol and pilot (Table S2) | `theory/calibration_gap/` (Table S2: `cell_summary.csv`, `per_dataset.csv`), `theory/exact_mmc/` (`per_dataset.csv`, `rows/`, `FEASIBILITY.md`) |
+| Section 7 | Theorem S.11 (data-computable gap bound), coverage (Table S3) | `theory/level_gap/` (`01_gap_bound.py`, `GAP_RAW.json`, `GAP_RAW.jsonl`, `GAP.log`, `THEOREM_G.md`) |
+| Section 8 | Proposition S.11a and Table S.11a (the level error against n) | `theory/level_gap/rate/` (`run_rate.R`, `rate_common.R`, `RATE_RAW/`, `analyze_rate.py`, `RATE.json`, `THEOREM_RATE.md`) |
+| Section 9 | Theorem S.4 (conditional consistency); Remark on the separation policy (bias-reduced fit rates) | firth rates: `results/s3/*/summary.csv` (`firth_rate`) |
+| Section 10 | Corollaries S.5, S.6 (blind cone, representation limit) | `benchmark/theory/theory_sphere_check.R`, `theory_blindcone_probe.R`, `results/theory_blind_direction.csv` |
+| Section 11 | Theorem S.9, Corollary S.10 (local asymptotic power), the classical tests on the same drift, numerical corroboration (Table S4) | `theory/local_power/` (`lp_core.py`, `01_local_power.py` -> `FORMULA.json`/`FORMULA.log`; `02_simulate.py` -> `SIMULATION.json`, `SIM_RAW.json`; `03_convergence.py` -> `CONV_RAW.jsonl`; `04_verdict.py` -> `CONVERGENCE.json`; `05_recheck.py` -> `RECHECK.json`; `06_bias_rate.py` -> `BIAS_RATE.json`) |
+| Section 12 | Proposition S.10a, Corollary S.10b (covariates that carry no signal), numerical check (Table S5) | `theory/local_power/irrelevant/` (`PROPOSITION.md`, `08_proj_liu_raw.py` -> `PROJ_LIU_RAW.json`, `09_pred_vs_sim_liu.py` -> `PRED_VS_SIM_LIU.json`, `04_proj_rate.py` -> `PROJ_RATE.json`, `07_printed_weight_check.py`, `10_null_sd_finite_n.py`, `01_are_irrelevant.py` -> `ARE_IRRELEVANT.json`) |
+| Section 13 | Proposition S.12 (usage-aware probabilistic certificate), Lemma A.6, Proposition S.12a, Corollary S.12b (smoothing certificate), Tables S6, S7 | `theory/finite_power/` (`crown_core.py`, `07_pcrown.py` -> `PCERT.json`, `03_certify.py` -> `CERTIFIED.json`, `01_constants.py`, `05_ball_limit.py`, `11_lipsdp.py`), `smoothing/` (`SMOOTH_CERT.json`, `NULL_UCB.json`, `THEOREM_SMOOTH.md`), `bab/` (branch and bound; `cell_pcrown_ua` in `03_bab.py`, `07_certify.py`; `README.md`) |
+| Section 14 | Theorems S.14, S.15, S.17, S.19, Proposition S.16, Corollary S.18 (one corrupted record), Table S8 (miss probability) | `theory/small_n/SPIKE_RESPONSE.json` (S.16), `03_trim_miss.py` (S.18) |
+| Section 15 | Studies 1 and 2 | `theory/small_n/rows/`, `rows_trim/`, `RESULTS.json`, `RESULTS_TRIM.json`; SstBoth: `sstboth_addon/` |
+| Section 16 | the deletion rule with more, or non-normal, covariates (Tables S9, S10) | `theory/small_n/touch_rate/` (see its `README.md`) |
+| Section 17 | Theorem S.13 (Neyman-Pearson gap), Table S11 | `theory/optimality/` (`01_family_maps.R` -> `FAMILY_MAPS.csv`, `02_np_gap.py` -> `NP_GAP.json`, `THEOREM_NP.md`) |
+| Section 18 | benchmark bookkeeping: missing p-values (Table S12) and failed refits | `tables/stukel_na.py` (reproduces Table S12 from `results/liu/*/blk_pvalues.csv`; log `stukel_na.log`); failed projection refits: `proj_nfail` in `theory/addon_arms/proj_rows_*` and `NICHE_ROWS.csv` |
+| Section 19 | pre-declaration hashes, deposit index (Table S13), training protocol (Table S14) | `training/` |
+
+## 6. Ties and the FDIC numbers
+
+The paper's FDIC adequacy calls (the "DG-1 observed p" column) use the fixed rule of `R/deepgof1.R` and
+of `ebrahim.gof` 2.8.0. `application/fdic/fdic_deepgof.R` defaults to it (`FDG_TIES=random`) and
+reproduces the deposited `results/fdic/deepgof_observed.csv` exactly: p = .350, .175, .785, .655, .330,
+.905 for GA, FL, IL, CA, WA, MN (`fdic_tie_check.log`; `FDG_REPS=0` runs these calls alone, in seconds).
+`FDG_TIES=roworder` remains as an option and gives the values computed before the fix, .320, .185, .805,
+.710, .350, .905: Monte Carlo movement of the B = 199 bootstrap only; no cell rejects under either rule,
+and `theory/tie_fix/` reports 30 random row orders per cell under both rules. `eq_ta` and `roa` have no
+ties; `npa_ta`, `bro_dep` and `cre_ta` are tied only at zero. The deposited size column (2,000 nulls per
+cell on the real design; `deepgof_size.csv`, `deepgof_pvalues_<S>.csv`, the paper's "DG-1 size") was
+computed with ties broken by row order; the script's size part keeps that rule by default
+(`FDG_SIZE_TIES=roworder`) so that it reproduces the deposit, and `FDG_SIZE_TIES=random` reruns it under
+the fixed rule. In the simulations the covariates are continuous
+or their rows are in random order with respect to y, where the two rules agree in law
+(`theory/tie_fix/RESULT.md`). The real-design check in `theory/real_data_niche/` permuted each data
+file once at random before any fit (`perm_<data>.csv`), which is the random rule with one fixed
+permutation.
+
+## 7. Not in this archive
+
+The following are available from the author:
+
+* the frozen evaluation criteria of Simulations I and II (written before the data were generated);
+* the declarations of Studies 1 and 2 and the files their hashes cover (`sim_defs.R`, `run_small_n.R`,
+  `run_trim.R`, `01_spike_response.py`, `THEORY_LOO.md`); their per-replicate rows and the analysis
+  scripts are here;
+* the pre-declaration of the BAGofT comparison (`PREDECLARATION.md`) and its hash, and its addendum
+  (`ADDENDUM_1_size_by_n.md`). The hash files are here (`bagoft/confirm/*.sha256`), and every other
+  file they cover that the archive carries is deposited unchanged and matches its recorded hash:
+  `run_confirm.R`, `analyze_confirm.py`, `analyze_size_by_n.py` (`bagoft/confirm/`), and `common.R`,
+  `verify_fast.R`, `bagoft_fast.R`, `VERIFY_FAST.log` (`bagoft/explore/`);
+* the shared helper `common.R` of the real-design check, covered by `theory/real_data_niche/RUN.sha256`.
+  The check's declaration, its other hashed scripts (`scan_candidates.R`, `check_separation.R`,
+  `partA.R`, `calibrate.R`, `run_partB.R`, `analyze_partB.R`, all matching their recorded hashes) and
+  every per-replicate row are here;
+* the stored rows of the original niche run, whose paper arms are in `theory/niche_paper/NICHE_ROWS.csv`.
 
 ## Licence
 
-Code: MIT. Deposited results and corpora: CC-BY 4.0. See `LICENSE.md`.
+Code: MIT. Data, results, corpora and weights: CC BY 4.0. See `LICENSE`.
 
-## Citing this archive
+## Citing
 
-Archived at Zenodo. Two DOIs, and which one you want depends on why you are citing:
-
-- **`10.5281/zenodo.22113219`** — the **concept** DOI. Always resolves to the newest version.
-  Use this one by default.
-- **`10.5281/zenodo.22113220`** — the **version** DOI for **v1.0.0**. Use this when you need to
-  pin DeepGOF-1 exactly, for example when reproducing a number from the paper.
-
-> Ebrahim, E. K. (2026). *DeepGOF-1: pretrained goodness-of-fit test for logistic regression —
-> weights, training corpus, benchmark harness and per-replicate results* (v1.0.0) [Software].
+> Ebrahim, E. K. (2026). *Auditing a Frozen Neural Goodness-of-Fit Test for Logistic Regression:
+> Validity, Certified Consistency and Local Power of DeepGOF-1* (Version 2.0.0) [Software and data].
 > Zenodo. https://doi.org/10.5281/zenodo.22113219

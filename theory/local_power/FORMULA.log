@@ -1,0 +1,20 @@
+shipped bench reproduced: 4.6e-11
+Sigma: eigenvalues in [-3.61e-16, 1.0000]; rank 35 (35 expected: only the intercept direction is null)
+
+limit size at tau = 0 (DeepGOF-1 must equal k/(B+1) = .05):  DG 0.0506  HL 0.0498  Stukel 0.0500
+
+departure    |delta|/tau |   t50 DG   t50 HL   t50 St | limit power of each test at the DeepGOF-1 tau_50
+quadratic        0.3561 |     8.76    11.15     7.70 | DG 0.500 HL 0.308 St 0.615
+interaction      0.3350 |    11.53    18.32    12.45 | DG 0.500 HL 0.200 St 0.439
+cubic            0.3186 |    12.91    13.00     7.84 | DG 0.500 HL 0.494 St 0.917
+bump             0.2187 |    13.28    24.33    22.16 | DG 0.500 HL 0.155 St 0.205
+threshold        0.2230 |    16.70   110.38    78.44 | DG 0.500 HL 0.056 St 0.067
+
+asymptotic relative efficiency, (tau_50 rival / tau_50 DeepGOF-1)^2 -- above 1 means DeepGOF-1 needs fewer patients:
+  quadratic    HL    1.62   Stukel    0.77
+  interaction  HL    2.52   Stukel    1.17
+  cubic        HL    1.01   Stukel    0.37
+  bump         HL    3.36   Stukel    2.79
+  threshold    HL   43.66   Stukel   22.05
+
+wrote theory/local_power/FORMULA.json

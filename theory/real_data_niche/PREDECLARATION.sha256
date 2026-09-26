@@ -1,0 +1,6 @@
+# sha256, written 2026-09-25 04:49:40 EDT before any goodness-of-fit test on any candidate
+f016bc63b25f052901c3b2ec2aec25c22c16beeca324960130c77723e7b1de0a *PREDECLARATION.md
+6d7c892a699d37cb3d7dd19ca394763cbe93474d9893ed05372c7ce343d5cef3 *scan_candidates.R
+0d35221e3c10d0e8b6edfa881de6dcb9012a6309fa845379d917fb0cccdc137d *candidate_scan.csv
+6f1b99cd262509b81baa3f5deb6dfb20494a97b367378ea85af54377eef3e9bd *check_separation.R
+9b1c15405a5a243c05b8165e167badb40aaccf1ff57c559aba170c0a32cfcab2 *check_separation.log

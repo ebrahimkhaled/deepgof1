@@ -1,0 +1,8 @@
+bench 4.6e-11 | 3 records already done | this process: variants ['pure'], k in [1, 2, 4]
+[pure k=1] design + DG null law 87 s; DG size 0.0490
+[pure k=1] seed 1 kernels 279 s
+  inter tau50 DG  11.87 | n*/n*_DG: HL  2.24 St  1.04 proj  0.66  (829 s)
+  quad  tau50 DG   8.66 | n*/n*_DG: HL  2.69 St  1.26 proj  0.62  (1312 s)
+[pure k=2] design + DG null law 74 s; DG size 0.0490
+[pure k=2] seed 1 kernels 231 s
+  inter tau50 DG  11.87 | n*/n*_DG: HL  2.24 St  1.04 proj  0.80  (731 s)

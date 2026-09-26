@@ -87,10 +87,11 @@ deepgof_scores <- function(M, W, K = 6L)      # M: rows are maps
 
 ## ---- verification against PyTorch --------------------------------------------------------------
 if (sys.nframe() == 0L) {
-  here <- "C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/code/rdeploy"
-  W  <- load_weights(file.path(here, "weights.csv"))
-  X  <- as.matrix(utils::read.csv(file.path(here, "test_input.csv"),  header = FALSE))
-  Sp <- as.numeric(readLines(file.path(here, "test_output.csv")))
+  ## run as  Rscript R/deepgof1_forward.R  from the archive root (training/VERIFY.R does the same)
+  here <- file.path("inst", "extdata")
+  W  <- load_weights(file.path(here, "deepgof1_weights.csv"))
+  X  <- as.matrix(utils::read.csv(file.path(here, "verify_input.csv"),  header = FALSE))
+  Sp <- as.numeric(readLines(file.path(here, "verify_output.csv")))
   Sr <- deepgof_scores(X, W)
   cat("PyTorch :", sprintf("%.6f", Sp), "\n")
   cat("base R  :", sprintf("%.6f", Sr), "\n")

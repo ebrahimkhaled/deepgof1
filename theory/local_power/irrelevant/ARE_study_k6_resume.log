@@ -1,0 +1,7 @@
+bench 4.6e-11 | 16 records already done | this process: variants ['study'], k in [6]
+[study k=6] design + DG null law 113 s; DG size 0.0504
+[study k=6] seed 1 kernels 572 s
+[study k=6] seed 2 kernels 1182 s
+  inter tau50 DG  11.88 | n*/n*_DG: HL  2.79 St  1.31 proj  2.02  (1886 s)
+  quad  tau50 DG   8.55 | n*/n*_DG: HL  3.45 St  1.62 proj  1.52  (2588 s)
+wrote ARE_IRRELEVANT.json with 20 records

@@ -1,0 +1,24 @@
+F_ab 0.213687 (fd 0.213687)  F_gg 0.384900 (fd 0.384900)  F_ag -0.096225 (fd -0.096225)  C_P 0.256722
+inter: M = [[-0.0515, 0.1263], [0.1263, -0.0586]]  tr M = -0.11016  ||M||_F^2 = 0.03800  Q_P = 0.00991
+quad: M = [[0.2132, -0.0515], [-0.0515, 0.016]]  tr M = 0.22921  ||M||_F^2 = 0.05101  Q_P = 0.02104
+E v = 0.18369 | asymptotic nu^2 bounds [0.01732, 0.03209] -> nu in [0.1316, 0.1791]
+  inter: p e_k in [0.0553, 0.0753] asymptotically
+  quad: p e_k in [0.1175, 0.1599] asymptotically
+
+signal: p sigma_k against Q_P (mean over 64 draws of the irrelevant block, its SE)
+
+signal, replicated samples of the relevant covariates (p = 50, 200; 16 samples, NW = 16)
+  p 50 inter: mean p*sigma 0.01022, SE 0.00046 over 16 samples; Q_P 0.00991
+  p 50 quad: mean p*sigma 0.02169, SE 0.00084 over 16 samples; Q_P 0.02104
+  p 200 inter: mean p*sigma 0.01021, SE 0.00045 over 16 samples; Q_P 0.00991
+  p 200 quad: mean p*sigma 0.02153, SE 0.00068 over 16 samples; Q_P 0.02104
+
+noise: nu_k (reference sample M = 1000), bounds, largest eigenvalue share, standardized .95 quantile q_k
+  p   2 | nu 0.0905  nu^2 0.00820  (lower 0.00000 finite-k / 0.01732 asym, upper 0.03209) | max share 0.720 | neg 927/1000 | q95 1.949  (761 s)
+  p   3 | nu 0.1060  nu^2 0.01123  (lower 0.00495 finite-k / 0.01732 asym, upper 0.03209) | max share 0.659 | neg 895/1000 | q95 1.929  (1039 s)
+  p   4 | nu 0.1176  nu^2 0.01383  (lower 0.00773 finite-k / 0.01732 asym, upper 0.03209) | max share 0.675 | neg 874/1000 | q95 1.920  (1241 s)
+  p   6 | nu 0.1152  nu^2 0.01327  (lower 0.01072 finite-k / 0.01732 asym, upper 0.03209) | max share 0.623 | neg 840/1000 | q95 1.867  (1386 s)
+  p  10 | nu 0.1239  nu^2 0.01534  (lower 0.01326 finite-k / 0.01732 asym, upper 0.03209) | max share 0.648 | neg 784/1000 | q95 1.851  (1506 s)
+  p  20 | nu 0.1178  nu^2 0.01388  (lower 0.01526 finite-k / 0.01732 asym, upper 0.03209) | max share 0.593 | neg 758/1000 | q95 1.828  (1606 s)
+  p  50 | nu 0.1572  nu^2 0.02470  (lower 0.01649 finite-k / 0.01732 asym, upper 0.03209) | max share 0.416 | neg 540/1000 | q95 1.728  (1704 s)
+wrote PROJ_RATE.json

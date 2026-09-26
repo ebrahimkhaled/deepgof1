@@ -1,0 +1,5 @@
+step_x1: tail from t=249.87 to t_global=6943.0 (c_max 5.8321, R_TAIL 8.739, kappa 2.1999); 0 intervals done
+  [249.87, 299.85]  lb 247.9  (3 CROWN calls, 17 s)
+  [746.11, 895.34]  lb 1266.9  (21 CROWN calls, 151 s)
+  [2673.46, 3208.15]  lb 4845.0  (42 CROWN calls, 300 s)
+step_x1 tail CLOSED: 19 intervals, 57 CROWN calls, 352 s

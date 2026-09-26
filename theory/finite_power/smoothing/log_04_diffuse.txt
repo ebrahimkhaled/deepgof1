@@ -1,0 +1,9 @@
+diffuse: paper's t_emp (threshold T_HAT, power .95) = 5.0656
+diffuse: paper's t_emp (threshold T_HAT, power .95) = 5.0656
+diffuse: paper's t_emp (threshold T_HAT, power .95) = 5.0656
+  fixed target 0.95: t = 5.1047  (power there 0.9502, slope 0.0829/unit t, SE(t) = 0.0059)
+  fixed target 0.50: t = 3.0477  (power there 0.4978, slope 0.3008/unit t, SE(t) = 0.0037)
+  b199 target 0.95: t = 5.1448  (power there 0.9504, slope 0.0842/unit t, SE(t) = 0.0058)
+  b199 target 0.50: t = 3.0660  (power there 0.4998, slope 0.2948/unit t, SE(t) = 0.0038)
+  hat target 0.95: t = 5.0779  (power there 0.9500, slope 0.0872/unit t, SE(t) = 0.0056)
+diffuse truth done in 4613 s

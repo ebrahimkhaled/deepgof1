@@ -1,0 +1,21 @@
+exact_mmc | D1 n=100 B=199 gamma=0.01 alpha=0.05 | 300 reps/arm | 6 workers
+grid 11^3 = 1331, NM starts 3 x maxit 60 | RCAP 200 Wald SE
+resume: 0 rows on disk, 600 jobs to run, deadline 205 min
+08:19:53  block 1-18 done (18/600 jobs, 19.9 min elapsed)
+08:40:33  block 19-36 done (36/600 jobs, 40.6 min elapsed)
+08:58:26  block 37-54 done (54/600 jobs, 58.5 min elapsed)
+09:14:24  block 55-72 done (72/600 jobs, 74.4 min elapsed)
+09:37:16  block 73-90 done (90/600 jobs, 97.3 min elapsed)
+09:53:33  block 91-108 done (108/600 jobs, 113.6 min elapsed)
+10:04:28  block 109-126 done (126/600 jobs, 124.5 min elapsed)
+10:21:07  block 127-144 done (144/600 jobs, 141.1 min elapsed)
+10:37:20  block 145-162 done (162/600 jobs, 157.4 min elapsed)
+10:51:18  block 163-180 done (180/600 jobs, 171.3 min elapsed)
+11:05:43  block 181-198 done (198/600 jobs, 185.8 min elapsed)
+11:20:01  block 199-216 done (216/600 jobs, 200.1 min elapsed)
+11:35:52  block 217-234 done (234/600 jobs, 215.9 min elapsed)
+deadline reached at 215.9 min; stopping with 234 done
+
+234 rows on disk: null 117, alt 117
+median seconds/dataset 192, median n_eval 115
+RUN INVOCATION COMPLETE

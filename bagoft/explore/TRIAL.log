@@ -1,0 +1,31 @@
+Warning message:
+package 'BAGofT' was built under R version 4.4.3 
+EXPLORATORY BAGofT trial | 12 cells x 40 reps = 480 datasets | 0 already on disk | 480 to do | 8 workers | budget 240 min
+ SET   n   C
+   2  50 0.0
+   2 100 0.0
+   3  50 0.0
+   3 100 0.0
+   2  50 1.0
+   2 100 1.0
+   3  50 1.0
+   3 100 1.0
+   2  50 0.5
+   2 100 0.5
+   3  50 0.5
+   3 100 0.5
+     8 datasets | 11.6 min elapsed | 87 s/dataset wall | eta-to-budget 157 more
+    16 datasets | 26.0 min elapsed | 98 s/dataset wall | eta-to-budget 132 more
+    24 datasets | 41.4 min elapsed | 103 s/dataset wall | eta-to-budget 115 more
+    32 datasets | 56.4 min elapsed | 106 s/dataset wall | eta-to-budget 104 more
+    40 datasets | 69.3 min elapsed | 104 s/dataset wall | eta-to-budget 98 more
+    48 datasets | 84.7 min elapsed | 106 s/dataset wall | eta-to-budget 88 more
+    56 datasets | 98.3 min elapsed | 105 s/dataset wall | eta-to-budget 81 more
+    64 datasets | 113.4 min elapsed | 106 s/dataset wall | eta-to-budget 71 more
+    72 datasets | 128.0 min elapsed | 107 s/dataset wall | eta-to-budget 63 more
+    80 datasets | 140.2 min elapsed | 105 s/dataset wall | eta-to-budget 57 more
+    88 datasets | 153.5 min elapsed | 105 s/dataset wall | eta-to-budget 50 more
+    96 datasets | 168.1 min elapsed | 105 s/dataset wall | eta-to-budget 41 more
+Error in unserialize(socklist[[n]]) : error reading from connection
+Calls: Filter ... recvOneData -> recvOneData.SOCKcluster -> unserialize
+Execution halted

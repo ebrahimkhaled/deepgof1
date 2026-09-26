@@ -1,0 +1,30 @@
+F_ab 0.213687 (fd 0.213687)  F_gg 0.384900 (fd 0.384900)  F_ag -0.096225 (fd -0.096225)  C_P 0.256722
+inter: M = [[-0.0515, 0.1263], [0.1263, -0.0586]]  tr M = -0.11016  ||M||_F^2 = 0.03800  Q_P = 0.00991
+quad: M = [[0.2132, -0.0515], [-0.0515, 0.016]]  tr M = 0.22921  ||M||_F^2 = 0.05101  Q_P = 0.02104
+E v = 0.18369 | asymptotic nu^2 bounds [0.01732, 0.03209] -> nu in [0.1316, 0.1791]
+  inter: p e_k in [0.0553, 0.0753] asymptotically
+  quad: p e_k in [0.1175, 0.1599] asymptotically
+
+signal: p sigma_k against Q_P (mean over 64 draws of the irrelevant block, its SE)
+  p    2 seed 21 | inter p*sigma 0.00497 (SE 0.00024; Q_P 0.00991) | quad 0.01212 (SE 0.00064; Q_P 0.02104)  (68 s)
+  p    2 seed 22 | inter p*sigma 0.00607 (SE 0.00025; Q_P 0.00991) | quad 0.01370 (SE 0.00065; Q_P 0.02104)  (133 s)
+  p    3 seed 21 | inter p*sigma 0.00614 (SE 0.00042; Q_P 0.00991) | quad 0.01393 (SE 0.00074; Q_P 0.02104)  (196 s)
+  p    3 seed 22 | inter p*sigma 0.00671 (SE 0.00044; Q_P 0.00991) | quad 0.01582 (SE 0.00090; Q_P 0.02104)  (264 s)
+  p    4 seed 21 | inter p*sigma 0.00601 (SE 0.00051; Q_P 0.00991) | quad 0.01496 (SE 0.00097; Q_P 0.02104)  (336 s)
+  p    4 seed 22 | inter p*sigma 0.00636 (SE 0.00047; Q_P 0.00991) | quad 0.01645 (SE 0.00091; Q_P 0.02104)  (399 s)
+  p    6 seed 21 | inter p*sigma 0.00631 (SE 0.00057; Q_P 0.00991) | quad 0.01505 (SE 0.00109; Q_P 0.02104)  (455 s)
+  p    6 seed 22 | inter p*sigma 0.00804 (SE 0.00053; Q_P 0.00991) | quad 0.01953 (SE 0.00105; Q_P 0.02104)  (514 s)
+  p   10 seed 21 | inter p*sigma 0.00669 (SE 0.00047; Q_P 0.00991) | quad 0.01543 (SE 0.00081; Q_P 0.02104)  (573 s)
+  p   10 seed 22 | inter p*sigma 0.00779 (SE 0.00049; Q_P 0.00991) | quad 0.01851 (SE 0.00093; Q_P 0.02104)  (631 s)
+  p   20 seed 21 | inter p*sigma 0.00697 (SE 0.00036; Q_P 0.00991) | quad 0.01612 (SE 0.00059; Q_P 0.02104)  (690 s)
+  p   20 seed 22 | inter p*sigma 0.00865 (SE 0.00047; Q_P 0.00991) | quad 0.01978 (SE 0.00084; Q_P 0.02104)  (753 s)
+  p   50 seed 21 | inter p*sigma 0.00732 (SE 0.00032; Q_P 0.00991) | quad 0.01646 (SE 0.00053; Q_P 0.02104)  (812 s)
+  p   50 seed 22 | inter p*sigma 0.00925 (SE 0.00028; Q_P 0.00991) | quad 0.02084 (SE 0.00048; Q_P 0.02104)  (872 s)
+  p  100 seed 21 | inter p*sigma 0.00721 (SE 0.00020; Q_P 0.00991) | quad 0.01652 (SE 0.00033; Q_P 0.02104)  (934 s)
+  p  100 seed 22 | inter p*sigma 0.00916 (SE 0.00023; Q_P 0.00991) | quad 0.02043 (SE 0.00038; Q_P 0.02104)  (1022 s)
+  p  200 seed 21 | inter p*sigma 0.00724 (SE 0.00014; Q_P 0.00991) | quad 0.01648 (SE 0.00021; Q_P 0.02104)  (1107 s)
+  p  200 seed 22 | inter p*sigma 0.00906 (SE 0.00016; Q_P 0.00991) | quad 0.02026 (SE 0.00027; Q_P 0.02104)  (1186 s)
+  p  400 seed 21 | inter p*sigma 0.00710 (SE 0.00010; Q_P 0.00991) | quad 0.01626 (SE 0.00016; Q_P 0.02104)  (1267 s)
+  p  400 seed 22 | inter p*sigma 0.00941 (SE 0.00012; Q_P 0.00991) | quad 0.02079 (SE 0.00020; Q_P 0.02104)  (1354 s)
+
+noise: nu_k (reference sample M = 1000), bounds, largest eigenvalue share, standardized .95 quantile q_k

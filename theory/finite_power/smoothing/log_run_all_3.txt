@@ -1,0 +1,12 @@
+12:39:07 stage 01: null quantiles
+12:39:07 stage 02+03+04: net, tail and truth per direction (independent jobs, one pool)
+12:39:07   jobs still needed: [('02_mc_net.py', 'step_x1'), ('02_mc_net.py', 'diffuse'), ('02_mc_net.py', 'stripe_x1'), ('02_mc_net.py', 'saddle'), ('02_mc_net.py', 'random'), ('04_truth.py', 'step_x1'), ('04_truth.py', 'diffuse'), ('04_truth.py', 'stripe_x1'), ('04_truth.py', 'saddle')]
+12:39:08   start 02_mc_net.py step_x1 (1 running, Rscript=14)
+12:39:09   start 02_mc_net.py diffuse (2 running, Rscript=14)
+12:39:10   start 02_mc_net.py stripe_x1 (3 running, Rscript=14)
+12:39:12   start 02_mc_net.py saddle (4 running, Rscript=14)
+12:39:13   start 02_mc_net.py random (5 running, Rscript=14)
+12:39:46   start 04_truth.py step_x1 (6 running, Rscript=14)
+12:43:55   start 04_truth.py diffuse (7 running, Rscript=14)
+12:47:47   start 04_truth.py stripe_x1 (8 running, Rscript=14)
+12:48:04   start 04_truth.py saddle (7 running, Rscript=14)

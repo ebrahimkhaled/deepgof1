@@ -1,0 +1,7 @@
+GA  random ties: S -0.854853 p 0.350 (deposited S -0.854853 p 0.350, identical) | row-order ties: p 0.320 (as before the fix)
+FL  random ties: S -0.280474 p 0.175 (deposited S -0.280474 p 0.175, identical) | row-order ties: p 0.185 (as before the fix)
+IL  random ties: S -1.786662 p 0.785 (deposited S -1.786662 p 0.785, identical) | row-order ties: p 0.805 (as before the fix)
+CA  random ties: S -1.740106 p 0.655 (deposited S -1.740106 p 0.655, identical) | row-order ties: p 0.710 (as before the fix)
+WA  random ties: S -1.021710 p 0.330 (deposited S -1.021710 p 0.330, identical) | row-order ties: p 0.350 (as before the fix)
+MN  random ties: S -1.671327 p 0.905 (deposited S -1.671327 p 0.905, identical) | row-order ties: p 0.905 (as before the fix)
+fixed rule reproduces every deposited FDIC adequacy call; row-order rule reproduces the pre-fix values

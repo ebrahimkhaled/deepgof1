@@ -1,0 +1,9 @@
+bench 4.6e-11 | 16 records already done | this process: variants ['pure'], k in [2, 4]
+[pure k=2] design + DG null law 114 s; DG size 0.0490
+[pure k=2] seed 1 kernels 581 s
+  quad  tau50 DG   8.66 | n*/n*_DG: HL  2.69 St  1.26 proj  0.74  (1279 s)
+[pure k=4] design + DG null law 126 s; DG size 0.0490
+[pure k=4] seed 1 kernels 729 s
+  inter tau50 DG  11.87 | n*/n*_DG: HL  2.24 St  1.04 proj  1.45  (1416 s)
+  quad  tau50 DG   8.66 | n*/n*_DG: HL  2.69 St  1.26 proj  1.28  (2043 s)
+wrote ARE_IRRELEVANT.json with 23 records

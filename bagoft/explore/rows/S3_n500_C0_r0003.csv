@@ -1,0 +1,2 @@
+"setting","n","C","rep","seed","p","p_med","bag_pmin_stat","time_s","status","nsplits","nsim","ntree","label"
+3,500,0,3,1601003,0.64,0.38,0.00798095097077689,1183.8,"ok",100,100,60,"EXPLORATORY_NOT_CONFIRMATORY"

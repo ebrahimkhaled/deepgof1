@@ -1,0 +1,4 @@
+"data","axis1","axis2","statistic","ranking_by_abs_b_sd"
+"myopia","mommy","dadmy",-1.80448311336593,"dadmy 0.498; mommy 0.390; sporthr 0.362; acd 0.346; gender 0.302; readhr 0.288; studyhr 0.239; age 0.142; comphr 0.100; tvhr 0.060; vcd 0.059; lt 0.012"
+"Pima","glu","bmi",0.578826168281097,"glu 1.095; bmi 0.569; ped 0.451; npreg 0.406; age 0.284; bp 0.095; skin 0.071"
+"Mroz","k5","age",-0.492700765623501,"k5 0.767; age 0.508; inc 0.401; wc 0.363; lwg 0.355; k618 0.085; hc 0.055"

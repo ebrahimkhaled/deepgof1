@@ -1,0 +1,23 @@
+shipped bench reproduced in map units: max |diff| = 4.64e-11
+
+A. certified  -100.697 <= S - S_inf <= 82.826   everywhere   ->  c_cert = 100.697
+B. certified  ||grad S||_2 <= 1735.636  everywhere (per-cell sup |dS/dm_j| in [90.220, 440.261])
+   sampled/attacked:  max|S - S_inf| = 7.509 (range -7.509..-1.626)   max ||grad|| = 3.819
+   gap certified/observed:  c 13.4x   L 454.5x   (norm products gave 13.6x and 17.0x)
+
+C. pure-ReLU rewrite reproduces S and S_inf: max |diff| 1.1e-14, 1.4e-14
+   one CROWN pass: 2.02 s
+   ball r=1.00 at |c0|=0.0: CROWN [-76.421, 129.795]  sampled [-1.370, -1.182]  attack min -1.499  all layers contained
+   ball r=7.14 at |c0|=0.0: CROWN [-673.070, 1165.576]  sampled [-2.726, 7.907]  attack min -3.687  all layers contained
+   ball r=3.00 at |c0|=38.3: CROWN [-6.518, 72.296]  sampled [24.588, 30.919]  attack min 22.704  all layers contained
+
+D. null critical value: MC 2.4616, certified (99.9% UCB) 2.4865
+
+  direction    kappa   t_cert(ball r=7.14)  t_emp(power .95)   ratio   n*_cert  n*_emp   global-constant n*
+  stripe_x1   1.729          64.34              5.52       11.66     16557     122    209037258
+  step_x1     2.200          51.56              4.24       12.16     10634      72    129103897
+  saddle      1.188          76.21              7.13       10.68     23232     204    443033675
+  diffuse     1.464          55.10              5.07       10.88     12144     103    291328519
+  random      0.731         101.24             13.50        7.50     40997     729   1170656294
+
+wrote theory/finite_power/CERTIFIED.json

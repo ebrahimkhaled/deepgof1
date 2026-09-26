@@ -1,0 +1,16 @@
+recheck: 12000 to run (0 on disk), 12 workers
+  1000 / 12000 (2.9 min)
+  2000 / 12000 (5.7 min)
+  3000 / 12000 (8.4 min)
+  4000 / 12000 (11.1 min)
+  5000 / 12000 (13.8 min)
+  6000 / 12000 (16.5 min)
+  7000 / 12000 (19.2 min)
+  8000 / 12000 (21.8 min)
+  9000 / 12000 (22.2 min)
+  10000 / 12000 (22.7 min)
+  11000 / 12000 (23.1 min)
+  12000 / 12000 (23.6 min)
+null         n= 8000  sim 0.0493  formula 0.0506  SE 0.0034  z -0.38  (4000 reps, clipped 0%)  -> noise (within 2 SE)
+interaction  n= 8000  sim 0.5128  formula 0.5000  SE 0.0079  z +1.61  (4000 reps, clipped 0%)  -> noise (within 2 SE)
+threshold    n= 2000  sim 0.5250  formula 0.5000  SE 0.0079  z +3.17  (4000 reps, clipped 0%)  -> REAL finite-n bias

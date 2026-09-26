@@ -1,0 +1,664 @@
+{
+  "Q1": {
+    "30|none|HL": {
+      "size": 0.046,
+      "se": 0.006624499981130651,
+      "reps": 1000,
+      "misbehaves": false
+    },
+    "30|none|Stukel": {
+      "size": 0.048,
+      "se": 0.006759881655768835,
+      "reps": 1000,
+      "misbehaves": false
+    },
+    "30|none|DG": {
+      "size": 0.056,
+      "se": 0.007270763371201128,
+      "reps": 1000,
+      "misbehaves": false
+    },
+    "30|decimal|HL": {
+      "size": 0.049,
+      "se": 0.006826346021115542,
+      "reps": 1000,
+      "misbehaves": false
+    },
+    "30|decimal|Stukel": {
+      "size": 0.079,
+      "se": 0.008529888627643388,
+      "reps": 1000,
+      "misbehaves": true
+    },
+    "30|decimal|DG": {
+      "size": 0.086,
+      "se": 0.008865889690267977,
+      "reps": 1000,
+      "misbehaves": true
+    },
+    "30|sign|HL": {
+      "size": 0.033,
+      "se": 0.005648982209212559,
+      "reps": 1000,
+      "misbehaves": false
+    },
+    "30|sign|Stukel": {
+      "size": 0.063,
+      "se": 0.007683163410991596,
+      "reps": 1000,
+      "misbehaves": false
+    },
+    "30|sign|DG": {
+      "size": 0.057,
+      "se": 0.007331507348424334,
+      "reps": 1000,
+      "misbehaves": false
+    },
+    "30|outcome|HL": {
+      "size": 0.034,
+      "se": 0.005730968504537431,
+      "reps": 1000,
+      "misbehaves": false
+    },
+    "30|outcome|Stukel": {
+      "size": 0.071,
+      "se": 0.008121514637061242,
+      "reps": 1000,
+      "misbehaves": false
+    },
+    "30|outcome|DG": {
+      "size": 0.038,
+      "se": 0.006046155803483731,
+      "reps": 1000,
+      "misbehaves": false
+    },
+    "50|none|HL": {
+      "size": 0.049,
+      "se": 0.006826346021115542,
+      "reps": 1000,
+      "misbehaves": false
+    },
+    "50|none|Stukel": {
+      "size": 0.061,
+      "se": 0.0075682891065286355,
+      "reps": 1000,
+      "misbehaves": false
+    },
+    "50|none|DG": {
+      "size": 0.055,
+      "se": 0.00720936890441875,
+      "reps": 1000,
+      "misbehaves": false
+    },
+    "50|decimal|HL": {
+      "size": 0.041,
+      "se": 0.006270486424512854,
+      "reps": 1000,
+      "misbehaves": false
+    },
+    "50|decimal|Stukel": {
+      "size": 0.142,
+      "se": 0.011037934589405754,
+      "reps": 1000,
+      "misbehaves": true
+    },
+    "50|decimal|DG": {
+      "size": 0.118,
+      "se": 0.01020176455325254,
+      "reps": 1000,
+      "misbehaves": true
+    },
+    "50|sign|HL": {
+      "size": 0.045,
+      "se": 0.0065555320150236475,
+      "reps": 1000,
+      "misbehaves": false
+    },
+    "50|sign|Stukel": {
+      "size": 0.051,
+      "se": 0.00695693898205238,
+      "reps": 1000,
+      "misbehaves": false
+    },
+    "50|sign|DG": {
+      "size": 0.046,
+      "se": 0.006624499981130651,
+      "reps": 1000,
+      "misbehaves": false
+    },
+    "50|outcome|HL": {
+      "size": 0.041,
+      "se": 0.006270486424512854,
+      "reps": 1000,
+      "misbehaves": false
+    },
+    "50|outcome|Stukel": {
+      "size": 0.054,
+      "se": 0.007147307185227175,
+      "reps": 1000,
+      "misbehaves": false
+    },
+    "50|outcome|DG": {
+      "size": 0.056,
+      "se": 0.007270763371201128,
+      "reps": 1000,
+      "misbehaves": false
+    }
+  },
+  "Q2": {
+    "30|none|HL": {
+      "loo_size": 0.001,
+      "se": 0.0009994998749374609,
+      "clean_base": 0.046,
+      "limit": 0.05939895518314768,
+      "holds": true
+    },
+    "30|none|Stukel": {
+      "loo_size": 0.005,
+      "se": 0.0022304708023195463,
+      "clean_base": 0.048,
+      "limit": 0.06223671310380314,
+      "holds": true
+    },
+    "30|none|DG": {
+      "loo_size": 0.001,
+      "se": 0.0009994998749374609,
+      "clean_base": 0.056,
+      "limit": 0.0706782832783674,
+      "holds": true
+    },
+    "30|decimal|HL": {
+      "loo_size": 0.001,
+      "se": 0.0009994998749374609,
+      "clean_base": 0.046,
+      "limit": 0.05939895518314768,
+      "holds": true
+    },
+    "30|decimal|Stukel": {
+      "loo_size": 0.008,
+      "se": 0.0028170906978654416,
+      "clean_base": 0.048,
+      "limit": 0.06264677438892263,
+      "holds": true
+    },
+    "30|decimal|DG": {
+      "loo_size": 0.003,
+      "se": 0.001729450779872038,
+      "clean_base": 0.056,
+      "limit": 0.07094724054800752,
+      "holds": true
+    },
+    "30|sign|HL": {
+      "loo_size": 0.0,
+      "se": 0.00031622776601683794,
+      "clean_base": 0.046,
+      "limit": 0.05926408685134412,
+      "holds": true
+    },
+    "30|sign|Stukel": {
+      "loo_size": 0.004,
+      "se": 0.001995995991979944,
+      "clean_base": 0.048,
+      "limit": 0.06209680814936488,
+      "holds": true
+    },
+    "30|sign|DG": {
+      "loo_size": 0.004,
+      "se": 0.001995995991979944,
+      "clean_base": 0.056,
+      "limit": 0.07107952253886043,
+      "holds": true
+    },
+    "30|outcome|HL": {
+      "loo_size": 0.0,
+      "se": 0.00031622776601683794,
+      "clean_base": 0.046,
+      "limit": 0.05926408685134412,
+      "holds": true
+    },
+    "30|outcome|Stukel": {
+      "loo_size": 0.004,
+      "se": 0.001995995991979944,
+      "clean_base": 0.048,
+      "limit": 0.06209680814936488,
+      "holds": true
+    },
+    "30|outcome|DG": {
+      "loo_size": 0.002,
+      "se": 0.0014127986409959489,
+      "clean_base": 0.056,
+      "limit": 0.07081350734971296,
+      "holds": true
+    },
+    "50|none|HL": {
+      "loo_size": 0.002,
+      "se": 0.0014127986409959489,
+      "clean_base": 0.049,
+      "limit": 0.06294202280876057,
+      "holds": true
+    },
+    "50|none|Stukel": {
+      "loo_size": 0.002,
+      "se": 0.0014127986409959489,
+      "clean_base": 0.061,
+      "limit": 0.07639805182482512,
+      "holds": true
+    },
+    "50|none|DG": {
+      "loo_size": 0.007,
+      "se": 0.0026364749192814255,
+      "clean_base": 0.055,
+      "limit": 0.07035265449360469,
+      "holds": true
+    },
+    "50|decimal|HL": {
+      "loo_size": 0.0,
+      "se": 0.00031622776601683794,
+      "clean_base": 0.049,
+      "limit": 0.06266733331707397,
+      "holds": true
+    },
+    "50|decimal|Stukel": {
+      "loo_size": 0.012,
+      "se": 0.003443254274665175,
+      "clean_base": 0.061,
+      "limit": 0.07762949187437788,
+      "holds": true
+    },
+    "50|decimal|DG": {
+      "loo_size": 0.005,
+      "se": 0.0022304708023195463,
+      "clean_base": 0.055,
+      "limit": 0.07009304475578072,
+      "holds": true
+    },
+    "50|sign|HL": {
+      "loo_size": 0.0,
+      "se": 0.00031622776601683794,
+      "clean_base": 0.049,
+      "limit": 0.06266733331707397,
+      "holds": true
+    },
+    "50|sign|Stukel": {
+      "loo_size": 0.004,
+      "se": 0.001995995991979944,
+      "clean_base": 0.061,
+      "limit": 0.076654136833438,
+      "holds": true
+    },
+    "50|sign|DG": {
+      "loo_size": 0.002,
+      "se": 0.0014127986409959489,
+      "clean_base": 0.055,
+      "limit": 0.06969299152657484,
+      "holds": true
+    },
+    "50|outcome|HL": {
+      "loo_size": 0.003,
+      "se": 0.001729450779872038,
+      "clean_base": 0.049,
+      "limit": 0.0630840335131666,
+      "holds": true
+    },
+    "50|outcome|Stukel": {
+      "loo_size": 0.012,
+      "se": 0.003443254274665175,
+      "clean_base": 0.061,
+      "limit": 0.07762949187437788,
+      "holds": true
+    },
+    "50|outcome|DG": {
+      "loo_size": 0.004,
+      "se": 0.001995995991979944,
+      "clean_base": 0.055,
+      "limit": 0.06996114968844307,
+      "holds": true
+    }
+  },
+  "power": {
+    "30|0.5|none|HL": {
+      "base": 0.03666666666666667,
+      "loo": 0.0,
+      "reps": 300
+    },
+    "30|0.5|none|Stukel": {
+      "base": 0.12666666666666668,
+      "loo": 0.0033333333333333335,
+      "reps": 300
+    },
+    "30|0.5|none|DG": {
+      "base": 0.05,
+      "loo": 0.0033333333333333335,
+      "reps": 300
+    },
+    "30|0.5|decimal|HL": {
+      "base": 0.056666666666666664,
+      "loo": 0.0,
+      "reps": 300
+    },
+    "30|0.5|decimal|Stukel": {
+      "base": 0.10666666666666667,
+      "loo": 0.0033333333333333335,
+      "reps": 300
+    },
+    "30|0.5|decimal|DG": {
+      "base": 0.09333333333333334,
+      "loo": 0.0033333333333333335,
+      "reps": 300
+    },
+    "30|1.0|none|HL": {
+      "base": 0.08333333333333333,
+      "loo": 0.013333333333333334,
+      "reps": 300
+    },
+    "30|1.0|none|Stukel": {
+      "base": 0.27666666666666667,
+      "loo": 0.04,
+      "reps": 300
+    },
+    "30|1.0|none|DG": {
+      "base": 0.17333333333333334,
+      "loo": 0.02,
+      "reps": 300
+    },
+    "30|1.0|decimal|HL": {
+      "base": 0.09666666666666666,
+      "loo": 0.02,
+      "reps": 300
+    },
+    "30|1.0|decimal|Stukel": {
+      "base": 0.19,
+      "loo": 0.03666666666666667,
+      "reps": 300
+    },
+    "30|1.0|decimal|DG": {
+      "base": 0.22333333333333333,
+      "loo": 0.03666666666666667,
+      "reps": 300
+    },
+    "30|1.5|none|HL": {
+      "base": 0.14666666666666667,
+      "loo": 0.016666666666666666,
+      "reps": 300
+    },
+    "30|1.5|none|Stukel": {
+      "base": 0.35333333333333333,
+      "loo": 0.06333333333333334,
+      "reps": 300
+    },
+    "30|1.5|none|DG": {
+      "base": 0.30666666666666664,
+      "loo": 0.09,
+      "reps": 300
+    },
+    "30|1.5|decimal|HL": {
+      "base": 0.14666666666666667,
+      "loo": 0.006666666666666667,
+      "reps": 300
+    },
+    "30|1.5|decimal|Stukel": {
+      "base": 0.2966666666666667,
+      "loo": 0.08666666666666667,
+      "reps": 300
+    },
+    "30|1.5|decimal|DG": {
+      "base": 0.3566666666666667,
+      "loo": 0.07666666666666666,
+      "reps": 300
+    },
+    "50|0.5|none|HL": {
+      "base": 0.1,
+      "loo": 0.01,
+      "reps": 300
+    },
+    "50|0.5|none|Stukel": {
+      "base": 0.17333333333333334,
+      "loo": 0.03,
+      "reps": 300
+    },
+    "50|0.5|none|DG": {
+      "base": 0.13666666666666666,
+      "loo": 0.01,
+      "reps": 300
+    },
+    "50|0.5|decimal|HL": {
+      "base": 0.09666666666666666,
+      "loo": 0.01,
+      "reps": 300
+    },
+    "50|0.5|decimal|Stukel": {
+      "base": 0.22,
+      "loo": 0.03333333333333333,
+      "reps": 300
+    },
+    "50|0.5|decimal|DG": {
+      "base": 0.14,
+      "loo": 0.01,
+      "reps": 300
+    },
+    "50|1.0|none|HL": {
+      "base": 0.2,
+      "loo": 0.05,
+      "reps": 300
+    },
+    "50|1.0|none|Stukel": {
+      "base": 0.39,
+      "loo": 0.17333333333333334,
+      "reps": 300
+    },
+    "50|1.0|none|DG": {
+      "base": 0.27666666666666667,
+      "loo": 0.07666666666666666,
+      "reps": 300
+    },
+    "50|1.0|decimal|HL": {
+      "base": 0.18666666666666668,
+      "loo": 0.023333333333333334,
+      "reps": 300
+    },
+    "50|1.0|decimal|Stukel": {
+      "base": 0.3566666666666667,
+      "loo": 0.13,
+      "reps": 300
+    },
+    "50|1.0|decimal|DG": {
+      "base": 0.41,
+      "loo": 0.1,
+      "reps": 300
+    },
+    "50|1.5|none|HL": {
+      "base": 0.29333333333333333,
+      "loo": 0.08,
+      "reps": 300
+    },
+    "50|1.5|none|Stukel": {
+      "base": 0.47333333333333333,
+      "loo": 0.23666666666666666,
+      "reps": 300
+    },
+    "50|1.5|none|DG": {
+      "base": 0.55,
+      "loo": 0.26,
+      "reps": 300
+    },
+    "50|1.5|decimal|HL": {
+      "base": 0.2633333333333333,
+      "loo": 0.07666666666666666,
+      "reps": 300
+    },
+    "50|1.5|decimal|Stukel": {
+      "base": 0.4266666666666667,
+      "loo": 0.21333333333333335,
+      "reps": 300
+    },
+    "50|1.5|decimal|DG": {
+      "base": 0.5333333333333333,
+      "loo": 0.17333333333333334,
+      "reps": 300
+    }
+  },
+  "posthoc_alpha_prime": {
+    "30|HL": {
+      "alpha_prime": 0.5038347581257627,
+      "contaminated_size": {
+        "decimal": 0.052,
+        "sign": 0.058,
+        "outcome": 0.065
+      },
+      "base_contaminated_size": {
+        "decimal": 0.049,
+        "sign": 0.033,
+        "outcome": 0.034
+      },
+      "power_base_vs_cal": {
+        "0.5": [
+          0.03666666666666667,
+          0.11
+        ],
+        "1.0": [
+          0.08333333333333333,
+          0.16666666666666666
+        ],
+        "1.5": [
+          0.14666666666666667,
+          0.24333333333333335
+        ]
+      }
+    },
+    "30|Stukel": {
+      "alpha_prime": 0.34854628352691913,
+      "contaminated_size": {
+        "decimal": 0.048,
+        "sign": 0.057,
+        "outcome": 0.057
+      },
+      "base_contaminated_size": {
+        "decimal": 0.079,
+        "sign": 0.063,
+        "outcome": 0.071
+      },
+      "power_base_vs_cal": {
+        "0.5": [
+          0.12666666666666668,
+          0.07333333333333333
+        ],
+        "1.0": [
+          0.27666666666666667,
+          0.19
+        ],
+        "1.5": [
+          0.35333333333333333,
+          0.24333333333333335
+        ]
+      }
+    },
+    "30|DG": {
+      "alpha_prime": 0.29,
+      "contaminated_size": {
+        "decimal": 0.074,
+        "sign": 0.06,
+        "outcome": 0.048
+      },
+      "base_contaminated_size": {
+        "decimal": 0.086,
+        "sign": 0.057,
+        "outcome": 0.038
+      },
+      "power_base_vs_cal": {
+        "0.5": [
+          0.05,
+          0.07666666666666666
+        ],
+        "1.0": [
+          0.17333333333333334,
+          0.16333333333333333
+        ],
+        "1.5": [
+          0.30666666666666664,
+          0.36333333333333334
+        ]
+      }
+    },
+    "50|HL": {
+      "alpha_prime": 0.385102687218646,
+      "contaminated_size": {
+        "decimal": 0.042,
+        "sign": 0.041,
+        "outcome": 0.036
+      },
+      "base_contaminated_size": {
+        "decimal": 0.041,
+        "sign": 0.045,
+        "outcome": 0.041
+      },
+      "power_base_vs_cal": {
+        "0.5": [
+          0.1,
+          0.13666666666666666
+        ],
+        "1.0": [
+          0.2,
+          0.24666666666666667
+        ],
+        "1.5": [
+          0.29333333333333333,
+          0.3233333333333333
+        ]
+      }
+    },
+    "50|Stukel": {
+      "alpha_prime": 0.25107521114274906,
+      "contaminated_size": {
+        "decimal": 0.059,
+        "sign": 0.033,
+        "outcome": 0.042
+      },
+      "base_contaminated_size": {
+        "decimal": 0.142,
+        "sign": 0.051,
+        "outcome": 0.054
+      },
+      "power_base_vs_cal": {
+        "0.5": [
+          0.17333333333333334,
+          0.14
+        ],
+        "1.0": [
+          0.39,
+          0.31
+        ],
+        "1.5": [
+          0.47333333333333333,
+          0.3933333333333333
+        ]
+      }
+    },
+    "50|DG": {
+      "alpha_prime": 0.22950000000000004,
+      "contaminated_size": {
+        "decimal": 0.088,
+        "sign": 0.043,
+        "outcome": 0.044
+      },
+      "base_contaminated_size": {
+        "decimal": 0.118,
+        "sign": 0.046,
+        "outcome": 0.056
+      },
+      "power_base_vs_cal": {
+        "0.5": [
+          0.13666666666666666,
+          0.10333333333333333
+        ],
+        "1.0": [
+          0.27666666666666667,
+          0.2866666666666667
+        ],
+        "1.5": [
+          0.55,
+          0.5466666666666666
+        ]
+      }
+    }
+  }
+}

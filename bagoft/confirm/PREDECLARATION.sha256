@@ -1,0 +1,9 @@
+# SHA-256, recorded 2026-09-18 23:37 UTC (02:37 local, UTC+3) BEFORE launch -- before any confirmatory dataset existed
+f49b418323e637d4de91d7adcc9441ba7ae57593fa162ec4b0601d3778c7e9e7 *PREDECLARATION.md
+f75161e03ffbeb3b9caba6a114c71e224789bdd69349064a742103284df711da *run_confirm.R
+0bc0089ff72be0bc5f43e00bfdb051ba74ddb8b550635304ebcee44161e7cebe *analyze_confirm.py
+87aa56f76ab3cabc6fdf5c0c8f64b4162d6a94a7edce65989983d027c5708cb4 *../explore_bagoft/bagoft_fast.R
+7e42b1a70598b553f03503117495c37136302d6c19b8622baadf03e8635efe84 *../explore_bagoft/verify_fast.R
+651ac697a67ebfeefa0a74ad8795baefebd867dcbd08050ac28a92623a3c75e3 *../explore_bagoft/VERIFY_FAST.log
+f11eb0726333fff06ef9493755cdddc1a034ca4fad401787271bfc395bc32655 *../explore_bagoft/common.R
+29867d14f340d9507de7b9bac7a872c5a874102a2179e98ef9e0bc625003b881 *../code/probit_common.py

@@ -1,0 +1,29 @@
+2026-09-20 12:36:44  identity re-check: 60 datasets over 60 cells, 2 workers
+2026-09-20 12:47:09  identity re-check: 2 datasets over 1 cells, 2 workers
+2026-09-20 12:51:10  2 of 2 reproduced exactly (0 mismatched or errored); median 232 s
+2026-09-20 12:51  identity re-check launcher started (pid 38708)
+2026-09-20 18:23  machine quiet, window opened
+2026-09-20 18:38  an Rscript appeared -- still waiting
+2026-09-20 18:39  machine quiet, window opened
+2026-09-20 18:41  an Rscript appeared -- still waiting
+2026-09-20 18:42  machine quiet, window opened
+2026-09-20 18:44  an Rscript appeared -- still waiting
+2026-09-20 18:45  machine quiet, window opened
+2026-09-20 19:00  launching verify_identity_wide.R (4 datasets per cell, 20 workers)
+Warning message:
+package 'BAGofT' was built under R version 4.4.3 
+Error in file(file, ifelse(append, "a", "w")) : 
+  cannot open the connection
+Calls: cat -> file
+In addition: Warning message:
+In file(file, ifelse(append, "a", "w")) :
+  cannot open file '/path/to/project/paper_deepgof/confirm_bagoft/IDENTITY_WIDE.log': Permission denied
+Execution halted
+2026-09-20 19:01  verify_identity_wide.R exited with code 1
+Warning message:
+package 'BAGofT' was built under R version 4.4.3 
+2026-09-21 16:15:38  239 of 240 reproduced exactly (1 mismatched or errored); median 287 s
+ setting  n C rep p_deposit p_package pmed_deposit pmed_package stat_deposit
+       2 50 1  35         0        NA            0           NA            0
+ stat_package  secs    reference match
+           NA 179.6 BAGofT 1.0.0    NA

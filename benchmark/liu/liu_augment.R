@@ -1,47 +1,34 @@
-suppressMessages(library(brglm2))
-## liu_augment.R -- add Stute-Zhu and proj (Escanciano RMEP) to an existing GATE LIU block.
+suppressMessages({ library(brglm2); library(ebrahim.gof) })
+## liu_augment.R -- adds the Stute-Zhu test to an existing Liu block.
 ##
-## Pre-declared in speckit/26_LIU_BENCHMARK.md, AMENDMENT (2026-08-23).
+## Every dataset of a block is generated from a deterministic seed
+## (set.seed(SEED0 + SET*500000 + kind*50000 + ci*5000 + i)), so the same data are re-derived here
+## without touching the stored block. Stute-Zhu is ebrahim.gof's implementation (run.all.gof row
+## "Stute-Zhu"; it calibrates by its own bootstrap and so draws random numbers after the fit).
 ##
-## WHY THIS IS CHEAP. Every dataset in a LIU block is generated from a DETERMINISTIC seed
-## (`set.seed(SEED0 + SET*500000 + kind*50000 + ci*5000 + i)`), so the exact same data can be
-## re-derived here without touching the stored blocks. The expensive part of the original run was
-## 199 bootstrap REFITS per dataset for the residual map; that is NOT needed for Stute-Zhu, and for
-## proj it is needed only through a rank-1 quadratic form:
+## The deposited augment_pvalues.csv also carries `proj_superseded`: the projection statistic of
+## the first run, whose weight had an extra length factor |X_i - X_l||X_j - X_l| on standardised
+## covariates. It is kept only as the pairing key for the corrected projection test of
+## theory/addon_arms/proj_addon.R (Liu et al.'s angle-only weight on the raw covariates), which
+## replays the random-number state Stute-Zhu leaves and so uses the same bootstrap outcomes.
 ##
-##   ⭐ THE A MATRIX DEPENDS ONLY ON X, NEVER ON y.
-##     A is built ONCE per dataset -- O(n^3 p), vectorised over the third index -- and every
-##     bootstrap replicate then costs only O(n^2) for eps' A eps. That is what turns Liu et al.'s
-##     reported ~2.5 h per setting into something that runs here.
-##
-## proj: T = eps-hat' A eps-hat / n^2, with
-##   A_ij = sum_r ||X_i-X_r|| ||X_j-X_r|| (pi - arccos(a_ijr)),
-##   a_ijr = (X_i-X_r)'(X_j-X_r)/(||X_i-X_r|| ||X_j-X_r||),   X standardised, intercept dropped.
-## Calibrated by the SAME model-based bootstrap as every other arm: simulate y* from the fitted
-## model, refit, recompute eps-hat*, exact rank p-value at B = 199.
-##
-## VALIDATION (LIU6, frozen): our proj must show high, MONOTONE power on Setting 2. If it does not,
-## the implementation is wrong and no proj number may be reported.
+## Environment: AU_SET, AU_N, AU_SEED (the block), AU_W (2 workers), AU_DIR (default
+## results/liu/S<set>_n<n>_s<seed> under DEEPGOF_ARCHIVE). Writes <block>/augment_sz.csv.
 
-ROOT <- "C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/learned-def"
-PAP  <- "C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof"
-source(file.path(ROOT,"jasa_study","config.R")); source(file.path(ROOT,"R","scenarios.R"))
-source(file.path(JASA$study,"R","scenarios_registry.R")); source(file.path(JASA$study,"R","methods_registry.R"))
-source(file.path(JASA$study,"R","harness_core.R")); jasa_init()
-
-B     <- as.integer(Sys.getenv("AU_B",    "199"))
-NW    <- as.integer(Sys.getenv("AU_W",    "12"))
+ARC   <- Sys.getenv("DEEPGOF_ARCHIVE", ".")
+NW    <- as.integer(Sys.getenv("AU_W",    "2"))
 NOBS  <- as.integer(Sys.getenv("AU_N",    "100"))
 SEED0 <- as.integer(Sys.getenv("AU_SEED", "101000"))
 SET   <- as.integer(Sys.getenv("AU_SET",  "2"))
-DOPROJ<- as.integer(Sys.getenv("AU_PROJ", "1"))
 CS    <- c(0, 0.25, 0.5, 0.75, 1.0)
-OUT   <- file.path(PAP,"results","liu", sprintf("S%d_n%d_s%d", SET, NOBS, SEED0))
+OUT   <- Sys.getenv("AU_DIR", file.path(ARC, "results", "liu", sprintf("S%d_n%d_s%d", SET, NOBS, SEED0)))
 if (!dir.exists(OUT)) stop("no such block: ", OUT)
-META  <- read.csv(file.path(OUT,"blk_meta.csv"))
-NNULL <- META$nnull[1]; NRAND <- META$nrand[1]; NEVAL <- META$neval[1]
+META  <- read.csv(file.path(OUT, "blk_meta.csv"))
+NNULL <- as.integer(Sys.getenv("AU_NULL", META$nnull[1]))
+NRAND <- as.integer(Sys.getenv("AU_RAND", META$nrand[1]))
+NEVAL <- as.integer(Sys.getenv("AU_EVAL", META$neval[1]))
 
-## ---- the four DGPs, identical to liu_grid.R ----------------------------------------------------
+## ---- the four DGPs and the fit policy, identical to liu_grid.R -----------------------------------
 gen_liu <- function(n, setting, C) {
   if (setting == 1L) { x1 <- runif(n,-3,3); d <- data.frame(x1)
     eta <- -1.963 + 0.982*x1 + C*x1^2
@@ -81,22 +68,6 @@ fit_pol <- function(frm, d) {
   g
 }
 
-## ---- Escanciano's A matrix: built ONCE from X ---------------------------------------------------
-proj_A <- function(X) {
-  X <- scale(X); n <- nrow(X)
-  A <- matrix(0, n, n)
-  for (r in seq_len(n)) {
-    D  <- sweep(X, 2, X[r, ], "-")                 # n x p
-    nm <- sqrt(rowSums(D*D))
-    G  <- tcrossprod(D)                            # n x n inner products
-    NN <- outer(nm, nm)
-    cs <- ifelse(NN > 1e-12, G/NN, 0)
-    A  <- A + NN * (pi - acos(pmin(pmax(cs, -1), 1)))
-  }
-  A
-}
-proj_T <- function(e, A) as.numeric(crossprod(e, A %*% e)) / (length(e)^2)
-
 one <- function(kind, i, C=NA_real_, ci=0L) {
   set.seed(SEED0 + SET*500000L + kind*50000L + ci*5000L + i)
   d <- if (kind == 1L) gen_train_alt(NOBS, SET, SEED0*29L + i)
@@ -106,48 +77,23 @@ one <- function(kind, i, C=NA_real_, ci=0L) {
   sz <- tryCatch(suppressWarnings(
           run.all.gof(fit, tests="Stute-Zhu", include_slow=TRUE, install="no")$p_value[1]),
         error=function(e) NA_real_)
-  pj <- NA_real_
-  if (DOPROJ == 1L) {
-    pj <- tryCatch({
-      X <- stats::model.matrix(fit)[, -1, drop=FALSE]
-      A <- proj_A(X)
-      ph <- as.numeric(stats::fitted(fit))
-      Tobs <- proj_T(d$y - ph, A)
-      Tb <- numeric(B); d2 <- d
-      for (b in seq_len(B)) {
-        d2$y <- rbinom(NOBS, 1, ph)
-        fb <- fit_pol(frm, d2)
-        Tb[b] <- if (is.null(fb)) -Inf else proj_T(d2$y - as.numeric(stats::fitted(fb)), A)
-      }
-      (1 + sum(Tb >= Tobs)) / (B + 1)
-    }, error = function(e) NA_real_)
-  }
-  c(kind=kind, rep=i, C=C, SZ=sz, proj=pj)
+  c(kind=kind, rep=i, C=C, SZ=sz)
 }
 
-SRC <- c(file.path(ROOT,"jasa_study","config.R"), file.path(ROOT,"R","scenarios.R"))
 cl <- parallel::makeCluster(NW)
-parallel::clusterExport(cl, c("SRC","B","NOBS","SEED0","SET","DOPROJ","gen_liu","gen_train_alt",
-                              "FRM","fit_pol","proj_A","proj_T","one"), envir=environment())
-invisible(parallel::clusterEvalQ(cl, {
-  source(SRC[1]); source(file.path(JASA$study,"R","methods_registry.R"))
-  source(file.path(JASA$study,"R","harness_core.R")); jasa_init()
-  source(SRC[2]); source(file.path(JASA$study,"R","scenarios_registry.R"))
-  suppressMessages(library(brglm2)); NULL }))
-
+parallel::clusterExport(cl, c("NOBS","SEED0","SET","gen_liu","gen_train_alt","FRM","fit_pol","one"),
+                        envir=environment())
+invisible(parallel::clusterEvalQ(cl, { suppressMessages({ library(brglm2); library(ebrahim.gof) }); NULL }))
 jobs <- c(lapply(seq_len(NNULL), function(i) list(k=0L,i=i)),
           lapply(seq_len(NRAND), function(i) list(k=1L,i=i)))
 for (ci in seq_along(CS)) if (CS[ci] > 0)
   jobs <- c(jobs, lapply(seq_len(NEVAL), function(i) list(k=2L,i=i,C=CS[ci],ci=ci)))
-cat(sprintf("AUGMENT S%d n=%d seed=%d | Stute-Zhu%s | %d datasets\n",
-            SET, NOBS, SEED0, if (DOPROJ==1L) " + proj" else "", length(jobs))); flush.console()
+cat(sprintf("AUGMENT S%d n=%d seed=%d | Stute-Zhu | %d datasets\n", SET, NOBS, SEED0, length(jobs)))
 t0 <- Sys.time()
 res <- Filter(Negate(is.null), parallel::parLapplyLB(cl, jobs, function(j)
   one(j$k, j$i, if (is.null(j$C)) NA_real_ else j$C, if (is.null(j$ci)) 0L else j$ci)))
 parallel::stopCluster(cl)
-
 R <- as.data.frame(do.call(rbind, res))
-write.csv(R, file.path(OUT,"augment_pvalues.csv"), row.names=FALSE)
-cat(sprintf("AUGMENT COMPLETE: %d rows, %.1f min | SZ NA %.3f | proj NA %.3f -> %s\n",
-            nrow(R), as.numeric(difftime(Sys.time(),t0,units="mins")),
-            mean(is.na(R$SZ)), mean(is.na(R$proj)), OUT))
+write.csv(R, file.path(OUT, "augment_sz.csv"), row.names=FALSE)
+cat(sprintf("AUGMENT COMPLETE: %d rows, %.1f min | SZ NA %.3f -> %s\n",
+            nrow(R), as.numeric(difftime(Sys.time(),t0,units="mins")), mean(is.na(R$SZ)), OUT))

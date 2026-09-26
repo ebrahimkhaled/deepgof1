@@ -1,0 +1,3 @@
+bench 4.6e-11 | 0 records already done | this process: k in [2]
+[study k=2] design + DG null law 115 s; DG size 0.0512
+[study k=2] seed 1 kernels 407 s

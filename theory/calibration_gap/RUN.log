@@ -1,0 +1,41 @@
+calibration-gap pilot | D1 (p=2, indep, 50% events) | M=100000 D=20 tau=0.30 gamma=0.01
+DKW term 2*sqrt(log(4/gamma)/(2M)) = 0.01095 | workers = 8 | chunk = 2500
+outputs -> /path/to/project/paper_deepgof/theory/calibration_gap
+started 2026-09-16 06:29:42
+resume: 0 dataset rows already on disk
+  cell n= 50: 20 of 20 datasets to compute
+  cell n=200: 20 of 20 datasets to compute
+cell n= 50 done: 20 datasets computed this invocation, 65.5 min (2026-09-16 07:35:30)
+cell n=200 done: 20 datasets computed this invocation, 69.8 min (2026-09-16 08:45:18)
+                      [,1]         [,2]
+n             5.000000e+01 2.000000e+02
+D             2.000000e+01 2.000000e+01
+M             1.000000e+05 1.000000e+05
+DKW           1.094666e-02 1.094666e-02
+eps_med       5.130000e-03 1.320000e-03
+eps_q90       2.968300e-02 6.621000e-03
+eps_q95       4.381800e-02 1.285550e-02
+epsdkw_med    1.607666e-02 1.226666e-02
+epsdkw_q90    4.062966e-02 1.756766e-02
+epsdkw_q95    5.476466e-02 2.380216e-02
+dp_med        1.139000e-02 3.330000e-03
+dp_q90        3.954100e-02 8.511000e-03
+dp_q95        4.634250e-02 1.667800e-02
+dpdkw_q90     5.048766e-02 1.945766e-02
+dpdkw_q95     5.728916e-02 2.762466e-02
+D2_med        1.349000e-02 5.220000e-03
+D2_q90        3.954100e-02 1.221900e-02
+D2_q95        4.634250e-02 1.667800e-02
+mean_VmV0    -1.676000e-03 5.615000e-04
+size_boot     5.000000e-02 1.000000e-01
+size_true     5.000000e-02 1.000000e-01
+firth_obs     0.000000e+00 0.000000e+00
+firth_L0      7.500000e-06 0.000000e+00
+firth_L1      1.410000e-04 0.000000e+00
+fail_L0       0.000000e+00 0.000000e+00
+fail_L1       0.000000e+00 0.000000e+00
+cert_q90      7.968300e-02 5.662100e-02
+cert_q90_dkw  9.062966e-02 6.756766e-02
+mins          6.550450e+01 6.978526e+01
+
+PILOT INVOCATION COMPLETE -- 40 rows on disk at M=100000 (protocol D=20 per cell)

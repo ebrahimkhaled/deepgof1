@@ -1,0 +1,50 @@
+14:59:46 stage 01: null quantiles
+14:59:46 stage 02+03+04: net, tail and truth per direction (independent jobs, one pool)
+14:59:47   jobs still needed: [('02_mc_net.py', 'saddle'), ('02_mc_net.py', 'random'), ('04_truth.py', 'step_x1'), ('04_truth.py', 'diffuse'), ('04_truth.py', 'stripe_x1'), ('04_truth.py', 'saddle')]
+14:59:47   start 02_mc_net.py saddle (1 running, Rscript=14)
+14:59:48   start 02_mc_net.py random (2 running, Rscript=14)
+14:59:48   start 04_truth.py step_x1 (3 running, Rscript=14)
+14:59:49   start 04_truth.py diffuse (4 running, Rscript=14)
+14:59:50   start 04_truth.py stripe_x1 (5 running, Rscript=14)
+14:59:50   start 04_truth.py saddle (6 running, Rscript=14)
+16:17:09   stage done in 4643 s
+16:17:09 stage 05: certify
+
+FIXED test (S > 2.4865), target .95   [eta = 0.001 net + 0.001 critical value]
+direction    t_true       SE |  t_CROWN t_smooth t(eta.01) |   n_true  n_CROWN n_smooth    ratio
+step_x1       4.274   0.0055 |    30.78    4.326    4.323 |       73     3789       75     1.02  [95% CI 1.02-1.03]  (paper: n_true 72, CROWN ratio 52.6)
+diffuse       5.105   0.0059 |    32.83    5.153    5.149 |      104     4311      106     1.02  [95% CI 1.01-1.02]  (paper: n_true 103, CROWN ratio 41.9)
+stripe_x1     5.547   0.0061 |    38.34    5.605    5.602 |      123     5881      126     1.02  [95% CI 1.02-1.03]  (paper: n_true 122, CROWN ratio 48.2)
+saddle        7.156   0.0065 |    44.84    7.213    7.209 |      205     8044      208     1.02  [95% CI 1.01-1.02]  (paper: n_true 204, CROWN ratio 39.4)
+random       13.529   0.0131 |    58.99   13.700   13.697 |      732    13918      751     1.03  [95% CI 1.02-1.03]  (paper: n_true 729, CROWN ratio 19.1)
+
+FIXED test, target 0.50
+step_x1    t_true    2.312 (SE 0.0035)  t_smooth    2.342  n_true     21.4  n_smooth     21.9  ratio 1.03 [1.02-1.03]
+diffuse    t_true    3.048 (SE 0.0037)  t_smooth    3.087  n_true     37.2  n_smooth     38.1  ratio 1.03 [1.02-1.03]
+stripe_x1  t_true    3.341 (SE 0.0040)  t_smooth    3.388  n_true     44.6  n_smooth     45.9  ratio 1.03 [1.02-1.03]
+saddle     t_true    4.689 (SE 0.0045)  t_smooth    4.773  n_true     88.0  n_smooth     91.1  ratio 1.04 [1.03-1.04]
+random     t_true    8.839 (SE 0.0085)  t_smooth    9.001  n_true    312.5  n_smooth    324.0  ratio 1.04 [1.03-1.04]
+
+B199 test, target 0.95
+step_x1    t_true    4.302 (SE 0.0054)  t_smooth    4.429  n_true     74.0  n_smooth     78.5  ratio 1.06 [1.05-1.06]
+diffuse    t_true    5.145 (SE 0.0058)  t_smooth    5.268  n_true    105.9  n_smooth    111.0  ratio 1.05 [1.04-1.05]
+stripe_x1  t_true    5.594 (SE 0.0060)  t_smooth    5.730  n_true    125.1  n_smooth    131.3  ratio 1.05 [1.04-1.05]
+saddle     t_true    7.232 (SE 0.0067)  t_smooth    7.432  n_true    209.2  n_smooth    220.9  ratio 1.06 [1.05-1.06]
+random     t_true   13.657 (SE 0.0133)  t_smooth   14.083  n_true    746.0  n_smooth    793.3  ratio 1.06 [1.06-1.07]
+
+B199 test, target 0.50
+step_x1    t_true    2.326 (SE 0.0035)  t_smooth    2.438  n_true     21.6  n_smooth     23.8  ratio 1.10 [1.09-1.11]
+diffuse    t_true    3.066 (SE 0.0038)  t_smooth    3.206  n_true     37.6  n_smooth     41.1  ratio 1.09 [1.09-1.10]
+stripe_x1  t_true    3.356 (SE 0.0040)  t_smooth    3.507  n_true     45.1  n_smooth     49.2  ratio 1.09 [1.09-1.10]
+saddle     t_true    4.719 (SE 0.0047)  t_smooth    4.914  n_true     89.1  n_smooth     96.6  ratio 1.08 [1.08-1.09]
+random     t_true    8.886 (SE 0.0088)  t_smooth    9.305  n_true    315.9  n_smooth    346.3  ratio 1.10 [1.09-1.10]
+
+diagnostics:
+  step_x1    J=260 net points (6.3 M draws) on [1.27, 249.87]; tail closed to t_global 6943 with 19 CROWN intervals; max Lambda 3.28
+  diffuse    J=271 net points (7.4 M draws) on [1.52, 249.37]; tail closed to t_global 10430 with 21 CROWN intervals; max Lambda 3.44
+  stripe_x1  J=278 net points (8.0 M draws) on [1.66, 249.85]; tail closed to t_global 8835 with 22 CROWN intervals; max Lambda 3.42
+  saddle     J=300 net points (10.0 M draws) on [2.14, 249.99]; tail closed to t_global 12862 with 31 CROWN intervals; max Lambda 3.66
+  random     J=387 net points (18.2 M draws) on [4.05, 249.25]; tail closed to t_global 20907 with 50 CROWN intervals; max Lambda 3.65
+
+
+16:17:41 all done

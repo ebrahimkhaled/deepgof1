@@ -1,0 +1,12 @@
+Warning messages:
+myopia       n =  618  events =   81  p = 13  converged = TRUE  extreme fitted =   0  aliased = 0  max|b|sd =     8.47  SEPARATION = FALSE
+Pima         n =  532  events =  177  p =  7  converged = TRUE  extreme fitted =   0  aliased = 0  max|b|sd =     1.09  SEPARATION = FALSE
+Mroz         n =  753  events =  428  p =  7  converged = TRUE  extreme fitted =   0  aliased = 0  max|b|sd =     0.77  SEPARATION = FALSE
+Ionosphere   n =  351  events =  225  p = 33  converged = TRUE  extreme fitted =  43  aliased = 0  max|b|sd =    11.28  SEPARATION = TRUE
+Sonar        n =  208  events =  111  p = 60  converged = TRUE  extreme fitted = 208  aliased = 0  max|b|sd =   571.02  SEPARATION = TRUE
+crabs_sp     n =  200  events =  100  p =  6  converged = TRUE  extreme fitted = 200  aliased = 0  max|b|sd =   354.59  SEPARATION = TRUE
+crabs_sex    n =  200  events =  100  p =  6  converged = TRUE  extreme fitted = 109  aliased = 0  max|b|sd =    66.35  SEPARATION = TRUE
+myopia: cor(AL, ACD + LT + VCD) = 1.0000; max |AL - (ACD + LT + VCD)| = 0.008
+myopia  rows sorted by y: FALSE  (number of runs of y = 144)
+Pima    rows sorted by y: FALSE  (number of runs of y = 235)
+Mroz    rows sorted by y: TRUE  (number of runs of y = 2)

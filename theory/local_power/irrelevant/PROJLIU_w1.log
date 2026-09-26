@@ -1,0 +1,66 @@
+5 records on disk | tasks ['curve:6:1', 'curve:2:1', 'curve:0:1', 'curve:6:2', 'curve:2:2', 'curve:0:2', 'curve:6:3', 'curve:2:3', 'curve:0:3', 'curve:6:4', 'curve:2:4', 'curve:0:4', 'curve:6:5', 'curve:2:5', 'curve:0:5', 'curve:6:6', 'curve:2:6', 'curve:0:6', 'pred:2', 'pred:4', 'pred:6', 'are:3', 'are:5', 'rate:50:1', 'rate:20:1', 'rate:10:2', 'M2000:8:1', 'M2000:0:2', 'areM2000:2']
+curve:2:1 done in 26 s
+curve:0:1 done in 26 s
+curve:6:2 done in 25 s
+curve:2:2 done in 26 s
+curve:0:2 done in 26 s
+curve:6:3 done in 26 s
+Traceback (most recent call last):
+  File "/path/to/project\paper_deepgof\theory\local_power\irrelevant\08_proj_liu_raw.py", line 241, in <module>
+    rec = run_task(task); log(rec); done[task] = rec
+  File "/path/to/project\paper_deepgof\theory\local_power\irrelevant\08_proj_liu_raw.py", line 111, in run_task
+    R = liu_kernel(x); rec = dict(key=task, kind=kind, k=k, p=2 + k, seed=sd, M=M)
+  File "/path/to/project\paper_deepgof\theory\local_power\irrelevant\08_proj_liu_raw.py", line 61, in liu_kernel
+    Kl = (np.pi - np.arccos(np.clip(U @ U.T, -1.0, 1.0))) / TWO_PI
+                                    ~~^~~~~
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 7.63 MiB for an array with shape (1000, 1000) and data type float64
+17 records on disk | tasks ['curve:6:1', 'curve:2:1', 'curve:0:1', 'curve:6:2', 'curve:2:2', 'curve:0:2', 'curve:6:3', 'curve:2:3', 'curve:0:3', 'curve:6:4', 'curve:2:4', 'curve:0:4', 'curve:6:5', 'curve:2:5', 'curve:0:5', 'curve:6:6', 'curve:2:6', 'curve:0:6', 'pred:2', 'pred:4', 'pred:6', 'are:3', 'are:5', 'rate:50:1', 'rate:20:1', 'rate:10:2', 'M2000:8:1', 'M2000:0:2', 'areM2000:2']
+curve:2:3 done in 23 s
+curve:0:3 done in 27 s
+curve:6:4 done in 26 s
+curve:2:4 done in 26 s
+curve:0:4 done in 27 s
+curve:6:5 done in 27 s
+curve:2:5 done in 27 s
+curve:0:5 done in 27 s
+curve:6:6 done in 26 s
+curve:2:6 done in 26 s
+curve:0:6 done in 26 s
+pred:2 done in 24 s
+pred:4 done in 24 s
+pred:6 done in 25 s
+are:3 done in 27 s
+are:5 done in 28 s
+rate:50:1 done in 29 s
+rate:20:1 done in 29 s
+rate:10:2 done in 31 s
+M2000:8:1 done in 275 s
+Traceback (most recent call last):
+  File "/path/to/project\paper_deepgof\theory\local_power\irrelevant\08_proj_liu_raw.py", line 241, in <module>
+    rec = run_task(task); log(rec); done[task] = rec
+  File "/path/to/project\paper_deepgof\theory\local_power\irrelevant\08_proj_liu_raw.py", line 111, in run_task
+    R = liu_kernel(x); rec = dict(key=task, kind=kind, k=k, p=2 + k, seed=sd, M=M)
+  File "/path/to/project\paper_deepgof\theory\local_power\irrelevant\08_proj_liu_raw.py", line 61, in liu_kernel
+    Kl = (np.pi - np.arccos(np.clip(U @ U.T, -1.0, 1.0))) / TWO_PI
+                            ~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "<python>/site-packages\numpy\_core\fromnumeric.py", line 2330, in clip
+    return _wrapfunc(a, 'clip', a_min, a_max, out=out, **kwargs)
+  File "<python>/site-packages\numpy\_core\fromnumeric.py", line 57, in _wrapfunc
+    return bound(*args, **kwds)
+  File "<python>/site-packages\numpy\_core\_methods.py", line 116, in _clip
+    return um.clip(a, min, max, out=out, **kwargs)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 30.5 MiB for an array with shape (2000, 2000) and data type float64
+71 records on disk | tasks ['curve:6:1', 'curve:2:1', 'curve:0:1', 'curve:6:2', 'curve:2:2', 'curve:0:2', 'curve:6:3', 'curve:2:3', 'curve:0:3', 'curve:6:4', 'curve:2:4', 'curve:0:4', 'curve:6:5', 'curve:2:5', 'curve:0:5', 'curve:6:6', 'curve:2:6', 'curve:0:6', 'pred:2', 'pred:4', 'pred:6', 'are:3', 'are:5', 'rate:50:1', 'rate:20:1', 'rate:10:2', 'M2000:8:1', 'M2000:0:2', 'areM2000:2']
+Traceback (most recent call last):
+  File "/path/to/project\paper_deepgof\theory\local_power\irrelevant\08_proj_liu_raw.py", line 241, in <module>
+    rec = run_task(task); log(rec); done[task] = rec
+  File "/path/to/project\paper_deepgof\theory\local_power\irrelevant\08_proj_liu_raw.py", line 111, in run_task
+    R = liu_kernel(x); rec = dict(key=task, kind=kind, k=k, p=2 + k, seed=sd, M=M)
+  File "/path/to/project\paper_deepgof\theory\local_power\irrelevant\08_proj_liu_raw.py", line 61, in liu_kernel
+    Kl = (np.pi - np.arccos(np.clip(U @ U.T, -1.0, 1.0))) / TWO_PI
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 30.5 MiB for an array with shape (2000, 2000) and data type float64
+71 records on disk | tasks ['curve:6:1', 'curve:2:1', 'curve:0:1', 'curve:6:2', 'curve:2:2', 'curve:0:2', 'curve:6:3', 'curve:2:3', 'curve:0:3', 'curve:6:4', 'curve:2:4', 'curve:0:4', 'curve:6:5', 'curve:2:5', 'curve:0:5', 'curve:6:6', 'curve:2:6', 'curve:0:6', 'pred:2', 'pred:4', 'pred:6', 'are:3', 'are:5', 'rate:50:1', 'rate:20:1', 'rate:10:2', 'M2000:8:1', 'M2000:0:2', 'areM2000:2']
+M2000:0:2 done in 726 s
+areM2000:2 done in 655 s

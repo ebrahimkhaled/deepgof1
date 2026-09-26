@@ -1,0 +1,150 @@
+{
+ "t_bar": 2.4865397005924965,
+ "target_t_stripe": 17.4,
+ "delta": 0.05,
+ "best_stripe": {
+  "t_cert": 38.0,
+  "method": "stratified BaB, k=1 (dominant gradient direction), usage-aware charge",
+  "bound": 0.04971236881419542,
+  "n_regions": 33,
+  "n_evals": 65,
+  "wall_s": 302.8166997432709,
+  "t_pcrown07": 40.064,
+  "t_emp": 5.516,
+  "n_ratio_vs_emp": 47.459010402068536,
+  "validation": {
+   "run": "run_stripe_x1_grad_k1_t38.json",
+   "violation_rate": 0.002495,
+   "charged": 0.024285319109360888,
+   "lower_fn_breaches": 0,
+   "dead_share": 0.01791,
+   "dead_mass": 0.017578125,
+   "mc_power": 1.0,
+   "ok": true
+  }
+ },
+ "directions": [
+  {
+   "direction": "stripe_x1",
+   "t_emp": 5.516328469690052,
+   "t_pcrown07": 40.06385603334638,
+   "t_cert_usage_aware": 38.342988217164056,
+   "method": "usage-aware probabilistic CROWN, 1 region",
+   "z": 4.22,
+   "band_charge": 0.045018205288610225,
+   "union_charge_same_z": 0.07817674192161936,
+   "tail": 0.004749549706529861,
+   "n_ratio_cert_vs_emp": 48.313853218753266,
+   "n_ratio_pcrown07_vs_emp": 52.7479100007771,
+   "wall_s_bisection": 123.6368362903595,
+   "n_regions": 1,
+   "validation": {
+    "violation_rate": 0.004905,
+    "charge": 0.045018205288610225,
+    "lower_fn_breaches": 0,
+    "min_gap": 52.58867041988678,
+    "mc_power": 1.0,
+    "ok": true
+   }
+  },
+  {
+   "direction": "step_x1",
+   "t_emp": 4.2409963755562785,
+   "t_pcrown07": 32.06672380340751,
+   "t_cert_usage_aware": 30.77879390439722,
+   "method": "usage-aware probabilistic CROWN, 1 region",
+   "z": 4.22,
+   "band_charge": 0.04785316756626229,
+   "union_charge_same_z": 0.07817674192161936,
+   "tail": 0.0018359632278509494,
+   "n_ratio_cert_vs_emp": 52.67049411336464,
+   "n_ratio_pcrown07_vs_emp": 57.170682877209245,
+   "wall_s_bisection": 74.1601734161377,
+   "n_regions": 1,
+   "validation": {
+    "violation_rate": 0.00542,
+    "charge": 0.04785316756626229,
+    "lower_fn_breaches": 0,
+    "min_gap": 51.203680865252636,
+    "mc_power": 1.0,
+    "ok": true
+   }
+  },
+  {
+   "direction": "saddle",
+   "t_emp": 7.133768966436037,
+   "t_pcrown07": 47.32967484538676,
+   "t_cert_usage_aware": 44.8441273898345,
+   "method": "usage-aware probabilistic CROWN, 1 region",
+   "z": 4.18,
+   "band_charge": 0.046522177348288875,
+   "union_charge_same_z": 0.09328291066154908,
+   "tail": 0.00321020425340051,
+   "n_ratio_cert_vs_emp": 39.516008920592725,
+   "n_ratio_pcrown07_vs_emp": 44.01786370329282,
+   "wall_s_bisection": 68.94991421699524,
+   "n_regions": 1,
+   "validation": {
+    "violation_rate": 0.0054,
+    "charge": 0.046522177348288875,
+    "lower_fn_breaches": 0,
+    "min_gap": 40.58935783557226,
+    "mc_power": 1.0,
+    "ok": true
+   }
+  },
+  {
+   "direction": "diffuse",
+   "t_emp": 5.065566932556976,
+   "t_pcrown07": 34.37237758061383,
+   "t_cert_usage_aware": 32.82750032888515,
+   "method": "usage-aware probabilistic CROWN, 1 region",
+   "z": 4.2,
+   "band_charge": 0.04482602933030026,
+   "union_charge_same_z": 0.08541279370180041,
+   "tail": 0.00486823141178324,
+   "n_ratio_cert_vs_emp": 41.99712030891622,
+   "n_ratio_pcrown07_vs_emp": 46.04293834315992,
+   "wall_s_bisection": 68.01893210411072,
+   "n_regions": 1,
+   "validation": {
+    "violation_rate": 0.005545,
+    "charge": 0.04482602933030026,
+    "lower_fn_breaches": 0,
+    "min_gap": 37.41569771332662,
+    "mc_power": 1.0,
+    "ok": true
+   }
+  },
+  {
+   "direction": "random",
+   "t_emp": 13.497681667271536,
+   "t_pcrown07": 62.46755692275474,
+   "t_cert_usage_aware": 58.98791879104192,
+   "method": "usage-aware probabilistic CROWN, 1 region",
+   "z": 4.16,
+   "band_charge": 0.0458940676786283,
+   "union_charge_same_z": 0.10183923020212586,
+   "tail": 0.003973705261143712,
+   "n_ratio_cert_vs_emp": 19.098874921329262,
+   "n_ratio_pcrown07_vs_emp": 21.418580238464223,
+   "wall_s_bisection": 64.52740383148193,
+   "n_regions": 1,
+   "validation": {
+    "violation_rate": 0.00488,
+    "charge": 0.0458940676786283,
+    "lower_fn_breaches": 0,
+    "min_gap": 30.54662206162582,
+    "mc_power": 1.0,
+    "ok": true
+   }
+  }
+ ],
+ "negative_results": {
+  "relu_split_bab_prob_style": "04_relu_bab.py: bound INCREASES with splitting at t=39 (root 0.0596 -> 0.0695 after 300 leaves, first-layer splits; -> 1.5 splitting any layer): region halfspaces built from relaxed forms overlap, children sum > parent",
+  "stratified_k2": "k=2 at t=38: bound 0.443 after 101 evaluations (not converged; strictly worse than k=1 at equal cost)",
+  "pinning_limit_t17p4": "02_pinning_limit.py: even point cells (infinite refinement) fail at t=17.4 unless >= 24 of 36 dims are pinned; k=24 centre cell bound 0.20, only k=36 succeeds",
+  "accounting_ceiling": "05_accounting_ceiling.py: charging the TRUE P(E^c) (oracle) instead of any bound certifies only down to t ~ 35 for stripe",
+  "hunter_worsley": "06_pcrown_hw.py: HW spanning-tree bound cuts the union charge only ~30% (0.190 -> 0.136 at z=4); true P(E^c) is 0.025 there"
+ }
+}

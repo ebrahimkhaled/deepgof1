@@ -1,0 +1,9 @@
+step_x1: paper's t_emp (threshold T_HAT, power .95) = 4.2410
+step_x1: paper's t_emp (threshold T_HAT, power .95) = 4.2410
+step_x1: paper's t_emp (threshold T_HAT, power .95) = 4.2410
+  fixed target 0.95: t = 4.2737  (power there 0.9505, slope 0.0875/unit t, SE(t) = 0.0055)
+  fixed target 0.50: t = 2.3116  (power there 0.5007, slope 0.3223/unit t, SE(t) = 0.0035)
+  b199 target 0.95: t = 4.3025  (power there 0.9498, slope 0.0907/unit t, SE(t) = 0.0054)
+  b199 target 0.50: t = 2.3260  (power there 0.5015, slope 0.3169/unit t, SE(t) = 0.0035)
+  hat target 0.95: t = 4.2566  (power there 0.9500, slope 0.0897/unit t, SE(t) = 0.0054)
+step_x1 truth done in 3574 s

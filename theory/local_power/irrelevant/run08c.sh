@@ -1,0 +1,1 @@
+( for try in 1 2 3 4 5 6 7 8; do PL_TAG=w3 IR_THREADS=1 python -u 08_proj_liu_raw.py base:1000:0:1 base:4000:0:1 base:1000:8:1 base:4000:8:1 base:1000:0:2 base:4000:0:2 base:1000:8:2 base:4000:8:2 >> PROJLIU_w3.log 2>&1 && break; sleep 30; done )

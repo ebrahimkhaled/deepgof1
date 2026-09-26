@@ -1,19 +1,17 @@
-"""s3_score.py -- GATE S3 stage 2: train ONE rule per (n, seed), apply it to all four designs.
+"""s3_score.py -- Simulation I, stage 2: train ONE rule per (n, seed), apply it to all four designs.
 
-Pre-declared in speckit/21_S3_PREDECLARATION.md. Read it before changing anything here.
-
-Section 5 of that document fixes the rule-fitting choice: **one deployment-matched rule per
+The rule-fitting choice was fixed before the data were generated: **one deployment-matched rule per
 (n, seed), trained on the D1 corpus and applied UNCHANGED to D1-D4.** That is the honest test of
 what the method actually offers -- a pretrained test is one an analyst downloads and applies to
 their own design without retraining. Fitting a fresh rule per design would measure a capability the
 method does not ship.
 
 `--per-design` additionally trains a rule on each design's own corpus and reports it alongside, so
-the COST of pooling is measured rather than assumed. Those numbers are a diagnostic and may never
-be the headline (21 section 8).
+the COST of pooling is measured rather than assumed. Those numbers are a diagnostic only.
 
-Everything else is inherited from closed gates and not re-opened here: K=6, mix pinned at 1.0,
-randomized matched level via probit_common, NA = a failed test that cannot reject.
+K = 6, mix pinned at 1.0, randomized matched level (benchmark/common/matched_power.py), NA = a failed
+test that cannot reject. Arms: DeepGOF-1 and the three published partition tests.
+Run:  python benchmark/grid/s3_score.py --n 100 --seed 101000   (from the archive root)
 """
 import os, sys, argparse, glob
 import numpy as np
@@ -21,11 +19,11 @@ import pandas as pd
 import torch
 from sklearn.metrics import roc_auc_score
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "common"))
 from map_train import CNN, train, DEV
-from probit_common import randomized_matched_power, narobust_cct, ALPHA
+from matched_power import randomized_matched_power, ALPHA
 
-PAP = "C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof"
+PAP = os.environ.get("DEEPGOF_ARCHIVE", ".")
 K = 6
 DESIGNS = ["D1", "D2", "D3", "D4"]
 
@@ -70,14 +68,14 @@ def evaluate(blk, net, mu, sd, tag, n, seed, des):
     kind, rep = idx.kind.to_numpy(), idx.rep.to_numpy()
     ho = (kind == 0) & (rep > half)
     ev = kind == 2
-    TESTS = [c for c in idx.columns if c not in ("kind", "rep", "sep", "cct", "axes")]
+    TESTS = [c for c in idx.columns if c not in ("kind", "rep", "sep", "axes")]
     S = score(net, M.reshape(-1, K * K), mu, sd).reshape(len(idx), B + 1)
     p = (1 + (S[:, 1:] >= S[:, [0]]).sum(1)) / (B + 1)
     s_t = score(net, M[(kind == 0) & (rep <= half)][:20000, 0, :], mu, sd)
     s_b = score(net, M[ho][:, 1:, :].reshape(-1, K * K)[:20000], mu, sd)
     auc = float(max(roc_auc_score(np.r_[np.zeros(len(s_t)), np.ones(len(s_b))], np.r_[s_t, s_b]),
                     1 - roc_auc_score(np.r_[np.zeros(len(s_t)), np.ones(len(s_b))], np.r_[s_t, s_b])))
-    arms = {"DEEP": p, "CCT-11": narobust_cct(idx[TESTS].to_numpy(float))}
+    arms = {"DEEP": p}
     arms.update({t: idx[t].to_numpy() for t in TESTS})
     rows = []
     for arm, q in arms.items():
@@ -112,11 +110,12 @@ def main():
         r, p = evaluate(blks[d], net, mu, sd, "pooled_D1", a.n, a.seed, d)
         rows += r; deps[d] = {"p_deep_pooled": p}
         s = {x["arm"]: x for x in r}
+        best = max(s[t]["matched_power"] for t in s if t != "DEEP")
         print(f"   {d}  size {s['DEEP']['raw_size']:.4f}  DEEP {s['DEEP']['matched_power']:.4f}  "
-              f"CCT {s['CCT-11']['matched_power']:.4f}  gain {s['DEEP']['matched_power']-s['CCT-11']['matched_power']:+.4f}"
+              f"best partition test {best:.4f}  gain {s['DEEP']['matched_power']-best:+.4f}"
               f"  AUC {s['DEEP']['score_auc']:.4f}  Firth {100*s['DEEP']['firth_rate']:.2f}%", flush=True)
 
-    if a.per_design:                       # diagnostic only -- never the headline (21 section 8)
+    if a.per_design:                       # diagnostic only
         for d in DESIGNS:
             netd, mud, sdd = fit_rule(blks[d], a.seed)
             r, p = evaluate(blks[d], netd, mud, sdd, "per_design", a.n, a.seed, d)

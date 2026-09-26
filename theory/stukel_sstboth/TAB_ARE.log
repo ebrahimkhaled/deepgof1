@@ -1,0 +1,8 @@
+Omega = [[0.01369, -0.01347], [-0.01347, 0.03523]]; correlation of the two marginal scores rho = -0.6133; weights [0.3867 1.6133]
+limit null size of SstBoth referred to chi2(2): 0.0643 (joint form: .0500)
+quadratic    s=(+0.0282, -0.0514)  tau50 DG 8.76 | joint 7.70 (FORMULA 7.70) ratio 0.773 | SstBoth 6.48 ratio 0.547 | power at tauDG joint 0.615 SstBoth 0.743
+interaction  s=(+0.0176, -0.0316)  tau50 DG 11.53 | joint 12.45 (FORMULA 12.45) ratio 1.165 | SstBoth 10.46 ratio 0.822 | power at tauDG joint 0.439 SstBoth 0.576
+cubic        s=(+0.0248, +0.0036)  tau50 DG 12.91 | joint 7.84 (FORMULA 7.84) ratio 0.369 | SstBoth 10.62 ratio 0.677 | power at tauDG joint 0.917 SstBoth 0.704
+bump         s=(-0.0116, +0.0089)  tau50 DG 13.28 | joint 22.16 (FORMULA 22.16) ratio 2.785 | SstBoth 21.46 ratio 2.612 | power at tauDG joint 0.205 SstBoth 0.235
+threshold    s=(+0.0028, -0.0051)  tau50 DG 16.70 | joint 78.44 (FORMULA 78.44) ratio 22.052 | SstBoth 66.06 ratio 15.638 | power at tauDG joint 0.067 SstBoth 0.093
+wrote TAB_ARE_SSTBOTH.json

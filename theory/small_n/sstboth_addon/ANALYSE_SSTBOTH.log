@@ -1,0 +1,69 @@
+Study 1 pairing: {'rows': 11600, 'HL_maxdiff': 0.0, 'Stukel_joint_full_maxdiff': 0.0, 'Stukel_joint_full_na_stored': 0, 'Stukel_joint_loo_maxdiff': 0.0, 'corrupted_equal': True, 'events_equal': True}
+Study 1 SstBoth undefined: {'full_share': 0.025258620689655172, 'full_by_n': {30: 0.035517241379310345, 50: 0.015}, 'loo_any_share': 0.07008620689655172, 'loo_any_by_n': {30: 0.09982758620689655, 50: 0.040344827586206895}, 'loo_deletions_share': 0.023058189655172413}
+
+Q1 size (joint -> SstBoth), * = above .075
+  n=30 none     size 0.048  -> 0.061  | LOO 0.005 (clean 0.048 ok) -> 0.004 (clean 0.061 ok)
+  n=30 decimal  size 0.079* -> 0.104* | LOO 0.008 (clean 0.048 ok) -> 0.008 (clean 0.061 ok)
+  n=30 sign     size 0.063  -> 0.079* | LOO 0.004 (clean 0.048 ok) -> 0.005 (clean 0.061 ok)
+  n=30 outcome  size 0.071  -> 0.086* | LOO 0.004 (clean 0.048 ok) -> 0.003 (clean 0.061 ok)
+  n=50 none     size 0.061  -> 0.087* | LOO 0.002 (clean 0.061 ok) -> 0.004 (clean 0.087 ok)
+  n=50 decimal  size 0.142* -> 0.146* | LOO 0.012 (clean 0.061 ok) -> 0.010 (clean 0.087 ok)
+  n=50 sign     size 0.051  -> 0.062  | LOO 0.004 (clean 0.061 ok) -> 0.004 (clean 0.087 ok)
+  n=50 outcome  size 0.054  -> 0.071  | LOO 0.012 (clean 0.061 ok) -> 0.013 (clean 0.087 ok)
+
+power base / LOO (joint | SstBoth)
+  n=30 C=0.5 none     0.127/0.003 | 0.140/0.000
+  n=30 C=0.5 decimal  0.107/0.003 | 0.123/0.003
+  n=30 C=1.0 none     0.277/0.040 | 0.273/0.050
+  n=30 C=1.0 decimal  0.190/0.037 | 0.177/0.037
+  n=30 C=1.5 none     0.353/0.063 | 0.363/0.060
+  n=30 C=1.5 decimal  0.297/0.087 | 0.280/0.063
+  n=50 C=0.5 none     0.173/0.030 | 0.217/0.043
+  n=50 C=0.5 decimal  0.220/0.033 | 0.233/0.030
+  n=50 C=1.0 none     0.390/0.173 | 0.430/0.187
+  n=50 C=1.0 decimal  0.357/0.130 | 0.367/0.143
+  n=50 C=1.5 none     0.473/0.237 | 0.477/0.240
+  n=50 C=1.5 decimal  0.427/0.213 | 0.410/0.180
+
+post hoc calibrated alpha' (clean LOO size .05)
+  n=30 joint   alpha' 0.349  decimal size 0.048 (base 0.079)
+  n=30 sstboth alpha' 0.386  decimal size 0.057 (base 0.104)
+  n=50 joint   alpha' 0.251  decimal size 0.059 (base 0.142)
+  n=50 sstboth alpha' 0.257  decimal size 0.061 (base 0.146)
+
+diagnostic: most-rescuing deletion = corrupted record, among base rejections (SstBoth)
+  n=30 decimal  joint  79 rej, 57% | SstBoth 104 rej, 42%
+  n=30 sign     joint  63 rej, 16% | SstBoth  79 rej, 15%
+  n=30 outcome  joint  71 rej, 28% | SstBoth  86 rej, 24%
+  n=50 decimal  joint 142 rej, 61% | SstBoth 146 rej, 63%
+  n=50 sign     joint  51 rej, 12% | SstBoth  62 rej, 13%
+  n=50 outcome  joint  54 rej, 13% | SstBoth  71 rej, 18%
+
+Study 2 pairing: {'rows': 11600, 'HL_maxdiff': 0.0, 'HL_trim_maxdiff': 0.0, 'Stukel_joint_full_maxdiff': 0.0, 'Stukel_joint_trim_maxdiff': 0.0, 'trimmed_equal': True, 'events_equal': True}
+Study 2 SstBoth undefined: {'full_share': 0.023017241379310344, 'trimmed_share': 0.022844827586206897, 'full_by_n': {30: 0.03, 50: 0.01603448275862069}}
+
+(1) protection: decimal slip, base -> trimmed, clean base (joint | SstBoth)
+  n=30 joint 0.091 -> 0.066 (clean 0.053) ok | SstBoth 0.113 -> 0.086 (clean 0.077) ok
+  n=50 joint 0.145 -> 0.073 (clean 0.064) ok | SstBoth 0.161 -> 0.089 (clean 0.062) FAIL
+
+(2) no harm when clean (base/trimmed; ! = beyond 2 paired SE)
+  n=30 C=0.0 joint 0.053/0.053 | SstBoth 0.077/0.077
+  n=30 C=0.5 joint 0.080/0.080 | SstBoth 0.103/0.100
+  n=30 C=1.0 joint 0.240/0.243 | SstBoth 0.277/0.277
+  n=30 C=1.5 joint 0.347/0.343 | SstBoth 0.353/0.353
+  n=50 C=0.0 joint 0.064/0.064 | SstBoth 0.062/0.063
+  n=50 C=0.5 joint 0.183/0.180 | SstBoth 0.203/0.203
+  n=50 C=1.0 joint 0.407/0.410 | SstBoth 0.430/0.437
+  n=50 C=1.5 joint 0.483/0.480 | SstBoth 0.490/0.487
+
+(3) mechanism: size among null decimal datasets whose slip was NOT deleted
+  n=30  351 missed: joint 0.077  SstBoth 0.097
+  n=50  340 missed: joint 0.124  SstBoth 0.129
+
+(4) sign / outcome (base -> trimmed)
+  n=30 sign     joint 0.061->0.061 | SstBoth 0.080->0.078
+  n=30 outcome  joint 0.060->0.060 | SstBoth 0.085->0.084
+  n=50 sign     joint 0.063->0.062 | SstBoth 0.080->0.080
+  n=50 outcome  joint 0.062->0.062 | SstBoth 0.063->0.063
+
+wrote RESULTS_SSTBOTH.json

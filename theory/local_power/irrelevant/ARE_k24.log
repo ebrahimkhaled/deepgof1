@@ -1,0 +1,13 @@
+bench 4.6e-11 | 0 records already done | this process: k in [2, 4]
+[study k=2] design + DG null law 97 s; DG size 0.0512
+[study k=2] seed 1 kernels 255 s
+[study k=2] seed 2 kernels 416 s
+  inter tau50 DG  11.82 | n*/n*_DG: HL  2.43 St  1.14 proj  0.87  (867 s)
+  quad  tau50 DG   8.57 | n*/n*_DG: HL  2.97 St  1.39 proj  0.78  (1405 s)
+[study k=4] design + DG null law 88 s; DG size 0.0505
+[study k=4] seed 1 kernels 295 s
+[study k=4] seed 2 kernels 472 s
+  inter tau50 DG  11.88 | n*/n*_DG: HL  2.59 St  1.21 proj  1.32  (953 s)
+  quad  tau50 DG   8.59 | n*/n*_DG: HL  3.18 St  1.49 proj  1.21  (1408 s)
+[pure k=2] design + DG null law 74 s; DG size 0.0490
+[pure k=2] seed 1 kernels 547 s

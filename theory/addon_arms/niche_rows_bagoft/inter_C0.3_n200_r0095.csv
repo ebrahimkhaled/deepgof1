@@ -1,0 +1,2 @@
+"scen","fam","C","n","rep","events","dseed","p","p_med","p_min","bag_pmin_stat","time_s","status","err","impl"
+"inter_C0.3_n200","inter",0.3,200,95,69,423095,0.55,0.64,0.8,0.00106858476269134,156.580000000002,"ok","","fast_pre"

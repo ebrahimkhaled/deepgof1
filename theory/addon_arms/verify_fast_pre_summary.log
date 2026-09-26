@@ -1,0 +1,4 @@
+stage A: 20 datasets | all outputs identical: 20 | p.value identical: 20 | p.value3 identical: 20 | max |dp| 0
+  package time 2.0 s mean, fast 1.1 s mean, ratio 1.9
+stage B: 20 datasets | all outputs identical: 20 | p.value identical: 20 | p.value3 identical: 20 | max |dp| 0
+  package time 317.1 s mean, fast 158.8 s mean, ratio 2.0

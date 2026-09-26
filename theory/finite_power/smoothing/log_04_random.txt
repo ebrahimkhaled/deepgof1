@@ -1,0 +1,7 @@
+random: paper's t_emp (threshold T_HAT, power .95) = 13.4977
+  fixed target 0.95: t = 13.5288  (power there 0.9503, slope 0.0372/unit t, SE(t) = 0.0131)
+  fixed target 0.50: t = 8.8394  (power there 0.4992, slope 0.1320/unit t, SE(t) = 0.0085)
+  b199 target 0.95: t = 13.6567  (power there 0.9502, slope 0.0366/unit t, SE(t) = 0.0133)
+  b199 target 0.50: t = 8.8862  (power there 0.4971, slope 0.1276/unit t, SE(t) = 0.0088)
+  hat target 0.95: t = 13.4868  (power there 0.9502, slope 0.0378/unit t, SE(t) = 0.0129)
+random truth done in 2723 s

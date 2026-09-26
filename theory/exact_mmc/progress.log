@@ -1,0 +1,444 @@
+07:59:58 pid47828  START kind=0 rep=2
+07:59:58 pid17520  START kind=0 rep=1
+07:59:58 pid52880  START kind=2 rep=2
+07:59:58 pid44804  START kind=0 rep=4
+07:59:58 pid20956  START kind=2 rep=3
+07:59:58 pid38576  START kind=0 rep=5
+08:02:04 pid17520  DONE  kind=0 rep=1  p_plug 0.4000 p_exact 0.5350  n_eval 216  126 s
+08:02:04 pid17520  START kind=2 rep=1
+08:02:22 pid17520  DONE  kind=2 rep=1  p_plug 0.4200 p_exact 0.4350  n_eval 23  17 s
+08:02:22 pid17520  START kind=2 rep=5
+08:02:52 pid17520  DONE  kind=2 rep=5  p_plug 0.1050 p_exact 0.1750  n_eval 48  30 s
+08:02:52 pid17520  START kind=0 rep=6
+08:02:55 pid44804  DONE  kind=0 rep=4  p_plug 0.1700 p_exact 0.2500  n_eval 124  176 s
+08:02:55 pid44804  START kind=2 rep=4
+08:04:22 pid20956  DONE  kind=2 rep=3  p_plug 0.1750 p_exact 0.2450  n_eval 191  263 s
+08:04:22 pid20956  START kind=0 rep=7
+08:05:53 pid17520  DONE  kind=0 rep=6  p_plug 0.5650 p_exact 0.8200  n_eval 150  181 s
+08:05:53 pid17520  START kind=2 rep=6
+08:08:10 pid47828  DONE  kind=0 rep=2  p_plug 0.4550 p_exact 0.9300  n_eval 42  491 s
+08:08:10 pid47828  START kind=2 rep=7
+08:08:10 pid52880  DONE  kind=2 rep=2  p_plug 0.2950 p_exact 0.2950  n_eval 30  492 s
+08:08:10 pid52880  START kind=0 rep=3
+08:08:35 pid38576  DONE  kind=0 rep=5  p_plug 0.0900 p_exact 0.0900  n_eval 22  516 s
+08:08:35 pid38576  START kind=2 rep=8
+08:08:38 pid17520  DONE  kind=2 rep=6  p_plug 0.5150 p_exact 0.6250  n_eval 200  165 s
+08:08:38 pid17520  START kind=0 rep=9
+08:09:18 pid20956  DONE  kind=0 rep=7  p_plug 0.3300 p_exact 0.3300  n_eval 41  295 s
+08:09:24 pid17520  DONE  kind=0 rep=9  p_plug 0.8650 p_exact 1.0000  n_eval 62  46 s
+08:09:24 pid17520  START kind=2 rep=9
+08:09:34 pid38576  DONE  kind=2 rep=8  p_plug 0.8900 p_exact 1.0000  n_eval 41  59 s
+08:10:39 pid44804  DONE  kind=2 rep=4  p_plug 0.0300 p_exact 0.0400  n_eval 55  465 s
+08:11:37 pid17520  DONE  kind=2 rep=9  p_plug 0.0800 p_exact 0.1500  n_eval 101  132 s
+08:14:04 pid47828  DONE  kind=2 rep=7  p_plug 0.2350 p_exact 0.3350  n_eval 238  354 s
+08:14:04 pid47828  START kind=0 rep=8
+08:16:24 pid52880  DONE  kind=0 rep=3  p_plug 0.2150 p_exact 0.2150  n_eval 26  494 s
+08:19:53 pid47828  DONE  kind=0 rep=8  p_plug 0.1400 p_exact 0.1400  n_eval 71  348 s
+08:19:53 pid47828  START kind=0 rep=11
+08:19:53 pid44804  START kind=0 rep=13
+08:19:53 pid38576  START kind=0 rep=14
+08:19:53 pid17520  START kind=0 rep=10
+08:22:27 pid52880  DONE  kind=2 rep=11  p_plug 0.3600 p_exact 0.4550  n_eval 129  154 s
+08:22:27 pid52880  START kind=0 rep=12
+08:22:30 pid17520  DONE  kind=0 rep=10  p_plug 0.3150 p_exact 0.4200  n_eval 270  157 s
+08:22:30 pid17520  START kind=2 rep=10
+08:23:33 pid47828  DONE  kind=0 rep=11  p_plug 0.8550 p_exact 1.0000  n_eval 63  220 s
+08:23:33 pid47828  START kind=2 rep=14
+08:24:09 pid52880  DONE  kind=0 rep=12  p_plug 0.9200 p_exact 1.0000  n_eval 32  102 s
+08:24:09 pid52880  START kind=0 rep=15
+08:25:38 pid38576  DONE  kind=0 rep=14  p_plug 0.2600 p_exact 0.3600  n_eval 172  345 s
+08:25:38 pid38576  START kind=0 rep=16
+08:25:45 pid20956  DONE  kind=2 rep=12  p_plug 0.7500 p_exact 0.8900  n_eval 171  352 s
+08:25:45 pid20956  START kind=2 rep=16
+08:25:50 pid47828  DONE  kind=2 rep=14  p_plug 0.3400 p_exact 0.4750  n_eval 248  138 s
+08:25:50 pid47828  START kind=2 rep=17
+08:26:32 pid47828  DONE  kind=2 rep=17  p_plug 0.0100 p_exact 0.0150  n_eval 52  42 s
+08:26:32 pid47828  START kind=0 rep=18
+08:26:39 pid44804  DONE  kind=0 rep=13  p_plug 0.7050 p_exact 0.9900  n_eval 103  406 s
+08:26:39 pid44804  START kind=2 rep=13
+08:27:51 pid20956  DONE  kind=2 rep=16  p_plug 0.0200 p_exact 0.0500  n_eval 184  126 s
+08:27:51 pid20956  START kind=0 rep=17
+08:28:05 pid47828  DONE  kind=0 rep=18  p_plug 0.1900 p_exact 0.3350  n_eval 149  93 s
+08:28:05 pid47828  START kind=2 rep=18
+08:28:25 pid38576  DONE  kind=0 rep=16  p_plug 0.7300 p_exact 1.0000  n_eval 39  167 s
+08:28:28 pid44804  DONE  kind=2 rep=13  p_plug 0.4700 p_exact 0.5450  n_eval 167  110 s
+08:30:28 pid20956  DONE  kind=0 rep=17  p_plug 0.3850 p_exact 0.5500  n_eval 227  157 s
+08:30:42 pid17520  DONE  kind=2 rep=10  p_plug 0.1300 p_exact 0.1300  n_eval 50  492 s
+08:31:02 pid47828  DONE  kind=2 rep=18  p_plug 0.4850 p_exact 0.5650  n_eval 234  177 s
+08:32:25 pid52880  DONE  kind=0 rep=15  p_plug 0.2500 p_exact 0.2500  n_eval 65  496 s
+08:32:25 pid52880  START kind=2 rep=15
+08:40:33 pid52880  DONE  kind=2 rep=15  p_plug 0.0200 p_exact 0.0200  n_eval 35  488 s
+08:40:33 pid47828  START kind=0 rep=20
+08:40:33 pid20956  START kind=2 rep=21
+08:40:33 pid38576  START kind=0 rep=23
+08:43:06 pid17520  DONE  kind=0 rep=19  p_plug 0.0550 p_exact 0.1850  n_eval 170  153 s
+08:43:06 pid17520  START kind=2 rep=19
+08:44:02 pid38576  DONE  kind=0 rep=23  p_plug 0.1700 p_exact 0.2800  n_eval 176  209 s
+08:44:02 pid38576  START kind=2 rep=23
+08:44:09 pid44804  DONE  kind=0 rep=22  p_plug 0.0600 p_exact 0.1250  n_eval 144  216 s
+08:44:09 pid44804  START kind=2 rep=22
+08:44:36 pid20956  DONE  kind=2 rep=21  p_plug 0.0800 p_exact 0.1900  n_eval 249  243 s
+08:44:36 pid20956  START kind=0 rep=24
+08:45:22 pid44804  DONE  kind=2 rep=22  p_plug 0.0050 p_exact 0.0200  n_eval 71  73 s
+08:45:22 pid44804  START kind=0 rep=25
+08:45:47 pid17520  DONE  kind=2 rep=19  p_plug 0.7900 p_exact 1.0000  n_eval 67  161 s
+08:45:47 pid17520  START kind=2 rep=25
+08:47:30 pid52880  DONE  kind=2 rep=20  p_plug 0.0450 p_exact 0.0900  n_eval 64  417 s
+08:47:30 pid52880  START kind=0 rep=21
+08:48:49 pid47828  DONE  kind=0 rep=20  p_plug 0.2900 p_exact 0.2900  n_eval 65  496 s
+08:48:49 pid47828  START kind=2 rep=26
+08:49:01 pid17520  DONE  kind=2 rep=25  p_plug 0.6800 p_exact 1.0000  n_eval 49  194 s
+08:49:01 pid17520  START kind=0 rep=26
+08:49:33 pid44804  DONE  kind=0 rep=25  p_plug 0.4850 p_exact 0.5300  n_eval 289  251 s
+08:49:33 pid44804  START kind=0 rep=27
+08:51:47 pid38576  DONE  kind=2 rep=23  p_plug 0.1750 p_exact 0.1900  n_eval 95  465 s
+08:51:55 pid52880  DONE  kind=0 rep=21  p_plug 0.1850 p_exact 0.1850  n_eval 82  266 s
+08:52:30 pid47828  DONE  kind=2 rep=26  p_plug 0.2700 p_exact 0.3750  n_eval 212  221 s
+08:52:52 pid20956  DONE  kind=0 rep=24  p_plug 0.5550 p_exact 0.9850  n_eval 46  496 s
+08:52:52 pid20956  START kind=2 rep=24
+08:54:08 pid44804  DONE  kind=0 rep=27  p_plug 0.3150 p_exact 0.3500  n_eval 77  275 s
+08:54:08 pid44804  START kind=2 rep=27
+08:55:36 pid17520  DONE  kind=0 rep=26  p_plug 0.6150 p_exact 0.9800  n_eval 79  395 s
+08:58:12 pid20956  DONE  kind=2 rep=24  p_plug 0.0150 p_exact 0.1200  n_eval 230  320 s
+08:58:26 pid44804  DONE  kind=2 rep=27  p_plug 0.0500 p_exact 0.0750  n_eval 92  258 s
+08:58:26 pid17520  START kind=0 rep=28
+08:58:26 pid47828  START kind=0 rep=29
+08:58:26 pid44804  START kind=0 rep=31
+08:58:26 pid38576  START kind=0 rep=32
+08:58:50 pid38576  DONE  kind=0 rep=32  p_plug 0.9450 p_exact 1.0000  n_eval 31  24 s
+08:58:50 pid38576  START kind=2 rep=32
+08:59:04 pid52880  DONE  kind=2 rep=29  p_plug 0.9250 p_exact 1.0000  n_eval 99  38 s
+08:59:04 pid52880  START kind=0 rep=30
+08:59:20 pid17520  DONE  kind=0 rep=28  p_plug 0.8550 p_exact 1.0000  n_eval 39  54 s
+08:59:20 pid17520  START kind=2 rep=28
+08:59:37 pid44804  DONE  kind=0 rep=31  p_plug 0.7200 p_exact 1.0000  n_eval 23  71 s
+08:59:37 pid44804  START kind=2 rep=31
+09:00:10 pid47828  DONE  kind=0 rep=29  p_plug 0.8200 p_exact 1.0000  n_eval 45  104 s
+09:00:10 pid47828  START kind=0 rep=33
+09:00:47 pid17520  DONE  kind=2 rep=28  p_plug 0.9350 p_exact 0.9950  n_eval 159  87 s
+09:00:47 pid17520  START kind=0 rep=34
+09:01:26 pid38576  DONE  kind=2 rep=32  p_plug 0.0100 p_exact 0.0550  n_eval 87  156 s
+09:01:26 pid38576  START kind=2 rep=34
+09:02:17 pid52880  DONE  kind=0 rep=30  p_plug 0.8150 p_exact 0.9850  n_eval 133  193 s
+09:02:17 pid52880  START kind=2 rep=35
+09:03:34 pid44804  DONE  kind=2 rep=31  p_plug 0.0450 p_exact 0.1350  n_eval 169  237 s
+09:03:34 pid44804  START kind=0 rep=36
+09:05:55 pid38576  DONE  kind=2 rep=34  p_plug 0.0750 p_exact 0.1300  n_eval 141  268 s
+09:05:55 pid38576  START kind=0 rep=35
+09:06:36 pid20956  DONE  kind=2 rep=30  p_plug 0.3750 p_exact 0.3750  n_eval 33  490 s
+09:07:02 pid44804  DONE  kind=0 rep=36  p_plug 0.6850 p_exact 0.8250  n_eval 179  208 s
+09:07:02 pid44804  START kind=2 rep=36
+09:07:05 pid17520  DONE  kind=0 rep=34  p_plug 0.6400 p_exact 0.7900  n_eval 302  378 s
+09:07:20 pid47828  DONE  kind=0 rep=33  p_plug 0.8100 p_exact 1.0000  n_eval 99  430 s
+09:07:20 pid47828  START kind=2 rep=33
+09:08:10 pid47828  DONE  kind=2 rep=33  p_plug 0.9050 p_exact 1.0000  n_eval 70  50 s
+09:09:34 pid52880  DONE  kind=2 rep=35  p_plug 0.0300 p_exact 0.1200  n_eval 431  437 s
+09:10:26 pid44804  DONE  kind=2 rep=36  p_plug 0.0100 p_exact 0.0850  n_eval 110  204 s
+09:14:24 pid38576  DONE  kind=0 rep=35  p_plug 0.1550 p_exact 0.1550  n_eval 21  510 s
+09:14:24 pid52880  START kind=2 rep=38
+09:14:24 pid17520  START kind=0 rep=37
+09:14:24 pid44804  START kind=0 rep=40
+09:14:24 pid38576  START kind=0 rep=41
+09:15:56 pid38576  DONE  kind=0 rep=41  p_plug 0.9150 p_exact 1.0000  n_eval 41  91 s
+09:15:56 pid38576  START kind=2 rep=41
+09:18:34 pid20956  DONE  kind=2 rep=39  p_plug 0.0550 p_exact 0.1850  n_eval 213  250 s
+09:18:34 pid20956  START kind=0 rep=42
+09:21:02 pid20956  DONE  kind=0 rep=42  p_plug 0.4050 p_exact 0.5350  n_eval 136  147 s
+09:21:02 pid20956  START kind=2 rep=42
+09:22:07 pid38576  DONE  kind=2 rep=41  p_plug 0.0100 p_exact 0.0200  n_eval 209  372 s
+09:22:07 pid38576  START kind=0 rep=43
+09:22:30 pid44804  DONE  kind=0 rep=40  p_plug 0.6100 p_exact 0.8400  n_eval 107  486 s
+09:22:30 pid44804  START kind=2 rep=40
+09:22:33 pid17520  DONE  kind=0 rep=37  p_plug 0.6200 p_exact 0.7800  n_eval 37  488 s
+09:22:33 pid17520  START kind=2 rep=37
+09:22:37 pid47828  DONE  kind=0 rep=38  p_plug 0.5950 p_exact 0.9900  n_eval 50  492 s
+09:22:37 pid47828  START kind=2 rep=43
+09:22:46 pid52880  DONE  kind=2 rep=38  p_plug 0.3550 p_exact 0.3550  n_eval 38  502 s
+09:22:46 pid52880  START kind=0 rep=39
+09:23:46 pid17520  DONE  kind=2 rep=37  p_plug 0.8400 p_exact 1.0000  n_eval 34  73 s
+09:23:46 pid17520  START kind=2 rep=44
+09:24:39 pid20956  DONE  kind=2 rep=42  p_plug 0.3250 p_exact 0.4050  n_eval 187  217 s
+09:24:39 pid20956  START kind=0 rep=45
+09:24:39 pid52880  DONE  kind=0 rep=39  p_plug 0.9850 p_exact 1.0000  n_eval 45  113 s
+09:25:30 pid38576  DONE  kind=0 rep=43  p_plug 0.4550 p_exact 0.5100  n_eval 140  202 s
+09:26:45 pid47828  DONE  kind=2 rep=43  p_plug 0.0150 p_exact 0.0900  n_eval 106  249 s
+09:26:45 pid47828  START kind=0 rep=44
+09:28:56 pid20956  DONE  kind=0 rep=45  p_plug 0.2550 p_exact 0.3600  n_eval 226  257 s
+09:28:56 pid20956  START kind=2 rep=45
+09:29:07 pid17520  DONE  kind=2 rep=44  p_plug 0.5200 p_exact 0.6450  n_eval 339  321 s
+09:30:39 pid44804  DONE  kind=2 rep=40  p_plug 0.8100 p_exact 1.0000  n_eval 180  489 s
+09:35:05 pid47828  DONE  kind=0 rep=44  p_plug 0.1500 p_exact 0.1500  n_eval 46  500 s
+09:37:16 pid20956  DONE  kind=2 rep=45  p_plug 0.0050 p_exact 0.0050  n_eval 34  500 s
+09:37:16 pid17520  START kind=0 rep=46
+09:37:16 pid47828  START kind=0 rep=47
+09:37:16 pid44804  START kind=0 rep=49
+09:37:16 pid20956  START kind=2 rep=48
+09:38:18 pid47828  DONE  kind=0 rep=47  p_plug 0.9350 p_exact 0.9900  n_eval 97  62 s
+09:38:18 pid47828  START kind=2 rep=50
+09:39:26 pid44804  DONE  kind=0 rep=49  p_plug 0.7250 p_exact 1.0000  n_eval 43  129 s
+09:39:26 pid44804  START kind=2 rep=49
+09:39:42 pid20956  DONE  kind=2 rep=48  p_plug 0.1550 p_exact 0.1600  n_eval 107  146 s
+09:39:42 pid20956  START kind=0 rep=51
+09:41:03 pid52880  DONE  kind=2 rep=47  p_plug 0.5500 p_exact 0.6950  n_eval 203  227 s
+09:41:03 pid52880  START kind=0 rep=48
+09:42:49 pid17520  DONE  kind=0 rep=46  p_plug 0.5250 p_exact 0.7650  n_eval 154  333 s
+09:42:49 pid17520  START kind=2 rep=46
+09:42:55 pid47828  DONE  kind=2 rep=50  p_plug 0.6300 p_exact 0.7050  n_eval 289  277 s
+09:42:55 pid47828  START kind=0 rep=52
+09:42:58 pid20956  DONE  kind=0 rep=51  p_plug 0.0600 p_exact 0.1250  n_eval 168  196 s
+09:42:58 pid20956  START kind=2 rep=51
+09:44:58 pid47828  DONE  kind=0 rep=52  p_plug 0.8550 p_exact 0.9950  n_eval 114  123 s
+09:44:58 pid47828  START kind=2 rep=52
+09:45:02 pid38576  DONE  kind=0 rep=50  p_plug 0.8750 p_exact 1.0000  n_eval 87  466 s
+09:45:02 pid38576  START kind=2 rep=53
+09:46:31 pid44804  DONE  kind=2 rep=49  p_plug 0.0050 p_exact 0.0450  n_eval 148  426 s
+09:46:31 pid44804  START kind=0 rep=54
+09:46:52 pid20956  DONE  kind=2 rep=51  p_plug 0.0650 p_exact 0.1350  n_eval 214  233 s
+09:47:12 pid52880  DONE  kind=0 rep=48  p_plug 0.1800 p_exact 0.3000  n_eval 280  370 s
+09:48:48 pid44804  DONE  kind=0 rep=54  p_plug 0.8800 p_exact 1.0000  n_eval 50  137 s
+09:48:48 pid44804  START kind=2 rep=54
+09:50:34 pid17520  DONE  kind=2 rep=46  p_plug 0.4250 p_exact 0.9950  n_eval 122  465 s
+09:50:56 pid47828  DONE  kind=2 rep=52  p_plug 0.7800 p_exact 1.0000  n_eval 95  358 s
+09:50:56 pid47828  START kind=0 rep=53
+09:52:10 pid44804  DONE  kind=2 rep=54  p_plug 0.0150 p_exact 0.0400  n_eval 130  202 s
+09:52:31 pid47828  DONE  kind=0 rep=53  p_plug 0.3050 p_exact 0.3400  n_eval 127  95 s
+09:53:33 pid38576  DONE  kind=2 rep=53  p_plug 0.1000 p_exact 0.1000  n_eval 24  511 s
+09:53:33 pid17520  START kind=0 rep=55
+09:53:33 pid47828  START kind=0 rep=56
+09:53:33 pid38576  START kind=0 rep=59
+09:55:26 pid20956  DONE  kind=2 rep=57  p_plug 0.0050 p_exact 0.0350  n_eval 83  113 s
+09:55:26 pid20956  START kind=2 rep=59
+09:55:29 pid17520  DONE  kind=0 rep=55  p_plug 0.8800 p_exact 1.0000  n_eval 59  116 s
+09:55:29 pid17520  START kind=2 rep=55
+09:56:27 pid47828  DONE  kind=0 rep=56  p_plug 0.7700 p_exact 1.0000  n_eval 93  173 s
+09:56:27 pid47828  START kind=0 rep=60
+09:56:48 pid38576  DONE  kind=0 rep=59  p_plug 0.7150 p_exact 1.0000  n_eval 41  195 s
+09:56:48 pid38576  START kind=0 rep=61
+09:57:03 pid44804  DONE  kind=0 rep=58  p_plug 0.0900 p_exact 0.0900  n_eval 20  210 s
+09:57:03 pid44804  START kind=2 rep=58
+09:57:13 pid47828  DONE  kind=0 rep=60  p_plug 0.0650 p_exact 0.0650  n_eval 54  46 s
+09:57:13 pid47828  START kind=2 rep=60
+09:57:15 pid17520  DONE  kind=2 rep=55  p_plug 0.4150 p_exact 0.4600  n_eval 142  106 s
+09:57:15 pid17520  START kind=2 rep=61
+09:57:39 pid20956  DONE  kind=2 rep=59  p_plug 0.1000 p_exact 0.2350  n_eval 190  133 s
+09:57:39 pid20956  START kind=2 rep=62
+09:59:08 pid20956  DONE  kind=2 rep=62  p_plug 0.0500 p_exact 0.1500  n_eval 112  89 s
+09:59:08 pid20956  START kind=0 rep=63
+09:59:38 pid47828  DONE  kind=2 rep=60  p_plug 0.0050 p_exact 0.0700  n_eval 219  145 s
+09:59:57 pid17520  DONE  kind=2 rep=61  p_plug 0.0200 p_exact 0.0200  n_eval 35  162 s
+09:59:57 pid17520  START kind=0 rep=62
+10:00:33 pid17520  DONE  kind=0 rep=62  p_plug 0.8250 p_exact 1.0000  n_eval 41  36 s
+10:01:09 pid38576  DONE  kind=0 rep=61  p_plug 0.0350 p_exact 0.0650  n_eval 126  261 s
+10:01:23 pid20956  DONE  kind=0 rep=63  p_plug 0.1600 p_exact 0.2550  n_eval 193  135 s
+10:01:23 pid20956  START kind=2 rep=63
+10:01:48 pid52880  DONE  kind=2 rep=56  p_plug 0.2400 p_exact 0.2400  n_eval 77  495 s
+10:01:48 pid52880  START kind=0 rep=57
+10:03:26 pid20956  DONE  kind=2 rep=63  p_plug 0.0700 p_exact 0.1600  n_eval 172  123 s
+10:03:32 pid44804  DONE  kind=2 rep=58  p_plug 0.4600 p_exact 1.0000  n_eval 153  389 s
+10:04:28 pid52880  DONE  kind=0 rep=57  p_plug 0.7050 p_exact 1.0000  n_eval 120  160 s
+10:04:28 pid17520  START kind=0 rep=64
+10:04:28 pid47828  START kind=0 rep=65
+10:04:28 pid52880  START kind=2 rep=65
+10:04:28 pid20956  START kind=2 rep=66
+10:04:28 pid44804  START kind=0 rep=67
+10:04:28 pid38576  START kind=0 rep=68
+10:05:07 pid17520  DONE  kind=0 rep=64  p_plug 0.9100 p_exact 1.0000  n_eval 64  39 s
+10:05:07 pid17520  START kind=2 rep=64
+10:06:41 pid52880  DONE  kind=2 rep=65  p_plug 0.3300 p_exact 0.3600  n_eval 157  133 s
+10:06:41 pid52880  START kind=0 rep=66
+10:07:33 pid47828  DONE  kind=0 rep=65  p_plug 0.4000 p_exact 0.5400  n_eval 240  185 s
+10:07:33 pid47828  START kind=2 rep=68
+10:08:09 pid38576  DONE  kind=0 rep=68  p_plug 0.2200 p_exact 0.3500  n_eval 140  221 s
+10:08:09 pid38576  START kind=0 rep=69
+10:10:45 pid52880  DONE  kind=0 rep=66  p_plug 0.6000 p_exact 0.9850  n_eval 23  244 s
+10:10:45 pid52880  START kind=0 rep=70
+10:11:28 pid47828  DONE  kind=2 rep=68  p_plug 0.3300 p_exact 0.3300  n_eval 72  235 s
+10:11:28 pid47828  START kind=2 rep=70
+10:12:40 pid20956  DONE  kind=2 rep=66  p_plug 0.1150 p_exact 0.1150  n_eval 46  492 s
+10:12:40 pid20956  START kind=2 rep=71
+10:12:42 pid44804  DONE  kind=0 rep=67  p_plug 0.1800 p_exact 0.2550  n_eval 57  494 s
+10:12:42 pid44804  START kind=2 rep=67
+10:12:57 pid52880  DONE  kind=0 rep=70  p_plug 0.6000 p_exact 0.6350  n_eval 142  132 s
+10:12:57 pid52880  START kind=0 rep=72
+10:13:00 pid47828  DONE  kind=2 rep=70  p_plug 0.3100 p_exact 0.3100  n_eval 141  92 s
+10:13:00 pid47828  START kind=0 rep=71
+10:13:15 pid47828  DONE  kind=0 rep=71  p_plug 0.9900 p_exact 1.0000  n_eval 25  15 s
+10:13:16 pid17520  DONE  kind=2 rep=64  p_plug 0.0050 p_exact 0.0050  n_eval 52  489 s
+10:14:26 pid20956  DONE  kind=2 rep=71  p_plug 0.7800 p_exact 0.9550  n_eval 123  106 s
+10:15:00 pid52880  DONE  kind=0 rep=72  p_plug 0.6050 p_exact 0.7650  n_eval 345  123 s
+10:15:00 pid52880  START kind=2 rep=72
+10:15:46 pid44804  DONE  kind=2 rep=67  p_plug 0.0150 p_exact 0.0150  n_eval 28  184 s
+10:16:37 pid38576  DONE  kind=0 rep=69  p_plug 0.1250 p_exact 0.1250  n_eval 35  508 s
+10:16:37 pid38576  START kind=2 rep=69
+10:16:46 pid52880  DONE  kind=2 rep=72  p_plug 0.0400 p_exact 0.1450  n_eval 180  106 s
+10:21:07 pid38576  DONE  kind=2 rep=69  p_plug 0.8800 p_exact 0.9600  n_eval 347  270 s
+10:21:07 pid17520  START kind=0 rep=73
+10:21:07 pid47828  START kind=0 rep=74
+10:21:07 pid20956  START kind=2 rep=75
+10:21:07 pid44804  START kind=0 rep=76
+10:21:07 pid38576  START kind=0 rep=77
+10:22:44 pid52880  DONE  kind=2 rep=74  p_plug 0.7900 p_exact 1.0000  n_eval 21  97 s
+10:22:44 pid52880  START kind=0 rep=75
+10:23:17 pid52880  DONE  kind=0 rep=75  p_plug 0.9600 p_exact 1.0000  n_eval 63  33 s
+10:23:17 pid52880  START kind=2 rep=77
+10:24:31 pid20956  DONE  kind=2 rep=75  p_plug 0.3050 p_exact 0.4000  n_eval 166  204 s
+10:24:31 pid20956  START kind=0 rep=78
+10:24:47 pid44804  DONE  kind=0 rep=76  p_plug 0.2300 p_exact 0.3400  n_eval 182  220 s
+10:24:47 pid44804  START kind=2 rep=76
+10:25:05 pid17520  DONE  kind=0 rep=73  p_plug 0.4950 p_exact 0.6300  n_eval 232  238 s
+10:25:05 pid17520  START kind=2 rep=73
+10:27:51 pid20956  DONE  kind=0 rep=78  p_plug 0.8250 p_exact 1.0000  n_eval 62  201 s
+10:27:51 pid20956  START kind=2 rep=78
+10:27:59 pid38576  DONE  kind=0 rep=77  p_plug 0.0550 p_exact 0.1350  n_eval 126  412 s
+10:27:59 pid38576  START kind=0 rep=79
+10:28:26 pid52880  DONE  kind=2 rep=77  p_plug 0.0050 p_exact 0.0150  n_eval 241  309 s
+10:28:26 pid52880  START kind=2 rep=79
+10:29:19 pid47828  DONE  kind=0 rep=74  p_plug 0.1750 p_exact 0.1950  n_eval 109  492 s
+10:29:19 pid47828  START kind=2 rep=80
+10:30:08 pid44804  DONE  kind=2 rep=76  p_plug 0.2300 p_exact 0.3850  n_eval 260  321 s
+10:30:08 pid44804  START kind=0 rep=81
+10:31:15 pid52880  DONE  kind=2 rep=79  p_plug 0.0100 p_exact 0.0500  n_eval 138  169 s
+10:31:15 pid52880  START kind=0 rep=80
+10:32:23 pid38576  DONE  kind=0 rep=79  p_plug 0.8250 p_exact 0.9650  n_eval 219  264 s
+10:32:25 pid20956  DONE  kind=2 rep=78  p_plug 0.4200 p_exact 0.5500  n_eval 332  274 s
+10:32:46 pid17520  DONE  kind=2 rep=73  p_plug 0.2600 p_exact 0.2600  n_eval 90  461 s
+10:32:52 pid44804  DONE  kind=0 rep=81  p_plug 0.5450 p_exact 0.6350  n_eval 216  163 s
+10:32:52 pid44804  START kind=2 rep=81
+10:33:39 pid47828  DONE  kind=2 rep=80  p_plug 0.0050 p_exact 0.0400  n_eval 281  259 s
+10:35:44 pid52880  DONE  kind=0 rep=80  p_plug 0.6300 p_exact 0.9950  n_eval 66  269 s
+10:37:20 pid44804  DONE  kind=2 rep=81  p_plug 0.1800 p_exact 0.2700  n_eval 442  268 s
+10:37:20 pid38576  START kind=0 rep=86
+10:37:20 pid17520  START kind=0 rep=82
+10:38:19 pid47828  DONE  kind=0 rep=83  p_plug 0.9550 p_exact 1.0000  n_eval 28  59 s
+10:38:19 pid47828  START kind=2 rep=86
+10:39:26 pid44804  DONE  kind=0 rep=85  p_plug 0.2350 p_exact 0.3750  n_eval 159  126 s
+10:39:26 pid44804  START kind=2 rep=85
+10:39:46 pid17520  DONE  kind=0 rep=82  p_plug 0.6350 p_exact 0.7100  n_eval 179  146 s
+10:39:46 pid17520  START kind=2 rep=82
+10:39:54 pid52880  DONE  kind=2 rep=83  p_plug 0.0500 p_exact 0.0900  n_eval 202  154 s
+10:39:54 pid52880  START kind=0 rep=84
+10:39:59 pid20956  DONE  kind=2 rep=84  p_plug 0.5450 p_exact 0.7100  n_eval 231  159 s
+10:39:59 pid20956  START kind=0 rep=87
+10:41:16 pid44804  DONE  kind=2 rep=85  p_plug 0.0050 p_exact 0.0400  n_eval 137  110 s
+10:41:16 pid44804  START kind=0 rep=88
+10:41:27 pid17520  DONE  kind=2 rep=82  p_plug 0.0950 p_exact 0.1800  n_eval 131  102 s
+10:41:27 pid17520  START kind=2 rep=88
+10:41:36 pid52880  DONE  kind=0 rep=84  p_plug 0.9500 p_exact 1.0000  n_eval 47  102 s
+10:41:36 pid52880  START kind=2 rep=89
+10:42:44 pid17520  DONE  kind=2 rep=88  p_plug 0.7400 p_exact 1.0000  n_eval 62  77 s
+10:42:44 pid17520  START kind=0 rep=89
+10:43:42 pid52880  DONE  kind=2 rep=89  p_plug 0.0150 p_exact 0.0900  n_eval 121  126 s
+10:43:42 pid52880  START kind=0 rep=90
+10:45:31 pid38576  DONE  kind=0 rep=86  p_plug 0.1850 p_exact 0.1850  n_eval 41  491 s
+10:46:30 pid47828  DONE  kind=2 rep=86  p_plug 0.2200 p_exact 0.2200  n_eval 57  491 s
+10:46:45 pid52880  DONE  kind=0 rep=90  p_plug 0.7800 p_exact 1.0000  n_eval 95  183 s
+10:46:45 pid52880  START kind=2 rep=90
+10:48:08 pid20956  DONE  kind=0 rep=87  p_plug 0.2100 p_exact 0.2100  n_eval 108  489 s
+10:48:08 pid20956  START kind=2 rep=87
+10:48:40 pid52880  DONE  kind=2 rep=90  p_plug 0.1150 p_exact 0.1150  n_eval 13  114 s
+10:49:29 pid44804  DONE  kind=0 rep=88  p_plug 0.0450 p_exact 0.0750  n_eval 43  493 s
+10:50:43 pid17520  DONE  kind=0 rep=89  p_plug 0.7100 p_exact 0.9650  n_eval 126  479 s
+10:51:18 pid20956  DONE  kind=2 rep=87  p_plug 0.3750 p_exact 0.4850  n_eval 292  190 s
+10:51:18 pid20956  START kind=2 rep=93
+10:51:18 pid44804  START kind=0 rep=94
+10:51:18 pid38576  START kind=0 rep=95
+10:51:18 pid17520  START kind=0 rep=91
+10:52:29 pid47828  DONE  kind=0 rep=92  p_plug 0.8200 p_exact 1.0000  n_eval 34  71 s
+10:52:29 pid47828  START kind=2 rep=95
+10:52:34 pid38576  DONE  kind=0 rep=95  p_plug 0.9650 p_exact 1.0000  n_eval 126  76 s
+10:52:34 pid38576  START kind=0 rep=96
+10:52:53 pid17520  DONE  kind=0 rep=91  p_plug 0.7300 p_exact 1.0000  n_eval 35  94 s
+10:52:53 pid17520  START kind=2 rep=91
+10:53:31 pid44804  DONE  kind=0 rep=94  p_plug 0.3600 p_exact 0.3900  n_eval 144  133 s
+10:53:31 pid44804  START kind=2 rep=94
+10:53:58 pid52880  DONE  kind=2 rep=92  p_plug 0.2050 p_exact 0.2050  n_eval 88  160 s
+10:53:58 pid52880  START kind=0 rep=93
+10:54:21 pid47828  DONE  kind=2 rep=95  p_plug 0.5100 p_exact 0.6400  n_eval 155  112 s
+10:54:21 pid47828  START kind=0 rep=97
+10:55:43 pid38576  DONE  kind=0 rep=96  p_plug 0.0750 p_exact 0.1750  n_eval 236  190 s
+10:55:43 pid38576  START kind=2 rep=96
+10:56:43 pid17520  DONE  kind=2 rep=91  p_plug 0.0200 p_exact 0.0900  n_eval 360  231 s
+10:56:43 pid17520  START kind=2 rep=97
+10:57:01 pid38576  DONE  kind=2 rep=96  p_plug 0.8600 p_exact 0.9850  n_eval 147  78 s
+10:57:01 pid38576  START kind=2 rep=98
+10:57:02 pid47828  DONE  kind=0 rep=97  p_plug 0.6600 p_exact 1.0000  n_eval 58  161 s
+10:57:02 pid47828  START kind=0 rep=99
+10:57:32 pid52880  DONE  kind=0 rep=93  p_plug 0.2600 p_exact 0.2600  n_eval 85  214 s
+10:58:37 pid38576  DONE  kind=2 rep=98  p_plug 0.6600 p_exact 0.7750  n_eval 266  96 s
+10:58:47 pid47828  DONE  kind=0 rep=99  p_plug 0.0650 p_exact 0.1700  n_eval 249  105 s
+10:58:47 pid47828  START kind=2 rep=99
+10:59:14 pid47828  DONE  kind=2 rep=99  p_plug 0.0150 p_exact 0.0850  n_eval 116  27 s
+10:59:28 pid20956  DONE  kind=2 rep=93  p_plug 0.3700 p_exact 0.3700  n_eval 102  490 s
+11:01:37 pid44804  DONE  kind=2 rep=94  p_plug 0.4450 p_exact 0.4450  n_eval 68  486 s
+11:04:50 pid17520  DONE  kind=2 rep=97  p_plug 0.5800 p_exact 0.5900  n_eval 86  487 s
+11:04:50 pid17520  START kind=0 rep=98
+11:05:43 pid17520  DONE  kind=0 rep=98  p_plug 0.8850 p_exact 0.9900  n_eval 164  53 s
+11:05:43 pid17520  START kind=0 rep=100
+11:05:43 pid52880  START kind=2 rep=101
+11:05:43 pid47828  START kind=0 rep=101
+11:05:43 pid44804  START kind=0 rep=103
+11:05:43 pid38576  START kind=0 rep=104
+11:06:11 pid44804  DONE  kind=0 rep=103  p_plug 0.9000 p_exact 1.0000  n_eval 17  28 s
+11:06:11 pid44804  START kind=2 rep=103
+11:06:14 pid17520  DONE  kind=0 rep=100  p_plug 0.9600 p_exact 1.0000  n_eval 7  30 s
+11:06:14 pid17520  START kind=2 rep=100
+11:08:12 pid20956  DONE  kind=2 rep=102  p_plug 0.0050 p_exact 0.0200  n_eval 154  149 s
+11:08:12 pid20956  START kind=2 rep=104
+11:09:08 pid17520  DONE  kind=2 rep=100  p_plug 0.0050 p_exact 0.0350  n_eval 262  174 s
+11:09:08 pid17520  START kind=0 rep=105
+11:09:47 pid52880  DONE  kind=2 rep=101  p_plug 0.4250 p_exact 1.0000  n_eval 93  243 s
+11:09:47 pid52880  START kind=0 rep=102
+11:10:07 pid38576  DONE  kind=0 rep=104  p_plug 0.3700 p_exact 0.4550  n_eval 152  264 s
+11:10:07 pid38576  START kind=0 rep=106
+11:11:17 pid20956  DONE  kind=2 rep=104  p_plug 0.6850 p_exact 1.0000  n_eval 91  185 s
+11:11:17 pid20956  START kind=2 rep=106
+11:12:55 pid52880  DONE  kind=0 rep=102  p_plug 0.1650 p_exact 0.2700  n_eval 178  189 s
+11:12:55 pid52880  START kind=2 rep=107
+11:13:06 pid47828  DONE  kind=0 rep=101  p_plug 0.4900 p_exact 0.9700  n_eval 99  443 s
+11:13:06 pid47828  START kind=0 rep=108
+11:13:33 pid38576  DONE  kind=0 rep=106  p_plug 0.0800 p_exact 0.1400  n_eval 257  207 s
+11:13:52 pid20956  DONE  kind=2 rep=106  p_plug 0.4950 p_exact 0.5950  n_eval 225  155 s
+11:13:52 pid20956  START kind=0 rep=107
+11:14:23 pid44804  DONE  kind=2 rep=103  p_plug 0.0250 p_exact 0.0250  n_eval 50  492 s
+11:15:00 pid52880  DONE  kind=2 rep=107  p_plug 0.0550 p_exact 0.1350  n_eval 155  125 s
+11:15:04 pid47828  DONE  kind=0 rep=108  p_plug 0.5950 p_exact 0.6200  n_eval 152  117 s
+11:15:04 pid47828  START kind=2 rep=108
+11:17:15 pid17520  DONE  kind=0 rep=105  p_plug 0.3250 p_exact 0.3250  n_eval 61  487 s
+11:17:15 pid17520  START kind=2 rep=105
+11:17:25 pid47828  DONE  kind=2 rep=108  p_plug 0.0500 p_exact 0.1850  n_eval 219  141 s
+11:19:09 pid17520  DONE  kind=2 rep=105  p_plug 0.4950 p_exact 0.5600  n_eval 171  114 s
+11:20:01 pid20956  DONE  kind=0 rep=107  p_plug 0.5000 p_exact 0.6200  n_eval 140  369 s
+11:20:01 pid20956  START kind=2 rep=111
+11:20:01 pid44804  START kind=0 rep=112
+11:20:01 pid38576  START kind=0 rep=113
+11:20:01 pid52880  START kind=2 rep=110
+11:21:19 pid52880  DONE  kind=2 rep=110  p_plug 0.0050 p_exact 0.0700  n_eval 99  78 s
+11:21:19 pid52880  START kind=0 rep=111
+11:21:35 pid44804  DONE  kind=0 rep=112  p_plug 0.2050 p_exact 0.3050  n_eval 151  94 s
+11:21:35 pid44804  START kind=2 rep=112
+11:22:05 pid47828  DONE  kind=0 rep=110  p_plug 0.4650 p_exact 0.5050  n_eval 158  124 s
+11:22:05 pid47828  START kind=2 rep=113
+11:22:49 pid20956  DONE  kind=2 rep=111  p_plug 0.0200 p_exact 0.0900  n_eval 151  168 s
+11:22:49 pid20956  START kind=0 rep=114
+11:24:31 pid17520  DONE  kind=0 rep=109  p_plug 0.5900 p_exact 1.0000  n_eval 83  269 s
+11:24:31 pid17520  START kind=2 rep=109
+11:24:55 pid20956  DONE  kind=0 rep=114  p_plug 0.1900 p_exact 0.2900  n_eval 144  126 s
+11:24:55 pid20956  START kind=2 rep=114
+11:25:09 pid52880  DONE  kind=0 rep=111  p_plug 0.1650 p_exact 0.1850  n_eval 123  230 s
+11:25:09 pid52880  START kind=0 rep=115
+11:25:27 pid17520  DONE  kind=2 rep=109  p_plug 0.0050 p_exact 0.0250  n_eval 38  56 s
+11:25:27 pid17520  START kind=2 rep=115
+11:25:48 pid47828  DONE  kind=2 rep=113  p_plug 0.0550 p_exact 0.1750  n_eval 277  223 s
+11:25:48 pid47828  START kind=2 rep=116
+11:26:01 pid44804  DONE  kind=2 rep=112  p_plug 0.0300 p_exact 0.0300  n_eval 24  266 s
+11:26:01 pid44804  START kind=0 rep=117
+11:27:30 pid20956  DONE  kind=2 rep=114  p_plug 0.0700 p_exact 0.2500  n_eval 235  155 s
+11:27:41 pid44804  DONE  kind=0 rep=117  p_plug 0.2250 p_exact 0.3400  n_eval 160  100 s
+11:27:41 pid44804  START kind=2 rep=117
+11:27:53 pid52880  DONE  kind=0 rep=115  p_plug 0.6000 p_exact 0.6850  n_eval 230  164 s
+11:28:01 pid17520  DONE  kind=2 rep=115  p_plug 0.1250 p_exact 0.2250  n_eval 200  154 s
+11:28:01 pid17520  START kind=0 rep=116
+11:28:16 pid38576  DONE  kind=0 rep=113  p_plug 0.4400 p_exact 0.9250  n_eval 52  494 s
+11:28:50 pid47828  DONE  kind=2 rep=116  p_plug 0.0050 p_exact 0.0050  n_eval 21  182 s
+11:30:14 pid17520  DONE  kind=0 rep=116  p_plug 0.6750 p_exact 1.0000  n_eval 39  133 s
+11:35:52 pid44804  DONE  kind=2 rep=117  p_plug 0.1500 p_exact 0.1500  n_eval 53  491 s

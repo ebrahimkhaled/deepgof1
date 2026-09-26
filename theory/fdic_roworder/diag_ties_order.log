@@ -1,0 +1,56 @@
+whole file: n = 8304  sorted by cert (numeric)? FALSE  sorted by cert (character)? FALSE 
+
+== GA  n = 334  failures = 69
+   eq_ta    distinct  334 | rows in a tie group    0 (0.0%) | largest tie: value 0.02575046 x 1
+   npa_ta   distinct  312 | rows in a tie group   23 (6.9%) | largest tie: value 0 x 23
+   roa      distinct  334 | rows in a tie group    0 (0.0%) | largest tie: value -15.546365 x 1
+   bro_dep  distinct  217 | rows in a tie group  118 (35.3%) | largest tie: value 0 x 118
+   cre_ta   distinct  329 | rows in a tie group    6 (1.8%) | largest tie: value 0 x 6
+   row index vs failed: mean index failed 189.7 vs survived 161.7 | Wilcoxon p 0.0323 | logit slope z 2.13
+   npa_ta   largest tie group (23 rows): all failed = 0
+   bro_dep  largest tie group (118 rows, 4 failed): order-vs-failed Wilcoxon p 0.151
+== FL  n = 307  failures = 56
+   eq_ta    distinct  307 | rows in a tie group    0 (0.0%) | largest tie: value -0.0457014 x 1
+   npa_ta   distinct  266 | rows in a tie group   42 (13.7%) | largest tie: value 0 x 42
+   roa      distinct  307 | rows in a tie group    0 (0.0%) | largest tie: value -15.771687 x 1
+   bro_dep  distinct  207 | rows in a tie group  101 (32.9%) | largest tie: value 0 x 101
+   cre_ta   distinct  304 | rows in a tie group    4 (1.3%) | largest tie: value 0 x 4
+   row index vs failed: mean index failed 141.2 vs survived 156.8 | Wilcoxon p 0.235 | logit slope z -1.19
+   npa_ta   largest tie group (42 rows): all failed = 0
+   bro_dep  largest tie group (101 rows, 6 failed): order-vs-failed Wilcoxon p 0.757
+== IL  n = 655  failures = 46
+   eq_ta    distinct  655 | rows in a tie group    0 (0.0%) | largest tie: value 0.00838612 x 1
+   npa_ta   distinct  633 | rows in a tie group   23 (3.5%) | largest tie: value 0 x 23
+   roa      distinct  655 | rows in a tie group    0 (0.0%) | largest tie: value -13.485961 x 1
+   bro_dep  distinct  272 | rows in a tie group  384 (58.6%) | largest tie: value 0 x 384
+   cre_ta   distinct  649 | rows in a tie group    7 (1.1%) | largest tie: value 0 x 7
+   row index vs failed: mean index failed 353.7 vs survived 326.1 | Wilcoxon p 0.34 | logit slope z 0.95
+   npa_ta   largest tie group (23 rows, 3 failed): order-vs-failed Wilcoxon p 0.698
+   bro_dep  largest tie group (384 rows, 9 failed): order-vs-failed Wilcoxon p 0.525
+== CA  n = 311  failures = 34
+   eq_ta    distinct  311 | rows in a tie group    0 (0.0%) | largest tie: value -0.1944464 x 1
+   npa_ta   distinct  249 | rows in a tie group   63 (20.3%) | largest tie: value 0 x 63
+   roa      distinct  311 | rows in a tie group    0 (0.0%) | largest tie: value -46.045853 x 1
+   bro_dep  distinct  213 | rows in a tie group   99 (31.8%) | largest tie: value 0 x 99
+   cre_ta   distinct  300 | rows in a tie group   12 (3.9%) | largest tie: value 0 x 12
+   row index vs failed: mean index failed 128.9 vs survived 159.3 | Wilcoxon p 0.0629 | logit slope z -1.84
+   npa_ta   largest tie group (63 rows): all failed = 0
+   bro_dep  largest tie group (99 rows, 2 failed): order-vs-failed Wilcoxon p 0.351
+   cre_ta   largest tie group (12 rows): all failed = 0
+== WA  n = 97  failures = 17
+   eq_ta    distinct   97 | rows in a tie group    0 (0.0%) | largest tie: value 0.02168690 x 1
+   npa_ta   distinct   92 | rows in a tie group    6 (6.2%) | largest tie: value 0 x 6
+   roa      distinct   97 | rows in a tie group    0 (0.0%) | largest tie: value -15.009039 x 1
+   bro_dep  distinct   74 | rows in a tie group   24 (24.7%) | largest tie: value 0 x 24
+   cre_ta   distinct   97 | rows in a tie group    0 (0.0%) | largest tie: value 0 x 1
+   row index vs failed: mean index failed 35.9 vs survived 51.8 | Wilcoxon p 0.0348 | logit slope z -2.07
+   bro_dep  largest tie group (24 rows, 2 failed): order-vs-failed Wilcoxon p 0.877
+== MN  n = 431  failures = 16
+   eq_ta    distinct  431 | rows in a tie group    0 (0.0%) | largest tie: value 0.04291553 x 1
+   npa_ta   distinct  420 | rows in a tie group   12 (2.8%) | largest tie: value 0 x 12
+   roa      distinct  431 | rows in a tie group    0 (0.0%) | largest tie: value -13.937440 x 1
+   bro_dep  distinct  199 | rows in a tie group  233 (54.1%) | largest tie: value 0 x 233
+   cre_ta   distinct  429 | rows in a tie group    3 (0.7%) | largest tie: value 0 x 3
+   row index vs failed: mean index failed 222.2 vs survived 215.8 | Wilcoxon p 0.839 | logit slope z 0.20
+   npa_ta   largest tie group (12 rows): all failed = 0
+   bro_dep  largest tie group (233 rows, 5 failed): order-vs-failed Wilcoxon p 0.74

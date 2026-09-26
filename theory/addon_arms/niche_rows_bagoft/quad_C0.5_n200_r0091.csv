@@ -1,0 +1,2 @@
+"scen","fam","C","n","rep","events","dseed","p","p_med","p_min","bag_pmin_stat","time_s","status","err","impl"
+"quad_C0.5_n200","quad",0.5,200,91,77,723091,0.01,0,0.15,1.13585904292224e-05,159.280000000001,"ok","","fast_pre"

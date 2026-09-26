@@ -1,0 +1,8 @@
+saddle: tail from t=249.99 to t_global=12861.6 (c_max 5.8321, R_TAIL 8.739, kappa 1.1875); 0 intervals done
+  [249.99, 274.99]  lb 139.0  (2 CROWN calls, 8 s)
+  [589.46, 648.41]  lb 577.7  (20 CROWN calls, 89 s)
+  [648.41, 713.25]  lb 644.0  (22 CROWN calls, 103 s)
+  [1667.91, 2001.49]  lb 81.1  (42 CROWN calls, 173 s)
+  [4980.35, 5976.42]  lb 879.2  (60 CROWN calls, 249 s)
+  [5976.42, 7171.70]  lb 1120.3  (63 CROWN calls, 255 s)
+saddle tail CLOSED: 31 intervals, 75 CROWN calls, 278 s

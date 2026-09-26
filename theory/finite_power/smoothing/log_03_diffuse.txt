@@ -1,0 +1,7 @@
+diffuse: tail from t=249.37 to t_global=10429.6 (c_max 5.8321, R_TAIL 8.739, kappa 1.4645); 0 intervals done
+  [249.37, 299.24]  lb 97.4  (3 CROWN calls, 14 s)
+  [744.61, 893.54]  lb 706.0  (21 CROWN calls, 188 s)
+  [2668.09, 3201.71]  lb 2961.4  (42 CROWN calls, 352 s)
+  [7966.87, 9560.25]  lb 9056.9  (60 CROWN calls, 497 s)
+  [9560.25, 10429.64]  lb 10890.5  (63 CROWN calls, 524 s)
+diffuse tail CLOSED: 21 intervals, 63 CROWN calls, 524 s

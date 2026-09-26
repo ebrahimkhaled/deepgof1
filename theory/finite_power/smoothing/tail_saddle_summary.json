@@ -1,0 +1,12 @@
+{
+ "direction": "saddle",
+ "t_start": 249.99,
+ "t_global": 12861.635186806363,
+ "c_max": 5.832118327651096,
+ "r_tail": 8.738705794753056,
+ "eps_tail": 0.0001,
+ "n_intervals": 31,
+ "closed": true,
+ "crown_calls": 75,
+ "wall_s": 278.2241129875183
+}

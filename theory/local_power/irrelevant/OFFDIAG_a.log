@@ -1,0 +1,23 @@
+bench 4.6e-11 | 0 records done | tasks ['study:0', 'study:1', 'study:2', 'study:4', 'pure:0', 'pure:1']
+[study:0] seed 1 done 462 s
+[study:0] seed 2 done 848 s
+  study:0:inter tau50 offdiag [7.84, 9.24] | with diagonal [7.71, 9.04]
+  study:0:quad tau50 offdiag [5.55, 5.95] | with diagonal [5.51, 5.9]
+[study:1] seed 1 done 1148 s
+[study:1] seed 2 done 1438 s
+  study:1:inter tau50 offdiag [9.97, 9.47] | with diagonal [9.78, 9.23]
+  study:1:quad tau50 offdiag [6.93, 6.97] | with diagonal [6.9, 6.88]
+[study:2] seed 1 done 1713 s
+[study:2] seed 2 done 1916 s
+  study:2:inter tau50 offdiag [11.1, 11.58] | with diagonal [10.74, 11.29]
+  study:2:quad tau50 offdiag [7.54, 7.92] | with diagonal [7.41, 7.77]
+[study:4] seed 1 done 2064 s
+[study:4] seed 2 done 2183 s
+  study:4:inter tau50 offdiag [14.74, 13.98] | with diagonal [14.28, 13.06]
+  study:4:quad tau50 offdiag [9.65, 9.78] | with diagonal [9.52, 9.39]
+[pure:0] seed 1 done 2289 s
+  pure:0:inter tau50 offdiag [7.84] | with diagonal [7.71]
+  pure:0:quad tau50 offdiag [5.55] | with diagonal [5.51]
+[pure:1] seed 1 done 2389 s
+  pure:1:inter tau50 offdiag [9.93] | with diagonal [9.68]
+  pure:1:quad tau50 offdiag [6.83] | with diagonal [6.81]

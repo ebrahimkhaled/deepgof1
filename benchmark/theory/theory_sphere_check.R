@@ -1,3 +1,5 @@
+## Run with the working directory theory/_support/rdeploy of this archive (the script reads
+## deepgof_forward.R, weights.csv and scaler.csv from there).
 ## theory_sphere_check.R -- Condition C of the consistency theorem, checked on the shipped weights.
 ##
 ## CLOSED FORM. For a ReLU/max-pool/linear network S, the recession slope along v is the ZERO-BIAS

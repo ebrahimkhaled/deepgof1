@@ -1,0 +1,81 @@
+normal    d= 2 n= 30  clean touched 0.0320  slip caught 0.6466
+normal    d= 2 n= 50  clean touched 0.0188  slip caught 0.6494
+normal    d= 2 n=100  clean touched 0.0118  slip caught 0.6522
+normal    d= 2 n=200  clean touched 0.0089  slip caught 0.6508
+normal    d= 2 n=500  clean touched 0.0111  slip caught 0.6512
+normal    d= 5 n= 30  clean touched 0.0787  slip caught 0.6421
+normal    d= 5 n= 50  clean touched 0.0472  slip caught 0.6484
+normal    d= 5 n=100  clean touched 0.0297  slip caught 0.6500
+normal    d= 5 n=200  clean touched 0.0223  slip caught 0.6465
+normal    d= 5 n=500  clean touched 0.0295  slip caught 0.6488
+normal    d=10 n= 30  clean touched 0.1519  slip caught 0.6426
+normal    d=10 n= 50  clean touched 0.0935  slip caught 0.6430
+normal    d=10 n=100  clean touched 0.0527  slip caught 0.6521
+normal    d=10 n=200  clean touched 0.0453  slip caught 0.6454
+normal    d=10 n=500  clean touched 0.0558  slip caught 0.6454
+t4        d= 2 n= 30  clean touched 0.4425  slip caught 0.5920
+t4        d= 2 n= 50  clean touched 0.5780  slip caught 0.5717
+t4        d= 2 n=100  clean touched 0.8024  slip caught 0.5278
+t4        d= 2 n=200  clean touched 0.9553  slip caught 0.4718
+t4        d= 2 n=500  clean touched 0.9994  slip caught 0.3802
+t4        d= 5 n= 30  clean touched 0.7704  slip caught 0.5397
+t4        d= 5 n= 50  clean touched 0.8894  slip caught 0.5077
+t4        d= 5 n=100  clean touched 0.9835  slip caught 0.4412
+t4        d= 5 n=200  clean touched 0.9996  slip caught 0.3722
+t4        d= 5 n=500  clean touched 1.0000  slip caught 0.2896
+t4        d=10 n= 30  clean touched 0.9476  slip caught 0.4778
+t4        d=10 n= 50  clean touched 0.9880  slip caught 0.4329
+t4        d=10 n=100  clean touched 0.9999  slip caught 0.3698
+t4        d=10 n=200  clean touched 1.0000  slip caught 0.3066
+t4        d=10 n=500  clean touched 1.0000  slip caught 0.2249
+unif      d= 2 n= 30  clean touched 0.0003  slip caught 0.6774
+unif      d= 2 n= 50  clean touched 0.0000  slip caught 0.6678
+unif      d= 2 n=100  clean touched 0.0000  slip caught 0.6750
+unif      d= 2 n=200  clean touched 0.0000  slip caught 0.6670
+unif      d= 2 n=500  clean touched 0.0000  slip caught 0.6651
+unif      d= 5 n= 30  clean touched 0.0009  slip caught 0.6736
+unif      d= 5 n= 50  clean touched 0.0000  slip caught 0.6697
+unif      d= 5 n=100  clean touched 0.0000  slip caught 0.6670
+unif      d= 5 n=200  clean touched 0.0000  slip caught 0.6688
+unif      d= 5 n=500  clean touched 0.0000  slip caught 0.6668
+unif      d=10 n= 30  clean touched 0.0013  slip caught 0.6748
+unif      d=10 n= 50  clean touched 0.0000  slip caught 0.6734
+unif      d=10 n=100  clean touched 0.0000  slip caught 0.6678
+unif      d=10 n=200  clean touched 0.0000  slip caught 0.6646
+unif      d=10 n=500  clean touched 0.0000  slip caught 0.6625
+lognormal d= 2 n= 30  clean touched 0.9670  slip caught 0.4930
+lognormal d= 2 n= 50  clean touched 0.9960  slip caught 0.4334
+lognormal d= 2 n=100  clean touched 1.0000  slip caught 0.3392
+lognormal d= 2 n=200  clean touched 1.0000  slip caught 0.2622
+lognormal d= 2 n=500  clean touched 1.0000  slip caught 0.1905
+lognormal d= 5 n= 30  clean touched 0.9999  slip caught 0.3684
+lognormal d= 5 n= 50  clean touched 1.0000  slip caught 0.3171
+lognormal d= 5 n=100  clean touched 1.0000  slip caught 0.2454
+lognormal d= 5 n=200  clean touched 1.0000  slip caught 0.1903
+lognormal d= 5 n=500  clean touched 1.0000  slip caught 0.1266
+lognormal d=10 n= 30  clean touched 1.0000  slip caught 0.2908
+lognormal d=10 n= 50  clean touched 1.0000  slip caught 0.2457
+lognormal d=10 n=100  clean touched 1.0000  slip caught 0.1951
+lognormal d=10 n=200  clean touched 1.0000  slip caught 0.1436
+lognormal d=10 n=500  clean touched 1.0000  slip caught 0.1008
+bern      d= 2 n= 30  clean touched 0.9787  slip caught 0.0197
+bern      d= 2 n= 50  clean touched 0.9863  slip caught 0.0130
+bern      d= 2 n=100  clean touched 0.9942  slip caught 0.0063
+bern      d= 2 n=200  clean touched 0.9974  slip caught 0.0029
+bern      d= 2 n=500  clean touched 0.9988  slip caught 0.0010
+bern      d= 5 n= 30  clean touched 0.9999  slip caught 0.0001
+bern      d= 5 n= 50  clean touched 1.0000  slip caught 0.0001
+bern      d= 5 n=100  clean touched 1.0000  slip caught 0.0000
+bern      d= 5 n=200  clean touched 1.0000  slip caught 0.0000
+bern      d= 5 n=500  clean touched 1.0000  slip caught 0.0000
+bern      d=10 n= 30  clean touched 1.0000  slip caught 0.0000
+bern      d=10 n= 50  clean touched 1.0000  slip caught 0.0000
+bern      d=10 n=100  clean touched 1.0000  slip caught 0.0000
+bern      d=10 n=200  clean touched 1.0000  slip caught 0.0000
+bern      d=10 n=500  clean touched 1.0000  slip caught 0.0000
+liu2      d= 3 n= 30  clean touched 0.2676  slip caught 0.6402
+liu2      d= 3 n= 50  clean touched 0.3649  slip caught 0.6266
+liu2      d= 3 n=100  clean touched 0.5622  slip caught 0.5899
+liu2      d= 3 n=200  clean touched 0.7963  slip caught 0.5336
+liu2      d= 3 n=500  clean touched 0.9759  slip caught 0.4223
+done

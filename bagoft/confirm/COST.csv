@@ -1,0 +1,4 @@
+n,median_secs,note
+50,64.1,"wall seconds per complete test, 20 workers sharing 12 physical cores"
+100,81.58500000000001,"wall seconds per complete test, 20 workers sharing 12 physical cores"
+500,178.81,"wall seconds per complete test, 20 workers sharing 12 physical cores"

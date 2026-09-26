@@ -1,0 +1,11 @@
+ SET   n covariates      status    p stat_min secs est_full_s
+   1  50          1 ERROR_OR_NA   NA       NA 0.02         11
+   2  50          3          ok 0.00 0.00e+00 1.34        677
+   3  50          2          ok 0.25 0.00e+00 1.45        730
+   4  50          2          ok 0.75 3.45e-02 1.51        763
+   1 500          1 ERROR_OR_NA   NA       NA 0.01          6
+   2 500          3          ok 0.00 7.02e-14 2.39       1205
+   3 500          2          ok 0.00 6.85e-03 2.19       1105
+   4 500          2          ok 0.00 1.72e-10 2.00       1011
+
+mean estimated full-default seconds per dataset: n=50 545 | n=500 832 

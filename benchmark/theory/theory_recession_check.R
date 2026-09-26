@@ -1,3 +1,5 @@
+## Run with the working directory theory/_support/rdeploy of this archive (the script reads
+## deepgof_forward.R, weights.csv and scaler.csv from there).
 ## theory_recession_check.R -- the computable half of the consistency theorem, checked on the
 ## SHIPPED weights before a single line of proof is typed.
 ##

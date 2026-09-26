@@ -1,3 +1,5 @@
+## Run with the working directory theory/_support/rdeploy of this archive (the script reads
+## deepgof_forward.R, weights.csv and scaler.csv from there).
 ## theory_blindcone_probe.R -- characterize the exceptional cone {v : Sinf(v) <= 0} of the shipped
 ## weights: multi-start descent for a better global minimum, and the worst direction's 6x6 pattern.
 source("deepgof_forward.R")

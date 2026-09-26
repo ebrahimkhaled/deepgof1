@@ -1,0 +1,13 @@
+bench 4.6e-11 | 29 records done | tasks ['extra:study:4', 'extra:study:2']
+[extra:study:4] seed 3 done 71 s
+[extra:study:4] seed 4 done 133 s
+[extra:study:4] seed 5 done 186 s
+[extra:study:4] seed 6 done 240 s
+  extra:study:4:inter tau50 offdiag [13.24, 14.01, 15.07, 14.89] | with diagonal []
+  extra:study:4:quad tau50 offdiag [9.22, 9.67, 9.47, 8.97] | with diagonal []
+[extra:study:2] seed 3 done 294 s
+[extra:study:2] seed 4 done 351 s
+[extra:study:2] seed 5 done 406 s
+[extra:study:2] seed 6 done 460 s
+  extra:study:2:inter tau50 offdiag [13.05, 13.97, 13.45, 13.25] | with diagonal []
+  extra:study:2:quad tau50 offdiag [8.13, 8.38, 9.35, 8.59] | with diagonal []

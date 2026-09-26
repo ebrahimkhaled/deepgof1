@@ -1,0 +1,24 @@
+patched line: datRf <- Train.data[, -which(names(Train.data) == Rsp), 
+
+=== 1. identity on the settings where unpatched BAGofT works ===
+  S2 n=50  rep 1: original p=0.000 pmin=0 | patched p=0.000 pmin=0 | identical=TRUE
+  S2 n=50  rep 2: original p=0.167 pmin=0 | patched p=0.167 pmin=0 | identical=TRUE
+  S2 n=500 rep 1: original p=0.000 pmin=9.99e-16 | patched p=0.000 pmin=9.99e-16 | identical=TRUE
+  S2 n=500 rep 2: original p=0.000 pmin=3.33e-16 | patched p=0.000 pmin=3.33e-16 | identical=TRUE
+  S3 n=50  rep 1: original p=0.667 pmin=0 | patched p=0.667 pmin=0 | identical=TRUE
+  S3 n=50  rep 2: original p=0.500 pmin=0 | patched p=0.500 pmin=0 | identical=TRUE
+  S3 n=500 rep 1: original p=0.000 pmin=0.04 | patched p=0.000 pmin=0.04 | identical=TRUE
+  S3 n=500 rep 2: original p=0.333 pmin=0.102 | patched p=0.333 pmin=0.102 | identical=TRUE
+  S4 n=50  rep 1: original p=0.500 pmin=5.98e-09 | patched p=0.500 pmin=5.98e-09 | identical=TRUE
+  S4 n=50  rep 2: original p=0.167 pmin=0 | patched p=0.167 pmin=0 | identical=TRUE
+  S4 n=500 rep 1: original p=0.000 pmin=1.62e-13 | patched p=0.000 pmin=1.62e-13 | identical=TRUE
+  S4 n=500 rep 2: original p=0.000 pmin=1.41e-10 | patched p=0.000 pmin=1.41e-10 | identical=TRUE
+ALL IDENTICAL: TRUE 
+
+=== 2. Setting 1 (one covariate): original vs patched ===
+  S1 n=50 : original -> ERROR: argument is of length zero | patched -> p=0.000 pmin=2.83e-07
+  S1 n=100: original -> ERROR: argument is of length zero | patched -> p=0.000 pmin=2.22e-05
+  S1 n=500: original -> ERROR: argument is of length zero | patched -> p=0.000 pmin=5.55e-16
+
+=== 3. the wrapper used for Setting 1 returns the same fields as the registry wrapper ===
+  names: p, p_med, p_min, stat_min, time_s | p = 0 | error-free: TRUE 

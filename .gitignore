@@ -1,7 +1,0 @@
-.Rproj.user
-.Rhistory
-.RData
-*.Rcheck/
-*.tar.gz
-__pycache__/
-*.pyc

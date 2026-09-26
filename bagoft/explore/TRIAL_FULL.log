@@ -1,0 +1,143 @@
+Warning message:
+package 'BAGofT' was built under R version 4.4.3 
+EXPLORATORY BAGofT trial | 60 cells x 12 reps = 720 datasets | 96 already on disk | 624 to do | 8 workers | budget 2400 min
+ SET   n    C
+   1  50 0.00
+   1  50 0.25
+   1  50 0.50
+   1  50 0.75
+   1  50 1.00
+   2  50 0.00
+   2  50 0.25
+   2  50 0.50
+   2  50 0.75
+   2  50 1.00
+   3  50 0.00
+   3  50 0.25
+   3  50 0.50
+   3  50 0.75
+   3  50 1.00
+   4  50 0.00
+   4  50 0.25
+   4  50 0.50
+   4  50 0.75
+   4  50 1.00
+   1 100 0.00
+   1 100 0.25
+   1 100 0.50
+   1 100 0.75
+   1 100 1.00
+   2 100 0.00
+   2 100 0.25
+   2 100 0.50
+   2 100 0.75
+   2 100 1.00
+   3 100 0.00
+   3 100 0.25
+   3 100 0.50
+   3 100 0.75
+   3 100 1.00
+   4 100 0.00
+   4 100 0.25
+   4 100 0.50
+   4 100 0.75
+   4 100 1.00
+   1 500 0.00
+   1 500 0.25
+   1 500 0.50
+   1 500 0.75
+   1 500 1.00
+   2 500 0.00
+   2 500 0.25
+   2 500 0.50
+   2 500 0.75
+   2 500 1.00
+   3 500 0.00
+   3 500 0.25
+   3 500 0.50
+   3 500 0.75
+   3 500 1.00
+   4 500 0.00
+   4 500 0.25
+   4 500 0.50
+   4 500 0.75
+   4 500 1.00
+     8 datasets | 11.4 min elapsed | 85 s/dataset wall | eta-to-budget 1682 more
+    16 datasets | 24.7 min elapsed | 93 s/dataset wall | eta-to-budget 1539 more
+    24 datasets | 39.3 min elapsed | 98 s/dataset wall | eta-to-budget 1441 more
+    32 datasets | 50.9 min elapsed | 95 s/dataset wall | eta-to-budget 1476 more
+    40 datasets | 73.0 min elapsed | 109 s/dataset wall | eta-to-budget 1275 more
+    48 datasets | 95.5 min elapsed | 119 s/dataset wall | eta-to-budget 1158 more
+    56 datasets | 114.6 min elapsed | 123 s/dataset wall | eta-to-budget 1117 more
+    64 datasets | 127.7 min elapsed | 120 s/dataset wall | eta-to-budget 1139 more
+    72 datasets | 141.1 min elapsed | 118 s/dataset wall | eta-to-budget 1152 more
+    80 datasets | 154.6 min elapsed | 116 s/dataset wall | eta-to-budget 1162 more
+    88 datasets | 175.1 min elapsed | 119 s/dataset wall | eta-to-budget 1118 more
+    96 datasets | 197.5 min elapsed | 123 s/dataset wall | eta-to-budget 1071 more
+   104 datasets | 218.7 min elapsed | 126 s/dataset wall | eta-to-budget 1037 more
+   112 datasets | 230.8 min elapsed | 124 s/dataset wall | eta-to-budget 1053 more
+   120 datasets | 242.2 min elapsed | 121 s/dataset wall | eta-to-budget 1069 more
+   128 datasets | 256.5 min elapsed | 120 s/dataset wall | eta-to-budget 1070 more
+   136 datasets | 269.4 min elapsed | 119 s/dataset wall | eta-to-budget 1075 more
+   144 datasets | 292.7 min elapsed | 122 s/dataset wall | eta-to-budget 1037 more
+   152 datasets | 316.2 min elapsed | 125 s/dataset wall | eta-to-budget 1002 more
+   160 datasets | 333.9 min elapsed | 125 s/dataset wall | eta-to-budget 990 more
+   168 datasets | 347.0 min elapsed | 124 s/dataset wall | eta-to-budget 994 more
+   176 datasets | 359.9 min elapsed | 123 s/dataset wall | eta-to-budget 998 more
+   184 datasets | 371.8 min elapsed | 121 s/dataset wall | eta-to-budget 1004 more
+   192 datasets | 391.7 min elapsed | 122 s/dataset wall | eta-to-budget 984 more
+   200 datasets | 411.2 min elapsed | 123 s/dataset wall | eta-to-budget 967 more
+   208 datasets | 432.2 min elapsed | 125 s/dataset wall | eta-to-budget 947 more
+   216 datasets | 444.9 min elapsed | 124 s/dataset wall | eta-to-budget 949 more
+   224 datasets | 456.9 min elapsed | 122 s/dataset wall | eta-to-budget 953 more
+   232 datasets | 467.9 min elapsed | 121 s/dataset wall | eta-to-budget 958 more
+   240 datasets | 481.3 min elapsed | 120 s/dataset wall | eta-to-budget 957 more
+   248 datasets | 503.8 min elapsed | 122 s/dataset wall | eta-to-budget 933 more
+   256 datasets | 524.4 min elapsed | 123 s/dataset wall | eta-to-budget 916 more
+   264 datasets | 543.8 min elapsed | 124 s/dataset wall | eta-to-budget 901 more
+   272 datasets | 552.7 min elapsed | 122 s/dataset wall | eta-to-budget 909 more
+   280 datasets | 566.2 min elapsed | 121 s/dataset wall | eta-to-budget 907 more
+   288 datasets | 580.3 min elapsed | 121 s/dataset wall | eta-to-budget 903 more
+   296 datasets | 600.4 min elapsed | 122 s/dataset wall | eta-to-budget 887 more
+   304 datasets | 621.7 min elapsed | 123 s/dataset wall | eta-to-budget 870 more
+   312 datasets | 643.5 min elapsed | 124 s/dataset wall | eta-to-budget 852 more
+   320 datasets | 656.5 min elapsed | 123 s/dataset wall | eta-to-budget 850 more
+   328 datasets | 669.1 min elapsed | 122 s/dataset wall | eta-to-budget 849 more
+   336 datasets | 680.8 min elapsed | 122 s/dataset wall | eta-to-budget 848 more
+   344 datasets | 694.9 min elapsed | 121 s/dataset wall | eta-to-budget 844 more
+   352 datasets | 715.7 min elapsed | 122 s/dataset wall | eta-to-budget 828 more
+   360 datasets | 737.8 min elapsed | 123 s/dataset wall | eta-to-budget 811 more
+   368 datasets | 757.0 min elapsed | 123 s/dataset wall | eta-to-budget 799 more
+   376 datasets | 769.4 min elapsed | 123 s/dataset wall | eta-to-budget 797 more
+   384 datasets | 782.9 min elapsed | 122 s/dataset wall | eta-to-budget 793 more
+   392 datasets | 797.0 min elapsed | 122 s/dataset wall | eta-to-budget 788 more
+   400 datasets | 813.5 min elapsed | 122 s/dataset wall | eta-to-budget 780 more
+   408 datasets | 835.6 min elapsed | 123 s/dataset wall | eta-to-budget 764 more
+   416 datasets | 856.0 min elapsed | 123 s/dataset wall | eta-to-budget 750 more
+   424 datasets | 869.2 min elapsed | 123 s/dataset wall | eta-to-budget 747 more
+   432 datasets | 880.5 min elapsed | 122 s/dataset wall | eta-to-budget 746 more
+   440 datasets | 892.6 min elapsed | 122 s/dataset wall | eta-to-budget 743 more
+   448 datasets | 907.2 min elapsed | 121 s/dataset wall | eta-to-budget 737 more
+   456 datasets | 929.8 min elapsed | 122 s/dataset wall | eta-to-budget 721 more
+   464 datasets | 953.0 min elapsed | 123 s/dataset wall | eta-to-budget 704 more
+   472 datasets | 972.8 min elapsed | 124 s/dataset wall | eta-to-budget 692 more
+   480 datasets | 985.7 min elapsed | 123 s/dataset wall | eta-to-budget 689 more
+   488 datasets | 999.4 min elapsed | 123 s/dataset wall | eta-to-budget 684 more
+   496 datasets | 1012.5 min elapsed | 122 s/dataset wall | eta-to-budget 680 more
+   504 datasets | 1021.0 min elapsed | 122 s/dataset wall | eta-to-budget 681 more
+   512 datasets | 1031.1 min elapsed | 121 s/dataset wall | eta-to-budget 680 more
+   520 datasets | 1038.9 min elapsed | 120 s/dataset wall | eta-to-budget 681 more
+   528 datasets | 1043.3 min elapsed | 119 s/dataset wall | eta-to-budget 687 more
+   536 datasets | 1047.8 min elapsed | 117 s/dataset wall | eta-to-budget 692 more
+   544 datasets | 1052.2 min elapsed | 116 s/dataset wall | eta-to-budget 697 more
+   552 datasets | 1057.2 min elapsed | 115 s/dataset wall | eta-to-budget 701 more
+   560 datasets | 1066.6 min elapsed | 114 s/dataset wall | eta-to-budget 700 more
+   568 datasets | 1075.1 min elapsed | 114 s/dataset wall | eta-to-budget 700 more
+   576 datasets | 1083.2 min elapsed | 113 s/dataset wall | eta-to-budget 700 more
+   584 datasets | 1087.1 min elapsed | 112 s/dataset wall | eta-to-budget 705 more
+   592 datasets | 1091.8 min elapsed | 111 s/dataset wall | eta-to-budget 709 more
+   600 datasets | 1097.1 min elapsed | 110 s/dataset wall | eta-to-budget 713 more
+   608 datasets | 1104.1 min elapsed | 109 s/dataset wall | eta-to-budget 714 more
+   616 datasets | 1113.7 min elapsed | 108 s/dataset wall | eta-to-budget 711 more
+   624 datasets | 1122.8 min elapsed | 108 s/dataset wall | eta-to-budget 710 more
+DONE: 624 datasets this run, 1122.8 min. Master: /path/to/project/paper_deepgof/explore_bagoft/bagoft_pvalues.csv

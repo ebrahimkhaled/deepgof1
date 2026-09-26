@@ -1,0 +1,7 @@
+stripe_x1: tail from t=249.85 to t_global=8834.7 (c_max 5.8321, R_TAIL 8.739, kappa 1.7288); 0 intervals done
+  [249.85, 274.84]  lb 307.6  (2 CROWN calls, 10 s)
+  [632.12, 758.55]  lb 348.5  (20 CROWN calls, 136 s)
+  [758.55, 910.26]  lb 486.4  (23 CROWN calls, 159 s)
+  [2265.02, 2718.02]  lb 2083.1  (41 CROWN calls, 292 s)
+  [8115.96, 8834.66]  lb 8205.0  (62 CROWN calls, 379 s)
+stripe_x1 tail CLOSED: 22 intervals, 62 CROWN calls, 379 s

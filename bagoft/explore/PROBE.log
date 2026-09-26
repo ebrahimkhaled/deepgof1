@@ -1,0 +1,33 @@
+=== EXPLORATORY BAGofT small-n probe ===
+BAGofT version: 1.0.0 
+randomForest  : 4.7.1.1 
+R version 4.4.1 (2024-06-14 ucrt) 
+
+--- (b1) split arithmetic at the published defaults ---
+   n  ne n_train nmin Kmax frac_train
+  50  35      15    6    5      0.300
+ 100  50      50    8    6      0.500
+ 500 111     389   11   10      0.778
+
+  ne      = size of the VALIDATION set (where the chi-square is formed)
+  n_train = n - ne = rows left to (i) REFIT the logistic model and
+            (ii) grow the parRF partition forest.
+  df of the per-split chi-square = ngp (the number of groups), BAGofT_sin():
+            P = 1 - pchisq(chisq, ngp)
+
+--- (b2) inside the splits, Liu S2, C=0, n=50 (5 datasets, nsim=0) ---
+  ds 1: ne=35 n_train=15 | train events med=1 min=0 | refits flagged bad 61/100 | ngp: 1:26 2:52 3:16 4:6 | median chisq=26.80 | mean split p=0.157 | nonfinite chisq=0 | warns=158 [glm.fit: algorithm did not converge] | 5.9s (nsim=0)
+  ds 2: ne=35 n_train=15 | train events med=3 min=0 | refits flagged bad 25/100 | ngp: 1:6 2:87 3:6 4:1 | median chisq=6.68 | mean split p=0.198 | nonfinite chisq=0 | warns=146 [glm.fit: algorithm did not converge] | 6.8s (nsim=0)
+  ds 3: ne=35 n_train=15 | train events med=3 min=0 | refits flagged bad 47/100 | ngp: 1:3 2:91 3:4 4:2 | median chisq=43.07 | mean split p=0.101 | nonfinite chisq=0 | warns=198 [invalid mtry: reset to within valid range] | 6.2s (nsim=0)
+  ds 4: ne=35 n_train=15 | train events med=2 min=0 | refits flagged bad 52/100 | ngp: 1:7 2:83 3:6 4:4 | median chisq=21.84 | mean split p=0.119 | nonfinite chisq=0 | warns=179 [invalid mtry: reset to within valid range] | 5.3s (nsim=0)
+  ds 5: ne=35 n_train=15 | train events med=2 min=0 | refits flagged bad 51/100 | ngp: 1:9 2:80 3:8 4:3 | median chisq=19.35 | mean split p=0.104 | nonfinite chisq=0 | warns=176 [invalid mtry: reset to within valid range] | 5.6s (nsim=0)
+
+--- (b2) inside the splits, Liu S2, C=0, n=100 (5 datasets, nsim=0) ---
+  ds 1: ne=50 n_train=50 | train events med=6 min=2 | refits flagged bad 3/100 | ngp: 1:1 2:87 3:6 4:6 | median chisq=2.82 | mean split p=0.352 | nonfinite chisq=0 | warns=102 [invalid mtry: reset to within valid range] | 6.3s (nsim=0)
+  ds 2: ne=50 n_train=50 | train events med=9 min=5 | refits flagged bad 0/100 | ngp: 2:96 3:2 4:2 | median chisq=4.08 | mean split p=0.266 | nonfinite chisq=0 | warns=100 [invalid mtry: reset to within valid range] | 7.1s (nsim=0)
+  ds 3: ne=50 n_train=50 | train events med=8 min=4 | refits flagged bad 0/100 | ngp: 2:80 3:10 4:10 | median chisq=2.80 | mean split p=0.364 | nonfinite chisq=0 | warns=100 [invalid mtry: reset to within valid range] | 7.6s (nsim=0)
+  ds 4: ne=50 n_train=50 | train events med=7 min=3 | refits flagged bad 0/100 | ngp: 1:2 2:86 3:7 4:5 | median chisq=3.04 | mean split p=0.322 | nonfinite chisq=0 | warns=100 [invalid mtry: reset to within valid range] | 6.6s (nsim=0)
+  ds 5: ne=50 n_train=50 | train events med=8 min=5 | refits flagged bad 0/100 | ngp: 1:1 2:77 3:14 4:8 | median chisq=3.38 | mean split p=0.303 | nonfinite chisq=0 | warns=100 [invalid mtry: reset to within valid range] | 6.7s (nsim=0)
+
+--- (c) FULL published-default timing (nsplits=100, nsim=100, ntree=60) ---
+  n= 50 ds 1: p=0.9 p_med=0.82 | 543.2 s

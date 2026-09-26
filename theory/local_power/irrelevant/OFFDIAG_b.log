@@ -1,0 +1,24 @@
+bench 4.6e-11 | 0 records done | tasks ['study:8', 'study:6', 'pred', 'pure:2', 'pure:4', 'pure:6', 'pure:8']
+[study:8] seed 1 done 489 s
+[study:8] seed 2 done 884 s
+  study:8:inter tau50 offdiag [16.52, 19.2] | with diagonal [15.38, 16.96]
+  study:8:quad tau50 offdiag [12.32, 12.91] | with diagonal [11.82, 12.18]
+[study:6] seed 1 done 1189 s
+[study:6] seed 2 done 1490 s
+  study:6:inter tau50 offdiag [19.58, 16.74] | with diagonal [18.17, 15.61]
+  study:6:quad tau50 offdiag [10.61, 11.21] | with diagonal [10.32, 10.74]
+[pred] seed 1 kernel 1757 s
+[pred] seed 2 kernel 1942 s
+[pred] {"cells": {"inter_C0.3_n200": 0.06215726071562928, "inter_C0.3_n500": 0.08274739008199357, "inter_C0.5_n200": 0.08026622372370162, "inter_C0.5_n500": 0.13785827099291553, "inter_C0.8_n200": 0.11527467011268647, "inter_C0.8_n500": 0.2884100082728446, "quad_C0.3_n200": 0.09222376088074283, "quad_C0.3_n500": 0.1636768882298445, "quad_C0.5_n200": 0.19786700349266612, "quad_C0.5_n500": 0.4774385766290757, "quad_C0.8_n200": 0.4904014471721629, "quad_C0.8_n500": 0.9346151723437371}, "size": 0.050025}
+[pure:2] seed 1 done 2088 s
+  pure:2:inter tau50 offdiag [10.97] | with diagonal [10.65]
+  pure:2:quad tau50 offdiag [7.52] | with diagonal [7.44]
+[pure:4] seed 1 done 2201 s
+  pure:4:inter tau50 offdiag [14.77] | with diagonal [14.31]
+  pure:4:quad tau50 offdiag [9.94] | with diagonal [9.82]
+[pure:6] seed 1 done 2305 s
+  pure:6:inter tau50 offdiag [19.17] | with diagonal [17.86]
+  pure:6:quad tau50 offdiag [10.61] | with diagonal [10.31]
+[pure:8] seed 1 done 2402 s
+  pure:8:inter tau50 offdiag [16.23] | with diagonal [15.05]
+  pure:8:quad tau50 offdiag [12.22] | with diagonal [11.7]

@@ -1,0 +1,30 @@
+11:43:27 stage 01: null quantiles
+11:43:27 stage 02+03+04: net, tail and truth per direction (independent jobs, one pool)
+11:43:28   start 02_mc_net.py step_x1 (1 running, Rscript=14)
+11:43:29   start 02_mc_net.py diffuse (2 running, Rscript=14)
+11:43:29   start 02_mc_net.py stripe_x1 (3 running, Rscript=14)
+11:43:30   start 02_mc_net.py saddle (4 running, Rscript=14)
+11:43:31   start 02_mc_net.py random (5 running, Rscript=14)
+11:43:32   start 03_tail.py step_x1 (6 running, Rscript=14)
+11:43:34   start 03_tail.py diffuse (7 running, Rscript=14)
+11:43:45   start 03_tail.py stripe_x1 (8 running, Rscript=14)
+11:49:17   start 03_tail.py saddle (5 running, Rscript=14)
+11:49:18   start 03_tail.py random (6 running, Rscript=14)
+11:50:03   start 04_truth.py step_x1 (7 running, Rscript=14)
+11:50:08   start 04_truth.py diffuse (8 running, Rscript=14)
+11:50:29   start 04_truth.py stripe_x1 (7 running, Rscript=14)
+11:52:01   start 04_truth.py saddle (8 running, Rscript=14)
+11:52:25   start 04_truth.py random (5 running, Rscript=14)
+12:38:26   stage done in 3299 s
+12:38:26 stage 05: certify
+
+Traceback (most recent call last):
+  File "/path/to/project\paper_deepgof\theory\finite_power\smoothing\05_certify.py", line 94, in <module>
+    res, diag = certify_direction(d, ETA_NET)
+                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/path/to/project\paper_deepgof\theory\finite_power\smoothing\05_certify.py", line 80, in certify_direction
+    tc = grid[bad.max() + 1] if len(bad) else 0.0
+         ~~~~^^^^^^^^^^^^^^^
+IndexError: index 249873 is out of bounds for axis 0 with size 249873
+
+12:38:36 all done

@@ -1,0 +1,42 @@
+[study k=0 inter] rho -0.6132 size 0.0643 | ratio joint 1.063 (stored 1.063) | SstBoth 0.749
+[study k=0 quad ] rho -0.6132 size 0.0643 | ratio joint 1.281 (stored 1.281) | SstBoth 0.903
+[study k=1 inter] rho -0.6132 size 0.0643 | ratio joint 1.098 (stored 1.098) | SstBoth 0.773
+[study k=1 quad ] rho -0.6132 size 0.0643 | ratio joint 1.332 (stored 1.332) | SstBoth 0.939
+[study k=2 inter] rho -0.6131 size 0.0643 | ratio joint 1.138 (stored 1.138) | SstBoth 0.801
+[study k=2 quad ] rho -0.6131 size 0.0643 | ratio joint 1.392 (stored 1.392) | SstBoth 0.980
+[study k=4 inter] rho -0.6131 size 0.0643 | ratio joint 1.214 (stored 1.214) | SstBoth 0.855
+[study k=4 quad ] rho -0.6131 size 0.0643 | ratio joint 1.494 (stored 1.494) | SstBoth 1.052
+[study k=6 inter] rho -0.6130 size 0.0643 | ratio joint 1.308 (stored 1.308) | SstBoth 0.921
+[study k=6 quad ] rho -0.6130 size 0.0643 | ratio joint 1.625 (stored 1.625) | SstBoth 1.144
+[study k=8 inter] rho -0.6129 size 0.0642 | ratio joint 1.394 (stored 1.394) | SstBoth 0.981
+[study k=8 quad ] rho -0.6129 size 0.0642 | ratio joint 1.738 (stored 1.738) | SstBoth 1.223
+[pure k=0 inter] rho -0.6132 size 0.0643 | ratio joint 1.063 (stored 1.063) | SstBoth 0.749
+[pure k=0 quad ] rho -0.6132 size 0.0643 | ratio joint 1.281 (stored 1.281) | SstBoth 0.903
+[pure k=1 inter] rho -0.6132 size 0.0643 | ratio joint 1.044 (stored 1.044) | SstBoth 0.735
+[pure k=1 quad ] rho -0.6132 size 0.0643 | ratio joint 1.260 (stored 1.260) | SstBoth 0.888
+[pure k=2 inter] rho -0.6132 size 0.0643 | ratio joint 1.044 (stored 1.044) | SstBoth 0.735
+[pure k=2 quad ] rho -0.6132 size 0.0643 | ratio joint 1.260 (stored 1.260) | SstBoth 0.888
+[pure k=4 inter] rho -0.6132 size 0.0643 | ratio joint 1.044 (stored 1.044) | SstBoth 0.735
+[pure k=4 quad ] rho -0.6132 size 0.0643 | ratio joint 1.260 (stored 1.260) | SstBoth 0.888
+[pure k=6 inter] rho -0.6132 size 0.0643 | ratio joint 1.044 (stored 1.044) | SstBoth 0.735
+[pure k=6 quad ] rho -0.6132 size 0.0643 | ratio joint 1.260 (stored 1.260) | SstBoth 0.888
+[pure k=8 inter] rho -0.6132 size 0.0643 | ratio joint 1.044 (stored 1.044) | SstBoth 0.735
+[pure k=8 quad ] rho -0.6132 size 0.0643 | ratio joint 1.260 (stored 1.260) | SstBoth 0.888
+wrote IRR_SSTBOTH.json
+
+k = 8 niche design: predicted (linear drift / exact finite-n drift) vs simulated SstBoth
+  inter_C0.3_n200  tau  4.24  pred lin 0.124 exact 0.121  sim 0.110 (SE 0.010)  z(exact) -1.1   [joint sim 0.081]
+  inter_C0.3_n500  tau  6.71  pred lin 0.213 exact 0.207  sim 0.208 (SE 0.013)  z(exact) +0.1   [joint sim 0.152]
+  inter_C0.5_n200  tau  7.07  pred lin 0.230 exact 0.232  sim 0.178 (SE 0.012)  z(exact) -4.5   [joint sim 0.134]
+  inter_C0.5_n500  tau 11.18  pred lin 0.460 exact 0.467  sim 0.411 (SE 0.016)  z(exact) -3.6   [joint sim 0.309]
+  inter_C0.8_n200  tau 11.31  pred lin 0.468 exact 0.565  sim 0.360 (SE 0.015)  z(exact) -13.5   [joint sim 0.283]
+  inter_C0.8_n500  tau 17.89  pred lin 0.830 exact 0.916  sim 0.767 (SE 0.013)  z(exact) -11.1   [joint sim 0.672]
+  null_n200        limit 0.0642  sim 0.0750 (SE 0.0059)  z 1.8   [joint sim 0.061]
+  null_n500        limit 0.0642  sim 0.0675 (SE 0.0056)  z 0.6   [joint sim 0.057]
+  quad_C0.3_n200   tau  4.24  pred lin 0.157 exact 0.171  sim 0.167 (SE 0.012)  z(exact) -0.4   [joint sim 0.124]
+  quad_C0.3_n500   tau  6.71  pred lin 0.295 exact 0.331  sim 0.292 (SE 0.014)  z(exact) -2.7   [joint sim 0.227]
+  quad_C0.5_n200   tau  7.07  pred lin 0.319 exact 0.455  sim 0.301 (SE 0.015)  z(exact) -10.6   [joint sim 0.241]
+  quad_C0.5_n500   tau 11.18  pred lin 0.630 exact 0.824  sim 0.647 (SE 0.015)  z(exact) -11.7   [joint sim 0.569]
+  quad_C0.8_n200   tau 11.31  pred lin 0.640 exact 0.917  sim 0.478 (SE 0.016)  z(exact) -27.8   [joint sim 0.439]
+  quad_C0.8_n500   tau 17.89  pred lin 0.950 exact 1.000  sim 0.895 (SE 0.010)  z(exact) -10.8   [joint sim 0.855]
+wrote PRED_VS_SIM_SSTBOTH.json

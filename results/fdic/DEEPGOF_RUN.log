@@ -1,0 +1,15 @@
+## Adequacy calls, fixed tie rule (FDG_TIES=random, FDG_REPS=0), rerun 2026-09-26:
+GA: n=334 events= 69  DeepGOF-1 p = 0.3500  (axes eq_ta, cre_ta; ties random)
+FL: n=307 events= 56  DeepGOF-1 p = 0.1750  (axes eq_ta, cre_ta; ties random)
+IL: n=655 events= 46  DeepGOF-1 p = 0.7850  (axes eq_ta, cre_ta; ties random)
+CA: n=311 events= 34  DeepGOF-1 p = 0.6550  (axes eq_ta, npa_ta; ties random)
+WA: n= 97 events= 17  DeepGOF-1 p = 0.3300  (axes eq_ta, cre_ta; ties random)
+MN: n=431 events= 16  DeepGOF-1 p = 0.9050  (axes eq_ta, roa; ties random)
+## Size on the real design, original run (row-order ties; FDG_SIZE_TIES=roworder reproduces it):
+GA: DeepGOF-1 size on the real design = 0.0445  (NA 0.000, 6.2 min)
+FL: DeepGOF-1 size on the real design = 0.0455  (NA 0.000, 6.2 min)
+IL: DeepGOF-1 size on the real design = 0.0470  (NA 0.000, 7.2 min)
+CA: DeepGOF-1 size on the real design = 0.0470  (NA 0.000, 6.2 min)
+WA: DeepGOF-1 size on the real design = 0.0615  (NA 0.000, 5.3 min)
+MN: DeepGOF-1 size on the real design = 0.0675  (NA 0.000, 6.8 min)
+FDIC DEEPGOF COMPLETE

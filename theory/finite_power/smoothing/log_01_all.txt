@@ -1,0 +1,17 @@
+drew and sorted 2000000 null scores in 131 s
+MC .95 quantile 2.4753 (paper's MC 2.4616); own 99.9% UCB 2.4855 (paper's T_BAR 2.4865)
+  level w=0.050  UCB c_w = 2.4878  (MC quantile 2.4753)
+  level w=0.045  UCB c_w = 2.6042  (MC quantile 2.5913)
+  level w=0.040  UCB c_w = 2.7331  (MC quantile 2.7186)
+  level w=0.035  UCB c_w = 2.8780  (MC quantile 2.8621)
+  level w=0.030  UCB c_w = 3.0408  (MC quantile 3.0247)
+  level w=0.025  UCB c_w = 3.2334  (MC quantile 3.2147)
+  level w=0.020  UCB c_w = 3.4593  (MC quantile 3.4405)
+  level w=0.015  UCB c_w = 3.7407  (MC quantile 3.7189)
+  level w=0.010  UCB c_w = 4.1224  (MC quantile 4.0992)
+  level w=0.007  UCB c_w = 4.4214  (MC quantile 4.3948)
+  level w=0.005  UCB c_w = 4.6972  (MC quantile 4.6686)
+  level w=0.003  UCB c_w = 5.0766  (MC quantile 5.0407)
+  level w=0.002  UCB c_w = 5.3627  (MC quantile 5.3229)
+  level w=0.001  UCB c_w = 5.8321  (MC quantile 5.7832)
+wrote NULL_UCB.json

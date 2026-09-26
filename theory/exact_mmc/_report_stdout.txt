@@ -1,0 +1,47 @@
+=================================================================================
+exact_mmc | D1, p=2, indep, 50% events, n=100 | B=199 | gamma=0.01 | alpha=0.05
+rows on disk: null 117, alt 117 ; balanced paired prefix used: 117 per arm
+
+--- 1. the Bernstein confidence set -----------------------------------------------
+  bounding-box half-width / Wald SE, median over 234 datasets: 20.0  35.7  31.3
+  ... q90:  63.1  104.5  102.0      max: 101.3  128.9  104.6
+  truncation at 200 Wald SE binds (C_gamma numerically unbounded): 82 / 234 = 0.350
+  theta0 inside C_gamma (null arm only): 117 / 117
+  11^3 = 1331 grid points inside C_gamma: median 40.0  q90 148.0  max 366.0 ; zero for 1 datasets
+  uniform points inside / 20000 drawn from the box: median 85.5  q90 680.3  max 1035.0
+  [12_geom.R, 40 null datasets, 200 random directions each]
+  radial extent of C_gamma in Wald-SE units: min-direction 3.8, median 5.4, max-direction 29.4
+  datasets with at least one unbounded direction: 3 / 40
+
+--- 2. size (null arm) ------------------------------------------------------------
+  p_plugin <= .05 (deployed)           2/117 = 0.0171   [0.0021, 0.0604]
+  p_exact  <= .05                      0/117 = 0.0000   [0.0000, 0.0310]
+  p_exact  <= .04 (= alpha - gamma)    0/117 = 0.0000   [0.0000, 0.0310]
+  size: plugin.05 - exact.05         +0.0171   [-0.0064, +0.0406]   (discordant 2 vs 0 of 117)
+  p_exact >= p_plugin on all null datasets: TRUE
+  median p_plugin 0.500, median p_exact 0.635, median (p_exact - p_plugin) 0.105
+
+--- 3. power (alternative arm) ----------------------------------------------------
+  p_plugin <= .05 (deployed)          41/117 = 0.3504   [0.2645, 0.4441]
+  p_exact  <= .05                     23/117 = 0.1966   [0.1289, 0.2802]
+  p_exact  <= .04 (guaranteed .05)    20/117 = 0.1709   [0.1077, 0.2516]
+  power: plugin.05 - exact.05        +0.1538   [+0.0885, +0.2192]   (discordant 18 vs 0 of 117)
+  power: plugin.05 - exact.04        +0.1795   [+0.1099, +0.2490]   (discordant 21 vs 0 of 117)
+  median p_plugin 0.150, median p_exact 0.205, median inflation 0.070
+
+--- 4. where the supremum sat -----------------------------------------------------
+  kind 0: sup at theta-hat 16/117 = 0.137 ; when elsewhere, ||sup - theta-hat|| in Wald-SE units: median 19.81, max 307.64
+  kind 2: sup at theta-hat 24/117 = 0.205 ; when elsewhere, ||sup - theta-hat|| in Wald-SE units: median 8.20, max 269.13
+  Nelder-Mead improved on the grid: 132 / 234 = 0.564
+  p_exact > p_grid: median gain when it improved 0.0250
+  search hit the 480 s budget (p_exact is then a strict LOWER bound): 35 / 234 = 0.150
+
+--- 5. compute --------------------------------------------------------------------
+  theta evaluations per dataset : median 115.0  q90 239.4  max 442.0
+  infeasible NM probes (free)   : median 4.0  q90 21.7  max 38.0
+  refits per dataset            : median 17269.0  q90 46722.1  max 87958.0   (B=199 per FULL evaluation)
+  seconds per dataset           : median 191.5  q90 490.8  max 515.6   mean 235
+  the deployed plug-in test is ONE evaluation = 199 refits ~ 1.67 s
+  cost ratio exact/plug-in, by refits: median 87 x, max 442 x
+
+=================================================================================

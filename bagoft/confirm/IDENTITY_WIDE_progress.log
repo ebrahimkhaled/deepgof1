@@ -1,0 +1,2 @@
+2026-09-21 14:44:48  identity re-check: 240 datasets over 60 cells, 20 workers
+2026-09-21 16:15:38  239 of 240 reproduced exactly (1 mismatched or errored); median 287 s

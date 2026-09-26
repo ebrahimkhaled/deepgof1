@@ -1,0 +1,21 @@
+shipped bench reproduced in map units: max |diff| = 4.64e-11
+
+A. certified  -100.697 <= S - S_inf <= 82.826   everywhere   ->  c_cert = 100.697
+B. certified  ||grad S||_2 <= 1735.636  everywhere (per-cell sup |dS/dm_j| in [90.220, 440.261])
+   sampled/attacked:  max|S - S_inf| = 7.509 (range -7.509..-1.626)   max ||grad|| = 3.819
+   gap certified/observed:  c 13.4x   L 454.5x   (norm products gave 13.6x and 17.0x)
+
+C. pure-ReLU rewrite reproduces S and S_inf: max |diff| 1.1e-14, 1.4e-14
+ball r=7.14 |c0|=0.0 : CROWN lb -673.070  alpha-CROWN lb -374.093  sampled/attack min -3.614
+ball r=3.00 |c0|=31.2 : CROWN lb -17.399  alpha-CROWN lb -15.740  sampled/attack min 27.832
+ball r=7.14 |c0|=65.9 : CROWN lb -143.944  alpha-CROWN lb -92.184  sampled/attack min 22.693
+
+critical value 2.4865, noise radius 7.14, rho 0.50
+direction    t_crown   t_alpha     t_emp   n*_crown   n*_alpha   n*_emp
+stripe_x1      64.34     63.62      5.52      16557      16188      122
+step_x1        51.56     51.01      4.24      10634      10408       72
+saddle         76.21     75.20      7.13      23232      22623      204
+diffuse        55.10     54.47      5.07      12144      11866      103
+random        101.24     99.39     13.50      40997      39512      729
+
+updated theory/finite_power/CERTIFIED.json with t_alpha / n_alpha

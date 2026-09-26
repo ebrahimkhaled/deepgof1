@@ -1,0 +1,79 @@
+rows: 16000 replicates in 800 files (2026-09-24 12:06)
+cells: inter_C0.3_n200 (R=1000), inter_C0.3_n500 (R=1000), inter_C0.5_n200 (R=1000), inter_C0.5_n500 (R=1000), inter_C0.8_n200 (R=1000), inter_C0.8_n500 (R=1000), null_C0.0_n200 (R=2000), null_C0.0_n500 (R=2000), quad_C0.3_n200 (R=1000), quad_C0.3_n500 (R=1000), quad_C0.5_n200 (R=1000), quad_C0.5_n500 (R=1000), quad_C0.8_n200 (R=1000), quad_C0.8_n500 (R=1000)
+design built 48 s
+asymptotic kernels built 229 s
+n-surrogate kernels built 278 s
+inter_C0.3_n200  tau  4.24 | DG 0.089/0.088 HL 0.062/0.062 Stukel 0.085/0.085 proj 0.071/0.067
+inter_C0.3_n500  tau  6.71 | DG 0.161/0.155 HL 0.082/0.081 Stukel 0.144/0.143 proj 0.109/0.097
+inter_C0.5_n200  tau  7.07 | DG 0.176/0.164 HL 0.086/0.086 Stukel 0.155/0.167 proj 0.116/0.092
+inter_C0.5_n500  tau 11.18 | DG 0.438/0.397 HL 0.154/0.156 Stukel 0.333/0.364 proj 0.257/0.179
+inter_C0.8_n200  tau 11.31 | DG 0.449/0.393 HL 0.157/0.181 Stukel 0.340/0.492 proj 0.264/0.146
+inter_C0.8_n500  tau 17.89 | DG 0.911/0.860 HL 0.377/0.448 Stukel 0.717/0.888 proj 0.703/0.404
+quad_C0.3_n200   tau  4.24 | DG 0.128/0.145 HL 0.069/0.073 Stukel 0.106/0.123 proj 0.092/0.101
+quad_C0.3_n500   tau  6.71 | DG 0.306/0.346 HL 0.103/0.114 Stukel 0.202/0.248 proj 0.170/0.197
+quad_C0.5_n200   tau  7.07 | DG 0.341/0.422 HL 0.109/0.149 Stukel 0.220/0.385 proj 0.186/0.250
+quad_C0.5_n500   tau 11.18 | DG 0.770/0.858 HL 0.230/0.354 Stukel 0.491/0.779 proj 0.459/0.627
+quad_C0.8_n200   tau 11.31 | DG 0.781/0.880 HL 0.235/0.452 Stukel 0.501/0.907 proj 0.470/0.638
+quad_C0.8_n500   tau 17.89 | DG 0.997/1.000 HL 0.586/0.901 Stukel 0.894/1.000 proj 0.931/0.992
+
+predicted (exact drift; quadratic forms: limit / n-surrogate) vs simulated raw power, binomial SE, z = (sim - ref)/SE, ref = n-sur if available else limit
+cell             arm          lin   limit   n-sur     sim   SE  z
+inter_C0.3_n200  DG         0.089   0.088     nan   0.074   0.008   -1.7
+inter_C0.3_n200  HL         0.062   0.062     nan   0.059   0.007   -0.4
+inter_C0.3_n200  Stukel     0.085   0.085     nan   0.081   0.009   -0.5
+inter_C0.3_n200  proj       0.071   0.067   0.065   0.074   0.008    1.1
+inter_C0.3_n500  DG         0.161   0.155     nan   0.152   0.011   -0.3
+inter_C0.3_n500  HL         0.082   0.081     nan   0.082   0.009    0.1
+inter_C0.3_n500  Stukel     0.144   0.143     nan   0.152   0.011    0.8
+inter_C0.3_n500  proj       0.109   0.097   0.073   0.081   0.009    0.9
+inter_C0.5_n200  DG         0.176   0.164     nan   0.156   0.011   -0.7
+inter_C0.5_n200  HL         0.086   0.086     nan   0.090   0.009    0.4
+inter_C0.5_n200  Stukel     0.155   0.167     nan   0.134   0.011   -3.1
+inter_C0.5_n200  proj       0.116   0.092   0.093   0.089   0.009   -0.4
+inter_C0.5_n500  DG         0.438   0.397     nan   0.375   0.015   -1.4
+inter_C0.5_n500  HL         0.154   0.156     nan   0.149   0.011   -0.6
+inter_C0.5_n500  Stukel     0.333   0.364     nan   0.309   0.015   -3.8
+inter_C0.5_n500  proj       0.257   0.179   0.123   0.114   0.010   -0.9
+inter_C0.8_n200  DG         0.449   0.393     nan   0.333   0.015   -4.0
+inter_C0.8_n200  HL         0.157   0.181     nan   0.153   0.011   -2.5
+inter_C0.8_n200  Stukel     0.340   0.492     nan   0.283   0.014  -14.7
+inter_C0.8_n200  proj       0.264   0.146   0.189   0.121   0.010   -6.6
+inter_C0.8_n500  DG         0.911   0.860     nan   0.826   0.012   -2.9
+inter_C0.8_n500  HL         0.377   0.448     nan   0.377   0.015   -4.6
+inter_C0.8_n500  Stukel     0.717   0.888     nan   0.672   0.015  -14.5
+inter_C0.8_n500  proj       0.703   0.404   0.295   0.236   0.013   -4.4
+quad_C0.3_n200   DG         0.128   0.145     nan   0.134   0.011   -1.0
+quad_C0.3_n200   HL         0.069   0.073     nan   0.074   0.008    0.1
+quad_C0.3_n200   Stukel     0.106   0.123     nan   0.124   0.010    0.1
+quad_C0.3_n200   proj       0.092   0.101   0.097   0.119   0.010    2.1
+quad_C0.3_n500   DG         0.306   0.346     nan   0.357   0.015    0.7
+quad_C0.3_n500   HL         0.103   0.114     nan   0.113   0.010   -0.1
+quad_C0.3_n500   Stukel     0.202   0.248     nan   0.227   0.013   -1.6
+quad_C0.3_n500   proj       0.170   0.197   0.166   0.183   0.012    1.4
+quad_C0.5_n200   DG         0.341   0.422     nan   0.377   0.015   -2.9
+quad_C0.5_n200   HL         0.109   0.149     nan   0.147   0.011   -0.2
+quad_C0.5_n200   Stukel     0.220   0.385     nan   0.241   0.014  -10.6
+quad_C0.5_n200   proj       0.186   0.250   0.279   0.237   0.013   -3.1
+quad_C0.5_n500   DG         0.770   0.858     nan   0.810   0.012   -3.9
+quad_C0.5_n500   HL         0.230   0.354     nan   0.300   0.014   -3.7
+quad_C0.5_n500   Stukel     0.491   0.779     nan   0.569   0.016  -13.4
+quad_C0.5_n500   proj       0.459   0.627   0.519   0.508   0.016   -0.7
+quad_C0.8_n200   DG         0.781   0.880     nan   0.770   0.013   -8.3
+quad_C0.8_n200   HL         0.235   0.452     nan   0.217   0.013  -18.0
+quad_C0.8_n200   Stukel     0.501   0.907     nan   0.439   0.016  -29.8
+quad_C0.8_n200   proj       0.470   0.638   0.755   0.511   0.016  -15.5
+quad_C0.8_n500   DG         0.997   1.000     nan   0.999   0.001   -0.6
+quad_C0.8_n500   HL         0.586   0.901     nan   0.586   0.016  -20.2
+quad_C0.8_n500   Stukel     0.894   1.000     nan   0.855   0.011  -13.0
+quad_C0.8_n500   proj       0.931   0.992   0.913   0.932   0.008    2.4
+
+null size (simulated raw, SE) vs limit size and n-surrogate:
+  null_C0.0_n200 DG       sim 0.0470 (SE 0.0047)  limit 0.0507  n-sur -
+  null_C0.0_n200 HL       sim 0.0505 (SE 0.0049)  limit 0.0503  n-sur -
+  null_C0.0_n200 Stukel   sim 0.0610 (SE 0.0054)  limit 0.0500  n-sur -
+  null_C0.0_n200 proj     sim 0.0665 (SE 0.0056)  limit 0.0500  n-sur 0.0500
+  null_C0.0_n500 DG       sim 0.0500 (SE 0.0049)  limit 0.0507  n-sur -
+  null_C0.0_n500 HL       sim 0.0455 (SE 0.0047)  limit 0.0503  n-sur -
+  null_C0.0_n500 Stukel   sim 0.0565 (SE 0.0052)  limit 0.0500  n-sur -
+  null_C0.0_n500 proj     sim 0.0605 (SE 0.0053)  limit 0.0500  n-sur 0.0500
+wrote /path/to/project\paper_deepgof\theory\local_power\irrelevant\PRED_VS_SIM.json

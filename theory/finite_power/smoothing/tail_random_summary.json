@@ -1,0 +1,12 @@
+{
+ "direction": "random",
+ "t_start": 249.249,
+ "t_global": 20907.038544282183,
+ "c_max": 5.832118327651096,
+ "r_tail": 8.738705794753056,
+ "eps_tail": 0.0001,
+ "n_intervals": 50,
+ "closed": true,
+ "crown_calls": 100,
+ "wall_s": 326.7716791629791
+}

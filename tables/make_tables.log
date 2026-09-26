@@ -1,0 +1,15 @@
+paired bootstrap SEs: {'DEEP': np.float64(0.0022), 'Stukel': np.float64(0.0022), 'proj': np.float64(0.0016), 'GiViTI': np.float64(0.0022)} | DEEP-Stukel SE 0.0028 | DEEP-GiViTI SE 0.0027
+paired t (DEEP vs calibrated arms): {'proj': np.float64(-2.96), 'Stukel': np.float64(-6.63), 'GiViTI': np.float64(-5.09), 'Stute-Zhu': np.float64(-4.23), 'HL': np.float64(-3.39), 'Pigeon-Heyse': np.float64(-12.05), 'mHL': np.float64(-2.85), 'HL-equalwidth': np.float64(-3.39)}
+Setting 2 rises: {'DEEP': 0.512, 'GiViTI': 0.287, 'HL': 0.211, 'HL-equalwidth': 0.226, 'Osius-Rojek': 0.641, 'Pigeon-Heyse': 0.21, 'Stukel': 0.327, 'Stute-Zhu': 0.294, 'mHL': 0.208, 'proj': 0.949}
+wrote /path/to/project\paper_deepgof\release\deepgof1_v2_final\tables\tables_generated.tex
+valid: [('proj', np.float64(0.7343), np.float64(0.0472)), ('Stukel', np.float64(0.6425), np.float64(0.0463)), ('DEEP', np.float64(0.637), np.float64(0.0506)), ('BAGofT', np.float64(0.6003), np.float64(0.0479)), ('GiViTI', np.float64(0.5982), np.float64(0.06)), ('Stute-Zhu', np.float64(0.5801), np.float64(0.0594)), ('HL', np.float64(0.5233), np.float64(0.0439)), ('Pigeon-Heyse', np.float64(0.5232), np.float64(0.0275)), ('mHL', np.float64(0.511), np.float64(0.0646)), ('HL-equalwidth', np.float64(0.4767), np.float64(0.042))]
+inflated: [('Osius-Rojek', np.float64(0.5305), np.float64(0.2599), np.float64(0.645))]
+rank DEEP among calibrated 3 of 10; by n {50: 2, 100: 2, 500: 5}
+FDIC partition sizes:
+         HL  Pigeon-Heyse  HL-equalwidth
+GA  0.0550        0.0485         0.0565
+FL  0.0475        0.0375         0.0515
+IL  0.0880        0.0770         0.0475
+CA  0.0450        0.0395         0.0475
+WA  0.0475        0.0360         0.0480
+MN  0.0780        0.0695         0.0475

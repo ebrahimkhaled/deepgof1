@@ -1,0 +1,20 @@
+
+[liu] 210 datasets from 6 stored blocks
+  HL identical to stored            : 210 / 210   (max |diff| 5e-16)
+  Stukel stored == joint form       : 1 / 210   (max |diff| 0.347)
+  Stukel stored == marginal form    : 210 / 210   (max |diff| 5e-16)
+
+[niche] 100 datasets from 5 stored blocks
+  HL identical to stored            : 100 / 100   (max |diff| 5e-16)
+  Stukel stored == joint form       : 100 / 100   (max |diff| 5e-16)
+  Stukel stored == marginal form    : 2 / 100   (max |diff| 0.334)
+
+[GiViTI] session call vs run.all.gof(tests = 'GiViTI')
+  liu   rep 1: session 0.864138787183081 | run.all.gof 0.864138787183081 | identical TRUE | 1.72 s
+  niche rep 1: session 0.343494459876805 | run.all.gof 0.343494459876805 | identical TRUE | 0.14 s
+  liu   rep 2: session 0.956793665220496 | run.all.gof 0.956793665220496 | identical TRUE | 0.11 s
+  niche rep 2: session 0.00141013634537546 | run.all.gof 0.00141013634537546 | identical TRUE | 0.12 s
+  liu   rep 3: session 0.415214016422324 | run.all.gof 0.415214016422324 | identical TRUE | 0.22 s
+  niche rep 3: session 0.199645396110586 | run.all.gof 0.199645396110586 | identical TRUE | 0.13 s
+
+verify_pairing DONE 2026-09-24 15:04:12 

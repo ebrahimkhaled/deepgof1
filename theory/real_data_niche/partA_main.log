@@ -1,0 +1,44 @@
+
+==== myopia: n = 618, events = 81, p = 12, logLik -215.2789
+  DeepGOF-1 axes: mommy dadmy  S = -1.8045 
+  DeepGOF1         p = 0.7700
+  HL               p = 0.7365
+  Stukel_marginal  p = 0.3999
+  Stukel_joint     p = 0.4632
+  StuteZhu         p = 0.8700
+  GiViTI           p = 0.4235
+  mHL              p = 0.9604
+  OsiusRojek       p = 0.6005
+  proj_raw         p = 0.2040
+  proj_std         p = 0.7460
+  20 other row orders: p median 0.405, range 0.010-0.935, #p<=.05 = 4
+
+==== Pima: n = 532, events = 177, p = 7, logLik -233.1611
+  DeepGOF-1 axes: glu bmi  S = 0.57883 
+  DeepGOF1         p = 0.0800
+  HL               p = 0.7024
+  Stukel_marginal  p = 0.0017
+  Stukel_joint     p = 0.0151
+  StuteZhu         p = 0.2150
+  GiViTI           p = 0.0115
+  mHL              p = 0.1018
+  OsiusRojek       p = 0.2094
+  proj_raw         p = 0.1830
+  proj_std         p = 0.0280
+  20 other row orders: p median 0.048, range 0.020-0.095, #p<=.05 = 13
+
+==== Mroz: n = 753, events = 428, p = 7, logLik -452.6330
+  DeepGOF-1 axes: k5 age  S = -0.4927 
+  DeepGOF1         p = 0.2050
+  HL               p = 0.0011
+  Stukel_marginal  p = 0.0006
+  Stukel_joint     p = 0.0055
+  StuteZhu         p = 0.0000
+  GiViTI           p = 0.0097
+  mHL              p = 0.0002
+  OsiusRojek       p = 0.5577
+  proj_raw         p = 0.0310
+  proj_std         p = 0.0010
+  20 other row orders: p median 0.463, range 0.050-0.965, #p<=.05 = 1
+
+DONE main

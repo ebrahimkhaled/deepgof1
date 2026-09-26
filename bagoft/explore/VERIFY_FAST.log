@@ -1,0 +1,63 @@
+verify_fast.R -- 2026-09-19 02:00:23 
+ R R version 4.4.1 (2024-06-14 ucrt) | BAGofT 1.0.0 | randomForest 4.7.1.1 
+
+== A. against BAGofT 1.0.0 itself (nsplits = 10, nsim = 5) ==
+  S1 n= 50 C=0.00  p 0.20/0.20  pmean 0.140716502070/0.140716502070  -> IDENTICAL
+  S1 n= 50 C=0.50  p 0.00/0.00  pmean 0.055195460510/0.055195460510  -> IDENTICAL
+  S1 n=100 C=0.00  p 1.00/1.00  pmean 0.629861891633/0.629861891633  -> IDENTICAL
+  S1 n=100 C=0.50  p 0.00/0.00  pmean 0.039787991091/0.039787991091  -> IDENTICAL
+  S1 n=500 C=0.00  p 0.20/0.20  pmean 0.413059865199/0.413059865199  -> IDENTICAL
+  S1 n=500 C=0.50  p 0.00/0.00  pmean 0.015214810200/0.015214810200  -> IDENTICAL
+  S2 n= 50 C=0.00  p 0.00/0.00  pmean 0.046897500935/0.046897500935  -> IDENTICAL
+  S2 n= 50 C=0.50  p 0.40/0.40  pmean 0.165482233750/0.165482233750  -> IDENTICAL
+  S2 n=100 C=0.00  p 0.80/0.80  pmean 0.389809767225/0.389809767225  -> IDENTICAL
+  S2 n=100 C=0.50  p 0.00/0.00  pmean 0.095049514891/0.095049514891  -> IDENTICAL
+  S2 n=500 C=0.00  p 0.40/0.40  pmean 0.400266507085/0.400266507085  -> IDENTICAL
+  S2 n=500 C=0.50  p 0.00/0.00  pmean 0.000278873586/0.000278873586  -> IDENTICAL
+  S3 n= 50 C=0.00  p 0.60/0.60  pmean 0.184955788554/0.184955788554  -> IDENTICAL
+  S3 n= 50 C=0.50  p 0.00/0.00  pmean 0.077988428838/0.077988428838  -> IDENTICAL
+  S3 n=100 C=0.00  p 0.60/0.60  pmean 0.339679264675/0.339679264675  -> IDENTICAL
+  S3 n=100 C=0.50  p 1.00/1.00  pmean 0.567050110573/0.567050110573  -> IDENTICAL
+  S3 n=500 C=0.00  p 0.80/0.80  pmean 0.549440179262/0.549440179262  -> IDENTICAL
+  S3 n=500 C=0.50  p 0.40/0.40  pmean 0.409854612635/0.409854612635  -> IDENTICAL
+  S4 n= 50 C=0.00  p 0.60/0.60  pmean 0.151813577017/0.151813577017  -> IDENTICAL
+  S4 n= 50 C=0.50  p 0.00/0.00  pmean 0.080227374724/0.080227374724  -> IDENTICAL
+  S4 n=100 C=0.00  p 0.00/0.00  pmean 0.238289831942/0.238289831942  -> IDENTICAL
+  S4 n=100 C=0.50  p 0.00/0.00  pmean 0.253949660002/0.253949660002  -> IDENTICAL
+  S4 n=500 C=0.00  p 0.20/0.20  pmean 0.396307982303/0.396307982303  -> IDENTICAL
+  S4 n=500 C=0.50  p 0.00/0.00  pmean 0.135111224228/0.135111224228  -> IDENTICAL
+A: 24 of 24 identical
+
+== B. against the trial's deposited results (nsplits = 100, nsim = 100) ==
+ setting   n rep seed_ok p_dep p_fast pmed_dep pmed_fast    stat_dep
+       1  50   1    TRUE  0.51   0.51     0.63      0.63 0.00000e+00
+       1 100   1    TRUE  0.00   0.00     0.00      0.00 4.90553e-05
+       1 500   1    TRUE  0.00   0.00     0.00      0.00 2.19547e-12
+       2  50   1    TRUE  0.43   0.43     0.34      0.34 0.00000e+00
+       2 100   1    TRUE  0.00   0.00     0.00      0.00 6.54149e-07
+       2 500   1    TRUE  0.00   0.00     0.00      0.00 5.51437e-12
+       3  50   1    TRUE  0.63   0.63     0.79      0.79 0.00000e+00
+       3 100   1    TRUE  0.42   0.42     0.47      0.47 6.04234e-05
+       3 500   1    TRUE  0.59   0.59     0.55      0.55 3.21237e-03
+       4  50   1    TRUE  0.81   0.81     0.78      0.78 0.00000e+00
+       4 100   1    TRUE  0.02   0.02     0.03      0.03 1.11335e-07
+       4 500   1    TRUE  0.00   0.00     0.00      0.00 6.43288e-09
+   stat_fast secs_dep secs_fast match
+ 0.00000e+00   526.74     82.89  TRUE
+ 4.90553e-05   745.91     91.30  TRUE
+ 2.19547e-12  1098.91    205.89  TRUE
+ 0.00000e+00   553.75     97.52  TRUE
+ 6.54149e-07   877.43    122.29  TRUE
+ 5.51437e-12  1211.12    258.34  TRUE
+ 0.00000e+00   603.74     77.19  TRUE
+ 6.04234e-05   545.19     95.89  TRUE
+ 3.21237e-03  1079.76    198.08  TRUE
+ 0.00000e+00   601.22     75.14  TRUE
+ 1.11335e-07   545.20    109.50  TRUE
+ 6.43288e-09  1006.38    213.03  TRUE
+B: 12 of 12 deposited full-default results reproduced exactly
+
+== C. speed: one observed-data pass (100 splits = 1/101 of a test), one core ==
+  n= 50  package 2.20 s | fast 0.73 s | x3.0 faster | same statistic: TRUE
+  n=100  package 2.58 s | fast 1.02 s | x2.5 faster | same statistic: TRUE
+  n=500  package 4.61 s | fast 2.25 s | x2.0 faster | same statistic: TRUE

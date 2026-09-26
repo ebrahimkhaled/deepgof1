@@ -1,0 +1,40 @@
+Licences of this archive
+
+1. Deposited data, results, corpora, weights and documentation
+   (results/, theory/ and bagoft/ data files, application/fdic/data/, inst/extdata/,
+   training/ship_corpus.csv, tables/tables_generated.tex, README.md and the other text files):
+
+   Creative Commons Attribution 4.0 International (CC BY 4.0)
+   https://creativecommons.org/licenses/by/4.0/
+
+   You are free to share and adapt these materials for any purpose, provided you give appropriate
+   credit. When you use the per-replicate p-values, the shipped weights or the training corpus,
+   please cite the paper and this archive (the version DOI for exact reproduction; the concept DOI
+   for the latest version).
+
+   The FDIC data in application/fdic/data/ were retrieved from the public FDIC BankFind Suite API
+   by application/fdic/fdic_download.R; they remain public-domain information of the FDIC.
+
+2. Code (R/, training/, benchmark/, tables/, figures/, application/ scripts, and the scripts
+   under theory/ and bagoft/): MIT License
+
+   Copyright (c) 2026 Ebrahim Khaled Ebrahim
+
+   Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+   and associated documentation files (the "Software"), to deal in the Software without
+   restriction, including without limitation the rights to use, copy, modify, merge, publish,
+   distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the
+   Software is furnished to do so, subject to the following conditions:
+
+   The above copyright notice and this permission notice shall be included in all copies or
+   substantial portions of the Software.
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+   BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+   NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+   DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+   bagoft/explore/bagoft_fast.R and theory/addon_arms/bagoft_fast_pre.R re-express functions of
+   the R package BAGofT (Zhang, Ding and Yang), and bagoft/explore/parRF_dropfix.R patches one
+   line of that package's parRF(); those parts remain under the licence of BAGofT.

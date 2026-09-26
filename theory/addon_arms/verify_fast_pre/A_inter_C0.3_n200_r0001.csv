@@ -1,0 +1,2 @@
+"stage","scen","fam","C","n","rep","dseed","nsplits","nsim","p_pkg","p_fast","p2_pkg","p2_fast","p3_pkg","p3_fast","pmean_pkg","pmean_fast","pmin_stat_pkg","pmin_stat_fast","max_abs_sim_diff","p_identical","p3_identical","stats_identical","sims_identical","all_identical","t_pkg","t_fast"
+"A","inter_C0.3_n200","inter",0.3,200,1,423001,10,5,0.4,0.4,0.2,0.2,0.2,0.2,0.302587771285229,0.302587771285229,0.000267946235867011,0.000267946235867011,0,TRUE,TRUE,TRUE,TRUE,TRUE,1.99,1.05

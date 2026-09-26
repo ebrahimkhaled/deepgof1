@@ -1,0 +1,12 @@
+{
+ "direction": "diffuse",
+ "t_start": 249.37,
+ "t_global": 10429.64000116952,
+ "c_max": 5.832118327651096,
+ "r_tail": 8.738705794753056,
+ "eps_tail": 0.0001,
+ "n_intervals": 21,
+ "closed": true,
+ "crown_calls": 63,
+ "wall_s": 523.8149511814117
+}

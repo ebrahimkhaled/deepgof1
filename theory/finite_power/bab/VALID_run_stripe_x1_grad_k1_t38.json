@@ -1,0 +1,10 @@
+{
+ "run": "run_stripe_x1_grad_k1_t38.json",
+ "violation_rate": 0.002495,
+ "charged": 0.024285319109360888,
+ "lower_fn_breaches": 0,
+ "dead_share": 0.01791,
+ "dead_mass": 0.017578125,
+ "mc_power": 1.0,
+ "ok": true
+}

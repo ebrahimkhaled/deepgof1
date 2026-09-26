@@ -1,0 +1,9 @@
+73 records on disk | tasks ['base:1000:0:1', 'base:4000:0:1', 'base:1000:8:1', 'base:4000:8:1', 'base:1000:0:2', 'base:4000:0:2', 'base:1000:8:2', 'base:4000:8:2']
+base:1000:0:1 done in 84 s
+base:4000:0:1 done in 284 s
+base:1000:8:1 done in 79 s
+base:4000:8:1 done in 277 s
+base:1000:0:2 done in 73 s
+base:4000:0:2 done in 262 s
+base:1000:8:2 done in 72 s
+base:4000:8:2 done in 246 s

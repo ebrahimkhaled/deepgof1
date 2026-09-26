@@ -1,0 +1,9 @@
+saddle: paper's t_emp (threshold T_HAT, power .95) = 7.1338
+saddle: paper's t_emp (threshold T_HAT, power .95) = 7.1338
+saddle: paper's t_emp (threshold T_HAT, power .95) = 7.1338
+  fixed target 0.95: t = 7.1555  (power there 0.9497, slope 0.0751/unit t, SE(t) = 0.0065)
+  fixed target 0.50: t = 4.6892  (power there 0.4990, slope 0.2459/unit t, SE(t) = 0.0045)
+  b199 target 0.95: t = 7.2317  (power there 0.9501, slope 0.0726/unit t, SE(t) = 0.0067)
+  b199 target 0.50: t = 4.7190  (power there 0.4990, slope 0.2377/unit t, SE(t) = 0.0047)
+  hat target 0.95: t = 7.1541  (power there 0.9510, slope 0.0721/unit t, SE(t) = 0.0067)
+saddle truth done in 3847 s

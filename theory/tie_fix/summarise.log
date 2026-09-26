@@ -1,0 +1,25 @@
+== FDIC: stored order (0) and 30 random orders, B = 199, paper seed ==
+GA old  stored: p 0.320 S -0.855 axes eq_ta|cre_ta | random (30): p median 0.305 range 0.225-0.360, p<=.05 0 | S range -0.855 to -0.855 | distinct axes eq_ta|cre_ta
+GA new  stored: p 0.350 S -0.855 axes eq_ta|cre_ta | random (30): p median 0.307 range 0.240-0.380, p<=.05 0 | S range -0.855 to -0.855 | distinct axes eq_ta|cre_ta
+FL old  stored: p 0.185 S -0.280 axes eq_ta|cre_ta | random (30): p median 0.210 range 0.165-0.290, p<=.05 0 | S range -0.280 to -0.280 | distinct axes eq_ta|cre_ta
+FL new  stored: p 0.175 S -0.280 axes eq_ta|cre_ta | random (30): p median 0.217 range 0.175-0.270, p<=.05 0 | S range -0.280 to -0.280 | distinct axes eq_ta|cre_ta
+IL old  stored: p 0.805 S -1.787 axes eq_ta|cre_ta | random (30): p median 0.800 range 0.745-0.870, p<=.05 0 | S range -1.787 to -1.787 | distinct axes eq_ta|cre_ta
+IL new  stored: p 0.785 S -1.787 axes eq_ta|cre_ta | random (30): p median 0.798 range 0.740-0.855, p<=.05 0 | S range -1.787 to -1.787 | distinct axes eq_ta|cre_ta
+CA old  stored: p 0.710 S -1.731 axes eq_ta|npa_ta | random (30): p median 0.725 range 0.655-0.760, p<=.05 0 | S range -1.771 to -1.734 | distinct axes eq_ta|npa_ta
+CA new  stored: p 0.655 S -1.740 axes eq_ta|npa_ta | random (30): p median 0.710 range 0.640-0.765, p<=.05 0 | S range -1.759 to -1.731 | distinct axes eq_ta|npa_ta
+WA old  stored: p 0.350 S -1.022 axes eq_ta|cre_ta | random (30): p median 0.315 range 0.245-0.385, p<=.05 0 | S range -1.022 to -1.022 | distinct axes eq_ta|cre_ta
+WA new  stored: p 0.330 S -1.022 axes eq_ta|cre_ta | random (30): p median 0.333 range 0.255-0.400, p<=.05 0 | S range -1.022 to -1.022 | distinct axes eq_ta|cre_ta
+MN old  stored: p 0.905 S -1.671 axes eq_ta|roa | random (30): p median 0.877 range 0.820-0.915, p<=.05 0 | S range -1.671 to -1.671 | distinct axes eq_ta|roa
+MN new  stored: p 0.905 S -1.671 axes eq_ta|roa | random (30): p median 0.865 range 0.815-0.925, p<=.05 0 | S range -1.671 to -1.671 | distinct axes eq_ta|roa
+
+== GLOW, new statistic ==
+M1 part A: file order p 0.860 S -1.923 | 30 random orders p median 0.827 range 0.565-0.940, p<=.05 0
+M1 part B: file order x 100 seeds: median 0.788, p<=.05 0.000 (SE 0.000) | 100 random orders: median 0.785, p<=.05 0.000 (SE 0.000) | KS p 0.813
+M2 part A: file order p 0.515 S -1.443 | 30 random orders p median 0.438 range 0.080-0.965, p<=.05 0
+M2 part B: file order x 300 seeds: median 0.455, p<=.05 0.040 (SE 0.011) | 300 random orders: median 0.425, p<=.05 0.047 (SE 0.012) | KS p 0.249
+
+== Liu Setting 3, n = 100, B = 199, paired old vs new ==
+null   R = 1000 | old 0.050 (SE 0.007) | new 0.041 (SE 0.006) | new-old -0.009 (paired SE 0.008) | discordant old-only 33 new-only 24, exact McNemar p 0.289 | KS on p 0.859 | cor(p_old,p_new) 0.35
+power  R = 1000 | old 0.096 (SE 0.009) | new 0.099 (SE 0.009) | new-old +0.003 (paired SE 0.011) | discordant old-only 56 new-only 59, exact McNemar p 0.852 | KS on p 0.723 | cor(p_old,p_new) 0.41
+power2 R =  600 | old 0.300 (SE 0.019) | new 0.302 (SE 0.019) | new-old +0.002 (paired SE 0.020) | discordant old-only 74 new-only 75, exact McNemar p 1.000 | KS on p 0.893 | cor(p_old,p_new) 0.51
+sorted R =  500 | old 0.282 (SE 0.020) | new 0.046 (SE 0.009) | new-old -0.236 (paired SE 0.021) | discordant old-only 129 new-only 11, exact McNemar p 0.000 | KS on p 0.000 | cor(p_old,p_new) 0.12

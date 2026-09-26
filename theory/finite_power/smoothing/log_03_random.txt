@@ -1,0 +1,12 @@
+random: tail from t=249.25 to t_global=20907.0 (c_max 5.8321, R_TAIL 8.739, kappa 0.7306); 0 intervals done
+  [249.25, 261.71]  lb 85.3  (2 CROWN calls, 8 s)
+  [424.37, 466.81]  lb 63.9  (20 CROWN calls, 107 s)
+  [466.81, 513.49]  lb 93.0  (22 CROWN calls, 113 s)
+  [1100.70, 1210.77]  lb 471.8  (40 CROWN calls, 198 s)
+  [1210.77, 1331.85]  lb 539.5  (42 CROWN calls, 207 s)
+  [2854.94, 3140.44]  lb 1458.0  (60 CROWN calls, 266 s)
+  [3140.44, 3454.48]  lb 1615.2  (62 CROWN calls, 269 s)
+  [7404.99, 8145.49]  lb 3957.1  (80 CROWN calls, 296 s)
+  [8145.49, 8960.04]  lb 4363.3  (82 CROWN calls, 299 s)
+  [19206.64, 20907.04]  lb 10440.9  (100 CROWN calls, 327 s)
+random tail CLOSED: 50 intervals, 100 CROWN calls, 327 s

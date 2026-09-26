@@ -1,0 +1,7 @@
+bench 4.6e-11 | 0 records done | tasks ['M2000:study:0', 'M2000:study:8']
+[M2000:study:0] seed 1 done 2177 s
+  M2000:study:0:inter tau50 offdiag [7.59] | with diagonal [7.58]
+  M2000:study:0:quad tau50 offdiag [5.44] | with diagonal [5.38]
+[M2000:study:8] seed 1 done 2868 s
+  M2000:study:8:inter tau50 offdiag [18.9] | with diagonal [17.97]
+  M2000:study:8:quad tau50 offdiag [12.87] | with diagonal [12.59]

@@ -1,0 +1,12 @@
+{
+ "direction": "stripe_x1",
+ "t_start": 249.855,
+ "t_global": 8834.656476889799,
+ "c_max": 5.832118327651096,
+ "r_tail": 8.738705794753056,
+ "eps_tail": 0.0001,
+ "n_intervals": 22,
+ "closed": true,
+ "crown_calls": 62,
+ "wall_s": 379.36976623535156
+}

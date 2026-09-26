@@ -1,0 +1,11 @@
+bench 4.6e-11 | 0 records already done | this process: k in [1]
+[study k=1] design + DG null law 118 s; DG size 0.0502
+[study k=1] seed 1 kernels 407 s
+[study k=1] seed 2 kernels 584 s
+  inter tau50 DG  11.81 | n*/n*_DG: HL  2.35 St  1.10 proj  0.65  (1059 s)
+  quad  tau50 DG   8.59 | n*/n*_DG: HL  2.84 St  1.33 proj  0.64  (1556 s)
+[pure k=1] design + DG null law 84 s; DG size 0.0490
+[pure k=1] seed 1 kernels 280 s
+  inter tau50 DG  11.87 | n*/n*_DG: HL  2.24 St  1.04 proj  0.66  (811 s)
+  quad  tau50 DG   8.66 | n*/n*_DG: HL  2.69 St  1.26 proj  0.62  (1298 s)
+wrote ARE_IRRELEVANT.json with 12 records

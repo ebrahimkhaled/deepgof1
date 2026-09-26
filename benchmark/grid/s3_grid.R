@@ -1,50 +1,48 @@
-suppressMessages(library(brglm2))
-## s3_grid.R -- GATE S3: the confirmatory grid, one (design, n, seed) block per invocation.
+suppressMessages({ library(brglm2); library(ebrahim.gof) })
+## s3_grid.R -- Simulation I: the 60-cell design grid, one (design, n, corpus seed) block per invocation.
 ##
-## Pre-declared in speckit/21_S3_PREDECLARATION.md. Read it before changing anything here.
+## Fixed design choices: K = 6, B = 199 exact rank p-value, the bias-reduced fit on separation,
+## departure amplitude 2 sqrt(100/n) times a random family amplitude.
 ##
-## Configuration inherited from CLOSED gates and NOT re-opened: K=6 (gate S4), deployment-matched
-## training with mix pinned at 1.0, B=199 exact rank p-value, Firth on separation, amplitude
-## 2*sqrt(100/n) (gate S4b's regime).
+## THE p > 2 PROJECTION: the grid is built on the two predictors with the largest |beta_j| sd(x_j) in
+## the OBSERVED fit, by rank. The pair is chosen once per dataset and reused for every bootstrap
+## replicate of that dataset. A factor's score is the largest |beta sd| among its dummies; if
+## selected, its level index is rank-binned like any other axis. When p = 2 this reduces exactly to
+## the two-covariate construction.
 ##
-## THE p>2 PROJECTION (first-time construction, declared in 21 section 2): grid on the two
-## predictors with the largest |beta_j| * sd(x_j) in the OBSERVED fit, by rank. The chosen pair is
-## computed ONCE per dataset and reused for every bootstrap replicate of that dataset -- letting it
-## move between the observed row and its replicates would break the exchangeability Proposition 1
-## rests on. A factor's score is the largest |beta*sd| among its dummies; if selected, its level
-## index is rank-binned like any other axis, which populates exactly nlev distinct bands.
-## When p = 2 this reduces EXACTLY to the construction used in every earlier gate.
+## Per dataset: the p-values of the three published partition tests (Hosmer-Lemeshow, HL equal-width,
+## Pigeon-Heyse; ebrahim.gof run.all.gof, clipped to [1e-12, 1 - 1e-12] as in the deposited files) and
+## the observed map with its B bootstrap maps (blk_maps.bin), which s3_score.py scores. None of the
+## tests draws random numbers, so the bootstrap maps use the same random stream as the deposited run.
+##
+## Environment: S3_DESIGN (D1..D4), S3_N, S3_SEED, S3_B (199), S3_NULL (2000), S3_RAND (1000),
+## S3_EVAL (2000), S3_W (2 workers), S3_OUT (default results/s3/<design>_n<n>_s<seed> under
+## DEEPGOF_ARCHIVE). Smoke test: S3_DESIGN=D2 S3_N=50 S3_NULL=3 S3_RAND=1 S3_EVAL=2 S3_B=9 S3_W=1 S3_OUT=smoke_D2
+##   Rscript benchmark/grid/s3_grid.R
 
-ROOT <- "C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/learned-def"
-PAP  <- "C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof"
-source(file.path(ROOT,"jasa_study","config.R")); source(file.path(ROOT,"R","scenarios.R"))
-source(file.path(JASA$study,"R","scenarios_registry.R")); source(file.path(JASA$study,"R","methods_registry.R"))
-source(file.path(JASA$study,"R","harness_core.R")); jasa_init()
-G <- 10L
-FEATS11 <- c("HL","HL-equalwidth","Pigeon-Heyse","Tsiatis","Xie","EF",
-             "DEF.poly2","DEF.poly3","DEF.stukel","A.poly","A.spline")
-source(file.path(PAP,"code","families_shared.R"))
-source(file.path(PAP,"code","fast_battery.R"))
-source(file.path(PAP,"code","universal_design.R"))
-
-K      <- 6L                                            # gate S4's selection
+ARC    <- Sys.getenv("DEEPGOF_ARCHIVE", ".")
+HERE_G <- local({ fa <- sub("^--file=", "", grep("^--file=", commandArgs(FALSE), value = TRUE))
+                  if (length(fa)) dirname(normalizePath(fa[1])) else file.path(ARC, "benchmark", "grid") })
+source(file.path(HERE_G, "s3_designs.R"))
+PART   <- c("HL", "HL-equalwidth", "Pigeon-Heyse")
+K      <- 6L
 B      <- as.integer(Sys.getenv("S3_B",    "199"))
 NNULL  <- as.integer(Sys.getenv("S3_NULL", "2000"))
 NRAND  <- as.integer(Sys.getenv("S3_RAND", "1000"))
 NEVAL  <- as.integer(Sys.getenv("S3_EVAL", "2000"))
-NW     <- as.integer(Sys.getenv("S3_W",    "12"))
+NW     <- as.integer(Sys.getenv("S3_W",    "2"))
 NOBS   <- as.integer(Sys.getenv("S3_N",    "100"))
 SEED0  <- as.integer(Sys.getenv("S3_SEED", "101000"))
 DES    <- Sys.getenv("S3_DESIGN", "D1")
-AMPMULT <- 2*sqrt(100/NOBS)                             # gate S4b's regime, not tunable per cell
+AMPMULT <- 2*sqrt(100/NOBS)
 
-## the four designs of 21 section 4
+## the four designs
 CFG <- switch(DES,
   D1 = list(p=2L, law="indep", rho=0.5, cat=0L, rate=0.50),   # textbook
   D2 = list(p=3L, law="indep", rho=0.5, cat=3L, rate=0.50),   # one 3-level factor
   D3 = list(p=3L, law="ar1",   rho=0.7, cat=0L, rate=0.50),   # correlated
   D4 = list(p=2L, law="indep", rho=0.5, cat=0L, rate=0.15))   # 15% events
-OUT <- file.path(PAP,"results","s3", sprintf("%s_n%d_s%d", DES, NOBS, SEED0))
+OUT <- Sys.getenv("S3_OUT", file.path(ARC, "results", "s3", sprintf("%s_n%d_s%d", DES, NOBS, SEED0)))
 dir.create(OUT, recursive=TRUE, showWarnings=FALSE)
 
 fit_pol <- function(frm, d) {
@@ -59,7 +57,8 @@ fit_pol <- function(frm, d) {
   list(fit=g, firth=0L)
 }
 
-## the two grid axes: largest |beta| * sd, scored per PREDICTOR (factor = max over its dummies)
+## the two grid axes: largest |beta| * sd, scored per PREDICTOR (factor = max over its dummies),
+## returned in data-column order
 pick_axes <- function(fit, d) {
   vars <- setdiff(names(d), "y")
   mm <- stats::model.matrix(fit); b <- stats::coef(fit)
@@ -73,10 +72,6 @@ pick_axes <- function(fit, d) {
   }, numeric(1))
   sc[!is.finite(sc)] <- 0
   sel <- vars[order(sc, decreasing=TRUE)][1:2]
-  ## return in DATA-COLUMN order, not score order. Score order would transpose the grid whenever
-  ## the second predictor outscored the first, and every closed gate used a fixed (x1,x2) order --
-  ## so score order would silently make S3 incomparable with them. Data order keeps the p=2 case
-  ## EXACTLY the earlier construction, which is what 21 section 2 claims.
   vars[sort(match(sel, vars))]
 }
 axis_num <- function(x) if (is.factor(x)) as.numeric(x) else as.numeric(x)
@@ -90,7 +85,13 @@ resid_map <- function(fit, d, ax) {
   s[is.na(s)] <- 0; vv[is.na(vv)] <- 0
   as.numeric(s)/sqrt(pmax(as.numeric(vv), 1e-8))
 }
-tanf <- function(p) tan((0.5 - pmin(pmax(p,1e-12),1-1e-12))*pi)
+eval_part <- function(fit) {
+  out <- setNames(rep(NA_real_, length(PART)), PART)
+  r <- tryCatch(suppressWarnings(run.all.gof(fit, tests = PART, include_slow = FALSE, install = "no")),
+                error = function(e) NULL)
+  if (!is.null(r)) { pv <- setNames(r$p_value, r$Test); k <- intersect(PART, names(pv)); out[k] <- pv[k] }
+  out
+}
 
 one <- function(kind, i) {
   set.seed(SEED0 + kind*300000L + i)
@@ -105,8 +106,8 @@ one <- function(kind, i) {
   d <- g$data; frm <- stats::formula(g$fit)
   fp <- fit_pol(frm, d); if (is.null(fp)) return(NULL)
   fit <- fp$fit
-  pv <- tryCatch(eval_fast(fit), error=function(e) NULL); if (is.null(pv)) return(NULL)
-  p11 <- pmin(pmax(as.numeric(pv[FEATS11]), 1e-12), 1-1e-12)
+  pv <- tryCatch(eval_part(fit), error=function(e) NULL); if (is.null(pv)) return(NULL)
+  p3 <- pmin(pmax(as.numeric(pv[PART]), 1e-12), 1-1e-12)
   ax <- tryCatch(pick_axes(fit, d), error=function(e) NULL); if (is.null(ax)) return(NULL)
 
   M <- matrix(NA_real_, B+1L, K*K)
@@ -117,26 +118,15 @@ one <- function(kind, i) {
     fb <- fit_pol(frm, d2)
     M[b+1L,] <- if (is.null(fb)) rep(0, K*K) else resid_map(fb$fit, d2, ax)
   }
-  list(kind=kind, rep=i, p11=p11, pcct=0.5-atan(mean(tanf(p11)))/pi, sep=as.numeric(fp$firth),
-       ax=paste(ax, collapse="|"), maps=M)
+  list(kind=kind, rep=i, p3=p3, sep=as.numeric(fp$firth), ax=paste(ax, collapse="|"), maps=M)
 }
 
-SRC <- c(file.path(ROOT,"jasa_study","config.R"), file.path(ROOT,"R","scenarios.R"),
-         file.path(PAP,"code","families_shared.R"), file.path(PAP,"code","fast_battery.R"),
-         file.path(PAP,"code","universal_design.R"))
 cl <- parallel::makeCluster(NW)
-parallel::clusterExport(cl, c("SRC","G","K","B","NOBS","SEED0","CFG","AMPMULT","fit_pol",
-                              "pick_axes","axis_num","resid_map","tanf","one","FEATS11"),
-                        envir=environment())
+parallel::clusterExport(cl, c("HERE_G","PART","K","B","NOBS","SEED0","CFG","AMPMULT","fit_pol",
+                              "pick_axes","axis_num","resid_map","eval_part","one"), envir=environment())
 invisible(parallel::clusterEvalQ(cl, {
-  source(SRC[1]); source(file.path(JASA$study,"R","methods_registry.R"))
-  source(file.path(JASA$study,"R","harness_core.R")); jasa_init()
-  source(SRC[2]); source(file.path(JASA$study,"R","scenarios_registry.R"))
-  G <- 10L
-  FEATS11 <- c("HL","HL-equalwidth","Pigeon-Heyse","Tsiatis","Xie","EF",
-               "DEF.poly2","DEF.poly3","DEF.stukel","A.poly","A.spline")
-  suppressMessages(library(brglm2))
-  source(SRC[3]); source(SRC[4]); source(SRC[5]); NULL }))
+  suppressMessages({ library(brglm2); library(ebrahim.gof) })
+  source(file.path(HERE_G, "s3_designs.R")); NULL }))
 
 cat(sprintf("S3 %s n=%d seed=%d | p=%d law=%s rho=%.1f cat=%d rate=%.2f | amp x%.2f K=%d B=%d\n",
             DES, NOBS, SEED0, CFG$p, CFG$law, CFG$rho, CFG$cat, CFG$rate, AMPMULT, K, B))
@@ -150,9 +140,8 @@ parallel::stopCluster(cl)
 idx <- data.frame(kind=vapply(res,function(z) z$kind,integer(1)),
                   rep =vapply(res,function(z) z$rep, integer(1)),
                   sep =vapply(res,function(z) z$sep, numeric(1)),
-                  cct =vapply(res,function(z) z$pcct,numeric(1)),
                   axes=vapply(res,function(z) z$ax,  character(1)))
-P <- do.call(rbind, lapply(res,function(z) z$p11)); colnames(P) <- FEATS11
+P <- do.call(rbind, lapply(res,function(z) z$p3)); colnames(P) <- PART
 write.csv(cbind(idx,P), file.path(OUT,"blk_pvalues.csv"), row.names=FALSE)
 writeBin(as.numeric(t(do.call(rbind, lapply(res,function(z) z$maps)))),
          file.path(OUT,"blk_maps.bin"), size=4)

@@ -1,0 +1,9 @@
+"pid","data","design","fam","C1","C2","C3","C3_target_reached","hl_at_C1","hl_at_C2","hl_at_C3"
+1,"myopia","niche","inter",1.4,2.2,3,FALSE,0.15,0.225,0.215
+2,"myopia","niche","quad",0.5,0.6,0.7,TRUE,0.17,0.305,0.505
+3,"myopia","dense","inter",3,3.1,3.2,FALSE,0.085,NA,NA
+4,"myopia","dense","quad",0.8,1,1.1,TRUE,0.18,0.29,0.4
+5,"Pima","niche","inter",0.4,0.6,0.7,TRUE,0.15,0.35,0.41
+6,"Pima","niche","quad",0.2,0.3,0.5,TRUE,0.105,0.195,0.56
+7,"Pima","dense","inter",0.5,0.8,1.1,TRUE,0.145,0.235,0.52
+8,"Pima","dense","quad",0.2,0.4,0.7,TRUE,0.1,0.22,0.445

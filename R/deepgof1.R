@@ -17,6 +17,15 @@
 ## Step 3 makes the level a rank within the analyst's own bootstrap: it does not depend on the
 ## network being right about anything (Lemma S.2 / Proposition S.3 of the paper's supplement).
 ##
+## TIES (version 2 of this archive). Ties among covariate values are broken at random, once per
+## call: a random permutation of the rows is drawn only when some covariate column has a tied
+## value, and the same permutation serves the observed map and every bootstrap map. This is the
+## rule of ebrahim.gof 2.8.0 and of the paper's Algorithm 1. With continuous covariates nothing is
+## drawn and the p-value is bit-identical to the earlier row-order rule. ties = "roworder" restores
+## the earlier rule (rank(ties.method = "first")); it exists only to reproduce numbers computed
+## before the fix, and must not be used on real data: a file sorted by the outcome then puts tied
+## rows into cells by their outcome.
+##
 ## VERSIONING. This file defines deepgof1() -- the frozen first model. deepgof() is an alias for
 ## the current default version. A DeepGOF-2 ships new weights + a deepgof2() with this interface.
 
@@ -41,7 +50,7 @@ source(file.path(.dg1_here, "deepgof1_forward.R"))
 `%||%` <- function(a, b) if (is.null(a)) b else a
 
 ## ---- the residual map, identical to the training-time builder ----------------------------------
-.deepgof1_map <- function(fit, K = 6L) {
+.deepgof1_map <- function(fit, K = 6L, tb = NULL) {
   d  <- stats::model.frame(fit)
   mm <- stats::model.matrix(fit)
   vars <- colnames(mm)[-1]
@@ -53,7 +62,12 @@ source(file.path(.dg1_here, "deepgof1_forward.R"))
   ph <- as.numeric(stats::fitted(fit))
   r  <- stats::model.response(d) - ph
   n  <- length(r)
-  bn <- function(v) pmin(K, 1L + floor(K * (rank(v, ties.method = "first") - 1) / n))
+  ## tb: the tie-breaking permutation drawn by deepgof1(); NULL = ties by row order
+  rk <- function(v) {
+    if (is.null(tb)) return(rank(v, ties.method = "first"))
+    o <- order(v, tb); rr <- integer(n); rr[o] <- seq_len(n); rr
+  }
+  bn <- function(v) pmin(K, 1L + floor(K * (rk(v) - 1) / n))
   idx <- factor((bn(mm[, ax[1]]) - 1L) * K + bn(mm[, ax[2]]), levels = 1:(K * K))
   s  <- tapply(r, idx, sum); vv <- tapply(ph * (1 - ph), idx, sum)
   s[is.na(s)] <- 0; vv[is.na(vv)] <- 0
@@ -61,15 +75,22 @@ source(file.path(.dg1_here, "deepgof1_forward.R"))
 }
 
 ## ---- the test ----------------------------------------------------------------------------------
-deepgof1 <- function(fit, B = 199L, K = 6L, weights_dir = NULL) {
+deepgof1 <- function(fit, B = 199L, K = 6L, weights_dir = NULL, ties = c("random", "roworder")) {
   stopifnot(inherits(fit, "glm"), fit$family$family == "binomial")
+  ties <- match.arg(ties)
   wd <- weights_dir %||% file.path(.deepgof1_root, "inst", "extdata")
   W  <- load_weights(file.path(wd, "deepgof1_weights.csv"))
   ms <- as.matrix(utils::read.csv(file.path(wd, "deepgof1_scaler.csv"), header = FALSE))
   mu <- ms[1, ]; sdv <- ms[2, ]
   score <- function(m) deepgof_score((m - mu) / sdv, W, K)
 
-  obs  <- .deepgof1_map(fit, K)
+  ## ties among covariate values: one random permutation per call, drawn only when some
+  ## covariate column is tied, shared by the observed map and every bootstrap map
+  mm   <- stats::model.matrix(fit)
+  tied <- any(apply(mm[, -1, drop = FALSE], 2, anyDuplicated) > 0L)
+  tb   <- if (tied && ties == "random") sample.int(nrow(mm)) else NULL
+
+  obs  <- .deepgof1_map(fit, K, tb)
   Sobs <- score(obs$map)
 
   ## the analyst's own parametric bootstrap: the source of the level
@@ -84,7 +105,7 @@ deepgof1 <- function(fit, B = 199L, K = 6L, weights_dir = NULL) {
                    error = function(e) NULL)
     ## a FAILED refit scores +Inf: it then counts AGAINST rejection (conservative direction --
     ## -Inf would deflate the p-value). Measured activation on the paper's designs: 0.03%.
-    Sb[b] <- if (is.null(fb)) Inf else score(.deepgof1_map(fb, K)$map)
+    Sb[b] <- if (is.null(fb)) Inf else score(.deepgof1_map(fb, K, tb)$map)
   }
   p <- (1 + sum(Sb >= Sobs)) / (B + 1)
   structure(list(statistic = Sobs, p.value = p, B = B, K = K, axes = obs$axes,

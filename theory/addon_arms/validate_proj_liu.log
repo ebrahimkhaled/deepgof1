@@ -1,0 +1,32 @@
+validate_proj_liu | 2026-09-24 17:39:15 | directions M = 200000 
+p=3 continuous (Setting 2 design)  n=25 p=3 | T closed 0.032553 | T MC 0.032544 (SE 0.000042) | z = -0.22
+                                   entrywise: max|A_MC - A| = 0.0177, max |z| over the 325 distinct entries = 1.91
+                                   printed orientation (arccos, no 'pi -'): T = -0.022793, z = +1322.0; max|A_MC - A_alt| = 12.011
+                                   deployed NN weight: T_nn/T_def = 22.095, cor(A_nn, A_def) off-diagonal = 0.623
+                                   proj_A_both: old identical to proj_A_nn: TRUE | new identical to proj_A_liu: TRUE
+p=2 with binary (Setting 3 design) n=25 p=2 | T closed 0.157788 | T MC 0.158211 (SE 0.000235) | z = +1.80
+                                   entrywise: max|A_MC - A| = 0.0325, max |z| over the 325 distinct entries = 2.55
+                                   printed orientation (arccos, no 'pi -'): T = 0.041892, z = +495.3; max|A_MC - A_alt| = 12.024
+                                   deployed NN weight: T_nn/T_def = 26.471, cor(A_nn, A_def) off-diagonal = 0.723
+                                   proj_A_both: old identical to proj_A_nn: TRUE | new identical to proj_A_liu: TRUE
+p=1 (Setting 1 design)             n=25 p=1 | T closed 0.074800 | T MC 0.074801 (SE 0.000016) | z = +0.03
+                                   entrywise: max|A_MC - A| = 0.0008, max |z| over the 325 distinct entries = 0.03
+                                   printed orientation (arccos, no 'pi -'): T = -0.021200, z = +5962.9; max|A_MC - A_alt| = 12.001
+                                   deployed NN weight: T_nn/T_def = 3.694, cor(A_nn, A_def) off-diagonal = 0.708
+                                   proj_A_both: old identical to proj_A_nn: TRUE | new identical to proj_A_liu: TRUE
+p=3 with duplicated rows           n=25 p=3 | T closed 0.104722 | T MC 0.104679 (SE 0.000102) | z = -0.43
+                                   entrywise: max|A_MC - A| = 0.0265, max |z| over the 325 distinct entries = 1.75
+                                   printed orientation (arccos, no 'pi -'): T = 0.044126, z = +595.4; max|A_MC - A_alt| = 12.026
+                                   deployed NN weight: T_nn/T_def = 35.558, cor(A_nn, A_def) off-diagonal = 0.737
+                                   proj_A_both: old identical to proj_A_nn: TRUE | new identical to proj_A_liu: TRUE
+RAW p=3 continuous                 n=25 p=3 | T closed 0.029490 | T MC 0.029500 (SE 0.000039) | z = +0.25
+                                   entrywise: max|A_MC - A| = 0.0350, max |z| over the 325 distinct entries = 2.09
+                                   printed orientation (arccos, no 'pi -'): T = -0.019730, z = +1271.2; max|A_MC - A_alt| = 12.035
+RAW p=2 with binary                n=25 p=2 | T closed 0.156958 | T MC 0.157045 (SE 0.000241) | z = +0.36
+                                   entrywise: max|A_MC - A| = 0.0192, max |z| over the 325 distinct entries = 1.27
+                                   printed orientation (arccos, no 'pi -'): T = 0.042722, z = +475.1; max|A_MC - A_alt| = 12.018
+RAW p=3 with duplicated rows       n=25 p=3 | T closed 0.101879 | T MC 0.101807 (SE 0.000087) | z = -0.83
+                                   entrywise: max|A_MC - A| = 0.0314, max |z| over the 325 distinct entries = 2.78
+                                   printed orientation (arccos, no 'pi -'): T = 0.046969, z = +628.6; max|A_MC - A_alt| = 12.026
+raw vs standardised, p=2 with binary: T_raw / T_std = 0.995
+p=1 EXACT (two directions) vs closed form: max |diff| = 2.71e-08
