@@ -1,0 +1,97 @@
+\section{Very small samples and wrong links}\label{sec:smallnlink}
+
+The design has two standard normal covariates and linear predictor $\eta=0.25+1.5x_{1}+x_{2}$, about half
+events; the fitted model is the logistic regression in $x_{1}$ and $x_{2}$, fitted by a plain \texttt{glm()}.
+Null datasets: $2{,}000$ at $n=20$ and $30$ and $1{,}000$ at $n=50$ and $100$. Wrong links: the outcome is
+drawn with probability $F(\eta)$ for $F$ the probit, the complementary log-log, and Stukel's generalized
+logistic with heavier tails ($\alpha_{1}=\alpha_{2}=-1$) and with asymmetric tails ($\alpha_{1}=0.5$,
+$\alpha_{2}=-1$), at $n=20$, $30$, $50$ and $100$. Misfit in the covariates: $\eta+C\{x_{1}^{2}-1\}$ (omitted
+quadratic) or $\eta+Cx_{1}x_{2}$ (omitted interaction), $C\in\{0.5,1\}$, at $n=20$, $30$ and $50$. Every
+alternative cell has $1{,}000$ datasets. The tests are DeepGOF-1 (shipped network, $B=199$; with two
+covariates both readings coincide), the projection test ($B=199$), Stukel's joint score test and its SstBoth
+form, GiViTI through \texttt{givitiR}, and the Hosmer--Lemeshow test. Power is at matched level $.05$: each
+test is placed at exactly $.05$ on its own null datasets at the same $n$ by the randomized threshold of the
+main text, and is evaluated on the datasets where it returns a p-value.
+
+\begin{table}[h]
+\centering
+\caption{Size at nominal $.05$ on the null datasets; in brackets, the share of datasets with no p-value
+where it is not zero. Separated: share of fits that did not converge or had a coefficient above $8$ in
+absolute value. Band: $[.035,.065]$.}
+\label{tab:smalln_size}
+\small
+\begin{tabular}{@{}rrcccccc@{}}
+\toprule
+$n$ & separated & DG-1 & proj. & Stukel J & SstBoth & GiViTI & HL \\
+\midrule
+20 & .073 & .036 & .034 & .030 & .031 & .093 [0.06] & .018 \\
+30 & .008 & .045 & .045 & .039 & .056 & .061 & .027 \\
+50 & .000 & .047 & .042 & .048 & .063 & .045 & .045 \\
+100 & .000 & .055 & .070 & .051 & .068 & .044 & .056 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Matched-level power against misfit in the covariates. Monte Carlo standard error at most $.016$.}
+\label{tab:smalln_power}
+\small
+\begin{tabular}{@{}lrrcccccc@{}}
+\toprule
+misfit & $C$ & $n$ & DG-1 & proj. & Stukel J & SstBoth & GiViTI & HL \\
+\midrule
+quadratic & 0.5 & 20 & .063 & .098 & .096 & .093 & .065 & .061 \\
+quadratic & 0.5 & 30 & .070 & .107 & .102 & .091 & .092 & .072 \\
+quadratic & 0.5 & 50 & .080 & .142 & .104 & .114 & .105 & .060 \\
+quadratic & 1.0 & 20 & .124 & .246 & .184 & .195 & .151 & .079 \\
+quadratic & 1.0 & 30 & .153 & .259 & .191 & .203 & .184 & .106 \\
+quadratic & 1.0 & 50 & .249 & .450 & .269 & .292 & .278 & .115 \\
+interaction & 0.5 & 20 & .058 & .078 & .080 & .082 & .058 & .043 \\
+interaction & 0.5 & 30 & .060 & .070 & .077 & .067 & .061 & .064 \\
+interaction & 0.5 & 50 & .080 & .086 & .065 & .073 & .068 & .052 \\
+interaction & 1.0 & 20 & .097 & .122 & .105 & .112 & .081 & .068 \\
+interaction & 1.0 & 30 & .116 & .134 & .105 & .105 & .104 & .085 \\
+interaction & 1.0 & 50 & .137 & .182 & .168 & .169 & .165 & .071 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Matched-level power when the true link is not the logit. Monte Carlo standard error at most $.015$.}
+\label{tab:smalln_link}
+\small
+\begin{tabular}{@{}lrcccccc@{}}
+\toprule
+true link & $n$ & DG-1 & proj. & Stukel J & SstBoth & GiViTI & HL \\
+\midrule
+probit & 20 & .026 & .059 & .019 & .021 & .037 & .009 \\
+probit & 30 & .068 & .048 & .018 & .017 & .068 & .042 \\
+probit & 50 & .048 & .048 & .025 & .027 & .029 & .044 \\
+probit & 100 & .032 & .033 & .018 & .020 & .015 & .041 \\
+cloglog & 20 & .017 & .044 & .051 & .049 & .065 & .013 \\
+cloglog & 30 & .044 & .048 & .046 & .045 & .095 & .026 \\
+cloglog & 50 & .061 & .052 & .065 & .071 & .073 & .026 \\
+cloglog & 100 & .032 & .045 & .093 & .105 & .093 & .033 \\
+Stukel, heavier tails & 20 & .070 & .095 & .114 & .115 & .071 & .073 \\
+Stukel, heavier tails & 30 & .061 & .089 & .092 & .078 & .076 & .072 \\
+Stukel, heavier tails & 50 & .061 & .071 & .108 & .097 & .099 & .053 \\
+Stukel, heavier tails & 100 & .062 & .048 & .132 & .097 & .104 & .054 \\
+Stukel, asymmetric & 20 & .053 & .086 & .118 & .125 & .091 & .032 \\
+Stukel, asymmetric & 30 & .067 & .082 & .096 & .103 & .108 & .049 \\
+Stukel, asymmetric & 50 & .090 & .120 & .154 & .198 & .209 & .061 \\
+Stukel, asymmetric & 100 & .097 & .120 & .290 & .350 & .369 & .096 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+DeepGOF-1 is the only test whose size lies inside the band at every $n$
+(Table~\ref{tab:smalln_size}). Against misfit in the covariates it has more power than the Hosmer--Lemeshow
+test in ten of the twelve cells and less than the projection test in all twelve
+(Table~\ref{tab:smalln_power}); with only two covariates, both carrying signal, this is the order the local
+power comparison of the main text predicts. Against a wrong link DeepGOF-1 and the projection test stay close
+to their level (Table~\ref{tab:smalln_link}): a wrong link bends the risk along the linear predictor and
+leaves little pattern over the covariate ranks, while Stukel's test and GiViTI look along the linear
+predictor and are the tests to use; even they reach appreciable power only for the asymmetric link at
+$n\ge50$. The scripts and every per-dataset p-value are in \texttt{theory/smalln\_link/} of the deposit.

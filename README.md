@@ -1,4 +1,4 @@
-# DeepGOF-1: reproducibility archive, version 2.1
+# DeepGOF-1: reproducibility archive, version 2.2
 
 Archive for the paper
 
@@ -15,8 +15,13 @@ bootstrap (B = 199), so the level is a property of the calibration, not of what 
 |---|---|
 | 10.5281/zenodo.22113219 | concept DOI: always the newest version |
 | 10.5281/zenodo.22113220 | version 1.0.0, the first archive |
-| (shown on this record's page) | this version, 2.1.0: cite it to reproduce a number of the paper above |
+| (shown on this record's page) | this version, 2.2.0: cite it to reproduce a number of the paper above |
 | 10.32614/CRAN.package.ebrahim.gof | the R package that distributes the deployable test as `deepgof1()` |
+
+## What changed from version 2.1.0
+
+* **Very small samples and wrong links** (`theory/smalln_link/`): the size of five tests at n = 20 to 100, their matched power against an omitted quadratic or interaction at n = 20 to 50, and against four wrong links (probit, complementary log-log and two Stukel links) at n = 20 to 100; the Supporting Information tables and the main-text figure are generated from these files.
+* Figure scripts brought up to date: `figures/fig_smalln_size.py` (new), `figures/fig_support_maps.py` (the three-panel SUPPORT figure), `figures/fig_are_irrelevant_sc.py`.
 
 ## What changed from version 2.0.0
 
@@ -175,14 +180,15 @@ uses continuous covariates. For data analysis use `R/deepgof1.R` or the package.
 | Section 4.2, Figure 3 (covariates that carry no signal) | ratio against k irrelevant covariates | `theory/local_power/irrelevant/fig_are_irrelevant.py` (reads `ARE_IRRELEVANT.json`, `PROJ_LIU_RAW.json`); SstBoth version: `theory/stukel_sstboth/fig_are_irrelevant_sstboth.py`, `IRR_SSTBOTH.json` |
 | Section 4.3 (power certificate) | certified against true sample sizes; smoothing certificate | `theory/finite_power/` (`PCERT.json`, `CERTIFIED.json`), `theory/finite_power/smoothing/SMOOTH_CERT.json` |
 | Section 2.1 (the all-pairs reading) and Section 5 (the shipped network on the level study) | the shipped network, run as an analyst runs it, on the 20,000 held-out nulls of the level study | `theory/shipped_network/` (`run_shipped_level.R`, `rows/`, `SHIPPED_LEVEL.csv`) |
+| Section 5, Figure 5 (level at very small n), and the power at small n and under wrong links in the Supporting Information | size of five tests at n = 20 to 100, matched power against an omitted quadratic or interaction and against four wrong links | `theory/smalln_link/` (see Supporting Information row Section 18) |
 | Section 5, Figure 4 (Simulation I: level on the 60-cell grid; gain over the best partition test) | per-replicate p-values of every arm and cell | `results/s3/<design>_n<n>_s<seed>/` (`blk_pvalues.csv`, `deep_pvalues.csv`, `summary.csv`), `results/s3/VERDICT.csv`; figure `figures/fig6_s3grid_sc_v2.py`; grid mean of the level: `tables/make_tables.py` (`\sizegrid`). Per-arm rejection rates of every cell (the pointer in Section 5 of the paper): `results/s3/<block>/summary.csv` (`raw_size`, `raw_power`, `matched_power`). The rejection rates of the partition tests on the small-n null designs are in `results/smalln/` |
-| Section 6.1, Table 3 (extended Liu benchmark) and Figure 5 | per-replicate p-values; per-block scores | `results/liu/<block>/` (`blk_pvalues.csv`: HL, HL equal-width, Pigeon-Heyse, Stukel, Osius-Rojek; `augment_pvalues.csv`: Stute-Zhu; `deep_pvalues.csv`: DeepGOF-1), `theory/addon_arms/liu_rows/` (mHL, GiViTI), `theory/addon_arms/proj_rows_liu/` (projection, `proj_liu_raw`), `bagoft/confirm/` (BAGofT); table: `tables/make_tables.py`; per-block scores `results/liu/TABLE2_SCORES.csv`; Osius-Rojek variance `results/liu/OSIUS_VARIANCE.csv` (`benchmark/liu/osius_variance.R`); figure `figures/fig8_liu_sc_v2.py` |
+| Section 6.1, Table 3 (extended Liu benchmark) and Figure 6 | per-replicate p-values; per-block scores | `results/liu/<block>/` (`blk_pvalues.csv`: HL, HL equal-width, Pigeon-Heyse, Stukel, Osius-Rojek; `augment_pvalues.csv`: Stute-Zhu; `deep_pvalues.csv`: DeepGOF-1), `theory/addon_arms/liu_rows/` (mHL, GiViTI), `theory/addon_arms/proj_rows_liu/` (projection, `proj_liu_raw`), `bagoft/confirm/` (BAGofT); table: `tables/make_tables.py`; per-block scores `results/liu/TABLE2_SCORES.csv`; Osius-Rojek variance `results/liu/OSIUS_VARIANCE.csv` (`benchmark/liu/osius_variance.R`); figure `figures/fig8_liu_sc_v2.py` |
 | Section 6.1 (the shipped network and its all-pairs reading on the benchmark) | both readings of the shipped network on the same datasets, the ranking, the paired standard errors, and the check that the package reproduces the all-pairs study | `theory/shipped_network/` (`run_shipped_liu.R`, `rows_liu/`, `run_allpairs_liu.R`, `rows_liu_ap/`, `rank_shipped_liu.R`, `RANK_SHIPPED_LIU.csv`, `paired_se_allpairs.R`, `verify_pkg_allpairs.R`, `VERIFY_PKG_ALLPAIRS.csv`); all four settings, both readings: `theory/allpairs_study/` (`run_phd_defs.R`, `run_phd.R`, `run_s1.R`, `rows/`, `rows_s1/`, `final_table.py`, `DEEP_SHIPPED.csv`, `SHIPGAP.csv`, `MACROS.txt`) |
 | Section 6.2, Table 4 (paired comparison with BAGofT) | every per-replicate p-value, paired tables, level by n, timings, the repair | `bagoft/confirm/` (`run_confirm.R`, `analyze_confirm.py`, `analyze_size_by_n.py`, `rows/`, `CONFIRM_PAIRED.csv`, `CONFIRM_ROW.csv`, `SIZE_BY_N.csv`, `REVIEW_RECOMPUTED.csv`, `COST.csv`, `IDENTITY_WIDE.csv`, `PREDECLARATION.sha256`, `ADDENDUM_1.sha256`); `bagoft/explore/` (`common.R`, `verify_fast.R`, `bagoft_fast.R` and `VERIFY_FAST.log`, byte-identical to the hashed files; `parRF_dropfix.R`, the one-line repair; `EXPLORATORY_FULL_TABLE.csv`, package timings). The declaration itself is available from the author |
 | Section 7, Table 5 (two active covariates among ten) | one row per dataset, the decision rule, BAGofT at n = 200 | `theory/niche_paper/NICHE_ROWS.csv`, `analyze_niche_paper.py` (writes `niche_generated.tex`, identical to the manuscript's), `niche_power.csv`, `niche_diff.csv`, `niche_size.csv`, `niche_rule.csv`, `niche_bagoft.csv`; BAGofT rows `theory/addon_arms/niche_rows_bagoft/`; the real-design check that closes the section: `theory/real_data_niche/` (declaration, hash files, `scan_candidates.R`, `check_separation.R`, `partA.R`, `calibrate.R`, `run_partB.R`, `analyze_partB.R`, every per-replicate row) |
 | Section 7 (the axis rule against the all-pairs reading; a U-shaped covariate) | `DG_all`, `sel12` and `all12` in `theory/niche_paper/NICHE_ROWS.csv`; the U-shape study | `theory/ushape/` (`run_ushape.R`, `rows/`, `analyze_ushape.R`, `USHAPE.csv`) |
 | Section 8, Tables 6 and 7 (one corrupted record; the two repair rules) | per-replicate rows of Studies 1 and 2 | `theory/small_n/rows/`, `rows_trim/`, `RESULTS.json`, `RESULTS_TRIM.json` (`02_analyse.py`, `04_analyse_trim.py` reproduce them exactly); Stukel in the SstBoth form: `theory/small_n/sstboth_addon/`; deletion rule with more covariates: `theory/small_n/touch_rate/`; the projection column and rows: `theory/small_n/proj_addon/` (`run_proj_smalln.R`, `rows/`, `PROJ_SIZE.csv`) |
-| Section 9, Table 8, Figure 6 (the SUPPORT application) | scripts in the order they were run, the public data, every result | `application/support/` (see its `README.txt`) |
+| Section 9, Table 8, Figure 7 (the SUPPORT application) | scripts in the order they were run, the public data, every result | `application/support/` (see its `README.txt`) |
 | Section 10, Table 9 (FDIC bank failures) | data, classical p-values and real-design sizes, DeepGOF-1 calls and sizes | `application/fdic/` (`fdic_download.R`, `fdic_size.R`, `fdic_deepgof.R`, `fdic_tie_check.R`), `results/fdic/`; table: `tables/make_tables.py` |
 | the deployed test | deployed code, weights, corpus, generator, training and export code, harnesses | `R/`, `inst/extdata/`, `training/`, `benchmark/`, `bagoft/` |
 | Section 2.1 and the Discussion (ties) | the tie-breaking study: FDIC in 30 random row orders, Liu Setting 3, GLOW | `theory/tie_fix/`, `theory/fdic_roworder/` |
@@ -205,13 +211,14 @@ analytically have no data files; the files listed are the numerical checks and i
 | Section 10 | Corollaries S.5, S.6 (blind cone, representation limit) | `benchmark/theory/theory_sphere_check.R`, `theory_blindcone_probe.R`, `results/theory_blind_direction.csv` |
 | Section 11 | Theorem S.9, Corollary S.10 (local asymptotic power), the classical tests on the same drift, numerical corroboration (Table S4) | `theory/local_power/` (`lp_core.py`, `01_local_power.py` -> `FORMULA.json`/`FORMULA.log`; `02_simulate.py` -> `SIMULATION.json`, `SIM_RAW.json`; `03_convergence.py` -> `CONV_RAW.jsonl`; `04_verdict.py` -> `CONVERGENCE.json`; `05_recheck.py` -> `RECHECK.json`; `06_bias_rate.py` -> `BIAS_RATE.json`) |
 | Section 12 | Proposition S.10a, Corollary S.10b (covariates that carry no signal), numerical check (Table S5) | `theory/local_power/irrelevant/` (`PROPOSITION.md`, `08_proj_liu_raw.py` -> `PROJ_LIU_RAW.json`, `09_pred_vs_sim_liu.py` -> `PRED_VS_SIM_LIU.json`, `04_proj_rate.py` -> `PROJ_RATE.json`, `07_printed_weight_check.py`, `10_null_sd_finite_n.py`, `01_are_irrelevant.py` -> `ARE_IRRELEVANT.json`) |
-| Section 13 | Proposition S.12 (usage-aware probabilistic certificate), Lemma A.6, Proposition S.12a, Corollary S.12b (smoothing certificate), Tables S6, S7 | `theory/finite_power/` (`crown_core.py`, `07_pcrown.py` -> `PCERT.json`, `03_certify.py` -> `CERTIFIED.json`, `01_constants.py`, `05_ball_limit.py`, `11_lipsdp.py`), `smoothing/` (`SMOOTH_CERT.json`, `NULL_UCB.json`, `THEOREM_SMOOTH.md`), `bab/` (branch and bound; `cell_pcrown_ua` in `03_bab.py`, `07_certify.py`; `README.md`) |
-| Section 14 | Theorems S.14, S.15, S.17, S.19, Proposition S.16, Corollary S.18 (one corrupted record), Table S8 (miss probability) | `theory/small_n/SPIKE_RESPONSE.json` (S.16), `03_trim_miss.py` (S.18) |
+| Section 13 | Proposition S.12 (usage-aware probabilistic certificate), Lemma A.6, Proposition S.12a, Corollary S.12b (smoothing certificate), Table S6 | `theory/finite_power/` (`crown_core.py`, `07_pcrown.py` -> `PCERT.json`, `03_certify.py` -> `CERTIFIED.json`, `01_constants.py`, `05_ball_limit.py`, `11_lipsdp.py`), `smoothing/` (`SMOOTH_CERT.json`, `NULL_UCB.json`, `THEOREM_SMOOTH.md`), `bab/` (branch and bound; `cell_pcrown_ua` in `03_bab.py`, `07_certify.py`; `README.md`) |
+| Section 14 | Theorems S.14, S.15, S.17, S.19, Proposition S.16, Corollary S.18 (one corrupted record), Table S7 (miss probability) | `theory/small_n/SPIKE_RESPONSE.json` (S.16), `03_trim_miss.py` (S.18) |
 | Section 15 | Studies 1 and 2 | `theory/small_n/rows/`, `rows_trim/`, `RESULTS.json`, `RESULTS_TRIM.json`; SstBoth: `sstboth_addon/` |
-| Section 16 | the deletion rule with more, or non-normal, covariates (Tables S9, S10) | `theory/small_n/touch_rate/` (see its `README.md`) |
-| Section 17 | Theorem S.13 (Neyman-Pearson gap), Table S11 | `theory/optimality/` (`01_family_maps.R` -> `FAMILY_MAPS.csv`, `02_np_gap.py` -> `NP_GAP.json`, `THEOREM_NP.md`) |
-| Section 18 | benchmark bookkeeping: missing p-values (Table S12) and failed refits | `tables/stukel_na.py` (reproduces Table S12 from `results/liu/*/blk_pvalues.csv`; log `stukel_na.log`); failed projection refits: `proj_nfail` in `theory/addon_arms/proj_rows_*` and `NICHE_ROWS.csv` |
-| Deposit index | deposit index (Table S13), training protocol (Table S14) | `training/` |
+| Section 16 | the deletion rule with more, or non-normal, covariates (Tables S8, S9) | `theory/small_n/touch_rate/` (see its `README.md`) |
+| Section 17 | Theorem S.13 (Neyman-Pearson gap), Table S10 | `theory/optimality/` (`01_family_maps.R` -> `FAMILY_MAPS.csv`, `02_np_gap.py` -> `NP_GAP.json`, `THEOREM_NP.md`) |
+| Section 18 | very small samples and wrong links: size, power against misfit in the covariates, power under four wrong links (Tables S11-S13) | `theory/smalln_link/` (`run_smalln_link.R`, `run_smalln_power.R`, `rows/`, `rows_power/`, `analyze_smalln_link.R`, `analyze_smalln_power.R`, `LEVEL.csv`, `POWER.csv`, `POWER_COVARIATE_MISFIT.csv`, `make_si_tables.py`; the main-text figure `fig_smalln_size.py`; the pooled ranking `pooled_ranking.py`) |
+| Section 19 | benchmark bookkeeping: missing p-values (Table S14) and failed refits | `tables/stukel_na.py` (reproduces Table S14 from `results/liu/*/blk_pvalues.csv`; log `stukel_na.log`); failed projection refits: `proj_nfail` in `theory/addon_arms/proj_rows_*` and `NICHE_ROWS.csv` |
+| Section 20 | deposit index (Table S15), training protocol (Table S16) | `training/` |
 
 ## 6. Ties and the FDIC numbers
 
@@ -244,5 +251,5 @@ Code: MIT. Data, results, corpora and weights: CC BY 4.0. See `LICENSE`.
 ## Citing
 
 > Ebrahim, E. K. (2026). *Auditing a Frozen Neural Goodness-of-Fit Test for Logistic Regression:
-> Validity, Certified Consistency and Local Power of DeepGOF-1* (Version 2.1.0) [Software and data].
+> Validity, Certified Consistency and Local Power of DeepGOF-1* (Version 2.2.0) [Software and data].
 > Zenodo. https://doi.org/10.5281/zenodo.22113219
