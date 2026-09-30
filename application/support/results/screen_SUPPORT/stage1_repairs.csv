@@ -1,0 +1,5 @@
+"repair","formula","deepgof1_p","statistic","axes","AIC","deviance"
+"a","y ~ meanbp + num.co + meanbp:num.co + age + hrt + resp + temp + crea + sod + wblc + sex",0.005,11.2658170546697,"meanbp & hrt",9891.03599736857,9867.03599736857
+"b","y ~ ns(meanbp, 3) + num.co + age + hrt + resp + temp + crea + sod + wblc + sex",0.315,-1.52989196935079,"ns(meanbp, 3)1 & ns(meanbp, 3)2",9777.88879270065,9751.88879270065
+"c","y ~ ns(meanbp, 3) + ns(num.co, 3) + age + hrt + resp + temp + crea + sod + wblc + sex",0.325,-1.54019664554323,"ns(meanbp, 3)1 & ns(meanbp, 3)2",9780.95881785124,9750.95881785124
+"d","y ~ ns(meanbp, 3) + ns(num.co, 3) + meanbp:num.co + age + hrt + resp + temp + crea + sod + wblc + sex",0.315,-1.54056050675939,"ns(meanbp, 3)1 & ns(meanbp, 3)2",9782.92776608927,9750.92776608927

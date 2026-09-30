@@ -1,0 +1,8 @@
+powdeepshipped	0.640
+powdeepshippedv1	0.580
+powdeepdesigntrained	0.636
+sizedeepshipped	0.0502
+sdsizedeepshipped	0.0077
+shipgappower	-0.056
+shipgapworst	-0.285
+shipgapcells	48

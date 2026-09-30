@@ -1,0 +1,19 @@
+"model","test","p_value"
+"M0","HL",3.207872166304e-06
+"M0","mHL",3.52028496207648e-10
+"M0","Pigeon-Heyse",9.41181296686023e-06
+"M0","HL equal-width",0.00701252991295254
+"M0","Osius-Rojek",3.98210629741285e-06
+"M0","Stukel",0.00459935465764122
+"M0","GiViTI",0
+"M0","Stute-Zhu",0
+"M1","HL",0.00431649405182048
+"M1","mHL",1.2688307484571e-07
+"M1","Pigeon-Heyse",0.0088966480072761
+"M1","HL equal-width",0.146154385525388
+"M1","Osius-Rojek",0.284505161109858
+"M1","Stukel",0.00899267599960995
+"M1","GiViTI",0.0371352867944497
+"M1","Stute-Zhu",0
+"M0","DeepGOF-1 (axes meanbp x num.co)",0.005
+"M1","DeepGOF-1 (axes meanbp x num.co)",0.9

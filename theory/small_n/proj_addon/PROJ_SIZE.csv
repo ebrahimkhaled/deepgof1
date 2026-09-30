@@ -1,0 +1,13 @@
+"study","n","type","full","trimmed"
+"small_n",30,"decimal",0.143,NA
+"trim",30,"decimal",0.139,0.056
+"small_n",50,"decimal",0.18,NA
+"trim",50,"decimal",0.164,0.058
+"small_n",30,"none",0.046,NA
+"trim",30,"none",0.059,0.057
+"small_n",50,"none",0.054,NA
+"trim",50,"none",0.045,0.045
+"small_n",30,"outcome",0.064,NA
+"small_n",50,"outcome",0.039,NA
+"small_n",30,"sign",0.079,NA
+"small_n",50,"sign",0.056,NA
