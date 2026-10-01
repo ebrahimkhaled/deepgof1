@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this archive, please cite it as below, together with the paper it supports."
 type: software
 title: "Auditing a Frozen Neural Goodness-of-Fit Test for Logistic Regression: Validity, Certified Consistency and Local Power of DeepGOF-1"
-version: 2.2.0
+version: 2.3.0
 authors:
   - family-names: Ebrahim
     given-names: Ebrahim Khaled

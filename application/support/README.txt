@@ -21,3 +21,14 @@ this folder:
                         p = .005, .005, .020, .21 for M0-M3 (Table 8)
 Every random step has a fixed seed. results/screen_SUPPORT/ holds the outputs as produced for the
 manuscript; rerunning the scripts overwrites them with identical values.
+
+Added in archive version 2.3.0 (results in results/):
+  14_ladder_290d.R        M0-M3 under the three readings of deepgof1() 2.9.0 from one call each
+                          (dg290d_ladder.csv): axis rule .005, .020, .010, .195; all pairs .005, .005,
+                          .020, .21; combined .005, .010, .020, .35
+  15_plasmode.R           level and power on the SUPPORT covariates up to all 8,873 patients
+                          (plasmode2_rows/, PLASMODE2_LEVEL.csv, PLASMODE2_POWER.csv; 15_analyze_plasmode.py;
+                          15_plasmode_rev.R is the same runner working from the other end of the queue)
+  16_projection_timing.R  the projection test on M0 with all 8,873 patients: 35,568 s, 4.5 GB, p = .005
+  17_deepgof_timing.R     deepgof1() on M0 with all 8,873 patients: 13 s (all pairs 71 s)
+  18_external_split.R     split-sample external validation over 20 random splits (external_split.csv)

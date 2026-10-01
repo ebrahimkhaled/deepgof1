@@ -1,0 +1,5 @@
+"model","p_axes","p_allpairs","p_combined","axes","top_pair","seconds"
+"M0",0.005,0.005,0.005,"meanbp & num.co","meanbp & resp",114.778212070465
+"M1",0.02,0.005,0.01,"meanbp & hrt","resp & sod",115.127654075623
+"M2",0.01,0.02,0.02,"crea & num.co","age & num.co",121.99867105484
+"M3",0.195,0.21,0.35,"age & crea","crea & num.co",128.67413687706
