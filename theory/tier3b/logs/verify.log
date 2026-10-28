@@ -1,0 +1,7 @@
+regenerated 400 data sets from recorded seeds: events and xfp reproduced on 400
+alternatives whose C equals C_CHOSEN.csv: 24000 of 24000
+smoke null rows found in main: 8 of 8; identical per column:
+      events          xfp         p_dg         p_ss      p_score p_score_asym 
+           8            8            8            8            8            8 
+        p_hl  p_stukel_fb        p_grp 
+           8            8            8 

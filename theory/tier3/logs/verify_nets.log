@@ -1,0 +1,29 @@
+                            net r_vs_torch32 batched_vs_torch32 r_vs_torch64
+Control_s1           Control_s1     9.88e-07           9.88e-07     3.77e-15
+Control_s2           Control_s2     6.47e-07           6.47e-07     2.22e-15
+Control_s3           Control_s3     8.26e-07           8.26e-07     2.22e-15
+NoInter_s1           NoInter_s1     1.37e-06           1.37e-06     3.11e-15
+NoInter_s2           NoInter_s2     6.35e-07           6.35e-07     3.11e-15
+NoInter_s3           NoInter_s3     8.03e-07           8.03e-07     2.22e-15
+NoQuad_s1             NoQuad_s1     8.32e-07           8.32e-07     3.11e-15
+NoQuad_s2             NoQuad_s2     5.15e-07           5.15e-07     2.89e-15
+NoQuad_s3             NoQuad_s3     4.43e-07           4.43e-07     2.22e-15
+NoQuadStrict_s1 NoQuadStrict_s1     1.22e-06           1.22e-06     3.11e-15
+NoQuadStrict_s2 NoQuadStrict_s2     1.69e-06           1.69e-06     3.55e-15
+NoQuadStrict_s3 NoQuadStrict_s3     8.69e-07           8.69e-07     2.00e-15
+                batched_vs_torch64 fast_vs_torch64 fast_rawmaps_vs_torch64 pass
+Control_s1                3.77e-15        3.77e-15                3.77e-15 TRUE
+Control_s2                2.22e-15        2.22e-15                2.22e-15 TRUE
+Control_s3                2.22e-15        2.22e-15                2.22e-15 TRUE
+NoInter_s1                3.11e-15        3.11e-15                3.11e-15 TRUE
+NoInter_s2                3.11e-15        3.11e-15                3.11e-15 TRUE
+NoInter_s3                2.22e-15        2.22e-15                2.22e-15 TRUE
+NoQuad_s1                 3.11e-15        3.11e-15                3.11e-15 TRUE
+NoQuad_s2                 2.89e-15        2.89e-15                2.89e-15 TRUE
+NoQuad_s3                 2.22e-15        2.22e-15                2.22e-15 TRUE
+NoQuadStrict_s1           3.11e-15        3.11e-15                3.11e-15 TRUE
+NoQuadStrict_s2           3.55e-15        3.55e-15                3.55e-15 TRUE
+NoQuadStrict_s3           2.00e-15        2.00e-15                2.00e-15 TRUE
+shipped network: batched scorer vs .dg_score, max |diff| 0.000e+00
+12 networks x 200 maps, batched: 0.632 s per data set (single process)
+ALL 12 NETWORKS PASS

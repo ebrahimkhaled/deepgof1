@@ -1,0 +1,13 @@
+noncentrality for limit power .5 at 3 df: 5.7605
+departure     ncp/tau^2  t50 score     t50 DG      n ratio   score pw@tDG | n ratio vs DG: score  HL  Stukel  leCessie
+quadratic       0.19831       5.39       8.76        0.379          0.921 |   0.38   1.62   0.77   0.57
+interaction     0.13184       6.61      11.53        0.328          0.954 |   0.33   2.52   1.17   0.63
+cubic           0.01642      18.73      12.91        2.106          0.253 |   2.11   1.01   0.37   0.22
+bump            0.01004      23.95      13.28        3.254          0.174 |   3.25   3.36   2.79   0.70
+threshold       0.02236      16.05      16.70        0.923          0.536 |   0.92  43.66  22.05   0.65
+check Stukel power at tau50(DG), quadratic  : recomputed 0.614797 vs FORMULA.json 0.614797
+check Stukel power at tau50(DG), interaction: recomputed 0.438548 vs FORMULA.json 0.438548
+check Stukel power at tau50(DG), cubic      : recomputed 0.917200 vs FORMULA.json 0.917200
+check Stukel power at tau50(DG), bump       : recomputed 0.204597 vs FORMULA.json 0.204597
+check Stukel power at tau50(DG), threshold  : recomputed 0.067288 vs FORMULA.json 0.067288
+wrote tables/LIMIT_SCORE_TABLE2.csv

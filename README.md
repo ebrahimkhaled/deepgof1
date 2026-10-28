@@ -1,11 +1,11 @@
-# DeepGOF-1: reproducibility archive, version 2.3
+# DeepGOF-1: reproducibility archive, version 2.4
 
 Archive for the paper
 
 > Ebrahim, E. K., Hussein, O. A., and El-Kotory, A. *Auditing a Frozen Neural Goodness-of-Fit Test for
 > Logistic Regression: Validity, Certified Consistency and Local Power of DeepGOF-1.*
 
-and its Supporting Information. DeepGOF-1 is a goodness-of-fit test for logistic regression
+and its Supporting Information; the paper is now titled *Where Does a Logistic Regression Model Fail? A Pretrained Neural Goodness-of-Fit Test with Bootstrap Validity*, and its supplement is Online Resources 1 (proofs) and 2 (supporting studies). DeepGOF-1 is a goodness-of-fit test for logistic regression
 whose statistic is a small convolutional network (18,273 frozen parameters) that reads the fitted
 model's *residual map*, a 6 x 6 grid of standardized residual sums over the ranks of the two strongest
 covariates (or, in the all-pairs reading, of every pair of covariates, taking the largest score). The p-value is the rank of the observed score inside the analyst's own parametric
@@ -15,8 +15,25 @@ bootstrap (B = 199), so the level is a property of the calibration, not of what 
 |---|---|
 | 10.5281/zenodo.22113219 | concept DOI: always the newest version |
 | 10.5281/zenodo.22113220 | version 1.0.0, the first archive |
-| (shown on this record's page) | this version, 2.3.0: cite it to reproduce a number of the paper above |
+| (shown on this record's page) | this version, 2.4.0: cite it to reproduce a number of the paper above |
 | 10.32614/CRAN.package.ebrahim.gof | the R package that distributes the deployable test as `deepgof1()` |
+
+## What changed from version 2.3.0
+
+* **The pair score test** (`theory/tier3/`): a score test for the squares and the product of the pair DeepGOF-1
+  selects, calibrated by the same bootstrap with the pair selected again in every sample; it is `pairscore.gof()`
+  in `ebrahim.gof` 3.0.0. On the Liu et al. (2024) benchmark, Settings 2-4 (43,000 data sets with the design with
+  ten covariates), together with the chi-square statistic of the map, the GRP test (GRPtests) and Stukel's test with
+  the one-sided fallback. `20_run_AB.R` reproduces the stored DeepGOF-1 p-values exactly on every data set.
+* **Stukel and Osius-Rojek on all 144,000 benchmark data sets** (`theory/tier3/30_run_C.R`).
+* **Networks trained on reduced corpora** (`theory/tier3/10_corpus.R`, `11_train_export.py`, `nets/`): without
+  interaction terms, without quadratic terms, and a stricter variant, three seeds each, with three full-corpus
+  controls; every exported network is verified against the training framework (`NET_VERIFY.csv`).
+* **Departures of other shapes** (`theory/tier3b/`): threshold, local bump, oscillation and corner, in the design
+  of Table 2 and the design with ten covariates (32,000 data sets), and the limiting power of the pair score test
+  for the departures of Table 2 (`50_limit_score.py`). `REPORT.md` summarises the study.
+* `tables/` in each folder holds every number of the paper's Tables 2, 3 and 5 and of Online Resource 2, Section 29;
+  `40_analyze.R` recomputes them from the per-data-set rows.
 
 ## What changed from version 2.2.0
 

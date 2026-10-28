@@ -1,0 +1,2 @@
+net,rows,alt,null,torch_seed,train_secs,insample_auc
+NoQuad_s1,8400,4200,4200,9001,2.85,0.8246

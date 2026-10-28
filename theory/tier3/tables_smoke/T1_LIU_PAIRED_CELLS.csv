@@ -1,0 +1,46 @@
+"setting","n","arm","d","se","m","z"
+2,50,"GRP",NA,NA,0,NA
+2,50,"chi-square of map",0.125,0.125,8,1
+2,50,"score test (bootstrap)",0.125,0.226581741793741,8,0.551677284367371
+2,50,"score test (asymptotic)",0.25,0.163663417676994,8,1.52752523165195
+2,50,"Stukel with fallback",0.4,0.4,5,1
+2,100,"GRP",-0.25,0.163663417676994,8,-1.52752523165195
+2,100,"chi-square of map",0.125,0.125,8,1
+2,100,"score test (bootstrap)",0.125,0.226581741793741,8,0.551677284367371
+2,100,"score test (asymptotic)",0.125,0.226581741793741,8,0.551677284367371
+2,100,"Stukel with fallback",0,0.316227766016838,5,0
+2,500,"GRP",-0.375,0.18298126367785,8,-2.04939015319192
+2,500,"chi-square of map",0,0,8,NA
+2,500,"score test (bootstrap)",-0.375,0.18298126367785,8,-2.04939015319192
+2,500,"score test (asymptotic)",-0.375,0.18298126367785,8,-2.04939015319192
+2,500,"Stukel with fallback",0,0,5,NA
+3,50,"GRP",-0.00714285714285715,0.21281239542437,7,-0.0335641029208545
+3,50,"chi-square of map",-0.125,0.125,8,-1
+3,50,"score test (bootstrap)",0.125,0.226581741793741,8,0.551677284367371
+3,50,"score test (asymptotic)",0.125,0.226581741793741,8,0.551677284367371
+3,50,"Stukel with fallback",0.4,0.244948974278318,5,1.63299316185545
+3,100,"GRP",-0.125,0.226581741793741,8,-0.551677284367371
+3,100,"chi-square of map",0,0.188982236504614,8,0
+3,100,"score test (bootstrap)",-0.25,0.163663417676994,8,-1.52752523165195
+3,100,"score test (asymptotic)",-0.25,0.163663417676994,8,-1.52752523165195
+3,100,"Stukel with fallback",0,0.316227766016838,5,0
+3,500,"GRP",0.125,0.125,8,1
+3,500,"chi-square of map",0.125,0.125,8,1
+3,500,"score test (bootstrap)",0.125,0.125,8,1
+3,500,"score test (asymptotic)",0.125,0.125,8,1
+3,500,"Stukel with fallback",0.2,0.2,5,1
+4,50,"GRP",-0.125,0.125,8,-1
+4,50,"chi-square of map",0.5,0.188982236504614,8,2.64575131106459
+4,50,"score test (bootstrap)",-0.125,0.125,8,-1
+4,50,"score test (asymptotic)",-0.125,0.125,8,-1
+4,50,"Stukel with fallback",0,0.316227766016838,5,0
+4,100,"GRP",0.11875,0.11875,8,1
+4,100,"chi-square of map",0.125,0.125,8,1
+4,100,"score test (bootstrap)",0,0,8,NA
+4,100,"score test (asymptotic)",0,0,8,NA
+4,100,"Stukel with fallback",0.2,0.2,5,1
+4,500,"GRP",0,0,8,NA
+4,500,"chi-square of map",0,0,8,NA
+4,500,"score test (bootstrap)",0,0,8,NA
+4,500,"score test (asymptotic)",0,0,8,NA
+4,500,"Stukel with fallback",0,0,5,NA

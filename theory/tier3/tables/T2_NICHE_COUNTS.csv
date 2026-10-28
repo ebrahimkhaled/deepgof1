@@ -1,0 +1,5 @@
+"arm","cells","DG_above_2SE","arm_above_2SE","within_2SE"
+"chi-square of map",12,7,2,3
+"GRP",12,9,0,3
+"score test (asymptotic)",12,0,11,1
+"score test (bootstrap)",12,0,11,1

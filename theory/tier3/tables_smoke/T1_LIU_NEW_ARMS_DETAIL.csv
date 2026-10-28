@@ -1,0 +1,55 @@
+"setting","n","test","power","size","missing","missing_null","missing_alt"
+2,50,"DeepGOF-1 shipped",0.625,0,0,0,0
+2,50,"GRP",NA,NA,0.2,1,0
+2,50,"chi-square of map",0.5,0,0,0,0
+2,50,"score test (bootstrap)",0.5,0.5,0,0,0
+2,50,"score test (asymptotic)",0.375,0.5,0,0,0
+2,50,"Stukel with fallback",0.4,0,0.3,0,0.375
+2,100,"DeepGOF-1 shipped",0.75,0,0,0,0
+2,100,"GRP",1,0,0.1,0.5,0
+2,100,"chi-square of map",0.625,0,0,0,0
+2,100,"score test (bootstrap)",0.625,0,0,0,0
+2,100,"score test (asymptotic)",0.625,0,0,0,0
+2,100,"Stukel with fallback",0.8,0,0.3,0,0.375
+2,500,"DeepGOF-1 shipped",0.625,0,0,0,0
+2,500,"GRP",1,0,0,0,0
+2,500,"chi-square of map",0.625,0,0,0,0
+2,500,"score test (bootstrap)",1,0,0,0,0
+2,500,"score test (asymptotic)",1,0,0,0,0
+2,500,"Stukel with fallback",0.6,0,0.3,0,0.375
+3,50,"DeepGOF-1 shipped",0.75,0,0,0,0
+3,50,"GRP",0.864285714285714,0,0.1,0,0.125
+3,50,"chi-square of map",0.875,0,0,0,0
+3,50,"score test (bootstrap)",0.625,0,0,0,0
+3,50,"score test (asymptotic)",0.625,0,0,0,0
+3,50,"Stukel with fallback",0.4,0,0.3,0,0.375
+3,100,"DeepGOF-1 shipped",0.625,0,0,0,0
+3,100,"GRP",0.75,0,0,0,0
+3,100,"chi-square of map",0.625,0,0,0,0
+3,100,"score test (bootstrap)",0.875,0,0,0,0
+3,100,"score test (asymptotic)",0.875,0,0,0,0
+3,100,"Stukel with fallback",0.6,0,0.3,0,0.375
+3,500,"DeepGOF-1 shipped",1,0,0,0,0
+3,500,"GRP",0.875,0,0,0,0
+3,500,"chi-square of map",0.875,0,0,0,0
+3,500,"score test (bootstrap)",0.875,0,0,0,0
+3,500,"score test (asymptotic)",0.875,0,0,0,0
+3,500,"Stukel with fallback",0.8,0,0.3,0,0.375
+4,50,"DeepGOF-1 shipped",0.75,0,0,0,0
+4,50,"GRP",0.875,0,0,0,0
+4,50,"chi-square of map",0.25,0,0,0,0
+4,50,"score test (bootstrap)",0.875,0,0,0,0
+4,50,"score test (asymptotic)",0.875,0,0,0,0
+4,50,"Stukel with fallback",0.6,0,0.3,0,0.375
+4,100,"DeepGOF-1 shipped",1,0,0,0,0
+4,100,"GRP",0.88125,0,0,0,0
+4,100,"chi-square of map",0.875,0,0,0,0
+4,100,"score test (bootstrap)",1,0,0,0,0
+4,100,"score test (asymptotic)",1,0,0,0,0
+4,100,"Stukel with fallback",0.8,0,0.3,0,0.375
+4,500,"DeepGOF-1 shipped",1,0,0,0,0
+4,500,"GRP",1,0,0,0,0
+4,500,"chi-square of map",1,0,0,0,0
+4,500,"score test (bootstrap)",1,0,0,0,0
+4,500,"score test (asymptotic)",1,0,0,0,0
+4,500,"Stukel with fallback",1,0,0.3,0,0.375

@@ -1,0 +1,274 @@
+"family","design","cell","n","net","variant","power","size"
+"interaction","liu","S3 n=50",50,"distributed","distributed",0.106,0.055
+"interaction","liu","S3 n=50",50,"Control_s1","Control",0.1215,0.047
+"interaction","liu","S3 n=50",50,"Control_s2","Control",0.113642857142857,0.053
+"interaction","liu","S3 n=50",50,"Control_s3","Control",0.075,0.065
+"interaction","liu","S3 n=50",50,"NoInter_s1","NoInter",0.11225,0.048
+"interaction","liu","S3 n=50",50,"NoInter_s2","NoInter",0.0995,0.06
+"interaction","liu","S3 n=50",50,"NoInter_s3","NoInter",0.059,0.063
+"interaction","liu","S3 n=50",50,"NoQuad_s1","NoQuad",0.118,0.05
+"interaction","liu","S3 n=50",50,"NoQuad_s2","NoQuad",0.131833333333333,0.048
+"interaction","liu","S3 n=50",50,"NoQuad_s3","NoQuad",0.0461,0.068
+"interaction","liu","S3 n=50",50,"NoQuadStrict_s1","NoQuadStrict",0.1085,0.046
+"interaction","liu","S3 n=50",50,"NoQuadStrict_s2","NoQuadStrict",0.100875,0.062
+"interaction","liu","S3 n=50",50,"NoQuadStrict_s3","NoQuadStrict",0.0483,0.066
+"interaction","liu","S3 n=100",100,"distributed","distributed",0.133277777777778,0.062
+"interaction","liu","S3 n=100",100,"Control_s1","Control",0.141,0.053
+"interaction","liu","S3 n=100",100,"Control_s2","Control",0.1309,0.049
+"interaction","liu","S3 n=100",100,"Control_s3","Control",0.1125,0.054
+"interaction","liu","S3 n=100",100,"NoInter_s1","NoInter",0.1115,0.056
+"interaction","liu","S3 n=100",100,"NoInter_s2","NoInter",0.112666666666667,0.058
+"interaction","liu","S3 n=100",100,"NoInter_s3","NoInter",0.0592,0.056
+"interaction","liu","S3 n=100",100,"NoQuad_s1","NoQuad",0.1365,0.05
+"interaction","liu","S3 n=100",100,"NoQuad_s2","NoQuad",0.15525,0.053
+"interaction","liu","S3 n=100",100,"NoQuad_s3","NoQuad",0.0597857142857143,0.058
+"interaction","liu","S3 n=100",100,"NoQuadStrict_s1","NoQuadStrict",0.0974090909090909,0.054
+"interaction","liu","S3 n=100",100,"NoQuadStrict_s2","NoQuadStrict",0.1107,0.059
+"interaction","liu","S3 n=100",100,"NoQuadStrict_s3","NoQuadStrict",0.07375,0.052
+"interaction","liu","S3 n=500",500,"distributed","distributed",0.543,0.051
+"interaction","liu","S3 n=500",500,"Control_s1","Control",0.4675,0.059
+"interaction","liu","S3 n=500",500,"Control_s2","Control",0.4404,0.048
+"interaction","liu","S3 n=500",500,"Control_s3","Control",0.3553,0.055
+"interaction","liu","S3 n=500",500,"NoInter_s1","NoInter",0.380875,0.053
+"interaction","liu","S3 n=500",500,"NoInter_s2","NoInter",0.3065,0.055
+"interaction","liu","S3 n=500",500,"NoInter_s3","NoInter",0.114625,0.053
+"interaction","liu","S3 n=500",500,"NoQuad_s1","NoQuad",0.4575,0.05
+"interaction","liu","S3 n=500",500,"NoQuad_s2","NoQuad",0.4403,0.058
+"interaction","liu","S3 n=500",500,"NoQuad_s3","NoQuad",0.2061,0.06
+"interaction","liu","S3 n=500",500,"NoQuadStrict_s1","NoQuadStrict",0.424,0.043
+"interaction","liu","S3 n=500",500,"NoQuadStrict_s2","NoQuadStrict",0.398928571428571,0.055
+"interaction","liu","S3 n=500",500,"NoQuadStrict_s3","NoQuadStrict",0.354,0.062
+"interaction","liu","S4 n=50",50,"distributed","distributed",0.4985,0.05
+"interaction","liu","S4 n=50",50,"Control_s1","Control",0.2294,0.053
+"interaction","liu","S4 n=50",50,"Control_s2","Control",0.171166666666667,0.059
+"interaction","liu","S4 n=50",50,"Control_s3","Control",0.3991875,0.064
+"interaction","liu","S4 n=50",50,"NoInter_s1","NoInter",0.1031875,0.043
+"interaction","liu","S4 n=50",50,"NoInter_s2","NoInter",0.06635,0.055
+"interaction","liu","S4 n=50",50,"NoInter_s3","NoInter",0.06825,0.053
+"interaction","liu","S4 n=50",50,"NoQuad_s1","NoQuad",0.198,0.05
+"interaction","liu","S4 n=50",50,"NoQuad_s2","NoQuad",0.177125,0.054
+"interaction","liu","S4 n=50",50,"NoQuad_s3","NoQuad",0.1787,0.057
+"interaction","liu","S4 n=50",50,"NoQuadStrict_s1","NoQuadStrict",0.155214285714286,0.056
+"interaction","liu","S4 n=50",50,"NoQuadStrict_s2","NoQuadStrict",0.188642857142857,0.07
+"interaction","liu","S4 n=50",50,"NoQuadStrict_s3","NoQuadStrict",0.3995,0.044
+"interaction","liu","S4 n=100",100,"distributed","distributed",0.77975,0.043
+"interaction","liu","S4 n=100",100,"Control_s1","Control",0.597,0.041
+"interaction","liu","S4 n=100",100,"Control_s2","Control",0.487428571428571,0.056
+"interaction","liu","S4 n=100",100,"Control_s3","Control",0.7395,0.05
+"interaction","liu","S4 n=100",100,"NoInter_s1","NoInter",0.196928571428571,0.055
+"interaction","liu","S4 n=100",100,"NoInter_s2","NoInter",0.1445,0.05
+"interaction","liu","S4 n=100",100,"NoInter_s3","NoInter",0.1815,0.048
+"interaction","liu","S4 n=100",100,"NoQuad_s1","NoQuad",0.48175,0.052
+"interaction","liu","S4 n=100",100,"NoQuad_s2","NoQuad",0.447071428571429,0.055
+"interaction","liu","S4 n=100",100,"NoQuad_s3","NoQuad",0.512,0.05
+"interaction","liu","S4 n=100",100,"NoQuadStrict_s1","NoQuadStrict",0.4065,0.05
+"interaction","liu","S4 n=100",100,"NoQuadStrict_s2","NoQuadStrict",0.571,0.047
+"interaction","liu","S4 n=100",100,"NoQuadStrict_s3","NoQuadStrict",0.733571428571429,0.042
+"interaction","liu","S4 n=500",500,"distributed","distributed",0.9958,0.052
+"interaction","liu","S4 n=500",500,"Control_s1","Control",0.961375,0.053
+"interaction","liu","S4 n=500",500,"Control_s2","Control",0.973863636363636,0.057
+"interaction","liu","S4 n=500",500,"Control_s3","Control",0.995625,0.047
+"interaction","liu","S4 n=500",500,"NoInter_s1","NoInter",0.82325,0.057
+"interaction","liu","S4 n=500",500,"NoInter_s2","NoInter",0.843166666666667,0.053
+"interaction","liu","S4 n=500",500,"NoInter_s3","NoInter",0.8537,0.047
+"interaction","liu","S4 n=500",500,"NoQuad_s1","NoQuad",0.948375,0.053
+"interaction","liu","S4 n=500",500,"NoQuad_s2","NoQuad",0.9635,0.05
+"interaction","liu","S4 n=500",500,"NoQuad_s3","NoQuad",0.9485,0.052
+"interaction","liu","S4 n=500",500,"NoQuadStrict_s1","NoQuadStrict",0.919,0.053
+"interaction","liu","S4 n=500",500,"NoQuadStrict_s2","NoQuadStrict",0.9736875,0.049
+"interaction","liu","S4 n=500",500,"NoQuadStrict_s3","NoQuadStrict",0.99,0.04
+"interaction","niche","inter_C0.3_n200",200,"distributed","distributed",0.079,0.047
+"interaction","niche","inter_C0.3_n200",200,"Control_s1","Control",0.0706666666666667,0.0515
+"interaction","niche","inter_C0.3_n200",200,"Control_s2","Control",0.0748461538461539,0.0455
+"interaction","niche","inter_C0.3_n200",200,"Control_s3","Control",0.104222222222222,0.0505
+"interaction","niche","inter_C0.3_n200",200,"NoInter_s1","NoInter",0.0687692307692308,0.0535
+"interaction","niche","inter_C0.3_n200",200,"NoInter_s2","NoInter",0.048,0.052
+"interaction","niche","inter_C0.3_n200",200,"NoInter_s3","NoInter",0.0528,0.056
+"interaction","niche","inter_C0.3_n200",200,"NoQuad_s1","NoQuad",0.0616666666666667,0.051
+"interaction","niche","inter_C0.3_n200",200,"NoQuad_s2","NoQuad",0.0584615384615385,0.0565
+"interaction","niche","inter_C0.3_n200",200,"NoQuad_s3","NoQuad",0.0642857142857143,0.0495
+"interaction","niche","inter_C0.3_n200",200,"NoQuadStrict_s1","NoQuadStrict",0.0675,0.047
+"interaction","niche","inter_C0.3_n200",200,"NoQuadStrict_s2","NoQuadStrict",0.0628181818181818,0.059
+"interaction","niche","inter_C0.3_n200",200,"NoQuadStrict_s3","NoQuadStrict",0.0746,0.0485
+"interaction","niche","inter_C0.5_n200",200,"distributed","distributed",0.165,0.047
+"interaction","niche","inter_C0.5_n200",200,"Control_s1","Control",0.12,0.0515
+"interaction","niche","inter_C0.5_n200",200,"Control_s2","Control",0.132384615384615,0.0455
+"interaction","niche","inter_C0.5_n200",200,"Control_s3","Control",0.161111111111111,0.0505
+"interaction","niche","inter_C0.5_n200",200,"NoInter_s1","NoInter",0.0768461538461538,0.0535
+"interaction","niche","inter_C0.5_n200",200,"NoInter_s2","NoInter",0.059,0.052
+"interaction","niche","inter_C0.5_n200",200,"NoInter_s3","NoInter",0.0516,0.056
+"interaction","niche","inter_C0.5_n200",200,"NoQuad_s1","NoQuad",0.1038,0.051
+"interaction","niche","inter_C0.5_n200",200,"NoQuad_s2","NoQuad",0.105923076923077,0.0565
+"interaction","niche","inter_C0.5_n200",200,"NoQuad_s3","NoQuad",0.0928571428571429,0.0495
+"interaction","niche","inter_C0.5_n200",200,"NoQuadStrict_s1","NoQuadStrict",0.10475,0.047
+"interaction","niche","inter_C0.5_n200",200,"NoQuadStrict_s2","NoQuadStrict",0.102818181818182,0.059
+"interaction","niche","inter_C0.5_n200",200,"NoQuadStrict_s3","NoQuadStrict",0.1246,0.0485
+"interaction","niche","inter_C0.8_n200",200,"distributed","distributed",0.351,0.047
+"interaction","niche","inter_C0.8_n200",200,"Control_s1","Control",0.200666666666667,0.0515
+"interaction","niche","inter_C0.8_n200",200,"Control_s2","Control",0.254769230769231,0.0455
+"interaction","niche","inter_C0.8_n200",200,"Control_s3","Control",0.344222222222222,0.0505
+"interaction","niche","inter_C0.8_n200",200,"NoInter_s1","NoInter",0.103,0.0535
+"interaction","niche","inter_C0.8_n200",200,"NoInter_s2","NoInter",0.105,0.052
+"interaction","niche","inter_C0.8_n200",200,"NoInter_s3","NoInter",0.0604,0.056
+"interaction","niche","inter_C0.8_n200",200,"NoQuad_s1","NoQuad",0.159733333333333,0.051
+"interaction","niche","inter_C0.8_n200",200,"NoQuad_s2","NoQuad",0.21,0.0565
+"interaction","niche","inter_C0.8_n200",200,"NoQuad_s3","NoQuad",0.145714285714286,0.0495
+"interaction","niche","inter_C0.8_n200",200,"NoQuadStrict_s1","NoQuadStrict",0.1445,0.047
+"interaction","niche","inter_C0.8_n200",200,"NoQuadStrict_s2","NoQuadStrict",0.210454545454545,0.059
+"interaction","niche","inter_C0.8_n200",200,"NoQuadStrict_s3","NoQuadStrict",0.2688,0.0485
+"interaction","niche","inter_C0.3_n500",500,"distributed","distributed",0.152,0.05
+"interaction","niche","inter_C0.3_n500",500,"Control_s1","Control",0.1188125,0.0555
+"interaction","niche","inter_C0.3_n500",500,"Control_s2","Control",0.14,0.0485
+"interaction","niche","inter_C0.3_n500",500,"Control_s3","Control",0.149125,0.0535
+"interaction","niche","inter_C0.3_n500",500,"NoInter_s1","NoInter",0.0758461538461539,0.0585
+"interaction","niche","inter_C0.3_n500",500,"NoInter_s2","NoInter",0.0664166666666667,0.0575
+"interaction","niche","inter_C0.3_n500",500,"NoInter_s3","NoInter",0.0618571428571429,0.049
+"interaction","niche","inter_C0.3_n500",500,"NoQuad_s1","NoQuad",0.0865714285714286,0.056
+"interaction","niche","inter_C0.3_n500",500,"NoQuad_s2","NoQuad",0.136285714285714,0.053
+"interaction","niche","inter_C0.3_n500",500,"NoQuad_s3","NoQuad",0.0820714285714286,0.0475
+"interaction","niche","inter_C0.3_n500",500,"NoQuadStrict_s1","NoQuadStrict",0.0834,0.0515
+"interaction","niche","inter_C0.3_n500",500,"NoQuadStrict_s2","NoQuadStrict",0.143941176470588,0.055
+"interaction","niche","inter_C0.3_n500",500,"NoQuadStrict_s3","NoQuadStrict",0.118181818181818,0.0585
+"interaction","niche","inter_C0.5_n500",500,"distributed","distributed",0.375,0.05
+"interaction","niche","inter_C0.5_n500",500,"Control_s1","Control",0.25125,0.0555
+"interaction","niche","inter_C0.5_n500",500,"Control_s2","Control",0.297,0.0485
+"interaction","niche","inter_C0.5_n500",500,"Control_s3","Control",0.389625,0.0535
+"interaction","niche","inter_C0.5_n500",500,"NoInter_s1","NoInter",0.110769230769231,0.0585
+"interaction","niche","inter_C0.5_n500",500,"NoInter_s2","NoInter",0.115333333333333,0.0575
+"interaction","niche","inter_C0.5_n500",500,"NoInter_s3","NoInter",0.0878571428571429,0.049
+"interaction","niche","inter_C0.5_n500",500,"NoQuad_s1","NoQuad",0.192142857142857,0.056
+"interaction","niche","inter_C0.5_n500",500,"NoQuad_s2","NoQuad",0.282,0.053
+"interaction","niche","inter_C0.5_n500",500,"NoQuad_s3","NoQuad",0.189714285714286,0.0475
+"interaction","niche","inter_C0.5_n500",500,"NoQuadStrict_s1","NoQuadStrict",0.1664,0.0515
+"interaction","niche","inter_C0.5_n500",500,"NoQuadStrict_s2","NoQuadStrict",0.293647058823529,0.055
+"interaction","niche","inter_C0.5_n500",500,"NoQuadStrict_s3","NoQuadStrict",0.28,0.0585
+"interaction","niche","inter_C0.8_n500",500,"distributed","distributed",0.826,0.05
+"interaction","niche","inter_C0.8_n500",500,"Control_s1","Control",0.6308125,0.0555
+"interaction","niche","inter_C0.8_n500",500,"Control_s2","Control",0.657333333333333,0.0485
+"interaction","niche","inter_C0.8_n500",500,"Control_s3","Control",0.767625,0.0535
+"interaction","niche","inter_C0.8_n500",500,"NoInter_s1","NoInter",0.275076923076923,0.0585
+"interaction","niche","inter_C0.8_n500",500,"NoInter_s2","NoInter",0.277583333333333,0.0575
+"interaction","niche","inter_C0.8_n500",500,"NoInter_s3","NoInter",0.170857142857143,0.049
+"interaction","niche","inter_C0.8_n500",500,"NoQuad_s1","NoQuad",0.502,0.056
+"interaction","niche","inter_C0.8_n500",500,"NoQuad_s2","NoQuad",0.655285714285714,0.053
+"interaction","niche","inter_C0.8_n500",500,"NoQuad_s3","NoQuad",0.441928571428571,0.0475
+"interaction","niche","inter_C0.8_n500",500,"NoQuadStrict_s1","NoQuadStrict",0.4174,0.0515
+"interaction","niche","inter_C0.8_n500",500,"NoQuadStrict_s2","NoQuadStrict",0.715176470588235,0.055
+"interaction","niche","inter_C0.8_n500",500,"NoQuadStrict_s3","NoQuadStrict",0.627363636363636,0.0585
+"quadratic","liu","S2 n=50",50,"distributed","distributed",0.410583333333333,0.055
+"quadratic","liu","S2 n=50",50,"Control_s1","Control",0.414083333333333,0.061
+"quadratic","liu","S2 n=50",50,"Control_s2","Control",0.438875,0.056
+"quadratic","liu","S2 n=50",50,"Control_s3","Control",0.3919,0.07
+"quadratic","liu","S2 n=50",50,"NoInter_s1","NoInter",0.384142857142857,0.055
+"quadratic","liu","S2 n=50",50,"NoInter_s2","NoInter",0.439,0.061
+"quadratic","liu","S2 n=50",50,"NoInter_s3","NoInter",0.437,0.056
+"quadratic","liu","S2 n=50",50,"NoQuad_s1","NoQuad",0.388222222222222,0.058
+"quadratic","liu","S2 n=50",50,"NoQuad_s2","NoQuad",0.422,0.057
+"quadratic","liu","S2 n=50",50,"NoQuad_s3","NoQuad",0.338,0.073
+"quadratic","liu","S2 n=50",50,"NoQuadStrict_s1","NoQuadStrict",0.3541875,0.047
+"quadratic","liu","S2 n=50",50,"NoQuadStrict_s2","NoQuadStrict",0.353,0.056
+"quadratic","liu","S2 n=50",50,"NoQuadStrict_s3","NoQuadStrict",0.25415,0.062
+"quadratic","liu","S2 n=100",100,"distributed","distributed",0.539714285714286,0.045
+"quadratic","liu","S2 n=100",100,"Control_s1","Control",0.541,0.045
+"quadratic","liu","S2 n=100",100,"Control_s2","Control",0.5521,0.048
+"quadratic","liu","S2 n=100",100,"Control_s3","Control",0.5361,0.048
+"quadratic","liu","S2 n=100",100,"NoInter_s1","NoInter",0.5276875,0.043
+"quadratic","liu","S2 n=100",100,"NoInter_s2","NoInter",0.5625,0.045
+"quadratic","liu","S2 n=100",100,"NoInter_s3","NoInter",0.562,0.049
+"quadratic","liu","S2 n=100",100,"NoQuad_s1","NoQuad",0.544388888888889,0.037
+"quadratic","liu","S2 n=100",100,"NoQuad_s2","NoQuad",0.55,0.038
+"quadratic","liu","S2 n=100",100,"NoQuad_s3","NoQuad",0.522428571428571,0.053
+"quadratic","liu","S2 n=100",100,"NoQuadStrict_s1","NoQuadStrict",0.507944444444444,0.039
+"quadratic","liu","S2 n=100",100,"NoQuadStrict_s2","NoQuadStrict",0.5199,0.047
+"quadratic","liu","S2 n=100",100,"NoQuadStrict_s3","NoQuadStrict",0.4755,0.051
+"quadratic","liu","S2 n=500",500,"distributed","distributed",0.701071428571429,0.06
+"quadratic","liu","S2 n=500",500,"Control_s1","Control",0.704833333333333,0.052
+"quadratic","liu","S2 n=500",500,"Control_s2","Control",0.703909090909091,0.055
+"quadratic","liu","S2 n=500",500,"Control_s3","Control",0.7051,0.049
+"quadratic","liu","S2 n=500",500,"NoInter_s1","NoInter",0.711666666666667,0.044
+"quadratic","liu","S2 n=500",500,"NoInter_s2","NoInter",0.7085,0.051
+"quadratic","liu","S2 n=500",500,"NoInter_s3","NoInter",0.702625,0.056
+"quadratic","liu","S2 n=500",500,"NoQuad_s1","NoQuad",0.7045,0.052
+"quadratic","liu","S2 n=500",500,"NoQuad_s2","NoQuad",0.705375,0.053
+"quadratic","liu","S2 n=500",500,"NoQuad_s3","NoQuad",0.6955,0.056
+"quadratic","liu","S2 n=500",500,"NoQuadStrict_s1","NoQuadStrict",0.696409090909091,0.057
+"quadratic","liu","S2 n=500",500,"NoQuadStrict_s2","NoQuadStrict",0.7104,0.046
+"quadratic","liu","S2 n=500",500,"NoQuadStrict_s3","NoQuadStrict",0.678375,0.055
+"quadratic","niche","quad_C0.3_n200",200,"distributed","distributed",0.142,0.047
+"quadratic","niche","quad_C0.3_n200",200,"Control_s1","Control",0.147666666666667,0.0515
+"quadratic","niche","quad_C0.3_n200",200,"Control_s2","Control",0.149153846153846,0.0455
+"quadratic","niche","quad_C0.3_n200",200,"Control_s3","Control",0.140666666666667,0.0505
+"quadratic","niche","quad_C0.3_n200",200,"NoInter_s1","NoInter",0.104692307692308,0.0535
+"quadratic","niche","quad_C0.3_n200",200,"NoInter_s2","NoInter",0.168,0.052
+"quadratic","niche","quad_C0.3_n200",200,"NoInter_s3","NoInter",0.1374,0.056
+"quadratic","niche","quad_C0.3_n200",200,"NoQuad_s1","NoQuad",0.1348,0.051
+"quadratic","niche","quad_C0.3_n200",200,"NoQuad_s2","NoQuad",0.127,0.0565
+"quadratic","niche","quad_C0.3_n200",200,"NoQuad_s3","NoQuad",0.129571428571429,0.0495
+"quadratic","niche","quad_C0.3_n200",200,"NoQuadStrict_s1","NoQuadStrict",0.117,0.047
+"quadratic","niche","quad_C0.3_n200",200,"NoQuadStrict_s2","NoQuadStrict",0.0833636363636364,0.059
+"quadratic","niche","quad_C0.3_n200",200,"NoQuadStrict_s3","NoQuadStrict",0.0992,0.0485
+"quadratic","niche","quad_C0.5_n200",200,"distributed","distributed",0.397,0.047
+"quadratic","niche","quad_C0.5_n200",200,"Control_s1","Control",0.359333333333333,0.0515
+"quadratic","niche","quad_C0.5_n200",200,"Control_s2","Control",0.456230769230769,0.0455
+"quadratic","niche","quad_C0.5_n200",200,"Control_s3","Control",0.378555555555556,0.0505
+"quadratic","niche","quad_C0.5_n200",200,"NoInter_s1","NoInter",0.320461538461538,0.0535
+"quadratic","niche","quad_C0.5_n200",200,"NoInter_s2","NoInter",0.422,0.052
+"quadratic","niche","quad_C0.5_n200",200,"NoInter_s3","NoInter",0.394,0.056
+"quadratic","niche","quad_C0.5_n200",200,"NoQuad_s1","NoQuad",0.318866666666667,0.051
+"quadratic","niche","quad_C0.5_n200",200,"NoQuad_s2","NoQuad",0.361076923076923,0.0565
+"quadratic","niche","quad_C0.5_n200",200,"NoQuad_s3","NoQuad",0.308714285714286,0.0495
+"quadratic","niche","quad_C0.5_n200",200,"NoQuadStrict_s1","NoQuadStrict",0.25225,0.047
+"quadratic","niche","quad_C0.5_n200",200,"NoQuadStrict_s2","NoQuadStrict",0.242727272727273,0.059
+"quadratic","niche","quad_C0.5_n200",200,"NoQuadStrict_s3","NoQuadStrict",0.199,0.0485
+"quadratic","niche","quad_C0.8_n200",200,"distributed","distributed",0.782,0.047
+"quadratic","niche","quad_C0.8_n200",200,"Control_s1","Control",0.756,0.0515
+"quadratic","niche","quad_C0.8_n200",200,"Control_s2","Control",0.831692307692308,0.0455
+"quadratic","niche","quad_C0.8_n200",200,"Control_s3","Control",0.739222222222222,0.0505
+"quadratic","niche","quad_C0.8_n200",200,"NoInter_s1","NoInter",0.709076923076923,0.0535
+"quadratic","niche","quad_C0.8_n200",200,"NoInter_s2","NoInter",0.775,0.052
+"quadratic","niche","quad_C0.8_n200",200,"NoInter_s3","NoInter",0.7584,0.056
+"quadratic","niche","quad_C0.8_n200",200,"NoQuad_s1","NoQuad",0.711866666666667,0.051
+"quadratic","niche","quad_C0.8_n200",200,"NoQuad_s2","NoQuad",0.716461538461538,0.0565
+"quadratic","niche","quad_C0.8_n200",200,"NoQuad_s3","NoQuad",0.639714285714286,0.0495
+"quadratic","niche","quad_C0.8_n200",200,"NoQuadStrict_s1","NoQuadStrict",0.57875,0.047
+"quadratic","niche","quad_C0.8_n200",200,"NoQuadStrict_s2","NoQuadStrict",0.580818181818182,0.059
+"quadratic","niche","quad_C0.8_n200",200,"NoQuadStrict_s3","NoQuadStrict",0.428,0.0485
+"quadratic","niche","quad_C0.3_n500",500,"distributed","distributed",0.357,0.05
+"quadratic","niche","quad_C0.3_n500",500,"Control_s1","Control",0.359125,0.0555
+"quadratic","niche","quad_C0.3_n500",500,"Control_s2","Control",0.422666666666667,0.0485
+"quadratic","niche","quad_C0.3_n500",500,"Control_s3","Control",0.32125,0.0535
+"quadratic","niche","quad_C0.3_n500",500,"NoInter_s1","NoInter",0.270615384615385,0.0585
+"quadratic","niche","quad_C0.3_n500",500,"NoInter_s2","NoInter",0.411333333333333,0.0575
+"quadratic","niche","quad_C0.3_n500",500,"NoInter_s3","NoInter",0.357571428571429,0.049
+"quadratic","niche","quad_C0.3_n500",500,"NoQuad_s1","NoQuad",0.304571428571429,0.056
+"quadratic","niche","quad_C0.3_n500",500,"NoQuad_s2","NoQuad",0.367571428571429,0.053
+"quadratic","niche","quad_C0.3_n500",500,"NoQuad_s3","NoQuad",0.266357142857143,0.0475
+"quadratic","niche","quad_C0.3_n500",500,"NoQuadStrict_s1","NoQuadStrict",0.238,0.0515
+"quadratic","niche","quad_C0.3_n500",500,"NoQuadStrict_s2","NoQuadStrict",0.259823529411765,0.055
+"quadratic","niche","quad_C0.3_n500",500,"NoQuadStrict_s3","NoQuadStrict",0.164636363636364,0.0585
+"quadratic","niche","quad_C0.5_n500",500,"distributed","distributed",0.81,0.05
+"quadratic","niche","quad_C0.5_n500",500,"Control_s1","Control",0.800125,0.0555
+"quadratic","niche","quad_C0.5_n500",500,"Control_s2","Control",0.860666666666667,0.0485
+"quadratic","niche","quad_C0.5_n500",500,"Control_s3","Control",0.77525,0.0535
+"quadratic","niche","quad_C0.5_n500",500,"NoInter_s1","NoInter",0.744461538461539,0.0585
+"quadratic","niche","quad_C0.5_n500",500,"NoInter_s2","NoInter",0.835333333333333,0.0575
+"quadratic","niche","quad_C0.5_n500",500,"NoInter_s3","NoInter",0.824714285714286,0.049
+"quadratic","niche","quad_C0.5_n500",500,"NoQuad_s1","NoQuad",0.759142857142857,0.056
+"quadratic","niche","quad_C0.5_n500",500,"NoQuad_s2","NoQuad",0.791285714285714,0.053
+"quadratic","niche","quad_C0.5_n500",500,"NoQuad_s3","NoQuad",0.684642857142857,0.0475
+"quadratic","niche","quad_C0.5_n500",500,"NoQuadStrict_s1","NoQuadStrict",0.6366,0.0515
+"quadratic","niche","quad_C0.5_n500",500,"NoQuadStrict_s2","NoQuadStrict",0.669882352941176,0.055
+"quadratic","niche","quad_C0.5_n500",500,"NoQuadStrict_s3","NoQuadStrict",0.448909090909091,0.0585
+"quadratic","niche","quad_C0.8_n500",500,"distributed","distributed",0.999,0.05
+"quadratic","niche","quad_C0.8_n500",500,"Control_s1","Control",0.99325,0.0555
+"quadratic","niche","quad_C0.8_n500",500,"Control_s2","Control",1,0.0485
+"quadratic","niche","quad_C0.8_n500",500,"Control_s3","Control",0.995125,0.0535
+"quadratic","niche","quad_C0.8_n500",500,"NoInter_s1","NoInter",0.986923076923077,0.0585
+"quadratic","niche","quad_C0.8_n500",500,"NoInter_s2","NoInter",0.998,0.0575
+"quadratic","niche","quad_C0.8_n500",500,"NoInter_s3","NoInter",0.997,0.049
+"quadratic","niche","quad_C0.8_n500",500,"NoQuad_s1","NoQuad",0.990142857142857,0.056
+"quadratic","niche","quad_C0.8_n500",500,"NoQuad_s2","NoQuad",0.995,0.053
+"quadratic","niche","quad_C0.8_n500",500,"NoQuad_s3","NoQuad",0.981,0.0475
+"quadratic","niche","quad_C0.8_n500",500,"NoQuadStrict_s1","NoQuadStrict",0.9674,0.0515
+"quadratic","niche","quad_C0.8_n500",500,"NoQuadStrict_s2","NoQuadStrict",0.965823529411765,0.055
+"quadratic","niche","quad_C0.8_n500",500,"NoQuadStrict_s3","NoQuadStrict",0.884,0.0585

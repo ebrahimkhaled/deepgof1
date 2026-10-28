@@ -1,0 +1,103 @@
+"arm","design","shape","n","settings","DG_ahead","arm_ahead","within","mean_dg_minus_arm"
+"chi-square of map","all","all","all",48,31,10,7,0.0801148313492064
+"GRP","all","all","all",48,16,17,15,0.000579761904761917
+"HL","all","all","all",48,43,0,5,0.251204761904762
+"score test (asymptotic)","all","all","all",48,18,23,7,0.0283714285714286
+"score test (bootstrap)","all","all","all",48,18,23,7,0.0336074945887446
+"Stukel (fallback)","all","all","all",48,33,12,3,0.124954761904762
+"chi-square of map","D10","all","all",24,17,5,2,0.0883513888888889
+"GRP","D10","all","all",24,16,2,6,0.0716666666666667
+"HL","D10","all","all",24,23,0,1,0.28325
+"score test (asymptotic)","D10","all","all",24,9,12,3,0.0226666666666667
+"score test (bootstrap)","D10","all","all",24,9,12,3,0.0277608225108225
+"Stukel (fallback)","D10","all","all",24,17,6,1,0.152666666666667
+"chi-square of map","D2","all","all",24,14,5,5,0.0718782738095238
+"GRP","D2","all","all",24,0,15,9,-0.0705071428571429
+"HL","D2","all","all",24,20,0,4,0.219159523809524
+"score test (asymptotic)","D2","all","all",24,9,11,4,0.0340761904761905
+"score test (bootstrap)","D2","all","all",24,9,11,4,0.0394541666666667
+"Stukel (fallback)","D2","all","all",24,16,6,2,0.0972428571428571
+"chi-square of map","all","bump","all",12,9,0,3,0.121560317460317
+"GRP","all","bump","all",12,6,5,1,0.00707142857142858
+"HL","all","bump","all",12,12,0,0,0.324404761904762
+"score test (asymptotic)","all","bump","all",12,6,0,6,0.0685714285714286
+"score test (bootstrap)","all","bump","all",12,6,0,6,0.0770606060606061
+"Stukel (fallback)","all","bump","all",12,10,0,2,0.221738095238095
+"chi-square of map","all","corner","all",12,1,10,1,-0.126739087301587
+"GRP","all","corner","all",12,4,4,4,0.0146761904761905
+"HL","all","corner","all",12,7,0,5,0.0641761904761905
+"score test (asymptotic)","all","corner","all",12,0,12,0,-0.143157142857143
+"score test (bootstrap)","all","corner","all",12,0,12,0,-0.141889826839827
+"Stukel (fallback)","all","corner","all",12,0,12,0,-0.170657142857143
+"chi-square of map","all","oscillation","all",12,12,0,0,0.246439087301587
+"GRP","all","oscillation","all",12,6,1,5,0.0399238095238095
+"HL","all","oscillation","all",12,12,0,0,0.24392380952381
+"score test (asymptotic)","all","oscillation","all",12,12,0,0,0.28992380952381
+"score test (bootstrap)","all","oscillation","all",12,12,0,0,0.293422186147186
+"Stukel (fallback)","all","oscillation","all",12,11,0,1,0.17192380952381
+"chi-square of map","all","threshold","all",12,9,0,3,0.0791990079365079
+"GRP","all","threshold","all",12,0,7,5,-0.0593523809523809
+"HL","all","threshold","all",12,12,0,0,0.372314285714286
+"score test (asymptotic)","all","threshold","all",12,0,11,1,-0.101852380952381
+"score test (bootstrap)","all","threshold","all",12,0,11,1,-0.094162987012987
+"Stukel (fallback)","all","threshold","all",12,12,0,0,0.276814285714286
+"chi-square of map","D10","bump","all",6,5,0,1,0.126644444444444
+"GRP","D10","bump","all",6,6,0,0,0.0803333333333333
+"HL","D10","bump","all",6,6,0,0,0.340666666666667
+"score test (asymptotic)","D10","bump","all",6,3,0,3,0.0606666666666667
+"score test (bootstrap)","D10","bump","all",6,3,0,3,0.0706450216450216
+"Stukel (fallback)","D10","bump","all",6,5,0,1,0.254666666666667
+"chi-square of map","D2","bump","all",6,4,0,2,0.11647619047619
+"GRP","D2","bump","all",6,0,5,1,-0.0661904761904762
+"HL","D2","bump","all",6,6,0,0,0.308142857142857
+"score test (asymptotic)","D2","bump","all",6,3,0,3,0.0764761904761905
+"score test (bootstrap)","D2","bump","all",6,3,0,3,0.0834761904761905
+"Stukel (fallback)","D2","bump","all",6,5,0,1,0.188809523809524
+"chi-square of map","D10","corner","all",6,1,5,0,-0.118122222222222
+"GRP","D10","corner","all",6,4,0,2,0.107
+"HL","D10","corner","all",6,5,0,1,0.103666666666667
+"score test (asymptotic)","D10","corner","all",6,0,6,0,-0.147333333333333
+"score test (bootstrap)","D10","corner","all",6,0,6,0,-0.147298701298701
+"Stukel (fallback)","D10","corner","all",6,0,6,0,-0.166333333333333
+"chi-square of map","D2","corner","all",6,0,5,1,-0.135355952380952
+"GRP","D2","corner","all",6,0,4,2,-0.077647619047619
+"HL","D2","corner","all",6,2,0,4,0.0246857142857143
+"score test (asymptotic)","D2","corner","all",6,0,6,0,-0.138980952380952
+"score test (bootstrap)","D2","corner","all",6,0,6,0,-0.136480952380952
+"Stukel (fallback)","D2","corner","all",6,0,6,0,-0.174980952380952
+"chi-square of map","D10","oscillation","all",6,6,0,0,0.258738888888889
+"GRP","D10","oscillation","all",6,6,0,0,0.107666666666667
+"HL","D10","oscillation","all",6,6,0,0,0.325666666666667
+"score test (asymptotic)","D10","oscillation","all",6,6,0,0,0.294
+"score test (bootstrap)","D10","oscillation","all",6,6,0,0,0.295484848484849
+"Stukel (fallback)","D10","oscillation","all",6,6,0,0,0.251333333333333
+"chi-square of map","D2","oscillation","all",6,6,0,0,0.234139285714286
+"GRP","D2","oscillation","all",6,0,1,5,-0.0278190476190476
+"HL","D2","oscillation","all",6,6,0,0,0.162180952380952
+"score test (asymptotic)","D2","oscillation","all",6,6,0,0,0.285847619047619
+"score test (bootstrap)","D2","oscillation","all",6,6,0,0,0.291359523809524
+"Stukel (fallback)","D2","oscillation","all",6,5,0,1,0.0925142857142857
+"chi-square of map","D10","threshold","all",6,5,0,1,0.0861444444444445
+"GRP","D10","threshold","all",6,0,2,4,-0.00833333333333332
+"HL","D10","threshold","all",6,6,0,0,0.363
+"score test (asymptotic)","D10","threshold","all",6,0,6,0,-0.116666666666667
+"score test (bootstrap)","D10","threshold","all",6,0,6,0,-0.107787878787879
+"Stukel (fallback)","D10","threshold","all",6,6,0,0,0.271
+"chi-square of map","D2","threshold","all",6,4,0,2,0.0722535714285714
+"GRP","D2","threshold","all",6,0,5,1,-0.110371428571429
+"HL","D2","threshold","all",6,6,0,0,0.381628571428571
+"score test (asymptotic)","D2","threshold","all",6,0,5,1,-0.0870380952380952
+"score test (bootstrap)","D2","threshold","all",6,0,5,1,-0.0805380952380952
+"Stukel (fallback)","D2","threshold","all",6,6,0,0,0.282628571428571
+"chi-square of map","all","all","200",24,16,5,3,0.0878020833333334
+"GRP","all","all","200",24,8,9,7,-0.0178166666666667
+"HL","all","all","200",24,23,0,1,0.18135
+"score test (asymptotic)","all","all","200",24,7,11,6,-0.01465
+"score test (bootstrap)","all","all","200",24,7,11,6,-0.00918679653679653
+"Stukel (fallback)","all","all","200",24,15,6,3,0.06835
+"chi-square of map","all","all","500",24,15,5,4,0.0724275793650794
+"GRP","all","all","500",24,8,8,8,0.0189761904761905
+"HL","all","all","500",24,20,0,4,0.321059523809524
+"score test (asymptotic)","all","all","500",24,11,12,1,0.0713928571428571
+"score test (bootstrap)","all","all","500",24,11,12,1,0.0764017857142857
+"Stukel (fallback)","all","all","500",24,18,6,0,0.181559523809524

@@ -1,0 +1,3 @@
+Tier3 C | 144000 data sets in 576 chunks | 194 to do | 22 workers | 2026-10-24 03:04:01
+wall 3.8 min | 2026-10-24 03:07:49
+rows on disk: 144000 | status: dropped_one_class 1 ok 143999 | 2026-10-24 03:07:53

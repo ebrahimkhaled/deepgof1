@@ -1,0 +1,55 @@
+"setting","n","test","power","size","missing","missing_null","missing_alt"
+2,50,"DeepGOF-1 shipped",0.410583333333333,0.055,0,0,0
+2,50,"GRP",0.71063829787234,0.0113636363636364,0.314666666666667,0.824,0.06
+2,50,"chi-square of map",0.216125,0.048,0,0,0
+2,50,"score test (bootstrap)",0.540333333333333,0.057,0,0,0
+2,50,"score test (asymptotic)",0.559,0.05,0,0,0
+2,50,"Stukel with fallback",0.2125,0.055,0,0,0
+2,100,"DeepGOF-1 shipped",0.539714285714286,0.045,0,0,0
+2,100,"GRP",0.814407203601801,0.010230179028133,0.073,0.218,5e-04
+2,100,"chi-square of map",0.4829,0.042,0,0,0
+2,100,"score test (bootstrap)",0.6255,0.047,0,0,0
+2,100,"score test (asymptotic)",0.6315,0.049,0,0,0
+2,100,"Stukel with fallback",0.265,0.059,0,0,0
+2,500,"DeepGOF-1 shipped",0.701071428571429,0.06,0,0,0
+2,500,"GRP",0.9805,0.004,0,0,0
+2,500,"chi-square of map",0.688,0.056,0,0,0
+2,500,"score test (bootstrap)",0.70825,0.048,0,0,0
+2,500,"score test (asymptotic)",0.7055,0.05,0,0,0
+2,500,"Stukel with fallback",0.5945,0.046,0,0,0
+3,50,"DeepGOF-1 shipped",0.106,0.055,0,0,0
+3,50,"GRP",0.110119047619048,0.00519031141868512,0.359333333333333,0.422,0.328
+3,50,"chi-square of map",0.196375,0.039,0,0,0
+3,50,"score test (bootstrap)",0.2385,0.046,0,0,0
+3,50,"score test (asymptotic)",0.227,0.046,0,0,0
+3,50,"Stukel with fallback",0.2335,0.044,0,0,0
+3,100,"DeepGOF-1 shipped",0.133277777777778,0.062,0,0,0
+3,100,"GRP",0.177710843373494,0.00608519269776876,0.00733333333333333,0.014,0.004
+3,100,"chi-square of map",0.2319,0.041,0,0,0
+3,100,"score test (bootstrap)",0.315833333333333,0.071,0,0,0
+3,100,"score test (asymptotic)",0.325,0.068,0,0,0
+3,100,"Stukel with fallback",0.3285,0.07,0,0,0
+3,500,"DeepGOF-1 shipped",0.543,0.051,0,0,0
+3,500,"GRP",0.5165,0.01,0,0,0
+3,500,"chi-square of map",0.5705625,0.054,0,0,0
+3,500,"score test (bootstrap)",0.810428571428571,0.044,0,0,0
+3,500,"score test (asymptotic)",0.805,0.047,0,0,0
+3,500,"Stukel with fallback",0.784,0.049,0,0,0
+4,50,"DeepGOF-1 shipped",0.4985,0.05,0,0,0
+4,50,"GRP",0.367367367367367,0.005005005005005,0.001,0.001,0.001
+4,50,"chi-square of map",0.4485,0.043,0,0,0
+4,50,"score test (bootstrap)",0.801666666666667,0.062,0,0,0
+4,50,"score test (asymptotic)",0.808,0.067,0,0,0
+4,50,"Stukel with fallback",0.563,0.074,0,0,0
+4,100,"DeepGOF-1 shipped",0.77975,0.043,0,0,0
+4,100,"GRP",0.712,0.006,0,0,0
+4,100,"chi-square of map",0.745875,0.051,0,0,0
+4,100,"score test (bootstrap)",0.9335,0.046,0,0,0
+4,100,"score test (asymptotic)",0.9305,0.057,0,0,0
+4,100,"Stukel with fallback",0.7475,0.088,0,0,0
+4,500,"DeepGOF-1 shipped",0.9958,0.052,0,0,0
+4,500,"GRP",0.988,0.004,0,0,0
+4,500,"chi-square of map",0.99675,0.042,0,0,0
+4,500,"score test (bootstrap)",1,0.049,0,0,0
+4,500,"score test (asymptotic)",1,0.05,0,0,0
+4,500,"Stukel with fallback",0.988,0.079,0,0,0

@@ -1,0 +1,2 @@
+net,rows,alt,null,torch_seed,train_secs,insample_auc
+NoInter_s1,8400,4200,4200,9001,3.01,0.8308

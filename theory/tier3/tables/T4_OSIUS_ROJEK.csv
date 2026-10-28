@@ -1,0 +1,4 @@
+"pair","R","max_abs","n_above_1e8","max_abs_when_min_pq_ge_1e4","p_or_NA"
+"hand vs stored (ebrahim.gof)",143999,0.0580885882530865,244,7.27196081129478e-15,0
+"LogisticDx vs stored",143998,0.0580885882530865,244,7.43849426498855e-14,1
+"hand vs LogisticDx",143998,1.27837575247813e-06,8,7.40518757424979e-14,NA

@@ -1,0 +1,15 @@
+"family","design","variant","cells","power","size_mean","size_min","size_max"
+"interaction","liu","Control",6,0.652777777777778,0.0277777777777778,0,0.5
+"quadratic","liu","Control",3,0.654166666666667,0,0,0
+"interaction","niche","Control",6,0.075,0,0,0
+"quadratic","niche","Control",6,0.0722222222222222,0,0,0
+"interaction","liu","distributed",6,0.854166666666667,0,0,0
+"quadratic","liu","distributed",3,0.666666666666667,0,0,0
+"interaction","niche","distributed",6,0.0916666666666667,0,0,0
+"quadratic","niche","distributed",6,0.075,0,0,0
+"interaction","liu","NoInter",6,0.604166666666667,0.0277777777777778,0,0.5
+"interaction","niche","NoInter",6,0.0611111111111111,0,0,0
+"quadratic","liu","NoQuad",3,0.708333333333333,0.0555555555555556,0,0.5
+"quadratic","niche","NoQuad",6,0.0722222222222222,0,0,0
+"quadratic","liu","NoQuadStrict",3,0.625,0.111111111111111,0,0.5
+"quadratic","niche","NoQuadStrict",6,0.0694444444444444,0,0,0

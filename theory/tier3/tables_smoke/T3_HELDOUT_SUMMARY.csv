@@ -1,0 +1,73 @@
+"family","design","cell","n","variant","power_mean","power_min","power_max","size_mean","size_min","size_max"
+"interaction","liu","S3 n=100",100,"Control",0.541666666666667,0.375,0.75,0,0,0
+"interaction","liu","S3 n=100",100,"distributed",0.625,0.625,0.625,0,0,0
+"interaction","liu","S3 n=100",100,"NoInter",0.625,0.375,0.875,0,0,0
+"interaction","liu","S3 n=50",50,"Control",0.25,0.125,0.375,0,0,0
+"interaction","liu","S3 n=50",50,"distributed",0.75,0.75,0.75,0,0,0
+"interaction","liu","S3 n=50",50,"NoInter",0.375,0.25,0.5,0,0,0
+"interaction","liu","S3 n=500",500,"Control",0.875,0.875,0.875,0,0,0
+"interaction","liu","S3 n=500",500,"distributed",1,1,1,0,0,0
+"interaction","liu","S3 n=500",500,"NoInter",0.791666666666667,0.625,0.875,0,0,0
+"interaction","liu","S4 n=100",100,"Control",0.875,0.75,1,0,0,0
+"interaction","liu","S4 n=100",100,"distributed",1,1,1,0,0,0
+"interaction","liu","S4 n=100",100,"NoInter",0.75,0.375,1,0,0,0
+"interaction","liu","S4 n=50",50,"Control",0.375,0.125,0.75,0.166666666666667,0,0.5
+"interaction","liu","S4 n=50",50,"distributed",0.75,0.75,0.75,0,0,0
+"interaction","liu","S4 n=50",50,"NoInter",0.0833333333333333,0,0.25,0.166666666666667,0,0.5
+"interaction","liu","S4 n=500",500,"Control",1,1,1,0,0,0
+"interaction","liu","S4 n=500",500,"distributed",1,1,1,0,0,0
+"interaction","liu","S4 n=500",500,"NoInter",1,1,1,0,0,0
+"interaction","niche","inter_C0.3_n200",200,"Control",0.0833333333333333,0.05,0.1,0,0,0
+"interaction","niche","inter_C0.3_n200",200,"distributed",0.1,0.1,0.1,0,0,0
+"interaction","niche","inter_C0.3_n200",200,"NoInter",0.0333333333333333,0,0.05,0,0,0
+"interaction","niche","inter_C0.3_n500",500,"Control",0.0833333333333333,0.05,0.1,0,0,0
+"interaction","niche","inter_C0.3_n500",500,"distributed",0.1,0.1,0.1,0,0,0
+"interaction","niche","inter_C0.3_n500",500,"NoInter",0.0666666666666667,0,0.1,0,0,0
+"interaction","niche","inter_C0.5_n200",200,"Control",0.0833333333333333,0.05,0.1,0,0,0
+"interaction","niche","inter_C0.5_n200",200,"distributed",0.1,0.1,0.1,0,0,0
+"interaction","niche","inter_C0.5_n200",200,"NoInter",0.0666666666666667,0.05,0.1,0,0,0
+"interaction","niche","inter_C0.5_n500",500,"Control",0.0166666666666667,0,0.05,0,0,0
+"interaction","niche","inter_C0.5_n500",500,"distributed",0.05,0.05,0.05,0,0,0
+"interaction","niche","inter_C0.5_n500",500,"NoInter",0.0333333333333333,0,0.05,0,0,0
+"interaction","niche","inter_C0.8_n200",200,"Control",0.0833333333333333,0.05,0.1,0,0,0
+"interaction","niche","inter_C0.8_n200",200,"distributed",0.1,0.1,0.1,0,0,0
+"interaction","niche","inter_C0.8_n200",200,"NoInter",0.0833333333333333,0.05,0.1,0,0,0
+"interaction","niche","inter_C0.8_n500",500,"Control",0.1,0.1,0.1,0,0,0
+"interaction","niche","inter_C0.8_n500",500,"distributed",0.1,0.1,0.1,0,0,0
+"interaction","niche","inter_C0.8_n500",500,"NoInter",0.0833333333333333,0.05,0.1,0,0,0
+"quadratic","liu","S2 n=100",100,"Control",0.791666666666667,0.625,0.875,0,0,0
+"quadratic","liu","S2 n=100",100,"distributed",0.75,0.75,0.75,0,0,0
+"quadratic","liu","S2 n=100",100,"NoQuad",0.791666666666667,0.625,1,0,0,0
+"quadratic","liu","S2 n=100",100,"NoQuadStrict",0.75,0.625,0.875,0,0,0
+"quadratic","liu","S2 n=50",50,"Control",0.504166666666667,0.5,0.5125,0,0,0
+"quadratic","liu","S2 n=50",50,"distributed",0.625,0.625,0.625,0,0,0
+"quadratic","liu","S2 n=50",50,"NoQuad",0.666666666666667,0.5,0.875,0,0,0
+"quadratic","liu","S2 n=50",50,"NoQuadStrict",0.5,0.375,0.625,0,0,0
+"quadratic","liu","S2 n=500",500,"Control",0.666666666666667,0.625,0.75,0,0,0
+"quadratic","liu","S2 n=500",500,"distributed",0.625,0.625,0.625,0,0,0
+"quadratic","liu","S2 n=500",500,"NoQuad",0.666666666666667,0.625,0.75,0.166666666666667,0,0.5
+"quadratic","liu","S2 n=500",500,"NoQuadStrict",0.625,0.625,0.625,0.333333333333333,0,0.5
+"quadratic","niche","quad_C0.3_n200",200,"Control",0.0333333333333333,0,0.1,0,0,0
+"quadratic","niche","quad_C0.3_n200",200,"distributed",0.05,0.05,0.05,0,0,0
+"quadratic","niche","quad_C0.3_n200",200,"NoQuad",0.0166666666666667,0,0.05,0,0,0
+"quadratic","niche","quad_C0.3_n200",200,"NoQuadStrict",0.0166666666666667,0,0.05,0,0,0
+"quadratic","niche","quad_C0.3_n500",500,"Control",0.05,0.05,0.05,0,0,0
+"quadratic","niche","quad_C0.3_n500",500,"distributed",0.05,0.05,0.05,0,0,0
+"quadratic","niche","quad_C0.3_n500",500,"NoQuad",0.05,0.05,0.05,0,0,0
+"quadratic","niche","quad_C0.3_n500",500,"NoQuadStrict",0.0666666666666667,0.05,0.1,0,0,0
+"quadratic","niche","quad_C0.5_n200",200,"Control",0.05,0.05,0.05,0,0,0
+"quadratic","niche","quad_C0.5_n200",200,"distributed",0.05,0.05,0.05,0,0,0
+"quadratic","niche","quad_C0.5_n200",200,"NoQuad",0.0666666666666667,0.05,0.1,0,0,0
+"quadratic","niche","quad_C0.5_n200",200,"NoQuadStrict",0.0333333333333333,0,0.05,0,0,0
+"quadratic","niche","quad_C0.5_n500",500,"Control",0.1,0.1,0.1,0,0,0
+"quadratic","niche","quad_C0.5_n500",500,"distributed",0.1,0.1,0.1,0,0,0
+"quadratic","niche","quad_C0.5_n500",500,"NoQuad",0.1,0.1,0.1,0,0,0
+"quadratic","niche","quad_C0.5_n500",500,"NoQuadStrict",0.1,0.1,0.1,0,0,0
+"quadratic","niche","quad_C0.8_n200",200,"Control",0.1,0.1,0.1,0,0,0
+"quadratic","niche","quad_C0.8_n200",200,"distributed",0.1,0.1,0.1,0,0,0
+"quadratic","niche","quad_C0.8_n200",200,"NoQuad",0.1,0.1,0.1,0,0,0
+"quadratic","niche","quad_C0.8_n200",200,"NoQuadStrict",0.1,0.1,0.1,0,0,0
+"quadratic","niche","quad_C0.8_n500",500,"Control",0.1,0.1,0.1,0,0,0
+"quadratic","niche","quad_C0.8_n500",500,"distributed",0.1,0.1,0.1,0,0,0
+"quadratic","niche","quad_C0.8_n500",500,"NoQuad",0.1,0.1,0.1,0,0,0
+"quadratic","niche","quad_C0.8_n500",500,"NoQuadStrict",0.1,0.1,0.1,0,0,0

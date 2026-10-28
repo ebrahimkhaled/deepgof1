@@ -1,0 +1,2 @@
+net,rows,alt,null,torch_seed,train_secs,insample_auc
+Control_s3,8400,4200,4200,9003,2.91,0.7924

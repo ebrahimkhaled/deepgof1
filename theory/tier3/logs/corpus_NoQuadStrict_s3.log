@@ -1,0 +1,5 @@
+[1] TRUE
+       variant s seed0 rows  alt null terms inter_terms inter_self_square
+1 NoQuadStrict 3 83101 8400 4200 4200   225          20                 0
+  quad_terms indexq_terms  secs
+1          0            0 39.47

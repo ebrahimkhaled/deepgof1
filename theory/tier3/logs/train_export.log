@@ -1,0 +1,36 @@
+exported 10 tensors + scaler + 20 verify vectors -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/theory/tier3\nets\Control_s1
+now run training/VERIFY.R -- it must print max |difference| < 1e-6
+Control_s1: 8400 maps, 10.3 s, in-sample AUC 0.8196
+exported 10 tensors + scaler + 20 verify vectors -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/theory/tier3\nets\Control_s2
+now run training/VERIFY.R -- it must print max |difference| < 1e-6
+Control_s2: 8400 maps, 2.9 s, in-sample AUC 0.8021
+exported 10 tensors + scaler + 20 verify vectors -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/theory/tier3\nets\Control_s3
+now run training/VERIFY.R -- it must print max |difference| < 1e-6
+Control_s3: 8400 maps, 2.9 s, in-sample AUC 0.7924
+exported 10 tensors + scaler + 20 verify vectors -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/theory/tier3\nets\NoInter_s1
+now run training/VERIFY.R -- it must print max |difference| < 1e-6
+NoInter_s1: 8400 maps, 3.0 s, in-sample AUC 0.8308
+exported 10 tensors + scaler + 20 verify vectors -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/theory/tier3\nets\NoInter_s2
+now run training/VERIFY.R -- it must print max |difference| < 1e-6
+NoInter_s2: 8400 maps, 3.0 s, in-sample AUC 0.8031
+exported 10 tensors + scaler + 20 verify vectors -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/theory/tier3\nets\NoInter_s3
+now run training/VERIFY.R -- it must print max |difference| < 1e-6
+NoInter_s3: 8400 maps, 2.9 s, in-sample AUC 0.7788
+exported 10 tensors + scaler + 20 verify vectors -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/theory/tier3\nets\NoQuadStrict_s1
+now run training/VERIFY.R -- it must print max |difference| < 1e-6
+NoQuadStrict_s1: 8400 maps, 3.0 s, in-sample AUC 0.8260
+exported 10 tensors + scaler + 20 verify vectors -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/theory/tier3\nets\NoQuadStrict_s2
+now run training/VERIFY.R -- it must print max |difference| < 1e-6
+NoQuadStrict_s2: 8400 maps, 3.0 s, in-sample AUC 0.8326
+exported 10 tensors + scaler + 20 verify vectors -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/theory/tier3\nets\NoQuadStrict_s3
+now run training/VERIFY.R -- it must print max |difference| < 1e-6
+NoQuadStrict_s3: 8400 maps, 3.0 s, in-sample AUC 0.7811
+exported 10 tensors + scaler + 20 verify vectors -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/theory/tier3\nets\NoQuad_s1
+now run training/VERIFY.R -- it must print max |difference| < 1e-6
+NoQuad_s1: 8400 maps, 2.9 s, in-sample AUC 0.8246
+exported 10 tensors + scaler + 20 verify vectors -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/theory/tier3\nets\NoQuad_s2
+now run training/VERIFY.R -- it must print max |difference| < 1e-6
+NoQuad_s2: 8400 maps, 3.0 s, in-sample AUC 0.8066
+exported 10 tensors + scaler + 20 verify vectors -> C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/paper_deepgof/theory/tier3\nets\NoQuad_s3
+now run training/VERIFY.R -- it must print max |difference| < 1e-6
+NoQuad_s3: 8400 maps, 3.3 s, in-sample AUC 0.7929

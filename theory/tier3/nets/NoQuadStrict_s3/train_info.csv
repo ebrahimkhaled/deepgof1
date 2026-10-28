@@ -1,0 +1,2 @@
+net,rows,alt,null,torch_seed,train_secs,insample_auc
+NoQuadStrict_s3,8400,4200,4200,9003,2.97,0.7811

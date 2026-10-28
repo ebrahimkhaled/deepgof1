@@ -1,0 +1,53 @@
+smoke rows: 118 | shared with pilot: 110 
+liu p_ss          identical to pilot on 90 of 90 (max |diff| 0)
+liu p_score       identical to pilot on 90 of 90 (max |diff| 0)
+liu p_score_asym  identical to pilot on 9 of 90 (max |diff| 4.4e-16)
+liu p_dg == pilot p_dg on 90 of 90
+GRP with the pilot's seed == pilot p_grp on 32 of 110 (NA in both: 5)
+events vs pilot: TRUE 
+       
+         2  3
+  liu   30 60
+  niche  0 28
+refit failures: 0 | score NA in bootstrap: 0 
+   design S   n kind   C  rep events
+1     liu 2  50    0 0.0 1001      5
+2     liu 2  50    0 0.0 1002      2
+11    liu 2 100    0 0.0 1001     11
+36    liu 3  50    2 0.5    2     12
+                                                                  grp_msg
+1  one multinomial or binomial class has 1 or 0 observations; not allowed
+2  one multinomial or binomial class has 1 or 0 observations; not allowed
+11 one multinomial or binomial class has 1 or 0 observations; not allowed
+36 one multinomial or binomial class has 1 or 0 observations; not allowed
+
+mean seconds by design/n:
+  design   n  t_combo   t_nets     t_grp
+1    liu  50 2.024000 1.568667 0.7566667
+2    liu 100 2.406667 2.140667 1.3590000
+3  niche 200 1.894286 2.468571 2.2264286
+4    liu 500 3.224000 2.690333 1.8733333
+5  niche 500 2.603571 2.727857 2.5492857
+
+network p-values (first rows):
+    scen kind    C  p_dg p_Control_s1 p_Control_s2 p_Control_s3 p_NoInter_s1
+1 S2_n50    0 0.00 0.140        0.265        0.140        0.160        0.175
+2 S2_n50    0 0.00 0.945        0.380        0.770        0.175        0.305
+3 S2_n50    2 0.25 0.105        0.025        0.060        0.010        0.100
+4 S2_n50    2 0.25 0.130        0.635        0.760        0.480        0.940
+5 S2_n50    2 0.50 0.370        0.670        0.525        0.470        0.550
+6 S2_n50    2 0.50 0.020        0.010        0.005        0.010        0.010
+  p_NoInter_s2 p_NoInter_s3 p_NoQuad_s1 p_NoQuad_s2 p_NoQuad_s3
+1        0.135        0.255       0.250       0.285       0.110
+2        0.570        0.235       0.265       0.860       0.165
+3        0.195        0.005       0.085       0.205       0.005
+4        0.500        0.530       0.875       0.965       0.660
+5        0.365        0.670       0.550       0.215       0.165
+6        0.015        0.010       0.005       0.010       0.065
+  p_NoQuadStrict_s1 p_NoQuadStrict_s2 p_NoQuadStrict_s3
+1             0.275             0.070             0.335
+2             0.815             0.815             0.255
+3             0.035             0.480             0.005
+4             0.935             0.820             0.445
+5             0.480             0.595             0.215
+6             0.055             0.045             0.135

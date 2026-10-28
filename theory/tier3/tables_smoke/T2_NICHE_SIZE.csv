@@ -1,0 +1,11 @@
+"n","arm","R","size","se","missing"
+200,"DG",2,0,0,0
+200,"GRP",2,0,0,0
+200,"chi-square of map",2,0,0,0
+200,"score test (bootstrap)",2,0,0,0
+200,"score test (asymptotic)",2,0,0,0
+500,"DG",2,0,0,0
+500,"GRP",2,0,0,0
+500,"chi-square of map",2,0,0,0
+500,"score test (bootstrap)",2,0,0,0
+500,"score test (asymptotic)",2,0,0,0

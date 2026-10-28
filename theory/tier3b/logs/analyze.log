@@ -1,0 +1,268 @@
+rows_main: 32000 rows (nulls 8000, alternatives 24000)
+
+== type I error at .05 (2,000 correct-model data sets per design x n) ==
+ design   n                    test    R   size       se missing
+    D10 200               DeepGOF-1 2000 0.0545 0.005076       0
+    D10 200       chi-square of map 2000 0.0540 0.005054       0
+    D10 200  score test (bootstrap) 2000 0.0535 0.005032       0
+    D10 200 score test (asymptotic) 2000 0.0710 0.005743       0
+    D10 200                     GRP 2000 0.0010 0.000707       0
+    D10 200                      HL 2000 0.0555 0.005120       0
+    D10 200       Stukel (fallback) 2000 0.0795 0.006049       0
+    D10 500               DeepGOF-1 2000 0.0570 0.005184       0
+    D10 500       chi-square of map 2000 0.0545 0.005076       0
+    D10 500  score test (bootstrap) 2000 0.0460 0.004684       0
+    D10 500 score test (asymptotic) 2000 0.0515 0.004942       0
+    D10 500                     GRP 2000 0.0030 0.001223       0
+    D10 500                      HL 2000 0.0535 0.005032       0
+    D10 500       Stukel (fallback) 2000 0.0570 0.005184       0
+     D2 200               DeepGOF-1 2000 0.0515 0.004942       0
+     D2 200       chi-square of map 2000 0.0535 0.005032       0
+     D2 200  score test (bootstrap) 2000 0.0575 0.005205       0
+     D2 200 score test (asymptotic) 2000 0.0635 0.005453       0
+     D2 200                     GRP 2000 0.0060 0.001727       0
+     D2 200                      HL 2000 0.0560 0.005141       0
+     D2 200       Stukel (fallback) 2000 0.0670 0.005591       0
+     D2 500               DeepGOF-1 2000 0.0505 0.004896       0
+     D2 500       chi-square of map 2000 0.0460 0.004684       0
+     D2 500  score test (bootstrap) 2000 0.0455 0.004660       0
+     D2 500 score test (asymptotic) 2000 0.0455 0.004660       0
+     D2 500                     GRP 2000 0.0080 0.001992       0
+     D2 500                      HL 2000 0.0490 0.004827       0
+     D2 500       Stukel (fallback) 2000 0.0605 0.005331       0
+ outside_2se_of_05
+             FALSE
+             FALSE
+             FALSE
+              TRUE
+              TRUE
+             FALSE
+              TRUE
+             FALSE
+             FALSE
+             FALSE
+             FALSE
+              TRUE
+             FALSE
+             FALSE
+             FALSE
+             FALSE
+             FALSE
+              TRUE
+              TRUE
+             FALSE
+              TRUE
+             FALSE
+             FALSE
+             FALSE
+             FALSE
+              TRUE
+             FALSE
+              TRUE
+
+== size-adjusted power (500 alternatives per cell) ==
+ design       shape   n ci       C DeepGOF-1 chi-square of map
+     D2        bump 200  1   1.840    0.1096            0.0813
+     D2        bump 200  2   4.140    0.3568            0.1802
+     D2        bump 200  3   6.120    0.5636            0.3028
+     D2        bump 500  1   1.840    0.2391            0.1990
+     D2        bump 500  2   4.140    0.8360            0.6797
+     D2        bump 500  3   6.120    0.9697            0.9330
+     D2      corner 200  1  -1.810    0.0972            0.1135
+     D2      corner 200  2  -4.420    0.3360            0.5005
+     D2      corner 200  3 -21.200    0.6312            0.8830
+     D2      corner 500  1  -1.810    0.1809            0.2797
+     D2      corner 500  2  -4.420    0.7411            0.9775
+     D2      corner 500  3 -21.200    0.9557            1.0000
+     D2 oscillation 200  1   0.387    0.1222            0.0665
+     D2 oscillation 200  2   0.798    0.3586            0.1265
+     D2 oscillation 200  3   1.190    0.5660            0.2130
+     D2 oscillation 500  1   0.387    0.2386            0.0990
+     D2 oscillation 500  2   0.798    0.6883            0.3260
+     D2 oscillation 500  3   1.190    0.9534            0.6913
+     D2   threshold 200  1   1.140    0.1516            0.0965
+     D2   threshold 200  2   2.270    0.3218            0.1925
+     D2   threshold 200  3   3.680    0.5438            0.3705
+     D2   threshold 500  1   1.140    0.2520            0.2055
+     D2   threshold 500  2   2.270    0.7157            0.6797
+     D2   threshold 500  3   3.680    0.9529            0.9595
+    D10        bump 200  1   2.260    0.1280            0.1008
+    D10        bump 200  2   3.590    0.2600            0.1464
+    D10        bump 200  3   5.690    0.4280            0.2136
+    D10        bump 500  1   2.260    0.3360            0.2198
+    D10        bump 500  2   3.590    0.6820            0.5250
+    D10        bump 500  3   5.690    0.9360            0.8045
+    D10      corner 200  1  -2.540    0.1140            0.1572
+    D10      corner 200  2  -4.520    0.2660            0.4192
+    D10      corner 200  3 -25.600    0.3860            0.5040
+    D10      corner 500  1  -2.540    0.3300            0.5488
+    D10      corner 500  2  -4.520    0.7180            0.9177
+    D10      corner 500  3 -25.600    0.9120            0.8878
+    D10 oscillation 200  1   0.460    0.1360            0.0412
+    D10 oscillation 200  2   0.786    0.2800            0.1000
+    D10 oscillation 200  3   1.150    0.5220            0.1612
+    D10 oscillation 500  1   0.460    0.2880            0.1090
+    D10 oscillation 500  2   0.786    0.6460            0.2535
+    D10 oscillation 500  3   1.150    0.9280            0.5827
+    D10   threshold 200  1   1.300    0.1200            0.0648
+    D10   threshold 200  2   2.630    0.3200            0.1712
+    D10   threshold 200  3   4.310    0.4740            0.2788
+    D10   threshold 500  1   1.300    0.2440            0.1815
+    D10   threshold 500  2   2.630    0.7460            0.6870
+    D10   threshold 500  3   4.310    0.9520            0.9558
+ score test (bootstrap) score test (asymptotic)   GRP    HL Stukel (fallback)
+                 0.1083                   0.106 0.146 0.058             0.118
+                 0.2620                   0.268 0.446 0.124             0.222
+                 0.5277                   0.520 0.706 0.176             0.366
+                 0.2000                   0.218 0.306 0.100             0.158
+                 0.5990                   0.614 0.884 0.288             0.408
+                 0.8770                   0.890 0.984 0.480             0.670
+                 0.1520                   0.152 0.108 0.076             0.200
+                 0.5471                   0.556 0.448 0.276             0.652
+                 0.8429                   0.844 0.736 0.564             0.786
+                 0.2740                   0.280 0.202 0.194             0.410
+                 0.9450                   0.944 0.918 0.714             0.948
+                 1.0000                   1.000 0.996 0.970             0.996
+                 0.0791                   0.082 0.158 0.050             0.100
+                 0.1471                   0.138 0.378 0.166             0.264
+                 0.2331                   0.252 0.672 0.364             0.510
+                 0.1335                   0.128 0.210 0.092             0.144
+                 0.2130                   0.222 0.704 0.434             0.480
+                 0.3730                   0.390 0.972 0.848             0.874
+                 0.1566                   0.160 0.164 0.056             0.066
+                 0.3949                   0.414 0.464 0.056             0.098
+                 0.6966                   0.708 0.738 0.102             0.216
+                 0.3315                   0.334 0.330 0.054             0.068
+                 0.8495                   0.850 0.904 0.116             0.242
+                 0.9920                   0.994 1.000 0.264             0.552
+                 0.1464                   0.154 0.068 0.038             0.106
+                 0.2385                   0.238 0.212 0.072             0.126
+                 0.4084                   0.436 0.368 0.100             0.154
+                 0.2380                   0.246 0.230 0.106             0.154
+                 0.4909                   0.490 0.542 0.176             0.254
+                 0.8240                   0.842 0.868 0.234             0.448
+                 0.2022                   0.196 0.070 0.068             0.244
+                 0.4387                   0.450 0.136 0.124             0.428
+                 0.5135                   0.516 0.382 0.262             0.542
+                 0.5917                   0.586 0.132 0.224             0.592
+                 0.9126                   0.912 0.452 0.548             0.932
+                 0.9511                   0.950 0.912 0.878             0.986
+                 0.0756                   0.076 0.084 0.052             0.076
+                 0.1204                   0.136 0.174 0.088             0.134
+                 0.2331                   0.230 0.408 0.132             0.230
+                 0.1023                   0.102 0.168 0.060             0.118
+                 0.2114                   0.210 0.474 0.138             0.244
+                 0.2843                   0.282 0.846 0.376             0.490
+                 0.1729                   0.174 0.102 0.046             0.050
+                 0.4165                   0.428 0.306 0.066             0.108
+                 0.6993                   0.710 0.546 0.124             0.156
+                 0.3309                   0.350 0.224 0.076             0.096
+                 0.8851                   0.896 0.740 0.128             0.290
+                 0.9980                   0.998 0.988 0.238             0.530
+
+== settings where DeepGOF-1 / the arm is ahead by > 2 paired SE (of 48) ==
+                     arm design shape   n settings DG_ahead arm_ahead within
+       chi-square of map    all   all all       48       31        10      7
+                     GRP    all   all all       48       16        17     15
+                      HL    all   all all       48       43         0      5
+ score test (asymptotic)    all   all all       48       18        23      7
+  score test (bootstrap)    all   all all       48       18        23      7
+       Stukel (fallback)    all   all all       48       33        12      3
+ mean_dg_minus_arm
+           0.08011
+           0.00058
+           0.25120
+           0.02837
+           0.03361
+           0.12495
+
+-- by design x shape, score test (bootstrap) and chi-square of map --
+                    arm design       shape   n settings DG_ahead arm_ahead
+      chi-square of map    D10        bump all        6        5         0
+ score test (bootstrap)    D10        bump all        6        3         0
+      chi-square of map     D2        bump all        6        4         0
+ score test (bootstrap)     D2        bump all        6        3         0
+      chi-square of map    D10      corner all        6        1         5
+ score test (bootstrap)    D10      corner all        6        0         6
+      chi-square of map     D2      corner all        6        0         5
+ score test (bootstrap)     D2      corner all        6        0         6
+      chi-square of map    D10 oscillation all        6        6         0
+ score test (bootstrap)    D10 oscillation all        6        6         0
+      chi-square of map     D2 oscillation all        6        6         0
+ score test (bootstrap)     D2 oscillation all        6        6         0
+      chi-square of map    D10   threshold all        6        5         0
+ score test (bootstrap)    D10   threshold all        6        0         6
+      chi-square of map     D2   threshold all        6        4         0
+ score test (bootstrap)     D2   threshold all        6        0         5
+ within mean_dg_minus_arm
+      1            0.1266
+      3            0.0706
+      2            0.1165
+      3            0.0835
+      0           -0.1181
+      0           -0.1473
+      1           -0.1354
+      0           -0.1365
+      0            0.2587
+      0            0.2955
+      0            0.2341
+      0            0.2914
+      1            0.0861
+      0           -0.1078
+      2            0.0723
+      1           -0.0805
+
+== mean size-adjusted power over the 48 settings ==
+                    test power_adj
+               DeepGOF-1     0.480
+                     GRP     0.479
+ score test (asymptotic)     0.452
+  score test (bootstrap)     0.446
+       chi-square of map     0.400
+       Stukel (fallback)     0.355
+                      HL     0.229
+
+== mean over n and C, by design x shape ==
+ design       shape chi-square of map DeepGOF-1   GRP    HL
+    D10        bump             0.335     0.462 0.381 0.121
+     D2        bump             0.396     0.512 0.579 0.204
+    D10      corner             0.572     0.454 0.347 0.351
+     D2      corner             0.626     0.490 0.568 0.466
+    D10 oscillation             0.208     0.467 0.359 0.141
+     D2 oscillation             0.254     0.488 0.516 0.326
+    D10   threshold             0.390     0.476 0.484 0.113
+     D2   threshold             0.417     0.490 0.600 0.108
+ score test (asymptotic) score test (bootstrap) Stukel (fallback)
+                   0.401                  0.391             0.207
+                   0.436                  0.429             0.324
+                   0.602                  0.602             0.621
+                   0.629                  0.627             0.665
+                   0.173                  0.171             0.215
+                   0.202                  0.196             0.395
+                   0.593                  0.584             0.205
+                   0.577                  0.570             0.207
+
+GRP without a p-value: 0 of 32000 data sets (0.00%); nulls 0.00%, alternatives 0.00%
+
+diagnostic shares by design x n:
+ design   n grp_na hl_na stukel_na stukel_fallback1 firth refit_fail_any
+    D10 200      0     0         0                0     0              0
+     D2 200      0     0         0                0     0              0
+    D10 500      0     0         0                0     0              0
+     D2 500      0     0         0                0     0              0
+ score_df3 axes_x1x2
+         1     0.926
+         1     1.000
+         1     0.987
+         1     1.000
+score statistic NA in a bootstrap refit: 0; refit failures: 0
+
+GRP messages:
+< table of extent 0 >
+
+timing (s per data set):
+  design   n  t_combo    t_grp    t_other
+1    D10 200 1.564480 1.512904 0.00448125
+2     D2 200 2.026768 1.147649 0.00385500
+3    D10 500 1.998804 2.239092 0.00522375
+4     D2 500 2.544212 1.593834 0.00476250

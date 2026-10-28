@@ -1,0 +1,8 @@
+"test","power_adj"
+"DeepGOF-1",0.479871428571429
+"GRP",0.479291666666667
+"score test (asymptotic)",0.4515
+"score test (bootstrap)",0.446263933982684
+"chi-square of map",0.399756597222222
+"Stukel (fallback)",0.354916666666667
+"HL",0.228666666666667

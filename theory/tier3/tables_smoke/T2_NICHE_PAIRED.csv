@@ -1,0 +1,49 @@
+"fam","C","n","arm","d","se","m","z"
+"inter",0.3,200,"GRP",0.05,0.05,2,1
+"inter",0.3,200,"chi-square of map",0.05,0.05,2,1
+"inter",0.3,200,"score test (bootstrap)",0.05,0.05,2,1
+"inter",0.3,200,"score test (asymptotic)",0.05,0.05,2,1
+"inter",0.5,200,"GRP",0.05,0.05,2,1
+"inter",0.5,200,"chi-square of map",0,0,2,NA
+"inter",0.5,200,"score test (bootstrap)",0.05,0.05,2,1
+"inter",0.5,200,"score test (asymptotic)",0.05,0.05,2,1
+"inter",0.8,200,"GRP",0.05,0.05,2,1
+"inter",0.8,200,"chi-square of map",0,0,2,NA
+"inter",0.8,200,"score test (bootstrap)",0,0,2,NA
+"inter",0.8,200,"score test (asymptotic)",0,0,2,NA
+"inter",0.3,500,"GRP",0.05,0,2,Inf
+"inter",0.3,500,"chi-square of map",0,0,2,NA
+"inter",0.3,500,"score test (bootstrap)",0,0,2,NA
+"inter",0.3,500,"score test (asymptotic)",0,0,2,NA
+"inter",0.5,500,"GRP",0,0.05,2,0
+"inter",0.5,500,"chi-square of map",-0.05,0.05,2,-1
+"inter",0.5,500,"score test (bootstrap)",-0.05,0.05,2,-1
+"inter",0.5,500,"score test (asymptotic)",-0.05,0.05,2,-1
+"inter",0.8,500,"GRP",0.05,0,2,Inf
+"inter",0.8,500,"chi-square of map",0,0,2,NA
+"inter",0.8,500,"score test (bootstrap)",0,0,2,NA
+"inter",0.8,500,"score test (asymptotic)",0,0,2,NA
+"quad",0.3,200,"GRP",0.05,0.05,2,1
+"quad",0.3,200,"chi-square of map",0.05,0.05,2,1
+"quad",0.3,200,"score test (bootstrap)",0.05,0.05,2,1
+"quad",0.3,200,"score test (asymptotic)",0.05,0.05,2,1
+"quad",0.5,200,"GRP",0,0.1,2,0
+"quad",0.5,200,"chi-square of map",0,0.1,2,0
+"quad",0.5,200,"score test (bootstrap)",0,0,2,NA
+"quad",0.5,200,"score test (asymptotic)",0,0,2,NA
+"quad",0.8,200,"GRP",0,0,2,NA
+"quad",0.8,200,"chi-square of map",0.05,0.05,2,1
+"quad",0.8,200,"score test (bootstrap)",0,0,2,NA
+"quad",0.8,200,"score test (asymptotic)",0,0,2,NA
+"quad",0.3,500,"GRP",0,0.05,2,0
+"quad",0.3,500,"chi-square of map",0,0.1,2,0
+"quad",0.3,500,"score test (bootstrap)",-0.05,0.05,2,-1
+"quad",0.3,500,"score test (asymptotic)",-0.05,0.05,2,-1
+"quad",0.5,500,"GRP",0.05,0,2,Inf
+"quad",0.5,500,"chi-square of map",0,0,2,NA
+"quad",0.5,500,"score test (bootstrap)",0,0,2,NA
+"quad",0.5,500,"score test (asymptotic)",0,0,2,NA
+"quad",0.8,500,"GRP",0.05,0,2,Inf
+"quad",0.8,500,"chi-square of map",0,0,2,NA
+"quad",0.8,500,"score test (bootstrap)",0,0,2,NA
+"quad",0.8,500,"score test (asymptotic)",0,0,2,NA

@@ -1,0 +1,5 @@
+[1] TRUE
+  variant s seed0 rows  alt null terms inter_terms inter_self_square quad_terms
+1 Control 2 82101 8400 4200 4200   206          30                22         33
+  indexq_terms  secs
+1           21 38.48
